@@ -1,0 +1,32 @@
+# Permalinks
+permalink:      pretty
+
+# Setup
+title:          Tale
+tagline:        What's your story?
+paginate:       1
+baseurl:        ""
+url:            ""
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+# Build settings
+markdown:       kramdown
+
+# About
+author:
+  name:         Chester How
+  url:          http://chester.how
+  email:        chesterhow@gmail.com
+
+# Custom vars
+version:        3.4.1
+github:
+  repo:         https://github.com/chesterhow/tale
+
+# Gems
+gems:
+  - jekyll-paginate

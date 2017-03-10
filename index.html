@@ -1,0 +1,13 @@
+---
+layout: default
+title: Home
+---
+
+<div>
+  {% for post in site.posts %}
+    <h1>{{ post.title }}</h1>
+    <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+
+    {{ post.content }}
+  {% endfor %}
+</div>
