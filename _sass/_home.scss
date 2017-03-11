@@ -1,0 +1,39 @@
+.post-preview {
+  margin-bottom: 30px;
+  position: relative;
+
+  time {
+    color: $default-tint;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: .3px;
+  }
+
+  h1 {
+    color: $default-shade;
+    font-size: 3.5em;
+    margin: 5px 0 10px;
+  }
+
+  p {
+    color: $default-color;
+    font-family: $serif-font;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0 0 5px;
+    text-align: justify;
+  }
+
+  .post-link {
+    text-align: right;
+  }
+
+  a {
+    color: $default-tint;
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: .3px;
+    text-decoration: none;
+  }
+}

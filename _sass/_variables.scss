@@ -1,0 +1,25 @@
+$default-color: #555555;
+$default-shade: #353535;
+$default-tint: #AAAAAA;
+
+$serif-font: 'Libre Baskerville';
+$sans-font: 'Helvetica Neue';
+$default-font-size: 14px;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}
+
+@mixin transform-translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+     -moz-transform: translate($x, $y);
+          transform: translate($x, $y);
+}

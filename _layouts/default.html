@@ -6,10 +6,12 @@
   <body>
 
     <div class="container">
-      <h3>
-        <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-        <small>{{ site.tagline }}</small>
-      </h3>
+      <header>
+        <a href="{{ site.baseurl }}/" title="Home">
+            <h2>{{ site.title }}</h2>
+        </a>
+        <h4>{{ site.subtitle }}</h4>
+      </header>
 
       <main>
         {{ content }}

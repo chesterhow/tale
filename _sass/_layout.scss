@@ -1,5 +1,50 @@
+* {
+  @include box-sizing;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $sans-font;
+  font-size: $default-font-size;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
   width: 80%;
+}
+
+header {
+  margin: 20px 0;
+  text-align: center;
+
+  * {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    display: inline-block;
+    font-size: 3em;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  h4 {
+    color: $default-tint;
+    font-family: $serif-font;
+    font-weight: 400;
+  }
 }
