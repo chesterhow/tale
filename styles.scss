@@ -3,5 +3,11 @@
 # only main files contain this front matter, not partials.
 ---
 
+@import 'variables';
 @import 'base';
+@import 'code';
+@import 'post';
+@import 'syntax';
 @import 'layout';
+@import 'pagination';
+@import 'catalogue';

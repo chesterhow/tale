@@ -1,12 +1,11 @@
 # Permalinks
-permalink:      pretty
+permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Tale
-tagline:        What's your story?
-paginate:       1
+paginate:       5
 baseurl:        ""
-url:            ""
+url:            "https://chesterhow.github.io/tale"
 
 # Assets
 sass:
