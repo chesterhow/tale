@@ -37,3 +37,35 @@
     text-decoration: none;
   }
 }
+
+.pagination {
+  font-family: $serif-font;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+
+  span {
+    color: $default-shade;
+    font-size: 1.3em;
+  }
+
+  a {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    font-size: 1.3em;
+    position: absolute;
+    text-decoration: none;
+
+    &:hover {
+      color: $default-tint;
+    }
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+}

@@ -6,7 +6,7 @@ title:          Tale
 subtitle:       by Chester
 paginate:       1
 baseurl:        ""
-url:            ""
+url:            "https://chesterhow.github.io/tale/"
 
 # Assets
 sass:

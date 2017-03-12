@@ -3,16 +3,26 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   <div class="post-preview">
     <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
     <h1>{{ post.title }}</h1>
 
     <p>{{ post.content | truncatewords: 70 | strip_html }}</p>
 
-
     <div class="post-link">
       <a href="{{ post.url }}">continue reading</a>
     </div>
   </div>
 {% endfor %}
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.url }}" class="left">&#8592;</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.url }}" class="right">&#8594;</a>
+  {% endif %}
+
+  <span>{{ paginator.page }}</span>
+</div>

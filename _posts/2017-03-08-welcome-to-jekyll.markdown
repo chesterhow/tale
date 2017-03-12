@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Introducing Tale 2"
-date:   2017-03-09 12:32:48 +0800
+title:  "Introducing Tale 3"
+date:   2017-03-08 12:32:48 +0800
 categories: jekyll update
 synopsys: "Tale is a minimal Jekyll theme for writers. Find out more here."
 ---
