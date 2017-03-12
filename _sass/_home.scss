@@ -1,62 +1,26 @@
-.post-preview {
-  margin-bottom: 30px;
+.preview {
+  margin-bottom: 3rem;
   position: relative;
-
-  time {
-    color: $default-tint;
-    font-size: 1.3em;
-    font-weight: 500;
-    letter-spacing: .3px;
-  }
-
-  h1 {
-    color: $default-shade;
-    font-size: 3.5em;
-    margin: 5px 0 10px;
-  }
-
-  p {
-    color: $default-color;
-    font-family: $serif-font;
-    font-size: 1em;
-    line-height: 1.5em;
-    margin: 0 0 5px;
-    text-align: justify;
-  }
-
-  .post-link {
-    text-align: right;
-  }
-
-  a {
-    color: $default-tint;
-    display: inline-block;
-    font-size: 1.3em;
-    font-weight: 500;
-    letter-spacing: .3px;
-    text-decoration: none;
-  }
 }
 
 .pagination {
   font-family: $serif-font;
-  margin-bottom: 20px;
   position: relative;
   text-align: center;
 
   span {
     color: $default-shade;
-    font-size: 1.3em;
+    font-size: 1.1rem;
   }
 
   a {
     @include transition(all .3s ease-out);
     color: $default-color;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     position: absolute;
-    text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $default-tint;
     }
   }

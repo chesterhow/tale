@@ -9,8 +9,26 @@ body {
 }
 
 html {
-  font-family: $sans-font;
+  font-family: $serif-font;
   font-size: $default-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sans-font;
+}
+
+pre,
+code {
+  font-family: menlo;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -20,24 +38,21 @@ html {
 }
 
 header {
-  margin: 20px 0;
+  margin: 1.5rem 0;
   text-align: center;
 
   * {
     margin: 0;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   h2 {
     @include transition(all .3s ease-out);
     color: $default-color;
     display: inline-block;
-    font-size: 3em;
+    font-size: 3rem;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: .6;
     }
   }
@@ -46,5 +61,14 @@ header {
     color: $default-tint;
     font-family: $serif-font;
     font-weight: 400;
+  }
+}
+
+footer {
+  font-family: $sans-font;
+  margin: 3rem 0;
+
+  span {
+    color: $default-color;
   }
 }

@@ -1,0 +1,45 @@
+.post {
+  &-time {
+    color: $default-tint;
+    font-family: $sans-font;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: .3px;
+  }
+
+  &-title {
+    color: $default-shade;
+    font-size: 2.5rem;
+    margin: 0 0 .8rem;
+
+    @media (min-width: 600px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  p {
+    color: $default-color;
+    line-height: 1.5rem;
+    margin: 0 0 1rem;
+    text-align: justify;
+  }
+
+  .post-link {
+    text-align: right;
+
+    a {
+      @include transition (all .3s ease-out);
+      color: $default-tint;
+      display: inline-block;
+      font-family: $sans-font;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: .3px;
+
+      &:hover,
+      &:focus {
+        color: $default-color;
+      }
+    }
+  }
+}

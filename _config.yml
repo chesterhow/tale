@@ -4,7 +4,7 @@ permalink:      pretty
 # Setup
 title:          Tale
 subtitle:       by Chester
-paginate:       1
+paginate:       2
 baseurl:        ""
 url:            "https://chesterhow.github.io/tale/"
 

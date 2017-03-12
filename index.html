@@ -4,14 +4,14 @@ title: Home
 ---
 
 {% for post in paginator.posts %}
-  <div class="post-preview">
-    <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-    <h1>{{ post.title }}</h1>
+  <div class="post preview">
+    <time class="post-time" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+    <h1 class="post-title">{{ post.title }}</h1>
 
-    <p>{{ post.content | truncatewords: 70 | strip_html }}</p>
+    {{ post.content | truncatewords: 70 }}
 
     <div class="post-link">
-      <a href="{{ post.url }}">continue reading</a>
+      <a href="{{ post.url | prepend: site.url }}">continue reading</a>
     </div>
   </div>
 {% endfor %}
