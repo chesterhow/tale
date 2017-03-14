@@ -1,10 +1,17 @@
-$default-color: #555555;
+$default-color: #555;
 $default-shade: #353535;
-$default-tint: #AAAAAA;
+$default-tint: #aaa;
+$grey-1: #979797;
+$grey-2: #e5e5e5;
+$grey-3: #f9f9f9;
+$blue: #4a9ae1;
 
 $serif-font: 'Libre Baskerville';
 $sans-font: 'Helvetica Neue';
 $default-font-size: 14px;
+
+$monospaced-font: Menlo, Monaco, monospace;
+$code-color: #bf616a;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;

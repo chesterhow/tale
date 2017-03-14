@@ -3,6 +3,25 @@
   position: relative;
 }
 
+.post-link {
+  text-align: right;
+
+  a {
+    @include transition (all .3s ease-out);
+    color: $default-tint;
+    display: inline-block;
+    font-family: $sans-font;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: .3px;
+
+    &:hover,
+    &:focus {
+      color: $default-color;
+    }
+  }
+}
+
 .pagination {
   font-family: $serif-font;
   position: relative;

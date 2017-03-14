@@ -1,39 +1,6 @@
-* {
-  @include box-sizing;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: $serif-font;
-  font-size: $default-font-size;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $sans-font;
-}
-
-pre,
-code {
-  font-family: menlo;
-}
-
-a {
-  text-decoration: none;
-}
-
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 80%;
 }
 
