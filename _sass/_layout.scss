@@ -33,9 +33,11 @@ header {
 
 footer {
   font-family: $sans-font;
-  margin: 3rem 0;
+  margin: 1.5rem 0 3rem;
+  text-align: center;
 
   span {
     color: $default-color;
+    font-size: .8rem;
   }
 }

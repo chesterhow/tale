@@ -1,6 +1,10 @@
 .post {
   padding: 3rem 0;
 
+  &:not(:last-child) {
+    border-bottom: .5px solid $grey-2;
+  }
+
   &-time {
     color: $default-tint;
     font-family: $sans-font;
@@ -16,11 +20,11 @@
     a {
       color: $default-shade;
       font-size: 2.7rem;
+      line-height: normal;
     }
   }
 
   p {
-    line-height: 1.5rem;
     margin: 0 0 1rem;
     text-align: justify;
   }

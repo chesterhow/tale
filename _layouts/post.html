@@ -2,12 +2,14 @@
 layout: default
 ---
 
-<div class="post">
-  <time class="post-time" datetime="{{ page.date }}">{{ page.date | date_to_string | upcase }}</time>
-  <h1 class="post-title">{{ page.title }}</h1>
+<div>
+  <div class="post">
+    <time class="post-time" datetime="{{ page.date }}">{{ page.date | date_to_string | upcase }}</time>
+    <h1 class="post-title">{{ page.title }}</h1>
 
-  {{ content }}
+    {{ content }}
 
+  </div>
 </div>
 
 <div class="pagination">

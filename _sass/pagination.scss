@@ -1,21 +1,14 @@
-.preview {
-  &:not(:last-child) {
-    border-bottom: .5px solid $grey-2;
-  }
-}
-
 .pagination {
+  border-bottom: .5px solid $grey-2;
+  border-top: .5px solid $grey-2;
   font-family: $serif-font;
+  padding: 1rem 0;
   position: relative;
   text-align: center;
 
   span {
     color: $default-shade;
     font-size: 1.1rem;
-  }
-
-  a {
-    @include transition(all .3s ease-out);
   }
 
   .home {
@@ -26,12 +19,12 @@
 
     &:hover,
     &:focus, {
-      color: $default-tint;
       text-decoration: underline;
     }
   }
 
   .arrow {
+    @include transition(all .3s ease-out);
     color: $default-color;
     font-size: 1.3rem;
     position: absolute;
