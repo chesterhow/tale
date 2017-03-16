@@ -26,7 +26,6 @@
   .arrow {
     @include transition(all .3s ease-out);
     color: $default-color;
-    font-size: 1.3rem;
     position: absolute;
 
     &:hover,
