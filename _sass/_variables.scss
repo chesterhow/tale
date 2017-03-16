@@ -6,11 +6,11 @@ $grey-2: #e5e5e5;
 $grey-3: #f9f9f9;
 $blue: #4a9ae1;
 
-$serif-font: 'Libre Baskerville';
-$sans-font: 'Helvetica Neue';
+$serif-font: 'Libre Baskerville', 'Times New Roman', Times, serif;
+$sans-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $default-font-size: 16px;
 
-$monospaced-font: Menlo, Monaco, monospace;
+$monospaced-font: Menlo, Monaco, 'Courier New', monospace;
 $code-color: #bf616a;
 
 @mixin box-sizing($type: border-box) {
