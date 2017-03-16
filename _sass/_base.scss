@@ -50,3 +50,27 @@ img {
   margin: 0 0 1rem;
   max-width: 100%;
 }
+
+table {
+  border: 1px solid $grey-2;
+  border-collapse: collapse;
+  font-size: 85%;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid $grey-2;
+  padding: .25rem .5rem;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: $grey-3;
+}
