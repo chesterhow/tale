@@ -9,7 +9,7 @@ title: Home
       <time class="post-time" datetime="{{ post.date }}">{{ post.date | date_to_string | upcase }}</time>
       <h1 class="post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h1>
 
-      {{ post.content | truncatewords: 70 }}
+      {{ post.content | truncatewords: 50 }}
 
     </div>
   {% endfor %}
