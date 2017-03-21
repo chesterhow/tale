@@ -12,8 +12,11 @@ body {
 
 html {
   font-family: $baskerville;
-  font-size: $default-font-size;
+  font-size: 14px;
 
+  @media (min-width: 600px) {
+    font-size: 16px;
+  }
 }
 
 body {
@@ -26,6 +29,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: $default-shade;
   font-family: $palatino;
   line-height: normal;
 }

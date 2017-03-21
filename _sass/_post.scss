@@ -1,27 +1,30 @@
 .post {
   padding: 3rem 0;
 
-  &:not(:last-child) {
-    border-bottom: .5px solid $grey-2;
-  }
-
-  &-time {
+  &-info {
     color: $default-tint;
-    font-family: $sans-font;
-    font-weight: 700;
+    font-family: $palatino;
     letter-spacing: .5px;
+    text-align: center;
+
+    span {
+      font-style: italic;
+    }
   }
 
   &-title {
     color: $default-shade;
-    font-size: 2.7rem;
-    margin: 0 0 .8rem;
+    font-family: $sans-font;
+    font-size: 4rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
 
-    a {
-      color: $default-shade;
-      font-size: 2.7rem;
-      line-height: normal;
-    }
+  &-line {
+    border-top: .4rem solid $default-color;
+    display: block;
+    margin: 0 auto 3rem;
+    width: 4rem;
   }
 
   p {
