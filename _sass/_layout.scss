@@ -5,7 +5,7 @@
 }
 
 header {
-  margin: 1.5rem 0 0;
+  padding: 2rem 0 0;
   text-align: center;
 
   * {
@@ -17,6 +17,7 @@ header {
     color: $default-color;
     display: inline-block;
     font-size: 2.8rem;
+    font-weight: 400;
 
     &:hover,
     &:focus {
@@ -26,14 +27,40 @@ header {
 
   h4 {
     color: $default-tint;
-    font-family: $serif-font;
+    font-size: .8rem;
     font-weight: 400;
+    letter-spacing: .1rem;
+  }
+
+  .line {
+    border-top: 1px solid $default-color;
+    display: block;
+    margin: 0 auto .8rem;
+    width: 1rem;
+  }
+
+  .nav-container {
+    border-bottom: .5px solid $grey-2;
+    border-top: .5px solid $grey-2;
+    margin-top: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    margin: .5rem auto;
+    max-width: 350px;
+
+    a {
+      color: $default-color;
+      font-family: $palatino;
+    }
   }
 }
 
 footer {
-  font-family: $sans-font;
-  margin: 1.5rem 0 3rem;
+  font-family: $palatino;
+  padding: 2rem 0;
   text-align: center;
 
   span {

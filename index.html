@@ -3,14 +3,10 @@ layout: default
 title: Home
 ---
 
-<div>
+<div class="catalogue">
   {% for post in paginator.posts %}
-    <div class="post">
-      <time class="post-time" datetime="{{ post.date }}">{{ post.date | date_to_string | upcase }}</time>
-      <h1 class="post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h1>
-
-      {{ post.content | truncatewords: 50 }}
-
+    <div class="catalogue-item">
+      <a href="{{ post.url | prepend: site.url }}" class="catalogue-title">{{ post.title }}</a>
     </div>
   {% endfor %}
 </div>

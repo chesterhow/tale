@@ -8,9 +8,20 @@
     <div class="container">
       <header>
         <a href="{{ site.baseurl }}/" title="Home">
-            <h2>{{ site.title }}</h2>
+          <h2>{{ site.title }}</h2>
         </a>
-        <h4>[ {{ site.subtitle }} ]</h4>
+
+        <div class="line"></div>
+
+        <h4>{{ site.subtitle | upcase }}</h4>
+
+        <div class="nav-container">
+          <nav>
+            <a href="#">about</a>
+            <a href="#">posts</a>
+            <a href="#">updates</a>
+          </nav>
+        </div>
       </header>
 
       <main>

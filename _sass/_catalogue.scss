@@ -1,0 +1,30 @@
+.catalogue {
+  text-align: center;
+
+  &-item {
+    padding: 1.5rem 0;
+
+    &:first-child {
+      padding-top: 2.5rem;
+    }
+
+    &:last-child {
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  &-title {
+    @include transition(all .3s ease-out);
+    border-bottom: 1px solid $white;
+    border-top: 1px solid $white;
+    color: $default-shade;
+    font-family: $palatino;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .5rem 1rem;
+
+    &:hover {
+      border-color: $default-tint;
+    }
+  }
+}
