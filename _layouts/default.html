@@ -4,36 +4,28 @@
   {% include head.html %}
 
   <body>
-
-    <div class="container">
-      <header>
-        <a href="{{ site.baseurl }}/" title="Home">
-          <h2>{{ site.title | downcase }}</h2>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
         </a>
-
-        <div class="line"></div>
-
-        <h4>{{ site.subtitle | upcase }}</h4>
-
-        <div class="nav-container">
-          <nav>
-            <a href="#">about</a>
-            <a href="#">posts</a>
-            <a href="#">updates</a>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        {{ content }}
-      </main>
-
-      <footer>
-        <span>
-          &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> Chester How. All rights reserved.
-        </span>
-      </footer>
+        <h4 class="nav-subtitle">{{ site.subtitle }}</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
     </div>
+  </nav>
 
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> Chester How. All rights reserved.
+      </span>
+    </footer>
   </body>
 </html>

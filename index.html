@@ -7,7 +7,9 @@ title: Home
   {% for post in paginator.posts %}
     <div class="catalogue-item">
       <a href="{{ post.url | prepend: site.url }}" class="catalogue-title">{{ post.title }}</a>
+      <div class="catalogue-line"></div>
     </div>
+    <br>
   {% endfor %}
 </div>
 

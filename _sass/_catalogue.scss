@@ -2,6 +2,7 @@
   text-align: center;
 
   &-item {
+    display: inline-block;
     padding: 1.5rem 0;
 
     &:first-child {
@@ -11,20 +12,27 @@
     &:last-child {
       padding-bottom: 2.5rem;
     }
+
+    &:hover .catalogue-line,
+    &:focus .catalogue-line {
+      width: 6rem;
+    }
   }
 
   &-title {
-    @include transition(all .3s ease-out);
-    border-bottom: 1px solid $white;
-    border-top: 1px solid $white;
     color: $default-shade;
-    font-family: $palatino;
-    font-size: 1.5rem;
+    display: block;
+    font-family: $sans-font;
+    font-size: 2rem;
     font-weight: 700;
-    padding: .5rem 1rem;
+    margin: .5rem 0;
+  }
 
-    &:hover {
-      border-color: $default-tint;
-    }
+  &-line {
+    @include transition(all .3s ease-out);
+    border-top: .2rem solid $default-shade;
+    display: block;
+    margin: 0 auto;
+    width: 2rem;
   }
 }
