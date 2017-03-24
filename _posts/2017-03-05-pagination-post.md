@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Empty Post"
+title: "Pagination Post"
 author: "Chester"
 ---
 

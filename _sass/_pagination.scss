@@ -1,8 +1,7 @@
 .pagination {
-  border-bottom: .5px solid $grey-2;
   border-top: .5px solid $grey-2;
-  font-family: $baskerville;
-  padding: 1rem 0;
+  font-family: $palatino;
+  padding-top: 2rem;
   position: relative;
   text-align: center;
 
@@ -12,14 +11,15 @@
   }
 
   .home {
+    @include transition(all .3s ease-out);
     color: $default-color;
     font-family: $sans-font;
     font-size: 1.1rem;
-    font-weight: 700;
+    opacity: .6;
 
     &:hover,
     &:focus, {
-      text-decoration: underline;
+      opacity: 1;
     }
   }
 
@@ -30,7 +30,7 @@
 
     &:hover,
     &:focus {
-      color: $default-tint;
+      opacity: .6;
       text-decoration: none;
     }
   }

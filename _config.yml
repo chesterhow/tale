@@ -3,7 +3,6 @@ permalink:      /:categories/:title
 
 # Setup
 title:          Tale
-subtitle:       by Chester
 paginate:       5
 baseurl:        ""
 url:            "https://chesterhow.github.io/tale"

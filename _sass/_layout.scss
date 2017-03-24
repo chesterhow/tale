@@ -13,7 +13,7 @@ footer,
 }
 
 .nav {
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
 
   &-container {
@@ -33,14 +33,6 @@ footer,
     &:focus {
       opacity: .6;
     }
-  }
-
-  &-subtitle {
-    color: $default-tint;
-    display: inline-block;
-    font-family: $palatino;
-    font-weight: 400;
-    margin: 0;
   }
 
   ul {
@@ -86,7 +78,6 @@ footer,
     }
   }
 }
-
 
 footer {
   font-family: $palatino;

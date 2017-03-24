@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introducing Tale 2"
+title:  "Introducing Tale"
 author: "Chester"
 ---
 
