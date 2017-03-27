@@ -1,9 +1,8 @@
 ---
-layout: default
-title: About
+layout: post
+title: "About"
+author: "Chester"
 permalink: /about/
 ---
 
-# About
-
-Tale is a minimal Jekyll theme.
+Tale is a minimal Jekyll theme curated for storytellers.
