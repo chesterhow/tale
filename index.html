@@ -11,7 +11,9 @@ title: Home
         <h1 class="catalogue-title">{{ post.title }}</h1>
         <div class="catalogue-line"></div>
 
-        {{ post.content | truncatewords: 30 }}
+        <p>
+          {{ post.content | truncatewords: 30 | strip_html }}
+        </p>
 
       </div>
     </a>

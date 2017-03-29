@@ -10,15 +10,14 @@
     font-size: 1.1rem;
   }
 
-  .home {
+  .top {
     @include transition(all .3s ease-out);
     color: $default-color;
     font-family: $sans-font;
     font-size: 1.1rem;
     opacity: .6;
 
-    &:hover,
-    &:focus, {
+    &:hover {
       opacity: 1;
     }
   }

@@ -1,5 +1,5 @@
 # Permalinks
-permalink:      /:categories/:title
+permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Tale
