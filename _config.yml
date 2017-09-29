@@ -4,7 +4,7 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          Jihye Leee
 paginate:       5
-baseurl:        "/work/"
+baseurl:        ".."
 url:            "http://jihyeleee.com"
 
 # Assets
