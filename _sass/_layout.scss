@@ -12,8 +12,11 @@ footer,
   width: 80%;
 }
 
+.nav-container {
+    height: 30px;
+}
+
 .nav {
-  box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
 
   &-container {
@@ -74,7 +77,6 @@ footer,
     ul {
       bottom: 0;
       position: absolute;
-      right: 0;
     }
   }
 }

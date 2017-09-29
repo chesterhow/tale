@@ -2,10 +2,10 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Tale
+title:          Jihye Leee
 paginate:       5
-baseurl:        "/work/"
-url:            "https://chesterhow.github.io/tale"
+baseurl:        ""
+url:            "http://jihyeleee.com"
 
 # Assets
 sass:
@@ -24,7 +24,7 @@ author:
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/chesterhow/tale
+  repo:         https://github.com/iamleejihye/work
 
 # Gems
 gems:
