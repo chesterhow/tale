@@ -4,8 +4,8 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          Jihye Leee
 paginate:       5
-baseurl:        ".."
-url:            "http://jihyeleee.com"
+baseurl:        ""
+url:            "http://jihyeleee.com/work"
 
 # Assets
 sass:
@@ -18,7 +18,7 @@ markdown:       kramdown
 # About
 author:
   name:         Jihye Leee
-  url:          http://jihyeleee.com
+  url:          http://jihyeleee.com/
   email:        iam.leejihye@gmail.com
 
 # Custom vars
