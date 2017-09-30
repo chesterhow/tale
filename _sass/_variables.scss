@@ -1,6 +1,8 @@
-$default-color: #555;
-$default-shade: #353535;
-$default-tint: #aaa;
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+$default-color: #10171f;
+$default-shade: #10171f;
+$default-tint: #8898aa;
 $grey-1: #979797;
 $grey-2: #e5e5e5;
 $grey-3: #f9f9f9;
@@ -8,7 +10,7 @@ $white: #fff;
 $blue: #4a9ae1;
 $shadow-color: rgba(0, 0, 0, .2);
 
-$baskerville: 'Libre Baskerville', 'Times New Roman', Times, serif;
+$serif: 'APPLE SD Gothic NEO', 'Spoqa Han Sans', Sans-serif;
 $palatino: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
 $sans-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 

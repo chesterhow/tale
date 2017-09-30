@@ -12,17 +12,15 @@ footer,
   width: 80%;
 }
 
-.nav-container {
-    height: 30px;
-}
-
 .nav {
-  overflow: auto;
+    overflow: auto;
+    padding: 24px 0;
 
   &-container {
-    margin: 1rem auto;
-    position: relative;
-    text-align: center;
+      margin: 0 auto;
+      padding: 24px 0;
+      position: relative;
+      text-align: center;
   }
 
   &-title {
@@ -39,10 +37,10 @@ footer,
   }
 
   ul {
-    list-style-type: none;
-    margin: 1rem 0 0;
-    padding: 0;
-    text-align: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
   }
 
   li {

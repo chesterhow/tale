@@ -1,3 +1,11 @@
+.intro {
+	font-family: SourceSansPro;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.17;
+    margin: 0;
+}
+
 .catalogue {
   &-item {
     border-bottom: 1px solid $grey-2;
@@ -25,7 +33,7 @@
     color: $default-shade;
     display: block;
     font-family: $sans-font;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin: .5rem 0;
   }
