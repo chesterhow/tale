@@ -1,3 +1,6 @@
+.test {
+    color: red;
+}
 .container {
   margin: 0 auto;
   max-width: 800px;
@@ -18,7 +21,7 @@ footer,
 
   &-container {
       margin: 0 auto;
-      padding: 24px 0;
+      padding-bottom: 40px;
       position: relative;
       text-align: center;
   }
@@ -40,7 +43,6 @@ footer,
       list-style-type: none;
       margin: 0;
       padding: 0;
-      text-align: center;
   }
 
   li {
@@ -71,16 +73,11 @@ footer,
     &-container {
       text-align: left;
     }
-
-    ul {
-      bottom: 0;
-      position: absolute;
-    }
   }
 }
 
 footer {
-  font-family: $palatino;
+  font-family: $source;
   padding: 2rem 0;
   text-align: center;
 
