@@ -1,5 +1,4 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-
+// color 정의
 $default-color: #10171f;
 $default-shade: #10171f;
 $default-tint: #8898aa;
@@ -10,8 +9,9 @@ $white: #fff;
 $blue: #4a9ae1;
 $shadow-color: rgba(0, 0, 0, .2);
 
+// font-family 정의
 $serif: 'APPLE SD Gothic NEO', 'Spoqa Han Sans', Sans-serif;
-$palatino: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+$source: 'Source Sans Pro', sans-serif;
 $sans-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $monospaced-font: Menlo, Monaco, monospace;

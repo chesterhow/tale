@@ -25,7 +25,12 @@ author:
 version:        3.4.1
 github:
   repo:         https://github.com/iamleejihye/work
+nav_home_link:  true
+nav_about_link:  '/about'   # By default, your home page is your blog
+                                # page. If you change your paginate_path,
+                                # set this to the root of the paginate_path
+                                # to enable a separate blog link.
 
 # Gems
-gems:
+plugins:
   - jekyll-paginate
