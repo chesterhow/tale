@@ -4,8 +4,8 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          Jihye Leee
 paginate:       5
-baseurl:        "/work"
-url:            "http://jihyeleee.com/work"
+baseurl:        ""
+url:            "http://jihyeleee.com"
 
 # Assets
 sass:
@@ -28,12 +28,6 @@ github:
 
 first_title: work
 second_title: About
-
-nav_home_link:  true
-nav_about_link:  '/about'   # By default, your home page is your blog
-                                # page. If you change your paginate_path,
-                                # set this to the root of the paginate_path
-                                # to enable a separate blog link.
 
 # Gems
 plugins:
