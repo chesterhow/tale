@@ -5,7 +5,7 @@
 }
 
 main,
-footer,
+footer>.footer_wrap,
 .nav-container {
   margin: 0 auto;
   max-width: 800px;
@@ -18,9 +18,8 @@ footer,
 
   &-container {
       margin: 0 auto;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
       position: relative;
-      text-align: center;
   }
 }
 
@@ -51,21 +50,62 @@ footer,
     font-family: $sans-font;
   }
 
-@media (min-width: 600px) {
-  .nav {
-    &-container {
-      text-align: left;
-    }
-  }
-}
 
 footer {
-  font-family: $source;
-  padding: 2rem 0;
-  text-align: center;
+    font-family: $source;
+    padding: 36px 0 46px 0;
+    background-color: $grey-3;
+    color: $default-tint;
+    border-top: 1px solid $grey-2;
+    border-bottom: 1px solid $grey-2;
+    
+    .footer_wrap {
+        position: relative;
+    
+    .information {
+        display: inline-block;
+        
+        .myname {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .email {
+            font-size: 16px;
+        }
+        .accounts {
+            margin-top: 36px;
+                svg {
+                    width: 20px;
+                    margin-right: 24px;
+                    fill: $default-tint;
+                }
+            }
+        
+        }
+    .copyright {
+        float: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+        span {
+            font-size: 16px;
+        }
+    }
+}
 
-  span {
-    color: $default-color;
-    font-size: .8rem;
-  }
+@media (min-width: 600px) {
+    footer {
+        .footer_wrap {
+            .information {
+                .accounts {
+                    svg {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
