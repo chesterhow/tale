@@ -1,15 +1,62 @@
-h1.intro {
-	font-family: $source, $serif;
-	font-size: 36px;
-	font-weight: bold;
-	line-height: 1.17;
-    margin: 0;
+section.explanation {        
+    h1.intro {
+        font-family: $source, $serif;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.17;
+        margin: 0;
+    }
+
+    h2.intro {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: $serif;
+        line-height: 1.4;
+    }
 }
 
-h2.intro {
-    font-size: 24px;
-    font-weight: 400;
-    font-family: $serif;
+p.second_label {
+    margin: 60px 0 20px 0;
+    font-family: $source;
+    font-size: 18px;
+    font-weight: 600;
+    color: $default-tint;
+}
+
+.resume {
+    .workplace {
+        width: 100%;
+        padding: 30px 0;
+        border-bottom: 1px solid $grey-2;
+    
+        .workplace_name {
+            font-family: $serif;
+            font-size: 20px;
+            font-weight: 700;
+            width: 46%;
+            float: left;
+            
+            @media (max-width: $break-small) {
+                float: none;
+            }
+            
+        }
+
+        .work_info {
+            display: inline-block;
+            
+            p.work_date {
+                color: $default-tint;
+                font-size: 16px;
+                font-family: $source;
+                font-weight: 400;
+            }
+        }
+    }
+    
+    .workplace:first-child {
+        border-top: 1px solid $grey-2;
+    }
 }
 
 .underline {
