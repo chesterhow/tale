@@ -9,7 +9,7 @@
             <div class="nav-container">
                 <ul>
                     <li>
-                        <a href="{{ site.baseurl }}/" {% if current[1] == "" %} class="active"{% endif %}>{{page.url}}</a>
+                        <a href="{{ site.baseurl }}/" {% if current[1] == nil %} class="active"{% endif %}>Work</a>
                     </li>
                     <li>
                         <a href="{{ '/about' | prepend: site.baseurl }}" {% if current[1] == "about" %} class="active"{% endif %}>About</a>
