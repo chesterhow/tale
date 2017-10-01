@@ -4,23 +4,19 @@
   {% include head.html %}
 
   <body>
-    <nav class="nav">
-      <div class="nav-container">
-        <ul>
-            {% for item in site.pages %}
-                {% if page.url == item.url %}
-                    <li class="active">
-                        <a href="{{ site.baseurl }}/">Work</a>
-                    </li>
-                {% else %}
+      {% assign current = page.url | downcase | split: '/' %}
+        <nav class="nav">
+            <div class="nav-container">
+                <ul>
                     <li>
-                        <a href="{{ '/about' | prepend: site.baseurl }}">About</a>
+                        <a href="{{ site.baseurl }}/" {% if current[1] == "" %} class="active"{% endif %}>{{page.url}}</a>
                     </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-  </nav>
+                    <li>
+                        <a href="{{ '/about' | prepend: site.baseurl }}" {% if current[1] == "about" %} class="active"{% endif %}>About</a>
+                    </li>
+                </ul>
+            </div>
+      </nav>
 
     <main>
       {{ content }}
