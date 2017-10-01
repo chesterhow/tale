@@ -1,9 +1,19 @@
-.intro {
+h1.intro {
 	font-family: $source, $serif;
 	font-size: 36px;
 	font-weight: bold;
 	line-height: 1.17;
     margin: 0;
+}
+
+h2.intro {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: $serif;
+}
+
+.underline {
+    border-bottom: 4px solid #d9e0e7;
 }
 
 .catalogue {
