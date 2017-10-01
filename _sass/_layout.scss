@@ -78,7 +78,7 @@ footer {
             margin-top: 36px;
                 svg {
                     width: 20px;
-                    margin-right: 24px;
+                    margin-right: 20px;
                     fill: $default-tint;
                 }
             }
@@ -92,20 +92,6 @@ footer {
     }
         span {
             font-size: 16px;
-        }
-    }
-}
-
-@media (min-width: 600px) {
-    footer {
-        .footer_wrap {
-            .information {
-                .accounts {
-                    svg {
-                        margin-right: 20px;
-                    }
-                }
-            }
         }
     }
 }
