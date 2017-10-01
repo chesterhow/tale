@@ -61,37 +61,43 @@ footer {
     
     .footer_wrap {
         position: relative;
-    
-    .information {
-        display: inline-block;
-        
-        .myname {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        
-        .email {
-            font-size: 16px;
-        }
-        .accounts {
-            margin-top: 36px;
-                svg {
-                    width: 20px;
-                    margin-right: 20px;
-                    fill: $default-tint;
+
+        .information {
+            display: inline-block;
+
+            .myname {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 4px;
+}
+            .email {
+                font-size: 16px;
+            }
+            .accounts {
+                margin-top: 36px;
+                a {
+                    margin-right: 24px;
+                    svg {
+                        fill: $default-tint;
+                        width: 20px;
+                    }
                 }
             }
-        
         }
-    .copyright {
-        float: right;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-        span {
-            font-size: 16px;
+        .copyright {
+            float: right;
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+
+            @media (max-width: $break-small) {
+                float: none;
+                position: static;
+                margin-top: 6px;
+            }
+            span {
+                font-size: 16px;
+            }
         }
     }
 }
