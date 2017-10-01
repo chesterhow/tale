@@ -7,17 +7,17 @@
     <nav class="nav">
       <div class="nav-container">
         <ul>
-            <li>
-              {% if site.nav_home_link %}
-                <a class="{% if page.url == '/' %} test{% endif %}" href="{{ site.baseurl }}/">Work</a>
+            {% for item in site.pages %}
+                {% if page.url == item.url %}
+                    <li class="active">
+                        <a href="{{ site.baseurl }}/">Work</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ '/about' | prepend: site.baseurl }}">About</a>
+                    </li>
                 {% endif %}
-            </li>
-            
-            <li>
-                {% if site.nav_about_link %}
-                    <a class="{% if page.url == site.nav_about_link %} test{% endif %}" href="{{ site.baseurl }}{{ site.nav_about_link }}">About</a>
-                {% endif %}
-            </li>
+            {% endfor %}
         </ul>
     </div>
   </nav>

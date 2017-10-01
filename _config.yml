@@ -25,6 +25,10 @@ author:
 version:        3.4.1
 github:
   repo:         https://github.com/iamleejihye/work
+
+first_title: work
+second_title: About
+
 nav_home_link:  true
 nav_about_link:  '/about'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
