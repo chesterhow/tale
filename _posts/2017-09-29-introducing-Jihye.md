@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "I'm Jihye Leee, an UI Designer at RIDI."
+title:  "Under Construction"
 author: "Jihye Leee"
 ---
 
-‘이지혜’ UI 디자이너입니다. 리디에서 일합니다. 현재 Jekyll 커스텀 작업 및 글 정리 작업을 진행 중입니다. 조금만 기다려주세요!
+현재 Jekyll 테마 커스터마이징 개발 작업을 진행 중입니다. 정리되는 대로 글도 올릴 예정입니다. 조금만 기다려주세요! :D
