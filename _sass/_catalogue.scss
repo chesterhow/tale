@@ -8,10 +8,12 @@ section.explanation {
     }
 
     h2.intro {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 400;
         font-family: $serif;
         line-height: 1.4;
+        word-wrap: normal;
+        margin: 20px 0;
     }
 }
 
@@ -33,7 +35,7 @@ p.second_label {
             font-family: $serif;
             font-size: 20px;
             font-weight: 700;
-            width: 46%;
+            width: 50%;
             float: left;
             
             @media (max-width: $break-small) {
@@ -63,6 +65,19 @@ p.second_label {
     border-bottom: 4px solid #d9e0e7;
 }
 
+section.skill {
+    padding-bottom: 72px;
+    
+    li.skill_name {
+        font-family: $source;
+        padding: 4px 14px;
+        border-radius: 100px;
+        border: solid 1px $grey-2;
+        font-size: 16px;
+        margin: 0 8px 14px 0;
+    }
+}
+
 .catalogue {
   &-item {
     border-bottom: 1px solid $grey-2;
@@ -89,7 +104,7 @@ p.second_label {
   &-title {
     color: $default-shade;
     display: block;
-    font-family: $sans-font;
+    font-family: $source;
     font-size: 1.6rem;
     font-weight: 700;
     margin: .5rem 0;
