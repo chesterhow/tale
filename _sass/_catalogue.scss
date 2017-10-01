@@ -13,7 +13,7 @@ section.explanation {
         font-family: $serif;
         line-height: 1.4;
         word-wrap: normal;
-        margin: 20px 0;
+        margin: 10px 0 0 0;
     }
 }
 
@@ -40,6 +40,7 @@ p.second_label {
             
             @media (max-width: $break-small) {
                 float: none;
+                width: 100%;
             }
             
         }
