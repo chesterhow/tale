@@ -3,7 +3,7 @@
     border-bottom: 1px solid $grey-2;
     color: $default-color;
     display: inline-block;
-    padding: 2rem 0;
+    padding: 20px 0;
 
     &:hover .catalogue-line,
     &:focus .catalogue-line {
@@ -24,16 +24,32 @@
   &-title {
     color: $default-shade;
     display: block;
-    font-family: $source;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin: .5rem 0;
+    font-family: $serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 16px 0;
+    line-height: 1.5;
   }
-
-  &-line {
-    @include transition(all .3s ease-out);
-    border-top: .2rem solid $default-shade;
-    display: block;
-    width: 2rem;
-  }
+    
+    &-type {
+        color: $default-tint;
+        font-size: 18px;
+        font-family: $source;
+        font-weight: 600;
+    }
+    
+    p {
+        font-size: 16px;
+        color: $grey-0;
+        line-height: 1.75;
+        margin: 20px 0;       
+    }
+    
+//
+//  &-line {
+//    @include transition(all .3s ease-out);
+//    border-top: .2rem solid $default-shade;
+//    display: block;
+//    width: 2rem;
+//  }
 }

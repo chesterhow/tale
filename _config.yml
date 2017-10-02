@@ -26,9 +26,6 @@ version:        3.4.1
 github:
   repo:         https://github.com/iamleejihye/work
 
-first_title: work
-second_title: About
-
 # Gems
 plugins:
   - jekyll-paginate

@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: article
 title: "Pagination Post"
-type: "iOS, Android"
 author: "Chester"
 ---
 
