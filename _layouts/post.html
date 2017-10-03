@@ -4,17 +4,21 @@ layout: default
 
 <div class="post">
   <div class="post-info">
+      <div class="catalogue-type">
+          {{ page.type }}
+      </div>
+<!--
     <span>Written by&nbsp;</span>{{ page.author }}
 
     {% if page.date %}
       <br>
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
+-->
   </div>
 
   <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
-
+    
   {{ content }}
 
 </div>
