@@ -1,11 +1,10 @@
 .post {
-  padding: 3rem 0;
+  padding-bottom: 64px;
 
   &-info {
     color: $default-tint;
     font-family: $source;
     letter-spacing: .5px;
-    text-align: center;
 
     span {
       font-style: italic;
@@ -14,16 +13,11 @@
 
   &-title {
     color: $default-shade;
-    font-size: 4rem;
-    margin: 1rem 0;
-    text-align: center;
-  }
-
-  &-line {
-    border-top: .4rem solid $default-shade;
-    display: block;
-    margin: 0 auto 3rem;
-    width: 4rem;
+    font-size: 28px;
+    font-family: $serif;
+    font-weight: 700;
+    margin: 16px 0;
+    line-height: 1.5;
   }
 
   p {
