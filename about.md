@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "About"
-author: "Chester"
+title: "Jihye Leee"
+author: "Jihye Lee"
 permalink: /about/
 ---
 
