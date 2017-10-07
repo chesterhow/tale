@@ -31,7 +31,7 @@ To test your site locally, run this in your site's root directory
 $ jekyll serve --watch
 ```
 
-Head to http://localhost:4000 to see your site in action.
+Head to http://localhost:4000/tale/ to see your site in action.
 
 ## Contributing
 Found a bug or have a suggestion? Feel free to create an issue or make a pull request!
