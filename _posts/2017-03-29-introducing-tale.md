@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Introducing Tale"
-author: "Chester"
+title:  "Tiny Goal - 작디 작은 목표 세우기"
+author: "Jihye Lee"
+type: "Android"
 ---
 
 Tale is minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.
