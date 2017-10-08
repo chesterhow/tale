@@ -10,24 +10,40 @@
       font-style: italic;
     }
   }
-    
-  &-title {
-    color: $default-shade;
-    font-size: 28px;
-    font-family: $serif;
-    font-weight: 700;
-    margin: 16px 0;
-    line-height: 1.5;
-  }
 
   p {
-    font-size: 16px;
-    line-height: 1.75;  
+    font-size: 18px;
+    line-height: 1.65;
     margin: 0 0 1rem;
-    text-align: justify;
+      word-wrap: break-word;
+      font-family: $serif;
+      font-weight: 400;
   }
 
   a:hover {
     text-decoration: underline;
   }
+    
+    h1 { 
+        padding: 28px 0 16px 0;
+        font-weight: 500;
+    }
+    
+    h1.post-title {
+        padding: 0;
+        font-weight: 600;
+        color: $default-shade;
+        font-size: 34px;
+        font-family: $serif;
+        line-height: 1.5;
+        padding: 16px 0 6px 0;
+    }
+    
+    h2.post-subtitle {
+        padding: 4px 0 120px 0;
+        font-weight: 400;
+        font-size: 22px;
+        color: $grey-1;
+    }
+    
 }
