@@ -30,8 +30,16 @@ h4,
 h5,
 h6 {
   color: $default-shade;
-  font-family: $source;
   line-height: normal;
+    margin: 0;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 a {
