@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Introducing Tale"
-author: "Chester"
+title:  "한글 테스트 "
+author: "Chester한글 "
 ---
 
-Tale is minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.
+한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 한글 테스트 
 
-## Tale features
-- Compatible with GitHub Pages
-- Responsive design (looks just as good on mobile)
-- Syntax highlighting, with the help of Pygments
-- Markdown and HTML text formatting
+## Tale features 한글 테스트 
+- Compatible with GitHub Pages 한글 테스트 
+- Responsive design (looks just as good on mobile)한글 테스트 
+- Syntax highlighting, with the help of Pygments 한글 테스트 한글 테스트 
+- Markdown and HTML text formatting한글 테스트 
 - Pagination of posts
 
 Head over to the [Example Content]({{ site.baseurl }}/2017-03-16/example-content) post for a showcase of Tale's text formatting features.
