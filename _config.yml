@@ -2,9 +2,9 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          test
+title:          blog
 paginate:       5
-baseurl:        "/test"
+baseurl:        "/blog"
 url:            "https://crazyjamy.github.io"
 
 # Assets
@@ -24,7 +24,7 @@ author:
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/crazyjamy/test
+  repo:         https://github.com/crazyjamy/blog
 
 # Gems
 gems:
