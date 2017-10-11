@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Introducing Tale"
-author: "Chester"
+title:  "한글 테스트 "
+author: "Chester한글 "
 ---
 
-Tale is minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.
+한글 테스트 
 
 ## Tale features
 - Compatible with GitHub Pages
