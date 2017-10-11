@@ -2,7 +2,7 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Tale
+title:          test
 paginate:       5
 baseurl:        "/test"
 url:            "https://crazyjamy.github.io"
