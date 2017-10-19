@@ -15,6 +15,7 @@ section.explanation {
         word-wrap: normal;
         margin: 10px 0 0 0;
     }
+    
     p.body {
         font-size: 16px;
         color: $grey-0;
@@ -22,6 +23,31 @@ section.explanation {
         margin: 20px 0 64px 0;
     }
     
+    .underline {
+        display: inline-block;
+        border-bottom: 4px solid $grey-2;
+        cursor: pointer;
+    }
+
+    .underline:after {
+      display: block;
+      content: '';
+      border-bottom: 4px solid #1f8ce6;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+    }
+
+    .underline:hover {
+      color: #1f8ce6;
+    }
+    
+    .underline:hover:after {
+      transform: scaleX(1);
+    }
+    
+    .fromLeft:after{
+      transform-origin:  0% 50%;
+    }
 }
 
 p.second_label {
@@ -72,10 +98,6 @@ p.second_label {
     .workplace:first-child {
         border-top: 1px solid $grey-2;
     }
-}
-
-.underline {
-    border-bottom: 4px solid #d9e0e7;
 }
 
 section.skill {
