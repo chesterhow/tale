@@ -29,3 +29,8 @@ github:
 # Gems
 plugins:
   - jekyll-paginate
+  
+category-list: [ridi, codi, quoin, story]
+
+gems:
+- jekyll-gist

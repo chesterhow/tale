@@ -42,7 +42,7 @@ section.explanation {
     
     .underline-mask {
         content: '';
-        background-color: $ridi-blue;
+        background-color: $ridi-skyblue;
         transform: scaleX(0);
         transform-origin: 0% 0%;
         transition: transform 300ms ease-in-out;
@@ -57,7 +57,8 @@ section.explanation {
     .transition {
         transition: all 0.2s ease-in-out;
     }
-
+    
+}
 p.second_label {
     margin: 60px 0 20px 0;
     font-family: $source;

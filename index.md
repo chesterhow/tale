@@ -1,7 +1,7 @@
 ---
+Time-stamp: <2015-07-26 11:29:11 ()>
 layout: default
-title: Jihye Leee
-permalink: /intro/
+title: "Work"
 ---
 
 <section class="explanation">
@@ -20,7 +20,7 @@ permalink: /intro/
     <p class="second_label">I've worked for</p>
     <ul>
         <li class="workplace">
-            <a href="resources/">
+            <a href="ridi/">
                 <p class="workplace_name">
                     RIDI
                 </p>
@@ -72,3 +72,5 @@ permalink: /intro/
         <li class="skill_name">Copywriting</li>
     </ul>
 </section>
+
+
