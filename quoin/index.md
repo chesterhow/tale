@@ -5,7 +5,7 @@ title: "RIDI"
 
 <div class="catalogue">
 {% for page in site.pages %}
-{% if page.ridi == true %}
+{% if page.quoin == true %}
 <a href="{{ page.url | prepend: site.baseurl }}" class="catalogue-item">
     <div>
         <!--

@@ -19,7 +19,9 @@ markdown:       kramdown
 author:
   name:         Jihye Leee
   url:          http://jihyeleee.com/
-  email:        iam.leejihye@gmail.com
+  email:        iam.leejihye@gmail.com  
+  github: iamleejihye
+  twitter: playpingpong
 
 # Custom vars
 version:        3.4.1
@@ -29,8 +31,8 @@ github:
 # Gems
 plugins:
   - jekyll-paginate
-  
-category-list: [ridi, codi, quoin, story]
 
 gems:
 - jekyll-gist
+
+category-list: [ridi, codi, quoin, blog]

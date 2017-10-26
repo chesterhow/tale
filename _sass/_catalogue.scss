@@ -11,7 +11,8 @@
     }
 
     &:last-child {
-      border: 0;
+        border: 0;
+        margin-bottom: 40px;
     }
   }
 
@@ -45,12 +46,5 @@
         line-height: 1.75;
         margin: 20px 0;       
     }
-    
-//
-//  &-line {
-//    @include transition(all .3s ease-out);
-//    border-top: .2rem solid $default-shade;
-//    display: block;
-//    width: 2rem;
-//  }
+
 }
