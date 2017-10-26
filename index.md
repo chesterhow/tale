@@ -1,5 +1,4 @@
 ---
-Time-stamp: <2015-07-26 11:29:11 ()>
 layout: default
 title: "Work"
 ---
@@ -32,7 +31,7 @@ title: "Work"
             </a>
         </li>
         <li class="workplace">
-            <a href="http://jihyeleee.com">
+            <a href="codi/">
                 <p class="workplace_name">
                     코딩하는 디자이너
                 </p>
@@ -44,7 +43,7 @@ title: "Work"
             </a>    
         </li>
         <li class="workplace">
-            <a href="http://jihyeleee.com">
+            <a href="quoin/">
                 <p class="workplace_name">
                     QUOIN
                 </p>

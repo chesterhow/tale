@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "'책 읽기' 탭 제거"
+title:  "헤헤헤"
 subtitle: "'책 읽기'탭을 제거하게 된 이유"
 type: "iOS, Android"
+categories: [work,ridi]
+blog: true
 author: "Jihye Leee"
-categories: [work-ridi]
 ---
 
 '책 읽기' 탭은 최근 읽은 책 3권, 최근 구매한 책 3권을 볼 수 있는 페이지이다. '최근 읽은 책', '최근 구매한 책' 전체보기 시, 최대 10권까지 볼 수 있다. '최근 구매한 책' 하단에는 '숨기기'와 '동기화' 버튼이 있다. '숨기기'는 최근 구매한 책을 보여주고 싶지 않은 사용자를 위한 기능이다. '동기화' 버튼은 구매 목록 새로 고침이라고 볼 수 있다.
