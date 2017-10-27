@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Android 디자인에 필요한 잡다한 지식"
-subtitle: "우리나라에서 사용률이 제일 높은 Android와 친해지기"
-type: "UI Design"
+title:  "Tiny Goal"
+subtitle: "매일 실천할 수 있는 작은 목표 세우기"
 side-projects: true
 author: "Jihye Leee"
 ---

@@ -1,9 +1,7 @@
 ---
 layout: post
-title:  "'책 읽기' 탭 제거"
-subtitle: "'책 읽기'탭을 제거하게 된 이유"
-type: "iOS, Android"
-categories: [work,ridi]
+title:  "Pomodoro"
+subtitle: "효율적인 업무를 도와주는 마법의 시계"
 side-projects: true
 author: "Jihye Leee"
 ---

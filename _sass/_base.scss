@@ -12,11 +12,7 @@ body {
 
 html {
   font-family: $serif, $source;
-  font-size: 14px;
-
-  @media (min-width: 600px) {
-    font-size: 18px;
-  }
+  font-size: 18px;
 }
 
 body {
