@@ -3,7 +3,7 @@ layout: post
 title:  "Android 디자인에 필요한 잡다한 지식"
 subtitle: "우리나라에서 사용률이 제일 높은 Android와 친해지기"
 type: "UI Design"
-blog: true
+side-projects: true
 author: "Jihye Leee"
 ---
 

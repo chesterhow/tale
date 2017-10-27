@@ -2,7 +2,7 @@
     <p class="second_label">I've worked for</p>
     <ul>
         {% for work in site.data.works %}
-        <li class="workplace">
+        <li class="workplace transition">
             <a href="ridi/">
                 <p class="workplace_name">
                     {{ work.name }}
@@ -18,6 +18,40 @@
                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><title>Artboard 1</title><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
             </a>
         </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="resume">
+    <p class="second_label">
+        Side Projects
+    </p>
+    <ul>
+        {% for side-project in site.data.side-projects %}
+        <li class="workplace transition">
+            <a href="side-projects/">
+                <p class="workplace_name">
+                    {{ side-project.name }}
+                </p>
+                <div class="work_info">
+                    <p class="work_date">
+                        {{ side-project.subtitle }}
+                    </p>
+                </div>
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><title>Artboard 1</title><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="skill">
+    <p class="second_label">Available My Skill & Role</p>
+    <ul>
+        {% for skill-role in site.data.skill-roles %}
+            <li class="skill_name">
+                {{ skill-role.name }}
+            </li>
         {% endfor %}
     </ul>
 </section>
