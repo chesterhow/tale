@@ -27,20 +27,22 @@
         Side Projects
     </p>
     <ul>
-        {% for side-project in site.data.side-projects %}
+        {% for page in site.pages %}
+        {% if page.side-projects == true %}
         <li class="workplace transition">
-            <a href="side-projects/">
+            <a href="{{ page.url | prepend: site.baseurl }}">
                 <p class="workplace_name">
-                    {{ side-project.name }}
+                    {{ page.title }}
                 </p>
                 <div class="work_info">
                     <p class="work_date">
-                        {{ side-project.subtitle }}
+                        {{ page.subtitle }}
                     </p>
                 </div>
                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><title>Artboard 1</title><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
             </a>
         </li>
+        {% endif %}
         {% endfor %}
     </ul>
 </section>
