@@ -9,13 +9,13 @@
         <div class="nav-container">
             <ul>
                 <li>
-                    <a href="{{ '' | prepend: site.baseurl }}/" {% if current[1] == "about" %} class="normal"{% endif %} class="active">Work</a>
+                    <a href="{{ '' | prepend: site.baseurl }}/" {% if current[1] == "about" or current[1] == "blog" %} class="normal" {% endif %} class="active">Work</a>
+                </li>
+                <li>
+                    <a href="{{ '/blog' | prepend: site.baseurl }}" {% if current[1] == "blog" %} class="active"{% endif %} >Blog</a>
                 </li>
                 <li>
                     <a href="{{ '/about' | prepend: site.baseurl }}" {% if current[1] == "about" %} class="active"{% endif %}>About</a>
-                </li>
-                <li>
-                    <a href="blog/">Blog</a>
                 </li>
             </ul>
         </div>
