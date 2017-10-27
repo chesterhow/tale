@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Work"
+title: "Jihye Leee"
 ---
 
 <section class="explanation">

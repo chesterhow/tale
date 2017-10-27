@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "RIDI"
+title: "Blog"
 ---
 
 <div class="catalogue">
 {% for page in site.pages %}
 {% if page.blog == true %}
-<a href="{{ page.url }}" class="catalogue-item">
+<a href="{{ page.url | prepend: site.baseurl }}" class="catalogue-item">
     <div>
         <!--
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
