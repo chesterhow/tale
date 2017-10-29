@@ -5,14 +5,18 @@
 
 html,
 body {
-  color: $default-color;
+  color: $grey-0;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-family: $serif, $source;
-  font-size: 18px;
+  font-size: 16px;
+
+  @media (min-width: 600px) {
+    font-size: 18px;
+  }    
 }
 
 body {
@@ -25,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $default-shade;
+//  color: $default-shade;
   line-height: normal;
     margin: 0;
 }
@@ -39,8 +43,8 @@ h2 {
 }
 
 a {
-  color: $blue;
-  text-decoration: none;
+  color: $grey-0;
+    text-decoration: none;
 }
 
 blockquote {

@@ -1,6 +1,9 @@
 ---
 layout: default
-title: "RIDI"
+work: true
+title: 'QUOIN'
+info: 'GUI Designer'
+date: '2014. MAR - 2015. MAR'
 ---
 
 <div class="catalogue">

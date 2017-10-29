@@ -5,7 +5,6 @@ p, h2 {
 }
 
 // color 정의
-$default-color: #10171f;
 $default-shade: #10171f;
 $default-tint: #8898aa;
 $grey-0: #333e4c;
@@ -14,16 +13,16 @@ $grey-2: #D8E0E7;
 $grey-2-70: rgba(216, 224, 231, .7);
 $grey-3: #f6f9fc;
 $white: #fff;
-$blue: #4a9ae1;
 $shadow-color: rgba(0, 0, 0, .2);
 $ridi-blue: #1f8ce6;
 $ridi-skyblue: #66baff;
+$purple: #8565fc;
 
 // media
 $break-small: 500px;
 
 // font-family 정의
-$serif: 'APPLE SD Gothic NEO', 'Spoqa Han Sans', Sans-serif;
+$serif: "Roboto", HelveticaNeue, Helvetica, "APPLE SD Gothic Neo", 'Spoqa Han Sans', "NanumGothic", "맑은 고딕", "Malgun Gothic", arial, sans-serif;
 $source: 'Source Sans Pro', sans-serif;
 
 $monospaced-font: Menlo, Monaco, monospace;
