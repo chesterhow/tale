@@ -4,6 +4,7 @@ work: true
 title: 'RIDI'
 info: 'UI Designer in RIDIBOOKS Viewer Team'
 date: '2015. JUN - Present'
+time: 2015-06-01
 ---
 
 <div class="catalogue">
