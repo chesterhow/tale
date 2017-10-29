@@ -1,6 +1,6 @@
 ---
 layout: default
-time: 2018-04-20
+time: 2014-03-24
 work: true
 title: '코딩하는 디자이너'
 info: 'Co-founder, Branding · UI Designer'

@@ -4,6 +4,7 @@ work: true
 title: 'QUOIN'
 info: 'GUI Designer'
 date: '2014. MAR - 2015. MAR'
+time: 2014-03-05
 ---
 
 <div class="catalogue">
