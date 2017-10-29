@@ -8,30 +8,26 @@
     
     @media (max-width: $break-small) {
         min-height: 200px;
-  }       
+    }  
 }
 
 .post {
   padding-bottom: 64px;
 
-    span {
-      font-style: italic;
-    }
-
-
-  p {
-    line-height: 1.65;
-    margin: 0 0 1rem;
-      word-wrap: break-word;
-      font-family: $serif;
-      font-weight: 400;
+    p {
+        line-height: 1.65;
+        margin: 0 0 1rem;
+        word-wrap: break-word;
+        font-family: $san-serif;
+        font-weight: 400;
       
-      sup {
-          a.footnote {
-              background: none;
-              color: $purple;
-          }
-      }
+    sup {
+        a.footnote {
+            background: none;
+            color: $purple;
+        }
+    }
+           
   }
     
     a {
@@ -42,30 +38,65 @@
     background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient($purple, $purple);
     }
     
-  a:hover {
-    color: $purple;
-    text-decoration-color: $purple;
-  }
+    a:hover {
+        color: $purple;
+        text-decoration-color: $purple;
+    }
     
     h1 { 
         padding: 28px 0 16px 0;
         font-weight: 500;
+        font-size: 25px;
     }
     
-    h1.post-title {
-        padding: 0;
-        font-weight: 600;
-        font-size: 34px;
-        font-family: $serif;
-        line-height: 1.5;
-        padding: 16px 0 6px 0;
-    }
-    
-    h2.post-subtitle {
-        padding: 4px 0 120px 0;
-        font-weight: 400;
+    h2 {
+        padding: 28px 0 16px 0;
+        font-weight: 500;
         font-size: 22px;
-        color: $grey-1;
+    } 
+    
+    ul {
+        li {
+            list-style: disc;
+            padding: 4px 0;
+        }
     }
     
+}
+
+.post-type {
+    color: $default-tint;
+    font-size: 18px;
+    font-family: $source;
+    font-weight: 600;
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.post-info>h1.post-title {
+    padding: 0 0 12px 0;
+    font-weight: 700;
+    font-size: 34px;
+    font-family: $san-serif;
+    line-height: 1.2;
+    
+    @media (max-width: $break-small) {
+        font-size: 28px;
+    }
+}
+    
+.post-info>h2.post-subtitle {
+    padding: 0 0 140px 0;
+    font-weight: 400;
+    font-size: 22px;
+    color: $grey-1;
+    line-height: 1.5;
+
+    @media (max-width: $break-small) {
+        font-size: 20px;
+    }        
+}
+
+.post>div.footnotes>ol {
+    padding: 0;
 }

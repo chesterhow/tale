@@ -24,7 +24,7 @@
   &-title {
     color: $default-shade;
     display: block;
-    font-family: $serif;
+    font-family: $san-serif;
     font-size: 28px;
     font-weight: 700;
     margin: 16px 0;
@@ -43,7 +43,12 @@
         font-size: 18px;
         color: $grey-0;
         line-height: 1.75;
-        margin: 20px 0;       
+        margin: 20px 0;
+        
+        @media (max-width: $break-small) {
+            font-size: 16px;
+        }
+        
     }
 
 }
