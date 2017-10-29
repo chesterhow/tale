@@ -5,13 +5,12 @@
   text-align: center;
 
   span {
-    color: $default-shade;
+//    color: $default-shade;
     font-size: 1.1rem;
   }
 
   .top {
     @include transition(all .3s ease-out);
-    color: $default-color;
     font-size: 1.1rem;
     opacity: .6;
 
@@ -22,7 +21,7 @@
 
   .arrow {
     @include transition(all .3s ease-out);
-    color: $default-color;
+    color: $grey-0;
     position: absolute;
 
     &:hover,

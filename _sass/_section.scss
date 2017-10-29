@@ -1,3 +1,10 @@
+.intro-animation {
+    animation-name: moving;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+
 section.explanation {
     h1.intro {
         font-family: $source, $serif;

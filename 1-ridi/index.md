@@ -1,11 +1,14 @@
 ---
 layout: default
-title: "A Designer to code"
+work: true
+title: 'RIDI'
+info: 'UI Designer in RIDIBOOKS Viewer Team'
+date: '2015. JUN - Present'
 ---
 
 <div class="catalogue">
 {% for page in site.pages %}
-{% if page.codi == true %}
+{% if page.ridi == true %}
 <a href="{{ page.url | prepend: site.baseurl }}" class="catalogue-item">
     <div>
         <!--

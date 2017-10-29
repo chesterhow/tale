@@ -3,7 +3,6 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Jihye Leee
-paginate:       5
 baseurl:        "/work"
 url:            "http://jihyeleee.com"
 
@@ -29,8 +28,6 @@ github:
   repo:         https://github.com/iamleejihye/work
 
 # Gems
-plugins:
-  - jekyll-paginate
 
 gems:
 - jekyll-gist

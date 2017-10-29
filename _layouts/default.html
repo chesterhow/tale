@@ -8,19 +8,22 @@
       <nav class="nav">
         <div class="nav-container">
             <ul>
-                <li>
+                <li class="transition">
                     <a href="{{ '' | prepend: site.baseurl }}/" {% if current[1] == "about" or current[1] == "blog" %} class="normal" {% endif %} class="active">Work</a>
                 </li>
-                <li>
+                <li class="transition">
                     <a href="{{ '/blog' | prepend: site.baseurl }}" {% if current[1] == "blog" %} class="active"{% endif %} >Blog</a>
                 </li>
-                <li>
-                    <a href="{{ '/about' | prepend: site.baseurl }}" {% if current[1] == "about" %} class="active"{% endif %}>About</a>
+                <li class="transition">
+                    <a href="{{ '/about' | prepend: site.baseurl }}" {% if current[1] == "about" %} class="active"{% endif %} >About</a>
                 </li>
             </ul>
         </div>
       </nav>
-
+    
+    {% if page.header == true %}
+    {% include post-header.html %}
+    {% endif %}
     <main>
       {{ content }}
     </main>
@@ -91,9 +94,10 @@
                 </div>
             </div> 
             <div class="copyright">
-                <span>
+<!--                <p>This site built by Jekyll & Github Pages</p>-->
+                <p>
                  &copy; {{ site.author.name }}. <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time>
-                </span>
+                </p>
             </div>    
         </div>
     </footer>

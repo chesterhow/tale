@@ -5,6 +5,8 @@ subtitle: "우리나라에서 사용률이 제일 높은 Android와 친해지기
 type: "UI Design"
 blog: true
 author: "Jihye Leee"
+header: true
+header-img: "img/sketch-to-code-blogheader.png"
 ---
 
 대부분 iOS 기기를 쓰는 UI 디자이너들이 많습니다. 저 또한 스마트폰으로 iPhone을 쓰고 있습니다. 그렇다보니 Android 디자인 시 버전이 iOS 버전보다는 낯설게 느껴질 때가 많습니다. 알파벳 순에 따라 디저트 이름[^1]으로 버전이 나오는구나 정도 아시는 분들도 많으리라 생각합니다.
@@ -13,39 +15,23 @@ author: "Jihye Leee"
 
 # SDK 버전을 디저트 이름과 API 숫자도 함께 알고 있자.
 
-API 9: Android 2.3 (Gingerbread)
-
-API 10: Android 2.3.3 (Gingerbread)
-
-API 11: Android 3.0 (Honeycomb)
-
-API 12: Android 3.1 (Honeycomb)
-
-API 13: Android 3.2 (Honeycomb)
-
-API 14: Android 4.0 (IceCreamSandwich)
-
-API 15: Android 4.0.3 (IceCreamSandwich)
-
-API 16: Android 4.1 (Jelly Bean)
-
-API 17: Android 4.2 (Jelly Bean)
-
-API 18: Android 4.3 (Jelly Bean)
-
-API 19: Android 4.4 (Jelly KitKat)
-
-API 21: Android 5.0 (Lollipop)
-
-API 22: Android 5.1 (Lollipop)
-
-API 23: Android 6.0 (Marshmallow)
-
-API 24: Android 7.0 (Nougat)
-
-API 25: Android 7.1 (Nougat)
-
-API 26: Android 8.0 (Oreo)
+- API 9: Android 2.3 (Gingerbread) 
+- API 10: Android 2.3.3 (Gingerbread)
+- API 11: Android 3.0 (Honeycomb)
+- API 12: Android 3.1 (Honeycomb)
+- API 13: Android 3.2 (Honeycomb)
+- API 14: Android 4.0 (IceCreamSandwich)
+- API 15: Android 4.0.3 (IceCreamSandwich)
+- API 16: Android 4.1 (Jelly Bean)
+- API 17: Android 4.2 (Jelly Bean)
+- API 18: Android 4.3 (Jelly Bean)
+- API 19: Android 4.4 (Jelly KitKat)
+- API 21: Android 5.0 (Lollipop)
+- API 22: Android 5.1 (Lollipop)
+- API 23: Android 6.0 (Marshmallow)
+- API 24: Android 7.0 (Nougat)
+- API 25: Android 7.1 (Nougat)
+- API 26: Android 8.0 (Oreo)
 
 (2017. 10. 27. 기준)
 

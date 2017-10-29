@@ -1,4 +1,4 @@
-p.second_label {
+p.second-label {
     margin: 80px 0 20px 0;
     font-family: $source;
     font-size: 18px;
@@ -7,10 +7,11 @@ p.second_label {
 }
 
 .resume {
+    
     .workplace {
         width: 100%;
         padding: 30px 0;
-        border-bottom: 1px solid $grey-2;
+        border-top: 1px solid $grey-2;
         
         .workplace_name {
             font-family: $serif;
@@ -48,15 +49,17 @@ p.second_label {
         cursor: pointer;
     }
     
-    .workplace:first-child {
-        border-top: 1px solid $grey-2;
+    .workplace:last-child {
+        border-bottom: 1px solid $grey-2;
     }
+    
 }
 
 section.skill {
     padding-bottom: 72px;
     
     li.skill_name {
+        display: inline-block;
         font-family: $source;
         padding: 4px 14px;
         border-radius: 100px;
@@ -64,4 +67,21 @@ section.skill {
         font-size: 16px;
         margin: 0 8px 14px 0;
     }
+}
+
+@keyframes moving {
+    from {
+        opacity: .3;
+//        margin-top: -10px;
+    }
+    to {
+        opacity: 1;
+//        margin-top: 0;
+    }
+}
+
+.resume-animation {
+    animation-name: moving;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
 }

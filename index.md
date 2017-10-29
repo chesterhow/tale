@@ -2,7 +2,7 @@
 layout: default
 title: "Jihye Leee"
 ---
-
+<div class="intro-animation">
 <section class="explanation">
     <h1 class="intro">
         I'm Jihye Leee,
@@ -19,5 +19,6 @@ title: "Jihye Leee"
     <h2 class="intro">
     ‘이지혜’ UI 디자이너입니다. 리디에서 일합니다.</h2>
 </section>
+</div>
 
 {% include resume.html %}
