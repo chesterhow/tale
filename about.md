@@ -3,6 +3,8 @@ layout: post
 title: "Jihye Leee"
 author: "Jihye Lee"
 permalink: /about/
+header: true
+header-img: img/about.png
 ---
 
 

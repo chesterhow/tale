@@ -4,7 +4,11 @@
     background-size: cover;
     width: 100%;
     min-height: 300px;
-//    position: absolute;
+    
+    @media (max-width: $break-small) {
+        min-height: 200px;
+  }   
+    
 }
 
 .post {
@@ -31,7 +35,6 @@
   }
     
     a {
-//        color: $grey-1;
     transition: all 0.2s ease-in-out;
     background-position: 0% 100%, 110% 90%, 0% 98%;
     background-repeat: no-repeat, no-repeat, repeat-x;
