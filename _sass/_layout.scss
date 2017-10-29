@@ -73,6 +73,7 @@ footer {
     border-bottom: 1px solid $grey-2;
     
     .footer_wrap {
+        font-style: normal;
         position: relative;
 
         .information {
@@ -85,7 +86,13 @@ footer {
 }
             .email {
                 font-size: 16px;
+                color: $default-tint;
             }
+            
+            a.email:hover {
+                opacity: .6;
+            }
+            
             .accounts {
                 margin-top: 36px;
                 a {
@@ -94,6 +101,9 @@ footer {
                         fill: $default-tint;
                         width: 20px;
                     }
+                }
+                a:hover {
+                    opacity: .6;
                 }
             }
         }

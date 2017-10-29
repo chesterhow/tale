@@ -4,11 +4,11 @@
     background-size: cover;
     width: 100%;
     min-height: 300px;
+    background-color: $grey-2;
     
     @media (max-width: $break-small) {
         min-height: 200px;
-  }   
-    
+  }       
 }
 
 .post {
