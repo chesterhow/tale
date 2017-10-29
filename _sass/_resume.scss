@@ -13,7 +13,7 @@ p.second-label {
         padding: 30px 0;
         border-top: 1px solid $grey-2;
         
-        .workplace_name {
+        .workplace-name {
             font-family: $serif;
             font-size: 20px;
             font-weight: 700;
@@ -27,10 +27,10 @@ p.second-label {
             
         }
 
-        .work_info {
+        .work-info {
             display: inline-block;
             
-            p.work_date {
+            p.work-sub-info {
                 color: $default-tint;
                 font-size: 16px;
                 font-family: $source;
@@ -72,15 +72,13 @@ section.skill {
 @keyframes moving {
     from {
         opacity: .3;
-//        margin-top: -10px;
     }
     to {
         opacity: 1;
-//        margin-top: 0;
     }
 }
 
-.resume-animation {
+.loading-animation {
     animation-name: moving;
     animation-duration: 0.6s;
     animation-timing-function: ease-in-out;

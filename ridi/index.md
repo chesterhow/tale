@@ -3,25 +3,18 @@ layout: default
 work: true
 title: 'RIDI'
 info: 'UI Designer in RIDIBOOKS Viewer Team'
-date: '2015. JUN - Present'
-time: 2015-06-01
+sub-info: '2015. JUN - Present'
+time: 2015-04-03
+order: 1
 ---
 
 <div class="catalogue">
-{% for page in site.pages %}
+{% assign sorted = site.pages | sort: 'order' %}
+{% for page in sorted %}
 {% if page.ridi == true %}
-<a href="{{ page.url | prepend: site.baseurl }}" class="catalogue-item">
-    <div>
-        <!--
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-        -->
-        <div class="catalogue-type">{{ page.type }}</div>
-        <h1 class="catalogue-title">{{ page.title }}</h1>
-        <p class="body">
-          {{ page.content | truncatewords: 30 | strip_html }}
-        </p>
-    </div>
-</a>
+
+     {% include post-list.html %}
+
 {% endif %}
 {% endfor %}
 </div>

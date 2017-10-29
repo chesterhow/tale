@@ -1,25 +1,13 @@
-<div class="resume-animation">
+<div class="loading-animation">
 <section class="resume">
     <p class="second-label">I've worked for</p>
     <ul>
-        {% for page in site.pages %}
-        {% if page.work == true %}
-        <li class="workplace transition">
-            <a href="{{ page.url | prepend: site.baseurl }}">
-                <p class="workplace_name">
-                        {{ page.title }}
-                </p>
-                <div class="work_info">
-                    <p>
-                        {{ page.info }}
-                    </p>
-                    <p class="work_date">
-                        {{ page.date }}
-                    </p>
-                </div>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><title>Artboard 1</title><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
-            </a>
-        </li>
+        {% assign sorted = site.pages | sort: 'order' %}
+        {% for page in sorted %}
+            {% if page.work == true %}
+
+                {% include project-list.html %}
+        
         {% endif %}
         {% endfor %}
     </ul>
@@ -30,22 +18,13 @@
         Side Projects
     </p>
     <ul>
-        {% for page in site.pages %}
-        {% if page.side-projects == true %}
-        <li class="workplace transition">
-            <a href="{{ page.url | prepend: site.baseurl }}">
-                <p class="workplace_name">
-                        {{ page.title }}
-                </p>
-                <div class="work_info">
-                    <p class="work_date">
-                        {{ page.subtitle }}
-                    </p>
-                </div>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><title>Artboard 1</title><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
-            </a>
-        </li>
-        {% endif %}
+        {% assign sorted = site.pages | sort: 'order' %}
+        {% for page in sorted %}
+            {% if page.side-projects == true %}
+        
+                {% include project-list.html %}
+        
+            {% endif %}
         {% endfor %}
     </ul>
 </section>

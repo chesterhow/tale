@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Tiny Goal"
-subtitle: "매일 실천할 수 있는 작은 목표 세우기"
+sub-info: "매일 실천할 수 있는 작은 목표 세우기"
 side-projects: true
 author: "Jihye Leee"
+order: 1
 ---
 
 대부분 iOS 기기를 쓰는 UI 디자이너들이 많습니다. 저 또한 스마트폰으로 iPhone을 쓰고 있습니다. 그렇다보니 Android 디자인 시 버전이 iOS 버전보다는 낯설게 느껴질 때가 많습니다. 알파벳 순에 따라 디저트 이름[^1]으로 버전이 나오는구나 정도 아시는 분들도 많으리라 생각합니다.
