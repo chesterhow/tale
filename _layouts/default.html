@@ -22,7 +22,7 @@
       </nav>
     
     {% if page.header == true %}
-    {% include post-header.html %}
+        {% include post-header.html %}
     {% endif %}
     <main>
       {{ content }}
@@ -95,9 +95,9 @@
             </div> 
             <div class="copyright">
 <!--                <p>This site built by Jekyll & Github Pages</p>-->
-                <p>
+                <span>
                  &copy; {{ site.author.name }}. <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time>
-                </p>
+                </span>
             </div>    
         </div>
     </footer>

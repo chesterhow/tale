@@ -6,12 +6,23 @@
 
 
 section.explanation {
+    padding-top: 40px;
+    
+    @media (max-width: $break-small) {
+        padding-top: 20px;
+    }
+    
     h1.intro {
         font-family: $source, $serif;
         font-size: 38px;
         font-weight: bold;
         line-height: 1.17;
         margin: 0;
+    
+        @media (max-width: $break-small) {
+        font-size: 32px;
+        }
+    
     }
     
     h2.intro {
@@ -21,6 +32,11 @@ section.explanation {
         line-height: 1.4;
         word-wrap: normal;
         margin: 20px 0 0 0;
+    
+        @media (max-width: $break-small) {
+        font-size: 24px;
+        }    
+        
     }
     
     p.body {

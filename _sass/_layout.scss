@@ -18,7 +18,7 @@ footer>.footer_wrap,
 
   &-container {
       margin: 0 auto;
-      padding-bottom: 50px;
+      padding-bottom: 10px;
       position: relative;
   }
 }
@@ -99,7 +99,6 @@ footer {
         }
         .copyright {
             float: right;
-            text-align: right;
             position: absolute;
             right: 0;
             bottom: 2px;
@@ -109,7 +108,7 @@ footer {
                 position: static;
                 margin-top: 6px;
             }
-            p {
+            span {
                 font-size: 16px;
             }
         }

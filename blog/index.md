@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Blog"
+header: true
+header-img: img/about.png
 ---
 
 <div class="catalogue">

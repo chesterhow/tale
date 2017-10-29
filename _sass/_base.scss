@@ -14,7 +14,7 @@ html {
   font-family: $serif, $source;
   font-size: 16px;
 
-  @media (min-width: 600px) {
+  @media (min-width: $break-small) {
     font-size: 18px;
   }    
 }
