@@ -88,15 +88,31 @@
     
     ul {
         li {
-            list-style: disc;
+            list-style: none;
             padding: 6px 0;
             margin-left: 20px;
             line-height: 1.65;
+            position: relative;
+        }
+        
+        li:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: $grey-5;
+            border-radius: 50%;
+            left: -22px;
+            top: 16px;
+            
+            @media (max-width: $break-small) {
+                top: 14px;
+            }
         }
         
         ul {
             li {
-                list-style: circle;
+                list-style: none;
                 margin-left: 20px;
             }
         }

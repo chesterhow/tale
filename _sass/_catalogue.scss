@@ -1,25 +1,18 @@
 .catalogue {
   &-item {
     border-bottom: 1px solid $grey-2;
-    display: inline-block;
+    display: block;
     padding: 20px 0;
-
-    &:hover .catalogue-line,
-    &:focus .catalogue-line {
-      width: 5rem;
-    }
 
     &:last-child {
         border: 0;
         margin-bottom: 40px;
     }
   }
-
-  &-time {
-    color: $default-tint;
-    font-family: $source;
-    letter-spacing: .5px;
-  }
+    
+    &-info {
+        display: inline-block;
+    }
 
   &-title {
     color: $default-shade;
@@ -27,7 +20,7 @@
     font-family: $san-serif;
     font-size: 28px;
     font-weight: 700;
-    margin: 16px 0;
+    margin: 16px 0 2px 0;
     line-height: 1.5;
   }
     
@@ -43,7 +36,7 @@
         font-size: 18px;
         color: $grey-0;
         line-height: 1.75;
-        margin: 20px 0;
+        margin: 0 0 10px 0;
         
         @media (max-width: $break-small) {
             font-size: 16px;
