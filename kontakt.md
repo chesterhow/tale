@@ -4,6 +4,7 @@ title: "Kontakt"
 author: "Justyna"
 permalink: /kontakt/
 ---
+
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr>
      <td width="50%">
