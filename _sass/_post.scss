@@ -139,4 +139,18 @@
 
 .post>div.footnotes>ol {
     padding: 0;
+    margin-left: 6px;
+    font-size: 16px;
+    color: $grey-1;
+    li {
+        p {
+            a.reversefootnote {
+                background: none;
+                color: $purple;
+            }
+            a:hover {
+                opacity: .6;
+            }
+        }
+    }
 }

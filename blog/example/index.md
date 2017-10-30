@@ -49,9 +49,10 @@ order: 3
 
 - 시간과 공간의 제약이 없는 곳에서 오프라인 서점과 같이 책을 탐색할 수 있다면 더는 전자책을 사는 사람은 없을 겁니다. [^1]
 
-  [^1]: 후후후
+  [^1]: Smart Cover를 열고 닫아도 iPad가 깨우기 또는 잠자기 상태로 전환되지 않는 경우 설정 > 디스플레이 및 밝기로 이동하여 '잠금/잠금 해제'를 켭니다.
+  [^2]: iPad Air, iPad Air 2, iPad (5th generation)용 iPad Smart Cover는 iPad 2, iPad (3rd generation) 및 iPad (4th generation)용 iPad Smart Cover와 다릅니다.
 
-- <sub>Subscript</sub>
+- <sub>Subscript[^2]</sub>
 
 - Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>
 
@@ -117,5 +118,3 @@ Use `<hr>` for horizontal rules
 and `<br>` for line breaks.
 
 <br>
-
-_The end_
