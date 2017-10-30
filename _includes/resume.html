@@ -1,6 +1,8 @@
 <div class="loading-animation">
 <section class="resume">
-    <p class="second-label">I've worked for</p>
+    <p class="second-label">
+        I've worked for
+    </p>
     <ul>
         {% assign sorted = site.pages | sort: 'order' %}
         {% for page in sorted %}
@@ -30,7 +32,9 @@
 </section>
 
 <section class="skill">
-    <p class="second-label">Available My Skill & Role</p>
+    <p class="second-label">
+        Available My Skill & Role
+    </p>
     <ul>
         {% for skill-role in site.data.skill-roles %}
             <li class="skill_name">

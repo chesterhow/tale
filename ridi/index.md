@@ -2,7 +2,7 @@
 layout: default
 work: true
 title: 'RIDI'
-info: 'UI Designer in RIDIBOOKS Viewer Team'
+info: 'UI Designer'
 sub-info: '2015. JUN - Present'
 time: 2015-04-03
 order: 1

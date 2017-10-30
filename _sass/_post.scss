@@ -16,7 +16,7 @@
 
     p {
         line-height: 1.65;
-        margin: 0 0 1rem;
+        margin: 0 0 1.6rem;
         word-wrap: break-word;
         font-family: $san-serif;
         font-weight: 400;
@@ -44,16 +44,35 @@
     }
     
     h1 { 
-        padding: 28px 0 16px 0;
-        font-weight: 500;
-        font-size: 25px;
+        padding: 12px 0 16px 0;
+        font-weight: 600;
+        font-size: 26px;
     }
     
     h2 {
-        padding: 28px 0 16px 0;
-        font-weight: 500;
-        font-size: 22px;
-    } 
+        padding: 10px 0 12px 0;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    
+    h3 {
+        padding: 8px 0 10px 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    h4, h5, h6 {
+        padding: 0 0 8px 0;
+    }
+    
+    h5 {
+        font-size: 17px;
+    }
+    
+    h6 {
+        font-size: 15px;
+        color: $grey-1;
+    }
     
     ul {
         li {
