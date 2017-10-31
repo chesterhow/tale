@@ -5,7 +5,7 @@ permalink:      /:year-:month-:day/:title
 title:          Tale
 paginate:       5
 baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+url:            "https://justyna1adam.github.io"
 
 # Assets
 sass:
@@ -24,7 +24,7 @@ author:
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/chesterhow/tale
+  repo:         https://github.com/justyna1adam/tale
 
 # Gems
 gems:
