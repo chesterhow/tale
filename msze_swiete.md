@@ -4,7 +4,7 @@ title: "Msze Święte"
 author: "Justyna"
 permalink: /msze_swiete/
 ---
-Strona w budowie, podane dane nie są zgodne ze stanem faktycznym
+Strona w budowie, podane dane nie są zgodne ze stanem faktycznym!
 
   
   <table width="100%" cellspacing="0" cellpadding="0">
@@ -30,7 +30,7 @@ Strona w budowie, podane dane nie są zgodne ze stanem faktycznym
 <ul>
 <li>10:30</li>
 </ul>
-<h6> <a href="https://goo.gl/maps/Mfgi4uaP7ro">Dojazd do kaplicy</a></h6>
+<h4> <a href="https://goo.gl/maps/Mfgi4uaP7ro">Dojazd do kaplicy</a></h4>
   </center>
      </td>
 </tr>
