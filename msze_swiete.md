@@ -5,7 +5,7 @@ author: "Justyna"
 permalink: /msze_swiete/
 ---
 
-<center> <h1> Secemin</h1>
+<center> <u><h1> Secemin</h1></u>
   <h4>Niedziele i Święta</h4>
 <ul>
 <li>10:00</li>
