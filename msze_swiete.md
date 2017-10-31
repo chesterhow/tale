@@ -13,7 +13,7 @@ Strona w budowie, podane dane nie są zgodne ze stanem faktycznym
 <li> 13:00</li>
 </ul>
 
-</i><h4> Dni powszednie</h4></i>
+<i><h4> Dni powszednie</h4></i>
 <ul>
 <li>10:00</li>
 <li> 18:00</li>
