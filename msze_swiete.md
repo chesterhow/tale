@@ -5,8 +5,8 @@ author: "Justyna"
 permalink: /msze_swiete/
 ---
 
-<center> <b> Secemin<b><br>
-<i> Niedziele i Święta </i> <br>
+<center> <h1><b> Secemin<b></h1><br>
+  <h3><i> Niedziele i Święta </i></h3> <br>
 <ul>
 <li>10:00</li>
 <li> 12:00</li>
@@ -19,11 +19,12 @@ permalink: /msze_swiete/
 <li> 18:00</li>
 </ul>
 
-<b> Bichniów<b><br>
-<i> Niedziele i Święta </i> <br>
+<h1><b> Bichniów<b></h1><br>
+  <h3><i> Niedziele i Święta </i></h3> <br>
 <ul>
 <li>10:30</li>
 </ul>
+  </center>
 
 
 
