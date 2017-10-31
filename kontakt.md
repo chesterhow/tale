@@ -12,11 +12,11 @@ permalink: /kontakt/
  
      </td>
      <td width="50%">
-                 <b>  Adres:</b> <br>
+   <center><b>  Adres:</b> <br>
    ul. Kościelna 2 <br>
    29-145 Secemin <br>
     <b>tel.</b> 34-355-60-10<br>
-    <b>wik.</b> 34-355-61-65
+    <b>wik.</b> 34-355-61-65 </center>
      </td>
 </tr>
 </table>
