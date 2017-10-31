@@ -26,6 +26,7 @@ Strona w budowie, podane dane nie są zgodne ze stanem faktycznym
      </td>
      <td width="50%">
    <center><u><h1>Bichniów</h1></u>
+     <h6> <a href="https://goo.gl/maps/Mfgi4uaP7ro">Dojazd</a>
   <i><h4>Niedziele i Święta</h4></i>
 <ul>
 <li>10:30</li>
