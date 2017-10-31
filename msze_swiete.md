@@ -30,7 +30,7 @@ Strona w budowie, podane dane nie są zgodne ze stanem faktycznym!
 <ul>
 <li>10:30</li>
 </ul>
-<h4> <a href="https://goo.gl/maps/Mfgi4uaP7ro">Dojazd do kaplicy</a></h4>
+<h4> <a href="https://goo.gl/maps/LJid29AeSeT2">Dojazd do kaplicy</a></h4>
   </center>
      </td>
 </tr>
