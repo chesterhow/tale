@@ -4,23 +4,23 @@ title: "Msze Święte"
 author: "Justyna"
 permalink: /msze_swiete/
 ---
-
+Strona w budowie, podane dane nie są zgodne ze stanem faktycznym
 <center> <u><h1> Secemin</h1></u>
-  <h4>Niedziele i Święta</h4>
+  <i><h4>Niedziele i Święta</h4></i>
 <ul>
 <li>10:00</li>
 <li> 12:00</li>
 <li> 13:00</li>
 </ul>
 
-<h4> Dni powszednie</h4>
+</i><h4> Dni powszednie</h4></i>
 <ul>
 <li>10:00</li>
 <li> 18:00</li>
 </ul>
 
-<h1>Bichniów</h1>
-  <h4>Niedziele i Święta</h4>
+<u><h1>Bichniów</h1></u>
+  <i><h4>Niedziele i Święta</h4></i>
 <ul>
 <li>10:30</li>
 </ul>
