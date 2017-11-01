@@ -54,6 +54,10 @@ section.explanation {
     a {
         cursor: pointer;
         color: $ridi-blue;
+        
+        @media (max-width: $break-small) {
+            color: $grey-0;
+        }
     }
     
     .underline,
@@ -70,12 +74,18 @@ section.explanation {
         transform: scaleX(0);
 //        transform-origin: 0% 0%;
         transition: transform 300ms ease-in-out;
+        @media (max-width: $break-small) {
+            transform: none;
+        }
     }
     
     .intro-link:hover
     .underline-mask {
         transform: scaleX(1);
 //        transform-origin: 0% 0%;
+        @media (max-width: $break-small) {
+            transform: none;
+        }
     }
     
 }
