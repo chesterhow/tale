@@ -2,7 +2,7 @@
 layout: post
 category: ogloszenia
 title: 'ogloszenia w tym tygodniu'
-Author: Justyna
+author: Justyna
 ---
 
 Post ogloszen
