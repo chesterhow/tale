@@ -12,9 +12,9 @@ header-img: img/about.jpg
 
 개인적으로 책 읽기를 좋아합니다. 아무말로 대충 버무린 글쓰기도 좋아합니다. 여행기를 쓰기도 하고 서평, 에세이를 쓰기도 합니다. 서울에 살지만 가늘고 길게 영어 공부를 계속하고 있습니다. 가끔 기타를 치고 노래도 만듭니다.
 
-하나의 문서로 정리된 저의 Resume는 이 곳을 클릭하면 보실 수 있습니다. 항상 재밌는 프로젝트는 언제든지 환영입니다. 메일 주세요. :)
+저의 Resume는 이 곳을 클릭하면 보실 수 있습니다. 항상 재밌는 프로젝트는 언제든지 환영입니다. 메일 주세요. :)
 
-Hi, I'm Jihye Leee. I've designed a viewer for RIDIBOOKS. I'm working as a UI Designer, but I'm interested in lots of field in design, such as Interior Design, Graphic Design, Illustration, Animation, Motion Graphic, etc. Here is my Pinterest boards, you can check my interests. I also like to study HTML & CSS. I'm interested in  XML, Swift, Javascript as well. Recently, I want to be a Dr. Jekyll. (This site is built by Jekyll)
+I've designed a viewer for RIDIBOOKS. I'm working as a UI Designer, but I'm interested in lots of field in design, such as Interior Design, Graphic Design, Illustration, Animation, Motion Graphic, etc. Here is my Pinterest boards, you can check my interests. I also like to study HTML & CSS. I'm interested in  XML, Swift, Javascript as well. Recently, I want to be a Dr. Jekyll. (This site is built by Jekyll)
 
 Pesonally, I like to read a book, write something meaningless. I write a travelog, a book review, and an essay. I've lived in Seoul, South Korea, but I've studied English a little bit for a long time. Sometimes, I play the guitar and make a song.
 

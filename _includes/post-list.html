@@ -1,13 +1,18 @@
-<a href="{{ page.url | prepend: site.baseurl }}" class="catalogue-item">
-    <div>
-        <div class="catalogue-type">
+<li class="catalogue-item">
+<a href="{{ page.url | prepend: site.baseurl }}" >
+        <p class="catalogue-type">
             {{ page.type }}
-        </div>
-        <h1 class="catalogue-title">
-            {{ page.title }}
-        </h1>
-        <p class="body">
-            {{ page.subtitle }}
         </p>
-    </div>
+        <div class="catalogue-info">
+            <h1 class="catalogue-title">
+                {{ page.title }}
+            </h1>
+            <p class="catalogue-sub">
+                {{ page.subtitle }}
+            </p>
+            <p class="catalogue-body">
+                {{ page.content | truncatewords: 24 | strip_html }}
+            </p>
+        </div>
 </a>
+</li>    

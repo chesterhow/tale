@@ -10,6 +10,9 @@ footer>.footer_wrap,
   margin: 0 auto;
   max-width: 800px;
   width: 80%;
+    @media (max-width: $break-small) {
+        width: 88%;
+    }
 }
 
 .nav {
