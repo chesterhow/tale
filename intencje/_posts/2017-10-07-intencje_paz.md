@@ -7,15 +7,11 @@ author: Justyna
 
 <h3>08.10 - XXVII Niedziela zwykła „A” </h3>
 <b> Secemin </b>
-<ul>
-  <li> 8:30 - Za Krzysztofa i jego rodzinę </li>
-  <li> 10:00 - Za parafian </li>
-  <li> 17:00 - Za strażaków </li>
-</ul>
+|8:30| Za Krzysztofa i jego rodzinę|
+|10:00|Za parafian|
+ |17:00| Za strażaków|
 <hr>
 <b> Bichniów </b>
-<ul>
-  <li> 10:30 - 10 rocznica ślubu Janiny i Jana </li>
-</ul>
+  |10:30| 10 rocznica ślubu Janiny i Jana|
 
  
