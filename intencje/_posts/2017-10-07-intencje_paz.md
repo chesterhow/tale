@@ -8,7 +8,7 @@ author: Justyna
 <h3>08.10 - XXVII Niedziela zwykła „A” </h3>
 <b> Secemin </b>
 <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>10:00 &nbsp;Za parafian</li>
  <li>17:00 &nbsp;Za strażaków</li>
  </ul>
@@ -20,37 +20,37 @@ author: Justyna
  <h4>09.10 Poniedziałek </h4>
  <b> Secemin </b>
  <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  </ul>
   <h4>10.10 Wotrek </h4>
  <b> Secemin </b>
  <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  </ul>
   <h4>11.10 Środa </h4>
  <b> Secemin </b>
  <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  </ul>
    <h4>12.10 Czwartek </h4>
  <b> Secemin </b>
  <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  </ul>
    <h4>13.10 Piątek </h4>
  <b> Secemin </b>
  <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  </ul>
    <h4>14.10 Sobota </h4>
  <b> Secemin </b>
  <ul>
- <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
  </ul>
  
