@@ -154,6 +154,10 @@
     }        
 }
 
+.post>div.footnotes {
+    margin-top: 60px;
+}
+
 .post>div.footnotes>ol {
     padding: 0;
     margin-left: 6px;
@@ -161,6 +165,7 @@
     color: $grey-1;
     li {
         p {
+            margin: 0;
             a.reversefootnote {
                 background: none;
                 color: $purple;
