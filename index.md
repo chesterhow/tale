@@ -5,7 +5,7 @@ title: "Jihye Leee"
 <div class="intro-animation">
 <section class="explanation">
     <h1 class="intro">
-        I'm Jihye Leee,
+    I'm Jihye Leee,
     </h1>
     <h1 class="intro">an UI Designer at 
         <div class="intro-link">

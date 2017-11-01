@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     background-color: $grey-2;
     
     @media (max-width: $break-small) {
@@ -116,6 +116,7 @@
                 margin-left: 20px;
             }
         }
+        
     }
     
 }

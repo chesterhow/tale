@@ -1,47 +1,73 @@
 .catalogue {
-  &-item {
-    border-bottom: 1px solid $grey-2;
-    display: block;
-    padding: 20px 0;
+    margin-top: 72px;
+    
+    &-item {
+        border-bottom: 1px solid $grey-2;
+        padding: 36px 0;
+        list-style: none;
 
     &:last-child {
-        border: 0;
-        margin-bottom: 40px;
+        margin-bottom: 72px;
+        border-bottom: none;
+//        border-bottom: 1px solid $grey-2;
     }
   }
-    
-    &-info {
-        display: inline-block;
-    }
 
-  &-title {
-    color: $default-shade;
-    display: block;
-    font-family: $san-serif;
-    font-size: 28px;
-    font-weight: 700;
-    margin: 16px 0 2px 0;
-    line-height: 1.5;
-  }
-    
     &-type {
         color: $default-tint;
         font-size: 18px;
         font-family: $source;
         font-weight: 600;
-        margin-top: 20px;
-    }
-    
-    p {
-        font-size: 18px;
-        color: $grey-0;
-        line-height: 1.75;
-        margin: 0 0 10px 0;
+        display: inline-block;
+        width: 20%;
+        float: left;
         
         @media (max-width: $break-small) {
+            float: none;
+            width: 100%;
+        }
+    
+    }
+    
+   
+    &-info {
+        display: inline-block;
+        width: 80%;
+        
+        h1.catalogue-title {
+            color: $grey-0;
+            display: block;
+            font-family: $san-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.5;
+
+            @media (max-width: $break-small) {
+                  font-size: 22px;
+            }
+        }
+        
+        @media (max-width: $break-small) {
+            display: block;
+            width: 100%;
+        }
+        
+        p.catalogue-sub {
+            font-size: 18px;
+            color: $grey-1;
+            line-height: 1.75;
+            padding-bottom: 24px;
+
+            @media (max-width: $break-small) {
+                font-size: 16px;
+            }        
+        }
+
+        p.catalogue-body {
             font-size: 16px;
+            color: $grey-1;
         }
         
     }
-
+    
 }
