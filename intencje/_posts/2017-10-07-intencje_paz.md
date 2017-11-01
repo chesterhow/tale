@@ -16,42 +16,42 @@ author: Justyna
 <ul>
  <li>10:30 10 rocznica ślubu Janiny i Jana </li>
  </ul>
- <hr width= "50%">
+ <hr width= "70%">
  <h4>09.10 Poniedziałek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr>
+ <hr width= "50%">
   <h4>10.10 Wotrek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr>
+ <hr width= "70%">
   <h4>11.10 Środa </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr>
+ <hr width= "50%">
    <h4>12.10 Czwartek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr>
+ <hr width= "70%">
    <h4>13.10 Piątek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr>
+ <hr width= "50%">
    <h4>14.10 Sobota </h4>
  <b> Secemin </b>
  <ul>
