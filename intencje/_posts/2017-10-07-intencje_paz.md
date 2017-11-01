@@ -30,7 +30,7 @@ author: Justyna
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr width= "70%">
+ <hr width= "60%">
   <h4>11.10 Środa </h4>
  <b> Secemin </b>
  <ul>
@@ -44,7 +44,7 @@ author: Justyna
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
- <hr width= "70%">
+ <hr width= "60%">
    <h4>13.10 Piątek </h4>
  <b> Secemin </b>
  <ul>
