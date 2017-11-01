@@ -12,12 +12,48 @@ author: Justyna
  <li>10:00 &nbsp;Za parafian</li>
  <li>17:00 &nbsp;Za strażaków</li>
  </ul>
-<hr>
 <b> Bichniów </b>
 <ul>
  <li>10:30 &nbsp;10 rocznica ślubu Janiny i Jana </li>
  </ul>
+ <hr>
+ <h4>09.10 Poniedziałek </h4>
+ <b> Secemin </b>
+ <ul>
+ <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ </ul>
+  <h4>10.10 Wotrek </h4>
+ <b> Secemin </b>
+ <ul>
+ <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ </ul>
+  <h4>11.10 Środa </h4>
+ <b> Secemin </b>
+ <ul>
+ <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ </ul>
+   <h4>12.10 Czwartek </h4>
+ <b> Secemin </b>
+ <ul>
+ <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ </ul>
+   <h4>13.10 Piątek </h4>
+ <b> Secemin </b>
+ <ul>
+ <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ </ul>
+   <h4>14.10 Sobota </h4>
+ <b> Secemin </b>
+ <ul>
+ <li>8:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ </ul>
  
- <h3>09.10 Poniedziałek </h3>
+ 
 
  
