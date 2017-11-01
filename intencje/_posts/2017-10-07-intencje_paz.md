@@ -16,7 +16,7 @@ author: Justyna
 <ul>
  <li>10:30 10 rocznica ślubu Janiny i Jana </li>
  </ul>
- <hr>
+ <hr width= "50%">
  <h4>09.10 Poniedziałek </h4>
  <b> Secemin </b>
  <ul>
