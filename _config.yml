@@ -2,7 +2,7 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Tale
+title:          Parafia Secemin
 paginate:       5
 baseurl:        "/tale"
 url:            "https://justyna1adam.github.io"
@@ -24,7 +24,7 @@ author:
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/justyna1adam/tale
+  repo:         https://github.com/justyna1adam/Parafia-Secemin
 
 # Gems
 gems:
