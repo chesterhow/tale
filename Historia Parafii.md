@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Historia Parafii"
 author: "Justyna"
 permalink: /historia/
