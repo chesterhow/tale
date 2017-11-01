@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: intencje
+category: intencje
 title: 'Intencje'
 author: Justyna
 ---
