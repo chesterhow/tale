@@ -5,7 +5,7 @@ category: ogloszenia
 ---
 <div class="catalogue">
   {% for post in site.posts %}      
-  {% if post.categories contains 'intencje' %}
+  {% if post.categories contains 'ogloszenia' %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
