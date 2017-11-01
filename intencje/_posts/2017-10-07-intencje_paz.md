@@ -8,9 +8,9 @@ author: Justyna
 <h3>08.10 - XXVII Niedziela zwykła „A” </h3>
 <b> Secemin </b>
 <ul>
- <li>08:30padding-left:4em Za Krzysztofa i jego rodzinę. </li>
- <li>10:00padding-left:4em Za parafian.</li>
- <li>17:00padding-left:4em Za strażaków.</li>
+ <li>08:30{padding-left:4em} Za Krzysztofa i jego rodzinę. </li>
+ <li>10:00{padding-left:4em} Za parafian.</li>
+ <li>17:00{padding-left:4em} Za strażaków.</li>
  </ul>
 <b> Bichniów </b>
 <ul>
