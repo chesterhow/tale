@@ -20,8 +20,8 @@ author: Justyna
  <h4>09.10 Poniedziałek </h4>
  <b> Secemin </b>
  <ul>
- <li>08:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
- <li>18:30 &nbsp;Za Krzysztofa i jego rodzinę </li>
+ <li>08:30&#09;Za Krzysztofa i jego rodzinę </li>
+ <li>18:30&#09;Za Krzysztofa i jego rodzinę </li>
  </ul>
   <h4>10.10 Wotrek </h4>
  <b> Secemin </b>
