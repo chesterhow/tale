@@ -5,7 +5,7 @@ title: 'Intencje 08.10-14.10.2017 '
 author: Justyna
 ---
 
-<h3>08.10 - XXVII Niedziela zwykła „A” <h3>
+<h3>08.10 - XXVII Niedziela zwykła „A” </h3>
 <b> Secemin </b>
 <ul>
   <li> 8:30 - Za Krzysztofa i jego rodzinę </li>
