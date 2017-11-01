@@ -1,7 +1,7 @@
 ---
 layout: post
 category: intencje
-title: 'Intencje 08.10-14.10.2017 '
+title: '08.10-14.10.2017'
 author: Justyna
 ---
 <center>
