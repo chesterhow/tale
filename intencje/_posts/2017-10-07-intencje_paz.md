@@ -23,12 +23,14 @@ author: Justyna
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
+ <hr>
   <h4>10.10 Wotrek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
+ <hr>
   <h4>11.10 Środa </h4>
  <b> Secemin </b>
  <ul>
