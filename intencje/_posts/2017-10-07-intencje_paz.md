@@ -37,18 +37,21 @@ author: Justyna
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
+ <hr>
    <h4>12.10 Czwartek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
+ <hr>
    <h4>13.10 Piątek </h4>
  <b> Secemin </b>
  <ul>
  <li>08:30 Za Krzysztofa i jego rodzinę </li>
  <li>18:30 Za Krzysztofa i jego rodzinę </li>
  </ul>
+ <hr>
    <h4>14.10 Sobota </h4>
  <b> Secemin </b>
  <ul>
