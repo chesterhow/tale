@@ -3,7 +3,7 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Jihye Leee
-baseurl:        "/"
+baseurl:        ""
 url:            "http://jihyeleee.com"
 
 # Assets
