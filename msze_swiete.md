@@ -12,24 +12,20 @@ Strona w budowie, podane dane nie są zgodne ze stanem faktycznym!
      <td width="50%">
  <center> <u><h1> Secemin</h1></u>
   <i><h4>Niedziele i Święta</h4></i>
-<ul>
-<li>10:00</li>
-<li> 12:00</li>
-<li> 13:00</li>
-</ul>
+10:00<br>
+12:00<br>
+13:00<br>
 
 <i><h4> Dni powszednie</h4></i>
-<ul>
-<li>10:00</li>
-<li> 18:00</li>
+10:00<br>
+18:00<br>
 </ul> </center>
      </td>
      <td width="50%">
    <center><u><h1>Bichniów</h1></u>
      <i><h4>Niedziele i Święta</h4></i>
-<ul>
-<li>10:30</li>
-</ul>
+
+10:30<br>
 <h4> <a href="https://goo.gl/maps/LJid29AeSeT2">Dojazd do kaplicy</a></h4>
   </center>
      </td>
