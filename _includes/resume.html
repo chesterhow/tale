@@ -1,16 +1,17 @@
 <div class="loading-animation">
 <section class="resume">
-
-    <p class="second-label">
-
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         viewBox="0 0 62 62" style="enable-background:new 0 0 62 62;" xml:space="preserve">
-    <path d="M46,24h-8v-3c0-1.7-1.3-3-3-3h-8c-1.7,0-3,1.3-3,3v3h-8c-1.7,0-3,1.3-3,3v14c0,1.7,1.3,3,3,3h30c1.7,0,3-1.3,3-3V27
-        C49,25.3,47.7,24,46,24z M27,22c0-0.6,0.4-1,1-1h6c0.6,0,1,0.4,1,1v2h-8V22z M38,27v14H24V27H38z M16,40V28c0-0.6,0.4-1,1-1h4v14h-4
-        C16.4,41,16,40.6,16,40z M46,40c0,0.6-0.4,1-1,1h-4V27h4c0.6,0,1,0.4,1,1V40z"/>
-    </svg>
-        I've worked for
-    </p>
+    <div class="resume-info">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+        <path d="M49.5,16.5h-12V12c0-2.5-1.9-4.5-4.5-4.5H21c-2.6,0-4.5,2-4.5,4.5v4.5h-12C2,16.5,0,18.4,0,21v21c0,2.6,2,4.5,4.5,4.5h45
+            c2.6,0,4.5-1.9,4.5-4.5V21C54,18.4,52.1,16.5,49.5,16.5z M21,13.5c0-0.9,0.6-1.5,1.5-1.5h9c0.9,0,1.5,0.6,1.5,1.5v3H21V13.5z
+             M37.5,21v21h-21V21H37.5z M4.5,40.5v-18C4.5,21.6,5.1,21,6,21h6v21H6C5.1,42,4.5,41.4,4.5,40.5z M49.5,40.5c0,0.9-0.6,1.5-1.5,1.5
+            h-6V21h6c0.9,0,1.5,0.6,1.5,1.5V40.5z"/>
+        </svg>
+        <p class="second-label">
+            I've worked for
+        </p>
+    </div>
     <ul>
         {% assign sorted = site.pages | sort: 'order' %}
         {% for page in sorted %}
@@ -24,18 +25,20 @@
 </section>
 
 <section class="resume">
-    <p class="second-label">
+    <div class="resume-info">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 62 62" style="enable-background:new 0 0 62 62;" xml:space="preserve">
-<g>
-	<rect x="21" y="35" width="14" height="3"/>
-	<path d="M44,24h-9.5l-1.8-4.5c-0.4-0.9-1.3-1.5-2.3-1.5H18c-1.7,0-3,1.3-3,3v6v8v6c0,1.7,1.3,3,3,3h26c1.7,0,3-1.3,3-3V27
-		C47,25.3,45.7,24,44,24z M18,21h12l1.2,3H18V21z M44,41H18v-6v-8l0,0h16.5l0,0H44V41z"/>
-</g>
-</svg>
-
-        Side Projects
-    </p>
+	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+        <g>
+            <rect x="11.6" y="33.2" width="21.5" height="4.6"/>
+            <path d="M47,16.2H32.4l-2.8-6.9C29,7.9,27.6,7,26.1,7H7c-2.6,0-4.6,2-4.6,4.6v9.2v12.3v9.2C2.4,45,4.4,47,7,47h40
+                c2.6,0,4.6-2,4.6-4.6V20.8C51.6,18.2,49.6,16.2,47,16.2z M7,11.6h18.5l1.8,4.6H7V11.6z M47,42.4H7v-9.2V20.8l0,0h25.4l0,0H47V42.4z
+                "/>
+        </g>
+        </svg>
+        <p class="second-label">
+            Side Projects
+        </p>
+    </div>
     <ul>
         {% assign sorted = site.pages | sort: 'order' %}
         {% for page in sorted %}
@@ -49,9 +52,21 @@
 </section>
 
 <section class="skill">
-    <p class="second-label">
-        Available My Skill & Role
-    </p>
+    <div class="resume-info">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+    <g>
+        <path d="M21.2,2H8.7C7.5,2,6.3,3.1,6.3,4.4v45.2c0,1.2,1.1,2.4,2.4,2.4h12.5c1.2,0,2.4-1.1,2.4-2.4V4.4C23.6,3.1,22.5,2,21.2,2z
+             M18.9,47.2h-7.8V41h4.8v-3.1h-4.8v-3.1h3.1v-3.1h-3.1v-3.1h4.7v-3.1h-4.8v-3.1h3.1v-3.1h-3.1V16h4.7v-3.1h-4.8V6.6h7.8V47.2z"/>
+        <path d="M47.8,17.6l0.5-0.2L42.1,4.9c-0.2-0.8-1.1-1.2-2-1.2s-1.8,0.5-2,1.2l-6.2,12.5l0.5,0.2h-0.8v28.9c0,3,2.5,5.5,5.5,5.5h6.2
+            c3,0,5.5-2.5,5.5-5.5V17.6H47.8z M43.8,41h-7.8V22.3h7.8V41z M40,11.2l3.2,6.4h-6.4L40,11.2z M43.1,47.2h-6.2
+            c-0.5,0-0.7-0.2-0.7-0.7v-0.8h7.8v0.8C43.8,47,43.6,47.2,43.1,47.2z"/>
+    </g>
+        </svg>
+        <p class="second-label">
+            Available My Skill & Role
+        </p>
+    </div>    
     <ul>
         {% for skill-role in site.data.skill-roles %}
             <li class="skill_name">

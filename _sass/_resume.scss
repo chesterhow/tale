@@ -1,5 +1,5 @@
-p.second-label {
-    margin: 80px 0 20px 0;
+.second-label {
+    margin: 80px 0 20px 36px;
     font-family: $source;
     font-size: 18px;
     font-weight: 600;
@@ -7,12 +7,18 @@ p.second-label {
     vertical-align: middle;
 }
 
-.resume {
+div.resume-info {
+    position: relative;
+
     svg {
-        width: 31px;
+        width: 24px;
         fill: $default-tint;
-        display: inline-block;
+        position: absolute;
     }
+}
+
+.resume {
+    
     .workplace {
         width: 100%;
         padding: 30px 0;
@@ -61,6 +67,11 @@ p.second-label {
 }
 
 section.skill {
+    svg {
+        width: 24px;
+        fill: $default-tint;
+        position: absolute;
+    }
     padding-bottom: 72px;
     
     li.skill_name {
