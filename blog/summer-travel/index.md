@@ -5,7 +5,7 @@ subtitle: "B와 함께하는 여름 휴가"
 type: "Travel"
 blog: true
 author: "Jihye Leee"
-header: true
+post-header: true
 header-img: "img/oldtown.png"
 order: 1
 ---

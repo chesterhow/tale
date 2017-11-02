@@ -4,10 +4,15 @@ p.second-label {
     font-size: 18px;
     font-weight: 600;
     color: $default-tint;
+    vertical-align: middle;
 }
 
 .resume {
-    
+    svg {
+        width: 31px;
+        fill: $default-tint;
+        display: inline-block;
+    }
     .workplace {
         width: 100%;
         padding: 30px 0;
