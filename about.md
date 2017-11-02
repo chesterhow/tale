@@ -4,7 +4,7 @@ title: "Jihye Leee"
 subtitle: "이지혜"
 author: "Jihye Lee"
 permalink: /about/
-header: true
+post-header: true
 header-img: img/about.jpg
 ---
 

@@ -1,9 +1,12 @@
+
+//post header
+
 .post-header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 400px;
+    min-height: 360px;
     background-color: $grey-2;
     
     @media (max-width: $break-small) {
@@ -11,9 +14,36 @@
     }
 }
 
+//project header
+
+.project-header {
+        display: flex;
+        font-family: $san-serif;
+        color: $white;
+        height: 100%;
+        
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .header-project-title {
+        font-weight: 700;
+        font-size: 38px;
+    }
+    
+    .header-project-des {
+        font-size: 24px;
+    }
+}
+
 .post-header-bg {
     background-color: $grey-2;
 }
+
+//post 영역
 
 .post {
   padding-bottom: 64px;

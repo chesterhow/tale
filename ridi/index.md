@@ -4,7 +4,9 @@ work: true
 title: 'RIDI'
 info: 'UI Designer'
 sub-info: '2015. JUN - Present'
-time: 2015-04-03
+project-header: true
+header-img: "img/about.jpg"
+description: 1등 전자책 서점
 order: 1
 ---
 

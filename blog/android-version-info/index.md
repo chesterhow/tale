@@ -5,7 +5,7 @@ subtitle: "우리나라에서 사용률이 제일 높은 Android와 친해지기
 type: "UI Design"
 blog: true
 author: "Jihye Leee"
-header: true
+post-header: true
 header-img: "img/sketch-to-code-blogheader.png"
 order: 1
 ---
