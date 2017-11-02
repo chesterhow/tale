@@ -4,6 +4,7 @@
     background-size: cover;
     width: 100%;
     min-height: 400px;
+    background-color: $grey-2;
     
     @media (max-width: $break-small) {
         min-height: 200px;
@@ -18,11 +19,12 @@
   padding-bottom: 64px;
 
     p {
-        line-height: 1.65;
+        line-height: 1.8;
         margin: 0 0 10px 0;
         word-wrap: break-word;
         font-family: $san-serif;
         font-weight: 400;
+        letter-spacing: -0.003em;
       
     sup {
         a.footnote {
@@ -47,15 +49,23 @@
     }
     
     h1 { 
-        padding: 20px 0 16px 0;
+        padding: 40px 0 16px 0;
         font-weight: 600;
         font-size: 26px;
+    }
+    
+    h1:first-child {
+        padding: 0 0 16px 0;
     }
     
     h2 {
         padding: 16px 0 12px 0;
         font-weight: 600;
         font-size: 24px;
+    }
+    
+    h2:first-child {
+        padding: 0 0 12px 0;
     }
     
     h3 {
@@ -120,9 +130,15 @@
             }
         }
         
-    }
-    
+    }  
 }
+
+sup {
+        a.footnote {
+            background: none;
+            color: $purple;
+        }
+    }
 
 .post-type {
     color: $default-tint;
