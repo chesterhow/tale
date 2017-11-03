@@ -7,6 +7,7 @@ blog: true
 author: "Jihye Leee"
 post-header: true
 header-img: "img/sketch-to-code-blogheader.png"
+date: 2017-11-03
 order: 1
 ---
 
