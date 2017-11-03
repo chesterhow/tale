@@ -5,7 +5,7 @@
 
 html,
 body {
-  color: $default-color;
+  color: &default-color;
   margin: 0;
   padding: 0;
 }

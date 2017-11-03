@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Home
+title: Ogloszenia
+category: ogloszenia
 ---
-
 <div class="catalogue">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}      
+  {% if post.categories contains 'ogloszenia' %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -17,8 +18,10 @@ title: Home
 
       </div>
     </a>
+  </div>
+  {% endif %}
   {% endfor %}
-</div>
+
 
 <div class="pagination">
   {% if paginator.previous_page %}
