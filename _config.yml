@@ -26,10 +26,3 @@ author:
 version:        3.4.1
 github:
   repo:         https://github.com/iamleejihye/work
-
-# Gems
-
-gems:
-- jekyll-gist
-
-category-list: [ridi, codi, quoin, blog]
