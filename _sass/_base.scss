@@ -70,3 +70,19 @@ td {
 .transition {
     transition: all 0.3s ease-in-out;
 }
+
+::selection {
+    background: $purple;
+    color: #FFF;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: $purple;
+    color: #FFF;
+    text-shadow: none;
+}
+::-webkit-selection {
+    background: $purple;
+    color: #FFF;
+    text-shadow: none;
+}

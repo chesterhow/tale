@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Blog"
+main: true
 ---
 
 <ul class="catalogue">
