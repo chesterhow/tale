@@ -2,10 +2,10 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Tale
+title:          Parafia Secemin
 paginate:       5
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+baseurl:        "/parafia-secemin"
+url:            "https://justyna1adam.github.io"
 
 # Assets
 sass:
@@ -17,14 +17,13 @@ markdown:       kramdown
 
 # About
 author:
-  name:         Chester How
-  url:          http://chester.how
-  email:        chesterhow@gmail.com
+  name:         Justyna Adamczyk
+  email:        justyna1adamczyk@gmail.com
 
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/chesterhow/tale
+  repo:         https://github.com/justyna1adam/Parafia-Secemin
 
 # Gems
 gems:
