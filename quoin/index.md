@@ -1,6 +1,7 @@
 ---
 layout: default
 work: true
+main: true
 title: 'QUOIN'
 info: 'GUI Designer'
 sub-info: '2014. MAR - 2015. MAR'

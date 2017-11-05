@@ -1,6 +1,7 @@
 ---
 layout: default
 work: true
+main: true
 title: '코딩하는 디자이너'
 info: 'Co-founder, Branding · UI Designer'
 sub-info: '2014. MAR - 2015. NOV'
