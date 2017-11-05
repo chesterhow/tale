@@ -10,9 +10,9 @@
 
   <meta property="og:site_name" content="{{ site.title }}">
 
-    <meta property="og:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% else %}{{ site.url }}{{ page.url }}{{ 'img/preview.jpg'}}{% endif %}">
+    <meta property="og:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% else %}{{ site.url }}{{ '/img/preview.jpg'}}{% endif %}">
     
-    <meta property="twitter:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% else %}{{ site.url }}{{ page.url }}{{ 'img/preview.jpg'}}{% endif %}">
+    <meta property="twitter:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% else %}{{ site.url }}{{ '/img/preview.jpg'}}{% endif %}">
     
     <!-- title -->
     <meta property="og:title" content="{% if page.url == '/' %}{{ page.subtitle}}{% else %}{{ page.title }}{% endif %}">
