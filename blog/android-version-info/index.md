@@ -6,7 +6,7 @@ type: "UI Design"
 blog: true
 author: "Jihye Leee"
 post-header: true
-header-img: "img/sketch-to-code-blogheader.png"
+header-img: "img/android-device.jpg"
 date: 2017-11-03
 order: 1
 ---
