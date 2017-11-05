@@ -7,8 +7,7 @@ blog: true
 author: "Jihye Leee"
 post-header: true
 header-img: "img/android-device.jpg"
-date: 2017-11-03
-order: 1
+order: 2
 ---
 
 iOS 기기를 쓰는 UI 디자이너들이 많다. iPhone, iPad 등 주로 iOS 기기를 평소에 사용한다. 그렇다보니 Android 자체가 익숙하지 않을 때가 종종 있다. 하지만 국내 스마트폰 OS 점유율은 Android가 70% 이상이다.[^1] 전년도에 비해 줄어들은 수치임에도 불구하고 국내 사용자의 대부분은 Android를 사용한다. Android 기기도 몇개 가지고 있지만 주력으로 쓰지 않기 때문에 Android 지식에 뒤쳐질 때가 종종 있고 낯설게 느껴질 때가 있다.
