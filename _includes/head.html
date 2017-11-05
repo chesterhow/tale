@@ -2,9 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>
-    {{ page.title }}
-  </title>
+  <title>{{ page.title }}</title>
     
 <!-- Post info -->
 
@@ -13,6 +11,7 @@
     <meta property="og:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% else %}{{ site.url }}{{ '/img/preview.jpg'}}{% endif %}">
     
     <meta property="twitter:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% else %}{{ site.url }}{{ '/img/preview.jpg'}}{% endif %}">
+    <meta name="twitter:card" content="summary_large_image">
     
     <!-- title -->
     <meta property="og:title" content="{% if page.url == '/' %}{{ page.subtitle}}{% else %}{{ page.title }}{% endif %}">
@@ -23,8 +22,6 @@
     <meta property="og:description" content="{% if page.main == true %}{{ page.description }}{% else %}{{ page.content | truncatewords: 30 | strip_html }}{% endif %}"/>
     
     <meta name="twitter:description" content="{% if page.main == true %}{{ page.description }}{% else %}{{ page.content | truncatewords: 30 | strip_html }}{% endif %}">
-
-    <meta name="twitter:card" content="summary_large_image">
     
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
