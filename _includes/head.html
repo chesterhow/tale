@@ -10,7 +10,7 @@
 
   <meta property="og:site_name" content="{{ site.title }}">
 
-    <meta property="og:image" content="{% if page.post-header == true %}{{ page.header-img | prepend: page.url | prepend: 'http://jihyeleee.com' }}{% else %}{{ 'img/preview.jpg' | prepend: 'http://jihyeleee.com/' }}{% endif %}">
+    <meta property="og:image" content="{% if page.post-header == true or page.project-header == true %}{{ page.header-img | prepend: page.url | prepend: 'http://jihyeleee.com' }}{% else %}{{ 'img/preview.jpg' | prepend: 'http://jihyeleee.com/' }}{% endif %}">
     
     <!-- title -->
     <meta property="og:title" content="{% if page.url == '/' %}{{ page.subtitle}}{% else %}{{ page.title }}{% endif %}">
