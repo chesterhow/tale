@@ -46,7 +46,7 @@
 //post 영역
 
 .post {
-  padding-bottom: 64px;
+  padding-bottom: 40px;
 
     p {
         line-height: 1.8;
@@ -205,7 +205,7 @@ sup {
 }
 
 .post>div.footnotes {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .post>div.footnotes>ol {
@@ -225,4 +225,22 @@ sup {
             }
         }
     }
+}
+
+.share {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 120px;
+    animation-name: moving;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+.share-facebook {
+    position: absolute;
+}
+
+.share-twitter {
+    position: absolute;
+    left: 110px;
 }
