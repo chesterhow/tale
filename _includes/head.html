@@ -11,18 +11,22 @@
   <meta property="og:site_name" content="{{ site.title }}">
     
   {% if page.title %}
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:type" content="article">
-  <meta property="og:description" content="{{ page.content | truncatewords: 30 | strip_html }}"/>
-  {% else %}
-  <meta property="og:title" content="UI Designer Jihye Leee at RIDI">
-  <meta property="og:description" content="Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.">
-  <meta property="og:image" content="http://www.jihyeleee.com/img/preview.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="UI Designer Jihye Leee at RIDI">
-  <meta name="twitter:description" content="Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.">
-  <meta name="twtiter:image" content="http://www.jihyeleee.com/img/preview.jpg">
-    
+      <meta property="og:title" content="{{ page.title }}">
+      <meta property="og:type" content="article">
+      <meta property="og:description" content="{{ page.content | truncatewords: 30 | strip_html }}"/>
+    {% if page.post-header == true %}
+      <meta property="og:image" content="{{ page.header-img }}">
+    {% endif %}
+  {% endif %}
+  {% if page.url == '/' %}
+      <meta property="og:title" content="UI Designer Jihye Leee at RIDI">
+      <meta property="og:description" content="Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.">
+      <meta property="og:image" content="http://www.jihyeleee.com/img/preview.jpg">
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="UI Designer Jihye Leee at RIDI">
+      <meta name="twitter:description" content="Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.">
+      <meta name="twtiter:image" content="http://www.jihyeleee.com/img/preview.jpg">   
   {% endif %}
   {% if author %}
   <meta property="article:author" content="{{ author.name }}" />
