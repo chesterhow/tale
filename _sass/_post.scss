@@ -54,7 +54,7 @@
         word-wrap: break-word;
         font-family: $san-serif;
         font-weight: 400;
-        letter-spacing: -0.003em;
+        letter-spacing: -0.009em;
       
     sup {
         a.footnote {
@@ -82,6 +82,7 @@
         padding: 40px 0 16px 0;
         font-weight: 600;
         font-size: 26px;
+        letter-spacing: -0.009em;
     }
     
     h1:first-child {
@@ -182,9 +183,10 @@ sup {
 .post-info>h1.post-title {
     padding: 0 0 12px 0;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 32px;
     font-family: $san-serif;
     line-height: 1.2;
+    letter-spacing: -0.009em;
     
     @media (max-width: $break-small) {
         font-size: 28px;
