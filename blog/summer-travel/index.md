@@ -6,7 +6,7 @@ type: "Travel"
 blog: true
 author: "Jihye Leee"
 post-header: true
-header-img: "img/oldtown.png"
+header-img: "img/oldtown.jpg"
 order: 1
 ---
 

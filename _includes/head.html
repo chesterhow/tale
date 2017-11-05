@@ -3,16 +3,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    {% if page.title == "work" %}
-    {% else %}
-      {{ page.title }}
-    {% endif %}
+    {{ page.title }}
   </title>
     
 <!-- Post info -->
-<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <meta property="og:site_name" content="{{ site.title }}">
+    
   {% if page.title %}
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:type" content="article">
