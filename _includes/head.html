@@ -12,19 +12,19 @@
     {% if page.url == '/' %}
       <meta property="og:title" content="UI Designer Jihye Leee at RIDI">
       <meta property="og:description" content="Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.">
-      <meta property="og:image" content="/img/preview.jpg">
+      <meta property="og:image" content="{{ 'img/preview.jpg' | prepend: page.url | prepend: 'http://jihyeleee.com' }}">
 
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="UI Designer Jihye Leee at RIDI">
       <meta name="twitter:description" content="Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.">
-      <meta name="twtiter:image" content="{{ 'img/preview.jpg' | prepend: page.url }}">
+      <meta name="twtiter:image" content="{{ 'img/preview.jpg' | prepend: page.url | prepend: 'http://jihyeleee.com' }}">
     
   {% else %}
       <meta property="og:title" content="{{ page.title }}">
       <meta property="og:type" content="article">
       <meta property="og:description" content="{{ page.content | truncatewords: 30 | strip_html }}"/>
     {% if page.post-header == true %}
-      <meta property="og:image" content="{{ page.header-img | prepend: page.url }}">
+      <meta property="og:image" content="{{ page.header-img | prepend: page.url | prepend: 'http://jihyeleee.com' }}">
     {% endif %}
   {% endif %}
 
