@@ -3,7 +3,7 @@ layout: post
 title:  "'책 읽기' 탭 제거"
 subtitle: "'책 읽기'탭을 제거하게 된 이유"
 type: "iOS, Android"
-categories: [work,ridi]
+text: true
 ridi: true
 author: "Jihye Leee"
 ---

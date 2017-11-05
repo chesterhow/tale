@@ -26,11 +26,16 @@
     {% endif %}
     {% if page.project-header == true %}
         {% include project-header.html %}
-    {% endif %}  
+    {% endif %} 
       
     <main>
       {{ content }}
-    </main>
+        
+        {% if page.text == true %}
+      {% include share.html %}
+        {% endif %}
+
+      </main>
       
       {% include footer.html %}
    
