@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Jihye Leee"
+main: true
+subtitle: UI Designer Jihye Leee at RIDI
+description: Jihye Leee, who is a Product Designer based in Seoul, South Korea focused on UI/UX, interaction. | '이지혜' UI 디자이너입니다. 리디에서 일합니다.
 ---
 <div class="intro-animation">
 <section class="explanation">
