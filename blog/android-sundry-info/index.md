@@ -81,7 +81,7 @@ lineSpacing 에 따라서 TextView의 높이도 달라지기 때문에 시각적
 디자이너로서 볼 때 API 버전을 알면 원하는 컴포넌트를 사용하기 위한 다른 방법을 미련 없이(?) 찾게 된다. 행간이 구현되는 방식은 알았지만 아직 Sketch에서 효율적으로 입력할 방법도 찾지 못했다. 테스트를 통해 어떠한 규칙도 찾지 못했기 때문이다. 하지만 막연하던 Android XML TextView에 대한 궁금증을 해소했고 매직 넘버들도 찾았기 때문에 이제 의도대로 디자인을 할 수 있다. 또 의도대로 디자인이 나오지 않는 이유를 알았기 때문에 개발자 분들과의 소통에도 도움이 되었다. (~~고 믿고 싶다.~~)
 
 [^3]: 그렇다고 해서 업데이트를 잘 하는 iOS에서 하위 버전을 버리는 것도 쉬운 일은 아닐 것이다.
-[^4]: 2017년 11월 9일까지 7일동안 수집된 데이터 https://developer.android.com/about/dashboards/index.html?hl=ko 참고
+[^4]: 2017년 11월 9일까지 7일동안 수집된 데이터 [Android Developers - Dashboards](https://developer.android.com/about/dashboards/index.html?hl=ko) 참고
 [^5]: [Android Developers - Layout](https://developer.android.com/guide/topics/ui/declaring-layout.html) 참고
 [^6]: 기존에 개발되어 있는 상태라면 모든 TextView에 적용할 경우 여기저기 난리가 날 가능성이 크다.
 [^7]: Sketch Text 박스 기준이 아닌, 글자 최하단부터의 여백이며 `includeFontPadding`은 `true`일 때다.
