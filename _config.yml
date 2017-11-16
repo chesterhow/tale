@@ -5,7 +5,7 @@ permalink:      /:year-:month-:day/:title
 title:          Tale
 paginate:       5
 baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+url:            "https://mu-xin.github.io"
 
 # Assets
 sass:
@@ -17,9 +17,9 @@ markdown:       kramdown
 
 # About
 author:
-  name:         Chester How
+  name:         muxin
   url:          http://chester.how
-  email:        chesterhow@gmail.com
+  email:        771480011@qq.com
 
 # Custom vars
 version:        3.4.1
