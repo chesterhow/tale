@@ -5,7 +5,7 @@ permalink:      /:year-:month-:day/:title
 title:          Tale
 paginate:       5
 baseurl:        "/tale"
-url:            "http://www.muxin.info"
+url:            "https://mu-xin.github.io"
 
 # Assets
 sass:
