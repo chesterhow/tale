@@ -4,7 +4,7 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          Tale
 paginate:       5
-baseurl:        "/tale"
+baseurl:        "/"
 url:            "https://mu-xin.github.io"
 
 # Assets
