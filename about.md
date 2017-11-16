@@ -14,6 +14,8 @@ header-img: img/about.jpg
 
 저의 Resume는 이 곳을 클릭하면 보실 수 있습니다. 항상 재밌는 프로젝트는 언제든지 환영입니다. 메일 주세요. :)
 
+# Hi, I'm Jihye Leee.
+
 I've designed a viewer for [RIDIBOOKS](https://ridibooks.com/support/app/download). I'm working as a UI Designer, but I'm interested in lots of field in design, such as Interior Design, Graphic Design, Illustration, Animation, Motion Graphic, etc. Here is my [Pinterest boards](https://www.pinterest.co.kr/iamleejihye/), you can check my interests. I also like to study HTML & CSS. I'm interested in  XML, Swift, Javascript as well. Recently, I want to be a Dr. Jekyll. (This site is built by Jekyll)
 
 Pesonally, I like to read a book, write something meaningless. I write a travelog, a book review, and an essay. I've lived in Seoul, South Korea, but I've studied English a little bit for a long time. I play the table tennis more than twice a week. Sometimes, I play the guitar and make a song.

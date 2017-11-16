@@ -118,6 +118,18 @@
         color: $grey-1;
     }
     
+    figcaption {
+        text-align: center;
+        font-size: 17px;
+        color: $grey-1;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        
+        @media (max-width: $break-small ) {
+            font-size: 15px;
+        }
+    }
+    
     ol {
         margin: 0;
         padding-left: 10px;
@@ -160,7 +172,6 @@
                 margin-left: 20px;
             }
         }
-        
     }  
 }
 
