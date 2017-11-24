@@ -72,14 +72,16 @@ Check out tale on [GitHub](https://github.com/chesterhow/tale).
 
 # Images
 {% highlight markdown %}
-![placeholder](https://placehold.it/800x400 "Large example image")
-![placeholder](https://placehold.it/400x200 "Medium example image")
-![placeholder](https://placehold.it/200x200 "Small example image")
+![Placeholder image](https://placehold.it/800x400 "Placeholder image")
+
+![Image with caption](https://placehold.it/700x400 "Image with caption")
+_This is an image with a caption_
 {% endhighlight %}
 
-![placeholder](https://placehold.it/800x400 "Large example image")
-![placeholder](https://placehold.it/400x200 "Medium example image")
-![placeholder](https://placehold.it/200x200 "Small example image")
+![Placeholder image](https://placehold.it/800x400 "Placeholder image")
+
+![Image with caption](https://placehold.it/700x400 "Image with caption")
+_This is an image with a caption_
 
 # Code and Syntax Highlighting
 Use back-ticks for `inline code`. Multi-line code snippets are supported too through Pygments.

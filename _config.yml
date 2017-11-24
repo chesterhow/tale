@@ -27,5 +27,5 @@ github:
   repo:         https://github.com/chesterhow/tale
 
 # Gems
-gems:
+plugins:
   - jekyll-paginate

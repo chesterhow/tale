@@ -4,7 +4,7 @@
   &-info {
     color: $default-tint;
     font-family: $palatino;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     text-align: center;
 
     span {
@@ -21,7 +21,7 @@
   }
 
   &-line {
-    border-top: .4rem solid $default-shade;
+    border-top: 0.4rem solid $default-shade;
     display: block;
     margin: 0 auto 3rem;
     width: 4rem;
@@ -34,5 +34,18 @@
 
   a:hover {
     text-decoration: underline;
+  }
+
+  img {
+    margin: 0 auto 0.5rem;
+  }
+
+  img + em {
+    color: $default-tint;
+    display: block;
+    font-family: $sans-font;
+    font-size: 0.9rem;
+    font-style: normal;
+    text-align: center;
   }
 }
