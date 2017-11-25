@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Pagination Post"
+categories: Help
 author: "Chester"
 ---
 
