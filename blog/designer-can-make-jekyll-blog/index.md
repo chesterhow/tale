@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "디자이너도 만드는 Jekyll Blog - 1편"
-subtitle: "비개발자에게 진입 장벽이 높은 Jekyll 정복하기"
+subtitle: "비 개발자에게 진입 장벽이 높은 Jekyll 정복하기"
 type: "Development"
 blog: true
 text: true
@@ -124,4 +124,3 @@ $ jekyll serve
 [^1]: 한글로 정적인 페이지로 일컫는다. 서버에 저장된 형태가 그대로 유지되는 페이지이다. Dynamic Page, 동적인 페이지와 반대되는 말이다. [Wikipedia 정의](https://en.wikipedia.org/wiki/Static_web_page) 참고
 [^2]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
 [^3]: Liquid란 [Shoptify](https://www.shopify.com/)에서 개발한 Ruby 기반의 Template Language이다.
-
