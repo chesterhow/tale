@@ -2,6 +2,8 @@
 layout: default
 title: "Blog"
 main: true
+post-header: true
+header-img: "img/about.jpg"
 ---
 
 <ul class="catalogue">
