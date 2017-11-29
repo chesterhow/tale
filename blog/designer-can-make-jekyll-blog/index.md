@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "디자이너도 만드는 Jekyll Blog - 1편"
-subtitle: "비 개발자에게 진입 장벽이 높은 Jekyll 정복하기"
+subtitle: "비 개발자에게 진입 장벽이 높은 Jekyll 설치하기"
 type: "Development"
 blog: true
 text: true
