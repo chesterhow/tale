@@ -116,10 +116,10 @@ $ jekyll serve
 
 두 번째 편에는 다음과 같은 내용을 담고자 한다. 몇 가지 내용은 구글링하여 쉽게 찾을 수 있는 내용이다. 하지만 쭉 이어서 Jekyll Blog를 만들 수 있도록 글로 연재해보고자 한다.
 
-- 로컬에 만든 Jekyll Blog 폴더를 Sourcetree를 사용하여 Github에 Repo와 연결하기
-- [Jekyll Themes](http://jekyllthemes.org/)에서 만들고자 하는 구조의 Theme Repo를 Fork 떠서 본격적으로 커스터마이징하기 
-- Jekyll에서 사용하는 Liquid[^3] 로 효율적인 블로그 만들기
+- 로컬에 만든 Jekyll Blog 폴더를 Sourcetree를 사용하여 Github 저장소(Repository)에 올리기
 - Github Pages로 Publishing 하기
+- [Jekyll Themes](http://jekyllthemes.org/)에서 만들고자 하는 구조의 Theme 저장소를 Fork 떠서 본격적으로 커스터마이징하기
+- Jekyll에서 사용하는 Liquid[^3] 맛보기
 
 [^1]: 한글로 정적인 페이지로 일컫는다. 서버에 저장된 형태가 그대로 유지되는 페이지이다. Dynamic Page, 동적인 페이지와 반대되는 말이다. [Wikipedia 정의](https://en.wikipedia.org/wiki/Static_web_page) 참고
 [^2]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
