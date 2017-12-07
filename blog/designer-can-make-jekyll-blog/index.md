@@ -67,15 +67,46 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 ## 4. Home Brew로 Ruby Version Manager rbenv 설치하기
 
+### 1) rbenv 설치
+
 {% highlight js %}
 
 $ brew install rbenv ruby-build
+
+{% endhighlight %}
+
+위에 코드를 터미널에 입력해보자. `brew`에게 `rbenv`를 `install` 하라는 내용의 코드이다.
+
+### 2) rbenv init 자동 실행 코드 입력
+
+{% highlight js %}
+
+$ eval "$(rbenv init -)"
+
+{% endhighlight %}
+
+터미널을 작업할 때마다 괄호 안의 명령어가 자동으로 실행되게 하는 코드라고 한다.[^3]
+
+### 3) ruby 2.4.2 설치
+
+{% highlight js%}
+
 $ rbenv install 2.4.2
 $ rbenv global 2.4.2
 
 {% endhighlight %}
 
-위에 코드를 터미널에 입력해보자. `brew`에게 `rbenv`를 `install` 하라는 내용의 코드이다. 2017년 11월 기준 최신 버전이 2.4.2라서 2.4.2를 깔았다.
+2017년 12월 기준 최신 버전이 2.4.2라서 2.4.2를 깔았다.
+
+### 4) rehash
+
+{% highlight js %}
+
+$ rbenv rehash
+
+{% endhighlight %}
+
+그 후에 rehash를 해준다. `rehash` 옵션은 새로운 환경을 재설정하는 옵션이라고 한다.[^4]
 
 ## 5. 드디어 Jekyll 설치하기
 
@@ -99,7 +130,18 @@ $ jekyll new my-awesome-site
 
 저 코드를 입력하면 최상위 로컬 폴더에 `my-awesome-site`라는 이름의 폴더가 생성된다. 이 폴더가 나의 블로그다. 이 폴더를 Github Repository에 Push하고 Github Pages로 Publishing 하면 URL로 접근할 수도 있다. 이 내용도 다음 글에서 설명해보려고 한다.
 
-## 7. 서버 띄어서 새로운 블로그 보기
+## 7. Bundler 설치하기
+
+{% highlight js %}
+
+$ gem install bundler
+$ bundle install
+
+{% endhighlight %}
+
+[Bundler](http://ruby-korea.github.io/bundler-site/)를 사용하면 Ruby 프로젝트를 위하여 일관된 환경을 제공해준다. 서버를 띄우려면 Bundler가 필요하여 위 코드로 설치한다.
+
+## 8. 서버 띄어서 새로운 블로그 보기
 
 {% highlight js %}
 
@@ -119,8 +161,10 @@ $ jekyll serve
 - 로컬에 만든 Jekyll Blog 폴더를 Sourcetree를 사용하여 Github 저장소(Repository)에 올리기
 - Github Pages로 Publishing 하기
 - [Jekyll Themes](http://jekyllthemes.org/)에서 만들고자 하는 구조의 Theme 저장소를 Fork 떠서 본격적으로 커스터마이징하기
-- Jekyll에서 사용하는 Liquid[^3] 맛보기
+- Jekyll에서 사용하는 Liquid[^5] 맛보기
 
 [^1]: 한글로 정적인 페이지로 일컫는다. 서버에 저장된 형태가 그대로 유지되는 페이지이다. Dynamic Page, 동적인 페이지와 반대되는 말이다. [Wikipedia 정의](https://en.wikipedia.org/wiki/Static_web_page) 참고
 [^2]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
-[^3]: Liquid란 [Shoptify](https://www.shopify.com/)에서 개발한 Ruby 기반의 Template Language이다.
+[^3]: 출처: [Extremely Normal Blog](https://zunonia.wordpress.com/2014/03/19/mac%EC%97%90%EC%84%9C-ruby-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B0/)
+[^4]: 출처: [초레가(초보자를 위한 레일스 가이드북)](https://rorlab.gitbooks.io/railsguidebook/content/contents/rbenv.html)
+[^5]: Liquid란 [Shoptify](https://www.shopify.com/)에서 개발한 Ruby 기반의 Template Language이다.
