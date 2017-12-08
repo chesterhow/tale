@@ -63,7 +63,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 {% endhighlight %}
 
-위에 코드를 제대로 터미널에 쳤다면 설치 과정을 설명하는 텍스트가 자동으로 쭉 표시된다. Home Brew에 걸맞은 맥주 Emoji🍺도 보인다. 생각보다 오래 걸리니 기다리자.
+위에 코드를 제대로 터미널에 쳤다면 설치 과정을 설명하는 텍스트가 자동으로 쭉 표시된다. 생각보다 오래 걸리니 기다리자.
 
 ## 4. Home Brew로 Ruby Version Manager rbenv 설치하기
 
@@ -135,22 +135,22 @@ $ jekyll new my-awesome-site
 {% highlight js %}
 
 $ gem install bundler
+$ cd my-awesome-site
 $ bundle install
 
 {% endhighlight %}
 
-[Bundler](http://ruby-korea.github.io/bundler-site/)를 사용하면 Ruby 프로젝트를 위하여 일관된 환경을 제공해준다. 서버를 띄우려면 Bundler가 필요하여 위 코드로 설치한다.
+[Bundler](http://ruby-korea.github.io/bundler-site/)를 사용하면 Ruby 프로젝트를 위하여 일관된 환경을 제공해준다. 서버를 띄우려면 Bundler가 필요하여 위 코드로 설치한다. `cd my-awesome-site`는 `my-awesome-site` 폴더로 이동하라는 뜻이다. `cd`는 아마도 'Change Directory' 라는 뜻일 것이다. 이동하여 `bundle`을 설치한다.
 
 ## 8. 서버 띄어서 새로운 블로그 보기
 
 {% highlight js %}
 
-$ cd my-awesome-site
 $ jekyll serve
 
 {% endhighlight %}
 
-`cd my-awesome-site`는 `my-awesome-site` 폴더로 이동하라는 뜻이다. `cd`는 아마도 'Change Directory' 라는 뜻일 것이다. 이동하는 이유는 해당 폴더로 이동해야 서버를 띄울 수 있기 때문이다. 그다음에 `jekyll serve`는 'Jekyll 서버를 띄어라(?)' 라는 뜻이다. 그러면 Generating 과정을 설명하는 텍스트가 터미널에 쭉 나타나고 `Server address: http://127.0.0.1:4000/` 서버 주소도 보인다. 해당 주소로 접근하면 새로운 블로그를 볼 수 있다. 서버를 끄려면 `Ctrl-c`를 누르면 된다. (Command가 아니고 Ctrl이다)
+`jekyll serve`는 'Jekyll 서버를 띄어라(?)' 라는 뜻이다. 그러면 Generating 과정을 설명하는 텍스트가 터미널에 쭉 나타나고 `Server address: http://127.0.0.1:4000/` 서버 주소도 보인다. 해당 주소로 접근하면 새로운 블로그를 볼 수 있다. 서버를 끄려면 `Ctrl-c`를 누르면 된다. (Command가 아니고 Ctrl이다)
 
 
 
@@ -162,6 +162,14 @@ $ jekyll serve
 - Github Pages로 Publishing 하기
 - [Jekyll Themes](http://jekyllthemes.org/)에서 만들고자 하는 구조의 Theme 저장소를 Fork 떠서 본격적으로 커스터마이징하기
 - Jekyll에서 사용하는 Liquid[^5] 맛보기
+
+# 공지
+
+어떻게 Jekyll로 블로그를 만들었는지 궁금하시는 분들이 많아서 첫 번째 글을 작성했다. 하지만 첫 번째 글을 보고 설치에 문제가 생긴 경우가 있었다. 그래서 메시지를 주고 받으며 최대한 알려드리고 나 또한 도움을 받아서 첫 번째 편의 내용을 수정했다. 하지만 계속 문제가 글을 따라하면서 계속 문제가 있을 수 있겠다는 생각이 들었다.
+
+그래서 미흡하지만 스터디를 진행해보려고 한다. 스터디를 통해서 1편에 최대한 수정 사항을 반영하고 쓰고 있는 2편을 좀 더 단단히 해볼 예정이다. 혹시 Jekyll 설치에 문제가 있거나 Jekyll Blog를 제대로 커스터마이징해서 계속 Blog를 운영해보고 싶은 디자이너가 있다면 아래 링크를 통해 신청해주시길 바란다. (스터디는 어느정도 인원이 되면 마감할 예정이다.)
+
+[UI, UX 디자이너도 만드는 Jekyll Blog 스터디 모집](https://goo.gl/forms/y8yFk1UQe23IdsPG3)
 
 [^1]: 한글로 정적인 페이지로 일컫는다. 서버에 저장된 형태가 그대로 유지되는 페이지이다. Dynamic Page, 동적인 페이지와 반대되는 말이다. [Wikipedia 정의](https://en.wikipedia.org/wiki/Static_web_page) 참고
 [^2]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
