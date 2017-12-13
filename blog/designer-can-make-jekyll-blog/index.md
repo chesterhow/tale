@@ -81,7 +81,9 @@ $ brew install rbenv ruby-build
 
 {% highlight js %}
 
-$ eval "$(rbenv init -)"
+$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+
+$ source ~/.bash_profile
 
 {% endhighlight %}
 
@@ -97,16 +99,6 @@ $ rbenv global 2.4.2
 {% endhighlight %}
 
 2017년 12월 기준 최신 버전이 2.4.2라서 2.4.2를 깔았다.
-
-### 4) rehash
-
-{% highlight js %}
-
-$ rbenv rehash
-
-{% endhighlight %}
-
-그 후에 rehash를 해준다. `rehash` 옵션은 새로운 환경을 재설정하는 옵션이라고 한다.[^4]
 
 ## 5. 드디어 Jekyll 설치하기
 
@@ -130,27 +122,17 @@ $ jekyll new my-awesome-site
 
 저 코드를 입력하면 최상위 로컬 폴더에 `my-awesome-site`라는 이름의 폴더가 생성된다. 이 폴더가 나의 블로그다. 이 폴더를 Github Repository에 Push하고 Github Pages로 Publishing 하면 URL로 접근할 수도 있다. 이 내용도 다음 글에서 설명해보려고 한다.
 
-## 7. Bundler 설치하기
+## 7. 서버 띄어서 새로운 블로그 보기
 
 {% highlight js %}
 
-$ gem install bundler
 $ cd my-awesome-site
-$ bundle install
-
-{% endhighlight %}
-
-[Bundler](http://ruby-korea.github.io/bundler-site/)를 사용하면 Ruby 프로젝트를 위하여 일관된 환경을 제공해준다. 서버를 띄우려면 Bundler가 필요하여 위 코드로 설치한다. `cd my-awesome-site`는 `my-awesome-site` 폴더로 이동하라는 뜻이다. `cd`는 아마도 'Change Directory' 라는 뜻일 것이다. 이동하여 `bundle`을 설치한다.
-
-## 8. 서버 띄어서 새로운 블로그 보기
-
-{% highlight js %}
 
 $ jekyll serve
 
 {% endhighlight %}
 
-`jekyll serve`는 'Jekyll 서버를 띄어라(?)' 라는 뜻이다. 그러면 Generating 과정을 설명하는 텍스트가 터미널에 쭉 나타나고 `Server address: http://127.0.0.1:4000/` 서버 주소도 보인다. 해당 주소로 접근하면 새로운 블로그를 볼 수 있다. 서버를 끄려면 `Ctrl-c`를 누르면 된다. (Command가 아니고 Ctrl이다)
+`cd my-awesome-site`는 `my-awesome-site` 폴더로 이동하라는 뜻이다. `cd`는 아마도 'Change Directory' 라는 뜻일 것이다. `jekyll serve`는 'Jekyll 서버를 띄어라(?)' 라는 뜻이다. 그러면 Generating 과정을 설명하는 텍스트가 터미널에 쭉 나타나고 `Server address: http://127.0.0.1:4000/` 서버 주소도 보인다. 해당 주소로 접근하면 새로운 블로그를 볼 수 있다. 서버를 끄려면 `Ctrl-c`를 누르면 된다. (Command가 아니고 Ctrl이다)
 
 
 
