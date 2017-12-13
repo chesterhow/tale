@@ -82,7 +82,6 @@ $ brew install rbenv ruby-build
 {% highlight js %}
 
 $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-
 $ source ~/.bash_profile
 
 {% endhighlight %}
@@ -127,7 +126,6 @@ $ jekyll new my-awesome-site
 {% highlight js %}
 
 $ cd my-awesome-site
-
 $ jekyll serve
 
 {% endhighlight %}
@@ -155,6 +153,6 @@ $ jekyll serve
 
 [^1]: 한글로 정적인 페이지로 일컫는다. 서버에 저장된 형태가 그대로 유지되는 페이지이다. Dynamic Page, 동적인 페이지와 반대되는 말이다. [Wikipedia 정의](https://en.wikipedia.org/wiki/Static_web_page) 참고
 [^2]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
-[^3]: 출처: [Extremely Normal Blog](https://zunonia.wordpress.com/2014/03/19/mac%EC%97%90%EC%84%9C-ruby-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B0/)
+[^3]: 출처: [Go Rails](https://gorails.com/setup/osx/10.11-el-capitan)
 [^4]: 출처: [초레가(초보자를 위한 레일스 가이드북)](https://rorlab.gitbooks.io/railsguidebook/content/contents/rbenv.html)
 [^5]: Liquid란 [Shoptify](https://www.shopify.com/)에서 개발한 Ruby 기반의 Template Language이다.
