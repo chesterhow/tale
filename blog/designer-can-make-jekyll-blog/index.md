@@ -31,15 +31,11 @@ order: 2
 
 # Jekyll 설치를 위한 환경 만들기
 
-- 아래 과정은 macOS 기준이다.
+- 아래 과정은 macOS Sierra 기준이다.
 
-## 1. Xcode 설치하기
+## 1. Command Line Tools 설치하기
 
-iOS, macOS 프로그램을 만드는 건 아니지만 Xcode가 필요하다. Xcode가 필요한 이유는 Command Line Tools 때문이 아닐까 싶은데 확실하지는 않다. (~~개알못은 그냥 하라는 대로 한다.~~) Xcode는 [Mac App Store](https://itunes.apple.com/kr/app/xcode/id497799835?mt=12)에서 다운받을 수 있다. Xcode는 용량이 상당히 크기 때문에 시간이 많이 소요된다. 중간에 Wi-Fi가 끊기면 더 오래 걸리니 그냥 지켜보면서 한 번에 다운받는 게 좋다.
-
-## 2. Command Line Tools 설치하기
-
-Xcode를 설치하고 나면 Command Line Tools를 설치할 수 있다.
+예전에는 Xcode를 깔아야 Command Line Tools를 설치할 수 있었지만 이제는 아래 코드만 입력해도 바로 설치할 수 있다.
 
 {% highlight js %}
 
@@ -51,7 +47,7 @@ $ xcode-select --install
 
 위에 코드를 치면 도구를 지금 설치할 거냐는 Alert이 하나 뜬다. **설치**를 선택하면 바로 설치가 시작된다.
 
-## 3. Home Brew 설치하기
+## 2. Home Brew 설치하기
 
 Home Brew를 설치하는 이유는 Ruby Version Manager를 설치하기 위해서이다. Jekyll은 Ruby라는 언어로 만들어졌다. 사실 macOS에는 Ruby가 원래 깔려있다. 그래서 나도 처음에는 Ruby를 설치할 생각을 안 했다. 하지만 구글링을 해보니 Apple에 설치된 Ruby는 사용할 수가 없다고 한다. 그래서 Ruby version manager 중 [rbenv](https://github.com/rbenv/rbenv)를 설치했다. 그에 앞서 rbenv를 설치하려면 [Home Brew](https://brew.sh/index_ko.html)가 필요하다. 공식 사이트에 따르면 Home Brew는 **Apple에서 제공하지 않는 유용한 패키지 관리자를 설치**한다.
 
@@ -65,7 +61,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 위에 코드를 제대로 터미널에 쳤다면 설치 과정을 설명하는 텍스트가 자동으로 쭉 표시된다. 생각보다 오래 걸리니 기다리자.
 
-## 4. Home Brew로 Ruby Version Manager rbenv 설치하기
+## 3. Home Brew로 Ruby Version Manager rbenv 설치하기
 
 ### 1) rbenv 설치
 
@@ -86,7 +82,7 @@ $ source ~/.bash_profile
 
 {% endhighlight %}
 
-터미널을 작업할 때마다 괄호 안의 명령어가 자동으로 실행되게 하는 코드라고 한다.[^3]
+터미널을 작업할 때마다 괄호 안의 명령어가 자동으로 실행되게 하는 코드라고 한다.[^2]
 
 ### 3) ruby 2.4.2 설치
 
@@ -99,7 +95,7 @@ $ rbenv global 2.4.2
 
 2017년 12월 기준 최신 버전이 2.4.2라서 2.4.2를 깔았다.
 
-## 5. 드디어 Jekyll 설치하기
+## 4. 드디어 Jekyll 설치하기
 
 {% highlight js %}
 
@@ -109,7 +105,7 @@ $ gem install jekyll
 
 터미널에 위와 같은 코드를 쳐보자. 아마 제대로 될 것이다. 처음에는 Jekyll 공식 사이트에서 `빠른 시작 방법`이라고 적혀 있어서 순수한 마음으로 저 코드부터 터미널에 쳐봤다. 하지만 될 리가 없었다. 앞에 4단계는 거쳐야 `$ gem install jekyll`은 실행될 수 있었다.
 
-## 6. 로컬에 Jekyll로 완전히 새 블로그 만들기
+## 5. 로컬에 Jekyll로 완전히 새 블로그 만들기
 
 {% highlight js %}
 
@@ -117,11 +113,11 @@ $ jekyll new my-awesome-site
 
 {% endhighlight %}
 
-위 코드는 Jekyll에게 `my-awesome-site`라는 이름의 새 Blog를 만들어달라는 명령이다. 그러므로 `my-awesome-site`는 만들고자 하는 Blog 이름으로 대체하면 된다. 새로운 블로그를 만들지 않고 괜찮은 테마를 찾아서 Fork[^2]를 떠서 수정하는 방법도 있다. 커스터마이징과 관련해서는 이후 다른 글에서 설명하고자 한다. 일단 새로운 블로그를 만들어보자.
+위 코드는 Jekyll에게 `my-awesome-site`라는 이름의 새 Blog를 만들어달라는 명령이다. 그러므로 `my-awesome-site`는 만들고자 하는 Blog 이름으로 대체하면 된다. 새로운 블로그를 만들지 않고 괜찮은 테마를 찾아서 Fork[^3]를 떠서 수정하는 방법도 있다. 커스터마이징과 관련해서는 이후 다른 글에서 설명하고자 한다. 일단 새로운 블로그를 만들어보자.
 
 저 코드를 입력하면 최상위 로컬 폴더에 `my-awesome-site`라는 이름의 폴더가 생성된다. 이 폴더가 나의 블로그다. 이 폴더를 Github Repository에 Push하고 Github Pages로 Publishing 하면 URL로 접근할 수도 있다. 이 내용도 다음 글에서 설명해보려고 한다.
 
-## 7. 서버 띄어서 새로운 블로그 보기
+## 6. 서버 띄어서 새로운 블로그 보기
 
 {% highlight js %}
 
@@ -141,7 +137,7 @@ $ jekyll serve
 - 로컬에 만든 Jekyll Blog 폴더를 Sourcetree를 사용하여 Github 저장소(Repository)에 올리기
 - Github Pages로 Publishing 하기
 - [Jekyll Themes](http://jekyllthemes.org/)에서 만들고자 하는 구조의 Theme 저장소를 Fork 떠서 본격적으로 커스터마이징하기
-- Jekyll에서 사용하는 Liquid[^5] 맛보기
+- Jekyll에서 사용하는 Liquid[^4] 맛보기
 
 # 공지
 
@@ -152,7 +148,7 @@ $ jekyll serve
 [UI, UX 디자이너도 만드는 Jekyll Blog 스터디 모집](https://goo.gl/forms/y8yFk1UQe23IdsPG3)
 
 [^1]: 한글로 정적인 페이지로 일컫는다. 서버에 저장된 형태가 그대로 유지되는 페이지이다. Dynamic Page, 동적인 페이지와 반대되는 말이다. [Wikipedia 정의](https://en.wikipedia.org/wiki/Static_web_page) 참고
-[^2]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
-[^3]: 출처: [Go Rails](https://gorails.com/setup/osx/10.11-el-capitan)
-[^4]: 출처: [초레가(초보자를 위한 레일스 가이드북)](https://rorlab.gitbooks.io/railsguidebook/content/contents/rbenv.html)
-[^5]: Liquid란 [Shoptify](https://www.shopify.com/)에서 개발한 Ruby 기반의 Template Language이다.
+[^2]: 출처: [Go Rails](https://gorails.com/setup/osx/10.11-el-capitan) 
+[^3]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
+[^4]: Liquid란 [Shoptify](https://www.shopify.com/)에서 개발한 Ruby 기반의 Template Language이다.
+
