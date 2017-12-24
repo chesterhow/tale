@@ -52,6 +52,10 @@ author: "without inheritance M"
  다음은 오라클에서 제공하는 자바 API Document에서 번역한 내용입니다.
  >자바 언어에서는 클래스들이 다른 클래스들로부터 파생될 수 있다. 그에 의해 필드와 메소드들을 이어받는다. 다른 클래스로부터 파생된 클래스를 subclass라고 하고, subclass가 파생된 클래스를 superclass라고 한다. superclass가 없는 Object를 제외한 모든 클래스는 단 하나의 직접적인 superclass를 갖는다. 명시된 다른 superclass가 없는 클래스들은 모두 Object의 subclass이다. 클래스들은 다른 클래스에서 파생된 클래스로부터 다시 파생될 수 있다. 이런 식으로 무한히 파생되는 것이 가능한데, 결국 최상위 클래스는 Object이다.
 
+<br>
+<br>
+
+정의는 위와 같이 단순합니다. 하지만 단순히 필드와 메소드를 가져온다는 의미에서 생각을 멈춰서는 안 됩니다. 이는 클래스 간에 의존 관계를 만드는 것이기 때문입니다. 
 
  다음은 Effective Java 2nd Edition/item 16:Favor composition over inheritance 일부 번역입니다. 필요하다고 생각되는 문단만 뽑아서 전문은 아닙니다.
 
