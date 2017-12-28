@@ -18,7 +18,7 @@
 
 .project-header {
         display: flex;
-        font-family: $san-serif;
+        font-family: $source, $san-serif;
         color: $white;
         height: 100%;
         
@@ -32,10 +32,19 @@
     .header-project-title {
         font-weight: 700;
         font-size: 38px;
+        
+        @media (max-width: $break-small) {
+            font-size: 32px;
+        }
     }
     
     .header-project-des {
-        font-size: 24px;
+        padding-top: 6px;
+        font-size: 20px;
+        
+        @media (max-width: $break-small) {
+            font-size: 17px;
+        }
     }
 }
 
