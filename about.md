@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jihye Leee"
+subtitle: "이지혜"
 author: "Jihye Lee"
 permalink: /about/
 post-header: true
