@@ -37,7 +37,7 @@ Github 저장소를 만들었다면 Sourcetree로 로컬과 만든 Github 저장
 2. Sourcetree는 Atlassian 계정이 필요하다. [Atlassian](https://id.atlassian.com/signup?application=mac&continue=https://my.atlassian.com) 사이트에서 계정을 만든다.
 3. 다운받은 Sourcetree를 설치한다. 설치하는 과정에서 가입한 Atlassian 계정과 연동할 Github 계정에 로그인해야 한다. 위에서 만든 Github 계정에 로그인하자.
 4. 설치가 완료되면 저장소를 관리하는 조그마한 빈 창이 뜬다. 이 빈 창은 저장소 브라우저(Repository Browser)라고 한다. 거기에서 ‘새로 만들기(New)…’를 누르고 ‘URL에서 복제 (Clone from URL)’를 누른다.
-5. ‘저장소 복제 (Clone a repository)’ 창이 뜨고 ’Source URL’ 입력 필드에 https//github.com/ `Github 계정 이름` / `저장소 이름.git` 을 입력한다.
+5. ‘저장소 복제 (Clone a repository)’ 창이 뜨고 ’Source URL’ 입력 필드에 http://github.com/`Github 계정 이름` / `저장소 이름.git` 을 입력한다.
   - 예를 들면 내 계정은 iamleejihye 이고 저장소 이름은 iamleejihye.github.io 여서 `https://github.com/iamleejihye/iamleejihye.github.io.git` 를 입력한다.
   - 저장소는 Github 저장소 만들기에서 설명했듯이 `username.github.io` 이여야 Github Pages를 쓸 수 있다. 
 6. 입력한 후 다음 입력 필드로 넘어가면 목적지 경로 (Destination Path)와 이름 (Name)이 자동으로 채워질 것이다.
