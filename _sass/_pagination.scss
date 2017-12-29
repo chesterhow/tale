@@ -1,6 +1,6 @@
 .pagination {
   border-top: .5px solid $grey-2;
-  font-family: $palatino;
+  font-family: $serif-secondary;
   padding-top: 2rem;
   position: relative;
   text-align: center;
@@ -13,7 +13,7 @@
   .top {
     @include transition(all .3s ease-out);
     color: $default-color;
-    font-family: $sans-font;
+    font-family: $sans-serif;
     font-size: 1.1rem;
     opacity: .6;
 

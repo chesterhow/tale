@@ -3,7 +3,7 @@
 
   &-info {
     color: $default-tint;
-    font-family: $palatino;
+    font-family: $serif-secondary;
     letter-spacing: 0.5px;
     text-align: center;
 
@@ -14,7 +14,7 @@
 
   &-title {
     color: $default-shade;
-    font-family: $sans-font;
+    font-family: $sans-serif;
     font-size: 4rem;
     margin: 1rem 0;
     text-align: center;
@@ -43,7 +43,7 @@
   img + em {
     color: $default-tint;
     display: block;
-    font-family: $sans-font;
+    font-family: $sans-serif;
     font-size: 0.9rem;
     font-style: normal;
     text-align: center;

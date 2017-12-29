@@ -11,7 +11,7 @@ body {
 }
 
 html {
-  font-family: $baskerville;
+  font-family: $serif-primary;
   font-size: 14px;
 
   @media (min-width: 600px) {
@@ -30,7 +30,7 @@ h4,
 h5,
 h6 {
   color: $default-shade;
-  font-family: $sans-font;
+  font-family: $sans-serif;
   line-height: normal;
 }
 
