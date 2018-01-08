@@ -8,9 +8,9 @@ baseurl:        "/tale"
 url:            "https://chesterhow.github.io"
 
 # Assets
-sass:
-  sass_dir:     _sass
-  style:        :compressed
+# sass:
+#   sass_dir:     _sass
+#   style:        :compressed
 
 # Build settings
 markdown:       kramdown
@@ -29,3 +29,5 @@ github:
 # Gems
 plugins:
   - jekyll-paginate
+
+theme:          tale

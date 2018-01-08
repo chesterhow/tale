@@ -4,32 +4,34 @@ Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here
 ![Tale screenshot](http://i.imgur.com/pXZrtmo.png)
 
 ## Features
+- Easy installation
 - Compatible with GitHub Pages
 - Responsive design (looks just as good on mobile)
 - Syntax highlighting, with the help of Pygments
 - Markdown and HTML text formatting
 - Pagination of posts
 
-## Usage
-### 1. Fork and Clone
-Fork this repository then clone it.
+## Installation
 
-### 2. Install dependencies
-Tale uses Jekyll's built-SCSS compiler to generate CSS. You'll need to install the Jekyll gem:
+1. Add this line to your `Gemfile`:
 
-```bash
-$ gem install jekyll
+```ruby
+gem "tale"
 ```
 
-### 3. Create your site
-Edit the `_config.yml` file to suit your site. Also replace posts and content with your own.
+2. And add this line to your `_config.yml`:
 
-### 4. Running Locally
-To test your site locally, run this in your site's root directory
-
-```bash
-$ jekyll serve --watch
+```yaml
+theme: tale
 ```
+
+3. Install the theme's gems and dependencies:
+
+    $ bundle
+
+4. Finally, build and serve your site
+
+    $ bundle exec jekyll serve
 
 Head to http://localhost:4000/tale/ to see your site in action.
 
