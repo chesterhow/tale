@@ -1,18 +1,23 @@
-# Setup
-title:          "Site title"
-paginate:       5
-baseurl:        # the subpath of your site e.g. "/blog"
-url:            # the base hostname & protocol for your site e.g. "https://chesterhow.github.io"
+# Site settings
+title:          Tale
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        "/tale"
+url:            "https://chesterhow.github.io"
+
+# Author
+author:
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
 
 # Build settings
 markdown:       kramdown
 theme:          tale
 
-# About
-author:
-  name:         "Your name"
-  url:
-  email:
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
 
 # Gems
 plugins:
@@ -20,3 +25,4 @@ plugins:
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
+paginate:       5
