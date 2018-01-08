@@ -1,33 +1,22 @@
-# Permalinks
-permalink:      /:year-:month-:day/:title
-
 # Setup
-title:          Tale
+title:          "Site title"
 paginate:       5
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
-
-# Assets
-# sass:
-#   sass_dir:     _sass
-#   style:        :compressed
+baseurl:        # the subpath of your site e.g. "/blog"
+url:            # the base hostname & protocol for your site e.g. "https://chesterhow.github.io"
 
 # Build settings
 markdown:       kramdown
+theme:          tale
 
 # About
 author:
-  name:         Chester How
-  url:          http://chester.how
-  email:        chesterhow@gmail.com
-
-# Custom vars
-version:        3.4.1
-github:
-  repo:         https://github.com/chesterhow/tale
+  name:         "Your name"
+  url:
+  email:
 
 # Gems
 plugins:
   - jekyll-paginate
 
-theme:          tale
+# Permalinks
+permalink:      /:year-:month-:day/:title
