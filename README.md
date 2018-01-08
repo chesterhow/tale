@@ -4,34 +4,63 @@ Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here
 ![Tale screenshot](http://i.imgur.com/pXZrtmo.png)
 
 ## Features
+- Easy installation
 - Compatible with GitHub Pages
 - Responsive design (looks just as good on mobile)
 - Syntax highlighting, with the help of Pygments
 - Markdown and HTML text formatting
 - Pagination of posts
 
+## Installation
+### As a Jekyll theme
+1. Add this line to your `Gemfile`:
+
+```ruby
+gem "tale"
+```
+
+2. In `_config.yml` replace the `minima` theme with `tale`:
+
+```yaml
+theme: tale
+```
+
+3. Install the theme's gems and dependencies:
+
+```bash
+$ bundle
+```
+
+4. Rename `index.md` to `index.html`. Without this, the `jekyll-paginate` gem will not work.
+
+5. Add these 2 lines in to `_config.yml`:
+
+```yaml
+permalink:      /:year-:month-:day/:title
+paginate:       5
+```
+
+### As a Fork
+1. Fork this repository
+
+2. Delete the unnecessary files/folders: `CODE_OF_CONDUCT.md`, `LICENSE`, `README.md`, `tale.gemspec`
+
+3. Delete the `baseurl` line in `_config.yml`:
+
+```yaml
+baseurl:        "/tale"   # delete this line
+```
+
 ## Usage
-### 1. Fork and Clone
-Fork this repository then clone it.
+Once you've installed the theme, you're ready to work on your Jekyll site. To start off, I would recommend updating `_config.yml` with your site's details.
 
-### 2. Install dependencies
-Tale uses Jekyll's built-SCSS compiler to generate CSS. You'll need to install the Jekyll gem:
+To build and serve your site, run:
 
 ```bash
-$ gem install jekyll
+$ bundle exec jekyll serve
 ```
 
-### 3. Create your site
-Edit the `_config.yml` file to suit your site. Also replace posts and content with your own.
-
-### 4. Running Locally
-To test your site locally, run this in your site's root directory
-
-```bash
-$ jekyll serve --watch
-```
-
-Head to http://localhost:4000/tale/ to see your site in action.
+And you're all set! Head over to http://127.0.0.1:4000/ to see your site in action.
 
 ## Contributing
 Found a bug or have a suggestion? Feel free to create an issue or make a pull request!

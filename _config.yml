@@ -1,31 +1,28 @@
-# Permalinks
-permalink:      /:year-:month-:day/:title
-
-# Setup
+# Site settings
 title:          Tale
-paginate:       5
+description:    "Minimal Jekyll theme for storytellers"
 baseurl:        "/tale"
 url:            "https://chesterhow.github.io"
+
+# Author
+author:
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
+
+# Build settings
+markdown:       kramdown
+theme:          tale
 
 # Assets
 sass:
   sass_dir:     _sass
-  style:        :compressed
-
-# Build settings
-markdown:       kramdown
-
-# About
-author:
-  name:         Chester How
-  url:          http://chester.how
-  email:        chesterhow@gmail.com
-
-# Custom vars
-version:        3.4.1
-github:
-  repo:         https://github.com/chesterhow/tale
+  style:        compressed
 
 # Gems
 plugins:
   - jekyll-paginate
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
