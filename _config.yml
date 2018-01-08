@@ -12,7 +12,6 @@ author:
 
 # Build settings
 markdown:       kramdown
-theme:          tale
 
 # Assets
 sass:
