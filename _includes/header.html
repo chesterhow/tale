@@ -1,11 +1,19 @@
+{% assign default_paths = site.pages | map: "path" %}
+{% assign page_paths = site.header_pages | default: default_paths %}
+
 <nav class="nav">
   <div class="nav-container">
     <a href="{{ site.baseurl }}/">
       <h2 class="nav-title">{{ site.title }}</h2>
     </a>
+
+
+    {% if page_paths %}
     <ul>
       <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
       <li><a href="{{ site.baseurl }}/">Posts</a></li>
     </ul>
+
+    {% endif %}
   </div>
 </nav>
