@@ -20,8 +20,12 @@ sass:
 
 # Gems
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
-paginate:       5
+
+pagination:
+  enabled: true
+  per_page: 5
+  indexpage: index
