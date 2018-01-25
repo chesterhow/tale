@@ -15,35 +15,82 @@ Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here
 - Pagination of posts
 
 ## Installation
-### As a Jekyll theme
+There are 3 ways to install this theme
+
+1. Install it as a Ruby Gem (for self-hosted sites)
+2. Install it with the `jekyll-remote-theme` plugin (for GitHub Pages hosted sites)
+3. Fork the project directly
+
+### Ruby Gem method
 1. Add this line to your `Gemfile`:
 
 ```ruby
 gem "tale"
 ```
 
-2. In `_config.yml` replace the `minima` theme with `tale`:
-
-```yaml
-theme: tale
-```
-
-3. Install the theme's gems and dependencies:
+2. Install the theme's gems and dependencies:
 
 ```bash
 $ bundle
 ```
 
-4. Rename `index.md` to `index.html`. Without this, the `jekyll-paginate` gem will not work.
-
-5. Add these 2 lines in to `_config.yml`:
+3. In `_config.yml` add these lines:
 
 ```yaml
-permalink:      /:year-:month-:day/:title
-paginate:       5
+theme:      tale
+
+permalink:  /:year-:month-:day/:title
+paginate:   5
 ```
 
-### As a Fork
+Remove any other `theme:` lines.
+
+4. Rename `index.md` to `index.html`. Without this, the `jekyll-paginate` gem will not work.
+
+5. In `about.md`, change the `layout:` field to `post`:
+
+```Markdown
+layout: post
+```
+
+### GitHub Pages method
+1. Add these 2 lines in to your `Gemfile`:
+
+```ruby
+gem "jekyll-remote-theme"
+gem "jekyll-paginate"
+```
+
+2. Install the newly added gems:
+
+```bash
+$ bundle
+```
+
+3. In `_config.yml` add these lines:
+
+```yaml
+remote_theme: chesterhow/tale
+
+permalink:    /:year-:month-:day/:title
+paginate:     5
+
+plugins:
+  - jekyll-paginate
+  - jekyll-remote-theme
+```
+
+Remove any other `theme:` or `remote_theme:` lines.
+
+4. Rename `index.md` to `index.html`. Without this, the `jekyll-paginate` gem will not work.
+
+5. In `about.md`, change the `layout:` field to `post`:
+
+```Markdown
+layout: post
+```
+
+### Fork method
 1. Fork this repository
 
 2. Delete the unnecessary files/folders: `CODE_OF_CONDUCT.md`, `LICENSE`, `README.md`, `tale.gemspec`
@@ -51,7 +98,7 @@ paginate:       5
 3. Delete the `baseurl` line in `_config.yml`:
 
 ```yaml
-baseurl:        "/tale"   # delete this line
+baseurl:  "/tale"   # delete this line
 ```
 
 ## Usage
