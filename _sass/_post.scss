@@ -196,8 +196,10 @@ sup {
     font-size: 18px;
     font-family: $source;
     font-weight: 600;
-    margin: 30px 0;
-    display: inline-block;
+}
+
+.post-type-tag {
+    margin: 32px 0;
 }
 
 .post-info>h1.post-title {
@@ -224,6 +226,26 @@ sup {
         font-size: 20px;
         padding: 0 0 90px 0;
     }        
+}
+
+.catalogue-tag {
+    font-family: $source;
+    display: inline-block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 4px 7px;
+    font-size: 13px;
+    font-weight: 800;
+    background-color: $yellow;
+    border-radius: 8px;
+    color: #000;
+    margin-bottom: 10px;
+            
+    @media (max-width: $break-medium) {
+            margin: 10px 0;
+    }
+            
 }
 
 .post>div.footnotes {

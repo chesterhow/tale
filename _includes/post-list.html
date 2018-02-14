@@ -4,6 +4,11 @@
             {{ page.type }}
         </p>
         <div class="catalogue-info transition">
+            {% if page.draft == true %}
+            <span class="catalogue-tag">
+                Coming Soon
+            </span>
+            {% endif %}
             <h1 class="catalogue-title">
                 {{ page.title }}
             </h1>

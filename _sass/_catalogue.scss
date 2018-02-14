@@ -22,7 +22,7 @@
         width: 20%;
         float: left;
         
-        @media (max-width: $break-small) {
+        @media (max-width: $break-medium) {
             float: none;
             width: 100%;
         }
@@ -34,6 +34,25 @@
         display: inline-block;
         width: 80%;
         
+        .catalogue-tag {
+            font-family: $source;
+            display: inline-block;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            padding: 4px 7px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background-color: $yellow;
+            border-radius: 8px;
+            
+            @media (max-width: $break-medium) {
+                margin: 10px 0;
+            }
+            
+        }
+        
         h1.catalogue-title {
             color: $grey-0;
             display: block;
@@ -42,13 +61,14 @@
             font-weight: 700;
             line-height: 1.5;
             letter-spacing: -0.009em;
+            position: relative;
 
             @media (max-width: $break-small) {
                   font-size: 22px;
             }
         }
         
-        @media (max-width: $break-small) {
+        @media (max-width: $break-medium) {
             display: block;
             width: 100%;
         }

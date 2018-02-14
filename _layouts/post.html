@@ -4,9 +4,16 @@ layout: default
 
 <div class="post">
     <div class="post-info">
-        <span class="post-type">
-            {{ page.type }}
-        </span>
+        <div class="post-type-tag">
+            {% if page.draft == true %}
+            <div class="catalogue-tag">
+                Coming Soon
+            </div>
+            {% endif %}
+            <div class="post-type">
+                {{ page.type }}
+            </div>
+        </div>
         <h1 class="post-title">
             {{ page.title }}
         </h1>
@@ -14,7 +21,6 @@ layout: default
             {{ page.subtitle }}
         </h2>
   </div>
-
     {{ content }}
 
 </div>
