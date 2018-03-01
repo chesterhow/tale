@@ -98,7 +98,7 @@ s = "Python syntax highlighting"
 print s
 {% endhighlight %}
 
-Adding `linenos` to the Pyments tag enables line numbers.
+Adding `linenos` to the Pygments tag enables line numbers.
 
 {% highlight js  linenos %}
 // Sample javascript code
