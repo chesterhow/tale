@@ -13,7 +13,7 @@ order: 4
 
 # 1,2편과 3편의 다른 점
 
-1편에서는 터미널에 $ jekyll new my-awesome-site 코드를 쳐서 완전히 새로운 블로그를 로컬에 생성했다. 2편에서는 1편에서 생성한  my-awesome-site 폴더를 Github 저장소에  Push 하는 과정을 다루었다. 3편은 조금 다르다. 3편에서는 새로운 블로그를 만드는 게 아닌, 이미 다른 사람이 만든 블로그를 가져와서 커스터마이징하는 과정을 다룬다.
+1편에서는 터미널에 `$ jekyll new my-awesome-site` 코드를 쳐서 완전히 새로운 블로그를 로컬에 생성했다. 2편에서는 1편에서 생성한 `my-awesome-site` 폴더를 Github 저장소에  Push 하는 과정을 다루었다. 3편은 조금 다르다. 3편에서는 새로운 블로그를 만드는 게 아닌, 이미 다른 사람이 만든 블로그를 가져와서 커스터마이징하는 과정을 다룬다.
 
 그래서 새로운 블로그를 만들어서 사용하고 싶다면 1편을 참고하여 블로그를 생성하고 2편을 참고하여 Github에 업로드하면 된다. 이미 잘 짜여있는 다른 블로그를 커스터마이징하여 사용하고 싶다면 1편으로 Jekyll 설치 과정까지만 진행한 후, 3편을 보고 커스터마이징 작업에 착수하면 된다.
 
@@ -26,6 +26,7 @@ order: 4
 ![Structure of Tale](./img/structure_tale.png)
 
 메인 페이지에서 ‘Posts’, ‘About’ 두 가지 메뉴에 접근할 수 있고 About은 단일 Markdown 파일 하나가 연결되어 있다. ‘Posts’ 메뉴에는 여러 Article (Mardown)이 있다. ‘Posts’ 메뉴의 글은 Markdown 파일명에 입력한 날짜를 기준으로 정렬된다. 이런 형태는 Jekyll의 기존 구조라 볼 수 있고 이를 [Post](http://jekyllrb-ko.github.io/docs/posts/)라고 부른다. 하지만 내가 원했던 구조는 아래 이미지와 같았다.
+
 
 ![My structure](./img/structure_mine.png)
 
@@ -55,12 +56,13 @@ order: 4
 하지만 디렉터리를 찬찬히 살펴봐도 머릿속에 들어오지도 않고 원하는 구조로 만들려면 어떻게 해야 할지 전혀 감이 오지 않았다. 할 수 없이 다시 구글링에 착수했다.
 
 # Page로 해결하기
-마침내 Stockoverflow에서 [나와 비슷한 문제를 겪고 있는 이의 질문](https://stackoverflow.com/questions/17118551/generating-a-list-of-pages-not-posts-in-a-given-category/17913214#17913214)을 찾아냈다. 그리고 가장 많은 표를 받은 답변으로 의도했던 ‘Work' 메뉴 구조를 만들 수 있었다. 각 ‘Company' 이름의 폴더를 만들고 그 안에 ‘index.html' 혹은 ‘index.md’를 만든다. 그렇게 구조를 갖추면 [Page](http://jekyllrb-ko.github.io/docs/pages/) 변수를 사용할 수 있다. 그리고 그 안에 프로젝트 이름의 폴더를 만들고 또 안에 ‘index.html' 혹은 ‘index.md’ 를 만들면 계속 위계를 주어 연결할 수 있다. 사실 현재 이 글이 속해있는 ‘blog’ 메뉴도 Post가 아닌 Page를 활용해서 만들었다. 이 블로그의 [폴더 구조](https://github.com/iamleejihye/iamleejihye.github.io/tree/master/blog) 를 보면 참고하면 좋다.
+마침내 Stockoverflow에서 [나와 비슷한 문제를 겪고 있는 이의 질문](https://stackoverflow.com/questions/17118551/generating-a-list-of-pages-not-posts-in-a-given-category/17913214#17913214)을 찾아냈다. 그리고 가장 많은 표를 받은 답변으로 의도했던 ‘Work' 메뉴 구조를 만들 수 있었다. 각 ‘Company' 이름의 폴더를 만들고 그 안에 `index.html` 혹은 `index.md`를 만든다. 그렇게 구조를 갖추면 [Page](http://jekyllrb-ko.github.io/docs/pages/) 변수를 사용할 수 있다. 그리고 그 안에 프로젝트 이름의 폴더를 만들고 또 안에 `index.html` 혹은 `index.md` 를 만들면 계속 위계를 주어 연결할 수 있다. 사실 현재 이 글이 속해있는 ‘blog’ 메뉴도 Post가 아닌 Page를 활용해서 만들었다. 현재 내 블로그의 [폴더 구조](https://github.com/iamleejihye/iamleejihye.github.io/tree/master/blog)를 보면 참고하면 좋다.
 
 ![My structure](./img/page_structure_example.png)
 
 ## Collection
-Page로 문제는 해결했지만, 나중에 알게 된 Collection이라는 기능이 ‘Work’ 메뉴를 구성하기에 더 적합하다는 걸 뒤늦게 알게 되었다. Collection으로 날짜별로 정렬하고 싶지 않지만 서로 어느 정도 관련이 있는 글에 사용한다. Collection에 대한 설명은 [Jekyll의 공식 문서](http://jekyllrb-ko.github.io/docs/collections/) 를 참고하면 될 것 같다.
+Page로 문제는 해결했지만, 나중에 알게 된 Collection이라는 기능이 ‘Work’ 메뉴를 구성하기에 더 적합하다는 걸 뒤늦게 알게 되었다. Collection으로 날짜별로 정렬하고 싶지 않지만 서로 어느 정도 관련이 있는 글에 사용한다. Collection에 대한 설명은 [Jekyll의 공식 문서](http://jekyllrb-ko.github.io/docs/collections/)를 참고하면 될 것 같다.
+
 사실 Page는 관련이 없는 카테고리를 최초에 나눌 때 쓰는 게 좋다. 그래서 Page는 컨테이너 역할을 하고 해당 메뉴 안에 글은 각 성격에 맞게 Post나 Collection을 쓰는 게 좋다.
 
 # Liquid 공부하기
@@ -68,21 +70,26 @@ Page로 문제는 해결했지만, 나중에 알게 된 Collection이라는 기�
 
 ## Output과 Tag
 Liquid에는 두 가지 마크업 형태가 있다. `Output` 과 `Tag` 이다.
-Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다.  `{{ skill-role.name }}`  여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
+
+Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다. ` {{ skill-role.name }} ` 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
 ![The example of Output](./img/liquid_output_example.png)
 
- `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다.  `{% assign sorted = site.pages %}`  Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
-이렇게 단편적으로 살펴보면 이해는 될 것이다. 하지만 막상 커스터마이징할 때는 어렵고 한 번에 버그 없이 잘 만들기는 어렵다. 그래도 그냥 해보는 게 제일 도움이 된다. 커스터마이징을 진행하면서 다음과 같은 문서를 보면 Liquid를 쓰는데 도움이 될 것이다. 먼저 [Jekyll에서 사용하는 변수](http://jekyllrb-ko.github.io/docs/variables/)들을 알아놓으면 `site.pages`  같은 변수들이 눈에 들어올 것이다. 또 [Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) 를 모르는 게 있을 때마다 사전처럼 사용하면 좋다.
+ `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다. ` {% assign sorted = site.pages %} ` Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
+ 
+이렇게 단편적으로 살펴보면 이해는 될 것이다. 하지만 막상 커스터마이징할 때는 어렵고 한 번에 버그 없이 잘 만들기는 어렵다. 그래도 그냥 해보는 게 제일 도움이 된다. 커스터마이징을 진행하면서 다음과 같은 문서를 보면 Liquid를 쓰는데 도움이 될 것이다. 먼저 [Jekyll에서 사용하는 변수](http://jekyllrb-ko.github.io/docs/variables/)들을 알아놓으면 `site.pages`  같은 변수들이 눈에 들어올 것이다. 또 [Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)를 모르는 게 있을 때마다 사전처럼 사용하면 좋다.
 
 # 마지막 편을 마치며
-디지털 제품을 만드는 디자이너 입장에서 최대한 쉽게 이해하고 Jekyll 블로그를 만들 수 있게 하려고 노력했다. 아쉽지만 전반적으로 모든 내용을 꼼꼼히 다루지는 못했다. 글을 쓰고 보니 Jekyll의 세계는 생각보다 아주 깊고 넓다. Jekyll 블로그 만들기는 쉽지 않다. 어렵다. 커스터마이징이 자유로운 만큼 어렵다. 빌드 에러가 난다든지, 수정했지만 서버에 뛰어도 반영이 안된다든지 크고 작은 문제들을 만날 수 있다. 그때는 그냥 구글링하자. 구글링이면 못할 게 없다.
+디지털 제품을 만드는 디자이너 입장에서 최대한 쉽게 이해하고 Jekyll 블로그를 만들 수 있게 하려고 노력했다. 아쉽지만 전반적으로 모든 내용을 꼼꼼히 다루지는 못했다. 글을 쓰고 보니 Jekyll의 세계는 생각보다 아주 깊고 넓다. Jekyll 블로그 만들기는 쉽지 않다. 어렵다. 커스터마이징이 자유로운 만큼 어렵다. 빌드 에러가 난다든지, 수정했지만 서버에 뛰어도 반영이 안된다든지 크고 작은 문제들을 만날 수 있다. 그때는 그냥 `구글링`하자. 구글링이면 못할 게 없다.
 
 ## 왜 구글링을 해야 할까?
-사실 개발 공부를 취미로 시작한 지 얼마 안 되었을 때는 모르는 게 생기면 무조건 주변 개발자분들께 바로 물어보곤 했다. 가까이 해답지가 있으니까 그 유혹을 이기지 못하고 해답지를 들춰보았다. 하지만 어느 순간 스스로 문제를 해결해야 한다는 사실을 깨달았다. 해답지가 사라졌을 때 자생할 수 있는 능력이 내게 필요했다.
+사실 개발 공부를 취미로 시작한 지 얼마 안 되었을 때는 모르는 게 생기면 무조건 주변 개발자분들께 바로 물어보곤 했다. 가까이 `해답지`가 있으니까 그 유혹을 이기지 못하고 해답지를 들춰보았다. 하지만 어느 순간 스스로 문제를 해결해야 한다는 사실을 깨달았다. 해답지가 사라졌을 때 자생할 수 있는 능력이 내게 필요했다.
+
 그리고 계속해서 구글링을 통해 알게 되었다. 한 번 더 생각해보고 디버깅하고 그래도 안 되면 계속 구글링을 하면 해결하지 못할 문제는 없다는 사실을!
 
 ## Jekyll은 내 제품을 만들어볼 수 있는 기회
 처음에는 원하는 구조와 디자인의 블로그를 만들고 싶다는 단순한 이유에서 Jekyll을 시작했다. 하지만 단순히 디자인 커스터마이징을 넘어서 Jekyll은 손수 `내 제품` 을 만드는 과정을 경험할 좋은 기회라고 생각한다.
+
 블로그를 기획하고 디자인하고 직접 개발까지 한다. 그 후에 글을 올려 런칭한 후에는 사용자 피드백을 받으며 소통한다. 어떻게 하면 내 글을 더 많이 읽히게 할 수 있을지 마케팅적 고민도 해본다. 최근에는 글을 기다리는 사람들을 위해 `COMING SOON`  태그를 달아서 예고하는 기능을 추가하기도 했다. 다음에는 해당 글을 기다리는 분들을 위해 메일 구독 기능도 추가할 생각이다.
+
 비개발자인 디자이너가 제품을 온전히 처음부터 끝까지 만들 기회는 흔치 않다. 넘어야 할 벽이 조금은 있지만, Jekyll로 블로그 만들기를 적극적으로 추천해보며 글을 마친다.
