@@ -4,7 +4,7 @@ title:  "디자이너도 만드는 Jekyll Blog - 3편"
 subtitle: "본격적으로 Jekyll Theme 커스터마이징하기"
 type: "Development"
 blog: true
-text: false
+text: true
 author: "Jihye Leee"
 post-header: true
 header-img: "img/third_custom.jpg"
@@ -21,7 +21,7 @@ order: 4
 그래서 새로운 블로그를 만들어서 사용하고 싶다면 1편을 참고하여 블로그를 생성하고 2편을 참고하여 Github에 업로드하면 된다. 이미 잘 짜여있는 다른 블로그를 커스터마이징하여 사용하고 싶다면 1편으로 Jekyll 설치 과정까지만 진행한 후, 3편을 보고 커스터마이징 작업에 착수하면 된다.
 
 # 원하는 구조의 Jekyll Theme 찾기
-먼저 [Jekyll Themes](http://jekyllthemes.org/) 사이트에서 Fork 할 Theme을 찾는다. 디자인 퀄리티보다는 구현하고자 하는 구조에 초점을 맞춰 찾는 게 중요하다. 나의 경우, 심플하고 깔끔한 [Tale](https://github.com/chesterhow/tale) 이라는 Theme을 생각 없이 Fork했고 한참 커스터마이징을 진행했다. 원래 구조를 내가 원하는 방향으로 쉽게 수정할 수 있을 거로 생각한 게 잘못이었다. 그래서 조금이라도 덜 고생하려면 무조건 계획을 세우고 원하는 구조의 Theme을 찾자.
+먼저 [Jekyll Themes](http://jekyllthemes.org/) 사이트에서 Fork[^1]할 Theme을 찾는다. 디자인 퀄리티보다는 구현하고자 하는 구조에 초점을 맞춰 찾는 게 중요하다. 나의 경우, 심플하고 깔끔한 [Tale](https://github.com/chesterhow/tale) 이라는 Theme을 생각 없이 Fork했고 한참 커스터마이징을 진행했다. 원래 구조를 내가 원하는 방향으로 쉽게 수정할 수 있을 거로 생각한 게 잘못이었다. 그래서 조금이라도 덜 고생하려면 무조건 계획을 세우고 원하는 구조의 Theme을 찾자.
 
 # 구조 다시 짜기
 원하는 구조의 Theme을 찾았다면 이 내용은 건너뛰어도 좋다. 앞서 말했듯이 내가 선택한 Theme은 단순한 디자인의 구조여서 이를 다시 짜는 과정이 필요했다. ‘Tale’의 구조는 아래와 스케치와 같았다.
@@ -39,7 +39,7 @@ order: 4
 일부만 수정할 거라면 어떻게 디렉터리가 구성되어 있는지, 어떤 파일이 어떤 역할을 하는지 자세히 몰라도 상관 없다. 하지만 나의 경우 전반적으로 갈아엎어야 해서 Jekyll 디렉터리 구조를 알아야 했다. Jekyll의 기본 구조는 다음과 같다.
 
 - _config.yml
-	- 환경설정 정보를 담고 있다. head에 넣는 메타 정보와 비슷한 정보를 담기도 하고 baseurl, url 등도 설정할 수 있다.
+	- 환경설정 정보를 담고 있다. head에 넣는 메타 정보[^2]와 비슷한 정보를 담기도 하고 baseurl, url 등도 설정할 수 있다.
 - _drafts
 	- 아직 게시하지 않은, 날짜 정보가 없는 Post를 보관할 수 있는 디렉터리이다.
 - _includes
@@ -75,7 +75,7 @@ Liquid에는 두 가지 마크업 형태가 있다. `Output` 과 `Tag` 이다.
 
 Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-`&#123;{ skill-role.name }&#125;`
+`{"{ skill-role.name }"}`
 
 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
@@ -83,7 +83,7 @@ Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용�
 
  `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-`&#123;% assign sorted = site.pages %&#125;`
+`'{"% assign sorted = site.pages %"}'`
 
 Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
  
@@ -106,3 +106,6 @@ Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변�
 [Dribbble에서 보기 → ](https://dribbble.com/shots/4241649-Coming-Soon-Tag-for-Post-Draft)
 
 비개발자인 디자이너가 제품을 온전히 처음부터 끝까지 만들 기회는 흔치 않다. 넘어야 할 벽이 조금은 있지만, Jekyll로 블로그 만들기를 적극적으로 추천해보며 글을 마친다.
+
+[^1]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
+[^2]: 해당 페이지에 대한 정보를 메타 정보라고 한다. <meta> 엘리먼트로 표현한다. [w3c school의 meta 엘리먼트 설명 보기](https://www.w3schools.com/tags/tag_meta.asp)
