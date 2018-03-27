@@ -11,6 +11,9 @@ header-img: "img/third_custom.jpg"
 order: 4
 ---
 
+[1편 - ‘비개발자에게 진입 장벽이 높은 Jekyll 설치하기’](www.jihyeleee.com/blog/designer-can-make-jekyll-blog/)
+[2편 - ‘Jekyll Blog 생성에 필요한 기초적인 Github 사용법’](www.jihyeleee.com/blog/second-designer-can-make-jekyll-blog/)
+
 # 1,2편과 3편의 다른 점
 
 1편에서는 터미널에 `$ jekyll new my-awesome-site` 코드를 쳐서 완전히 새로운 블로그를 로컬에 생성했다. 2편에서는 1편에서 생성한 `my-awesome-site` 폴더를 Github 저장소에  Push 하는 과정을 다루었다. 3편은 조금 다르다. 3편에서는 새로운 블로그를 만드는 게 아닌, 이미 다른 사람이 만든 블로그를 가져와서 커스터마이징하는 과정을 다룬다.
@@ -72,7 +75,7 @@ Liquid에는 두 가지 마크업 형태가 있다. `Output` 과 `Tag` 이다.
 
 Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-`&#123;&#123; skill-role.name &#123;&#123;`
+`&#123;{ skill-role.name }&#125;`
 
 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
@@ -80,7 +83,7 @@ Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용�
 
  `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-`&#123;% assign sorted = site.pages %&#123;`
+`&#123;% assign sorted = site.pages %&#125;`
 
 Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
  
@@ -98,5 +101,8 @@ Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변�
 처음에는 원하는 구조와 디자인의 블로그를 만들고 싶다는 단순한 이유에서 Jekyll을 시작했다. 하지만 단순히 디자인 커스터마이징을 넘어서 Jekyll은 손수 `내 제품` 을 만드는 과정을 경험할 좋은 기회라고 생각한다.
 
 블로그를 기획하고 디자인하고 직접 개발까지 한다. 그 후에 글을 올려 런칭한 후에는 사용자 피드백을 받으며 소통한다. 어떻게 하면 내 글을 더 많이 읽히게 할 수 있을지 마케팅적 고민도 해본다. 최근에는 글을 기다리는 사람들을 위해 `COMING SOON`  태그를 달아서 예고하는 기능을 추가하기도 했다. 다음에는 해당 글을 기다리는 분들을 위해 메일 구독 기능도 추가할 생각이다.
+
+![COMINGSOON tag](https://cdn.dribbble.com/users/291872/screenshots/4241649/180219_blog_coming_soon.png)
+[Dribbble에서 보기 → ](https://dribbble.com/shots/4241649-Coming-Soon-Tag-for-Post-Draft)
 
 비개발자인 디자이너가 제품을 온전히 처음부터 끝까지 만들 기회는 흔치 않다. 넘어야 할 벽이 조금은 있지만, Jekyll로 블로그 만들기를 적극적으로 추천해보며 글을 마친다.
