@@ -12,6 +12,7 @@ order: 4
 ---
 
 [1편 - ‘비개발자에게 진입 장벽이 높은 Jekyll 설치하기’](www.jihyeleee.com/blog/designer-can-make-jekyll-blog/)
+
 [2편 - ‘Jekyll Blog 생성에 필요한 기초적인 Github 사용법’](www.jihyeleee.com/blog/second-designer-can-make-jekyll-blog/)
 
 # 1,2편과 3편의 다른 점
