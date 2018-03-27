@@ -76,7 +76,7 @@ Liquid에는 두 가지 마크업 형태가 있다. `Output` 과 `Tag` 이다.
 
 Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-```{{ skill-role.name }}```
+{% raw %}`{{ skill-role.name }}`{% endraw %}
 
 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
@@ -84,7 +84,7 @@ Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용�
 
  `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-```{% assign sorted = site.pages %}```
+{% raw %}`{% assign sorted = site.pages %}`{% endraw %}
 
 Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
  
