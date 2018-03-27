@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "디자이너도 만드는 Jekyll Blog - 2편"
-subtitle: "Jekyll Blog 생성에 필요한 기초적인 Github 사용법"
+title:  "Jekyll Blog 생성에 필요한 기초적인 Github 사용법"
+subtitle: "디자이너도 만드는 Jekyll Blog - 2편"
 type: "Development"
 blog: true
 text: true
