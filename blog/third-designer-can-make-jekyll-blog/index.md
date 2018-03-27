@@ -27,7 +27,6 @@ order: 4
 
 메인 페이지에서 ‘Posts’, ‘About’ 두 가지 메뉴에 접근할 수 있고 About은 단일 Markdown 파일 하나가 연결되어 있다. ‘Posts’ 메뉴에는 여러 Article (Mardown)이 있다. ‘Posts’ 메뉴의 글은 Markdown 파일명에 입력한 날짜를 기준으로 정렬된다. 이런 형태는 Jekyll의 기존 구조라 볼 수 있고 이를 [Post](http://jekyllrb-ko.github.io/docs/posts/)라고 부른다. 하지만 내가 원했던 구조는 아래 이미지와 같았다.
 
-
 ![My structure](./img/structure_mine.png)
 
 ‘Work’, ‘Blog’, ‘About’ 3개의 메뉴로 구성된다. ‘About’과 ‘Blog’ 메뉴는 ‘Tale’과 거의 같아서 수정하기만 하면 되었다.
@@ -71,11 +70,11 @@ Page로 문제는 해결했지만, 나중에 알게 된 Collection이라는 기�
 ## Output과 Tag
 Liquid에는 두 가지 마크업 형태가 있다. `Output` 과 `Tag` 이다.
 
-Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다. ` {{ skill-role.name }} ` 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
+Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다. **{{ skill-role.name }}** 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
 ![The example of Output](./img/liquid_output_example.png)
 
- `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다. ` {% assign sorted = site.pages %} ` Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
+ `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다. **{% assign sorted = site.pages %}** Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
  
 이렇게 단편적으로 살펴보면 이해는 될 것이다. 하지만 막상 커스터마이징할 때는 어렵고 한 번에 버그 없이 잘 만들기는 어렵다. 그래도 그냥 해보는 게 제일 도움이 된다. 커스터마이징을 진행하면서 다음과 같은 문서를 보면 Liquid를 쓰는데 도움이 될 것이다. 먼저 [Jekyll에서 사용하는 변수](http://jekyllrb-ko.github.io/docs/variables/)들을 알아놓으면 `site.pages`  같은 변수들이 눈에 들어올 것이다. 또 [Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)를 모르는 게 있을 때마다 사전처럼 사용하면 좋다.
 
