@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "디자이너도 만드는 Jekyll Blog - 3편"
-subtitle: "본격적으로 Jekyll Theme 커스터마이징하기"
+title:  "본격적으로 Jekyll Theme 커스터마이징하기"
+subtitle: "디자이너도 만드는 Jekyll Blog - 3편"
 type: "Development"
 blog: true
 text: true
@@ -76,7 +76,7 @@ Liquid에는 두 가지 마크업 형태가 있다. `Output` 과 `Tag` 이다.
 
 Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-`{'{ skill-role.name }'}`
+```{{ skill-role.name }}```
 
 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
@@ -84,7 +84,7 @@ Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용�
 
  `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다.
 
-`{'% assign sorted = site.pages %'}`
+```{% assign sorted = site.pages %}```
 
 Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
  
@@ -109,4 +109,4 @@ Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변�
 비개발자인 디자이너가 제품을 온전히 처음부터 끝까지 만들 기회는 흔치 않다. 넘어야 할 벽이 조금은 있지만, Jekyll로 블로그 만들기를 적극적으로 추천해보며 글을 마친다.
 
 [^1]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
-[^2]: 해당 페이지에 대한 정보를 메타 정보라고 한다. <meta> 엘리먼트로 표현한다. [w3c school의 meta 엘리먼트 설명 보기](https://www.w3schools.com/tags/tag_meta.asp)
+[^2]: 해당 페이지에 대한 정보를 메타 정보라고 한다. HTML <head> 안에 <meta> 엘리먼트로 표현한다. 메타 정보를 잘 채우면 SNS에서 URL을 공유할 때 풍부한 미리보기를 보여줄 수 있다. [w3c school의 meta 엘리먼트 설명 보기](https://www.w3schools.com/tags/tag_meta.asp)
