@@ -103,7 +103,7 @@ Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변�
 
 블로그를 기획하고 디자인하고 직접 개발까지 한다. 그 후에 글을 올려 런칭한 후에는 사용자 피드백을 받으며 소통한다. 어떻게 하면 내 글을 더 많이 읽히게 할 수 있을지 마케팅적 고민도 해본다. 최근에는 글을 기다리는 사람들을 위해 `COMING SOON`  태그를 달아서 예고하는 기능을 추가하기도 했다. 다음에는 해당 글을 기다리는 분들을 위해 메일 구독 기능도 추가할 생각이다.
 
-![COMINGSOON tag](https://cdn.dribbble.com/users/291872/screenshots/4241649/180219_blog_coming_soon.png)
+![COMINGSOON tag](https://cdn.dribbble.com/users/291872/screenshots/4241649/attachments/969349/coming_soon_tag_for_post_draft.png)
 [Dribbble에서 보기 → ](https://dribbble.com/shots/4241649-Coming-Soon-Tag-for-Post-Draft)
 
 비개발자인 디자이너가 제품을 온전히 처음부터 끝까지 만들 기회는 흔치 않다. 넘어야 할 벽이 조금은 있지만, Jekyll로 블로그 만들기를 적극적으로 추천해보며 글을 마친다.
