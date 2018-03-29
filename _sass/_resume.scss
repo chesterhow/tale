@@ -1,10 +1,15 @@
 .second-label {
-    margin: 80px 0 20px 36px;
+    margin: 80px 0 20px 0;
     font-family: $source;
     font-size: 18px;
     font-weight: 600;
     color: $purple;
     vertical-align: middle;
+    
+    .label-emoji {
+        font-size: 24px;
+    }
+    
 }
 
 div.resume-info {
