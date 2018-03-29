@@ -22,6 +22,10 @@ section.explanation {
         @media (max-width: $break-small) {
         font-size: 32px;
         }
+        
+        @media (max-width: 550px) {
+            margin-bottom: 8px;
+        }
     
     }
     
