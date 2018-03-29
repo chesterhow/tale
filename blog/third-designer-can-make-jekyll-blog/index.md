@@ -31,16 +31,18 @@ order: 4
 
 메인 페이지에서 ‘Posts’, ‘About’ 두 가지 메뉴에 접근할 수 있고 About은 단일 Markdown 파일 하나가 연결되어 있다. ‘Posts’ 메뉴에는 여러 Article (Mardown)이 있다. ‘Posts’ 메뉴의 글은 Markdown 파일명에 입력한 날짜를 기준으로 정렬된다. 이런 형태는 Jekyll의 기존 구조라 볼 수 있고 이를 [Post](http://jekyllrb-ko.github.io/docs/posts/)라고 부른다. 하지만 내가 원했던 구조는 아래 이미지와 같았다.
 
+<br />
+
 ![My structure](./img/structure_mine.png)
 
 ‘Work’, ‘Blog’, ‘About’ 3개의 메뉴로 구성된다. ‘About’과 ‘Blog’ 메뉴는 ‘Tale’과 거의 같아서 수정하기만 하면 되었다.
-문제는 ‘Work’ 메뉴였다. 각 회사에서 작업했던 프로젝트를 글로 ‘Work’ 메뉴에 업로드하려고 했다. 과거 작업에 대한 글이라서 특정 날짜를 적기가 모호했다. 그래서 날짜가 파일명에 포함되어야 하는 Post는 쓰고 싶지 않았다. 하지만 ’Tale’은 Post를 사용하고 있어서 어떻게 수정해야 할지 막막했다.
+문제는 ‘Work’ 메뉴였다. 각 회사에서 작업했던 프로젝트를 글로 ‘Work’ 메뉴에 업로드하려고 했다. 과거 작업에 대한 글이라서 특정 날짜를 적기가 모호했다. 그래서 날짜가 파일명에 포함되어야 하는 Post는 쓰고 싶지 않았다. 하지만 ’Tale’은 Post를 사용하고 있어서 어떻게 수정해야 할지 막막했다.[^2]
 
 # Jekyll 디렉터리 구조 파악하기
 일부만 수정할 거라면 어떻게 디렉터리가 구성되어 있는지, 어떤 파일이 어떤 역할을 하는지 자세히 몰라도 상관 없다. 하지만 나의 경우 전반적으로 갈아엎어야 해서 Jekyll 디렉터리 구조를 알아야 했다. Jekyll의 기본 구조는 다음과 같다.
 
 - _config.yml
-	- 환경설정 정보를 담고 있다. head에 넣는 메타 정보[^2]와 비슷한 정보를 담기도 하고 baseurl, url 등도 설정할 수 있다.
+	- 환경설정 정보를 담고 있다. head에 넣는 메타 정보[^3]와 비슷한 정보를 담기도 하고 baseurl, url 등도 설정할 수 있다.
 - _drafts
 	- 아직 게시하지 않은, 날짜 정보가 없는 Post를 보관할 수 있는 디렉터리이다.
 - _includes
@@ -87,7 +89,7 @@ Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용�
 {% raw %}`{% assign sorted = site.pages %}`{% endraw %}
 
 Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변수에 `site.pages` 를 `assign` 하라는 뜻이다. 여기서 `assign` 은 변수를 정의할 수 있는 Tag이다.
- 
+
 이렇게 단편적으로 살펴보면 이해는 될 것이다. 하지만 막상 커스터마이징할 때는 어렵고 한 번에 버그 없이 잘 만들기는 어렵다. 그래도 그냥 해보는 게 제일 도움이 된다. 커스터마이징을 진행하면서 다음과 같은 문서를 보면 Liquid를 쓰는데 도움이 될 것이다. 먼저 [Jekyll에서 사용하는 변수](http://jekyllrb-ko.github.io/docs/variables/)들을 알아놓으면 `site.pages`  같은 변수들이 눈에 들어올 것이다. 또 [Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)를 모르는 게 있을 때마다 사전처럼 사용하면 좋다.
 
 # 마지막 편을 마치며
@@ -109,4 +111,5 @@ Tag는 로직을 구성할 때 사용한다. 이 구문은 `sorted` 라는 변�
 비개발자인 디자이너가 제품을 온전히 처음부터 끝까지 만들 기회는 흔치 않다. 넘어야 할 벽이 조금은 있지만, Jekyll로 블로그 만들기를 적극적으로 추천해보며 글을 마친다.
 
 [^1]: Fork란 다른 개발자가 만든 Repository의 모든 내용을 내 Repository에 복사 붙여넣기를 하는 거라고 볼 수 있다. 다른 디자이너가 만든 Sketch, PSD 파일을 로컬에 다운받아서 수정해서 쓰는 거라고 볼 수 있다.
-[^2]: 해당 페이지에 대한 정보를 메타 정보라고 한다. HTML <head> 안에 <meta> 엘리먼트로 표현한다. 메타 정보를 잘 채우면 SNS에서 URL을 공유할 때 풍부한 미리보기를 보여줄 수 있다. [w3c school의 meta 엘리먼트 설명 보기](https://www.w3schools.com/tags/tag_meta.asp)
+[^2]: 복잡한 구조를 구현하긴 했지만 이 글을 쓰고 얼마 안 돼서 단순한 구조로 수정하였다. 추후에 각 Company 마다 글이 많아진다면 다시 이 구조로 변경할 예정이다.
+[^3]: 해당 페이지에 대한 정보를 메타 정보라고 한다. HTML <head> 안에 <meta> 엘리먼트로 표현한다. 메타 정보를 잘 채우면 SNS에서 URL을 공유할 때 풍부한 미리보기를 보여줄 수 있다. [w3c school의 meta 엘리먼트 설명 보기](https://www.w3schools.com/tags/tag_meta.asp)
