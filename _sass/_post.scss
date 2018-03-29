@@ -181,7 +181,36 @@
                 margin-left: 20px;
             }
         }
-    }  
+    }
+    
+    .catalogue-draft-message {
+        text-align: center;
+        margin: 50px 0;
+        width: 100%;
+        padding: 32px 0;
+        border: 1px solid $grey-2;
+        border-radius: 6px;
+        font-size: 16px;
+        color: $grey-0;
+        font-weight: 500;
+        
+        @media (max-width: $break-small ) {
+            font-size: 15px;
+        }
+        
+        h1 {
+            font-family: $source;
+            letter-spacing: 0.01em;
+            color: $purple;
+            padding-bottom: 7px;
+            font-size: 25px;
+            
+            @media (max-width: $break-small ) {
+                font-size: 23px;
+            }
+            
+        }
+    }
 }
 
 sup {

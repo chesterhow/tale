@@ -10,7 +10,7 @@ description: Jihye Leee, who is a Product Designer based in Seoul, South Korea f
     <h1 class="intro">
     I'm Jihye Leee,
     </h1>
-    <h1 class="intro">an UI Designer at 
+    <h1 class="intro">an Digital Product Designer at 
         <div class="intro-link">
             <a class="transition" href="http://ridicorp.com/" target="_blank">
                 RIDI

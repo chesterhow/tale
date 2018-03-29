@@ -2,19 +2,16 @@
 layout: default
 work: true
 main: true
-title: 'RIDI'
-info: 'UI Designer'
-sub-info: '2015. JUN - Present'
+title: My projects at work
 project-header: true
-header-img: "img/ridi.png"
-description: MUST-USE 전자책을 만듭니다.
-order: 1
+header-img: "img/project_bg.png"
+description: 진행했던 프로젝트를 조금씩 글로 써서 올립니다.
 ---
 
 <div class="catalogue">
 {% assign sorted = site.pages | sort: 'order' | reverse %}
 {% for page in sorted %}
-{% if page.ridi == true %}
+{% if page.projects == true %}
 
      {% include post-list.html %}
 
