@@ -2,10 +2,10 @@
 layout: default
 work: true
 main: true
-title: My projects at work
+title: Selected Projects at Work
 project-header: true
 header-img: "img/project_bg.png"
-description: 진행했던 프로젝트를 조금씩 글로 써서 올립니다.
+description: 진행해 온 프로젝트를 조금씩 글로 써서 리뷰합니다.
 ---
 
 <div class="catalogue">
