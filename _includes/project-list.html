@@ -1,16 +1,47 @@
 <li class="workplace transition">
-    <a href="{{ page.url | prepend: site.baseurl }}">
-        <p class="workplace-name">
-            {{ page.title }}
+    {% for third in site.data.experience.third-place %}
+    <p class="workplace-name">
+        {{ third.name }}
+    </p>
+    <div class="work-info">
+        <p>
+            {{ third.role }}
         </p>
-        <div class="work-info">
-            <p>
-                {{ page.info }}
-            </p>
-            <p class="work-sub-info">
-                {{ page.sub-info }}
-            </p>
-        </div>
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><title>Artboard 1</title><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
-    </a>
+        <p class="work-sub-info">
+            {{ third.date }}
+        </p>
+    </div>
+    {% endfor %}
+</li>
+
+<li class="workplace transition">
+    {% for second in site.data.experience.second-place %}
+    <p class="workplace-name">
+        {{ second.name }}
+    </p>
+    <div class="work-info">
+        <p>
+            {{ second.role }}
+        </p>
+        <p class="work-sub-info">
+            {{ second.date }}
+        </p>
+    </div>
+    {% endfor %}
+</li>
+
+<li class="workplace transition">
+    {% for first in site.data.experience.first-place %}
+    <p class="workplace-name">
+        {{ first.name }}
+    </p>
+    <div class="work-info">
+        <p>
+            {{ first.role }}
+        </p>
+        <p class="work-sub-info">
+            {{ first.date }}
+        </p>
+    </div>
+    {% endfor %}
 </li>

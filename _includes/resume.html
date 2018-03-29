@@ -13,43 +13,20 @@
         </p>
     </div>
     <ul>
-        {% assign sorted = site.pages | sort: 'order' %}
-        {% for page in sorted %}
-            {% if page.work == true %}
 
-                {% include project-list.html %}
-        
-        {% endif %}
-        {% endfor %}
+        {% include project-list.html %}
+
     </ul>
+    
+    <a href="{{ site.baseurl | append: '/project' }}" class="transition"> 
+        <div class="view-all-projects transition">
+            View all projects
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><path d="M7.2,17.9l6.1-6.1L7.2,5.6,9,3.8l8,8-8,8Z"/><path class="cls-1" d="M.1-.2h24v24H.1Z"/></svg>
+        </div>
+    </a>
+
 </section>
 
-<section class="resume">
-    <div class="resume-info">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
-        <g>
-            <rect x="11.6" y="33.2" width="21.5" height="4.6"/>
-            <path d="M47,16.2H32.4l-2.8-6.9C29,7.9,27.6,7,26.1,7H7c-2.6,0-4.6,2-4.6,4.6v9.2v12.3v9.2C2.4,45,4.4,47,7,47h40
-                c2.6,0,4.6-2,4.6-4.6V20.8C51.6,18.2,49.6,16.2,47,16.2z M7,11.6h18.5l1.8,4.6H7V11.6z M47,42.4H7v-9.2V20.8l0,0h25.4l0,0H47V42.4z
-                "/>
-        </g>
-        </svg>
-        <p class="second-label">
-            Side Projects
-        </p>
-    </div>
-    <ul>
-        {% assign sorted = site.pages | sort: 'order' %}
-        {% for page in sorted %}
-            {% if page.side-projects == true %}
-        
-                {% include project-list.html %}
-        
-            {% endif %}
-        {% endfor %}
-    </ul>
-</section>
 
 <section class="skill">
     <div class="resume-info">

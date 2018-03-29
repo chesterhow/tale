@@ -3,7 +3,7 @@
     font-family: $source;
     font-size: 18px;
     font-weight: 600;
-    color: $default-tint;
+    color: $purple;
     vertical-align: middle;
 }
 
@@ -12,7 +12,7 @@ div.resume-info {
 
     svg {
         width: 24px;
-        fill: $default-tint;
+        fill: $purple;
         position: absolute;
     }
 }
@@ -55,21 +55,36 @@ div.resume-info {
         }
     }
     
-    .workplace:hover {
-        background: $grey-3;
-        cursor: pointer;
-    }
-    
     .workplace:last-child {
         border-bottom: 1px solid $grey-2;
     }
     
+    a {
+        .view-all-projects {
+            display: inline-block;
+            color: $default-tint;
+            font-size: 18px;
+            font-family: $source;
+            font-weight: 600;
+            margin: 20px 0;
+            
+            svg {
+                width: 20px;
+                fill: $default-tint;
+                vertical-align: middle;
+                margin-left: 6px;
+            }
+        }
+    }
+    a:hover {
+        opacity: .6;
+    }
 }
 
 section.skill {
     svg {
         width: 24px;
-        fill: $default-tint;
+        fill: $purple;
         position: absolute;
     }
     padding-bottom: 72px;
