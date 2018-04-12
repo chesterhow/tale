@@ -14,25 +14,16 @@
   }
 
     &-type {
-        color: $default-tint;
+        color: $purple;
         font-size: 18px;
         font-family: $source;
         font-weight: 600;
+        margin-bottom: 12px;
         display: inline-block;
-        width: 20%;
-        float: left;
-        
-        @media (max-width: $break-medium) {
-            float: none;
-            width: 100%;
-        }
-    
     }
-    
    
     &-info {
         display: inline-block;
-        width: 80%;
         
         .catalogue-tag {
             font-family: $source;
