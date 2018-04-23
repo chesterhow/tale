@@ -7,7 +7,7 @@ blog: true
 text: true
 author: "Jihye Leee"
 post-header: true
-header-img: "img/github.png"
+header-img: "img/github.jpg"
 order: 3
 ---
 
