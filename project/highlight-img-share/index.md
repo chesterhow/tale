@@ -9,7 +9,7 @@ draft: true
 ridi: true
 author: "Jihye Leee"
 post-header: true
-header-img: "img/card.png"
+header-img: "img/card.jpg"
 order: 1
 ---
 
