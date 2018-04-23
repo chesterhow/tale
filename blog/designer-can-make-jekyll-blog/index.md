@@ -7,7 +7,7 @@ blog: true
 text: true
 author: "Jihye Leee"
 post-header: true
-header-img: "img/jekyll-pattern.png"
+header-img: "img/jekyll-pattern.jpg"
 order: 2
 ---
 

@@ -27,13 +27,13 @@ order: 4
 # 구조 다시 짜기
 원하는 구조의 Theme을 찾았다면 이 내용은 건너뛰어도 좋다. 앞서 말했듯이 내가 선택한 Theme은 단순한 디자인의 구조여서 이를 다시 짜는 과정이 필요했다. ‘Tale’의 구조는 아래와 스케치와 같았다.
 
-![Structure of Tale](./img/structure_tale.png)
+![Structure of Tale](./img/structure_tale.jpg)
 
 메인 페이지에서 ‘Posts’, ‘About’ 두 가지 메뉴에 접근할 수 있고 About은 단일 Markdown 파일 하나가 연결되어 있다. ‘Posts’ 메뉴에는 여러 Article (Mardown)이 있다. ‘Posts’ 메뉴의 글은 Markdown 파일명에 입력한 날짜를 기준으로 정렬된다. 이런 형태는 Jekyll의 기존 구조라 볼 수 있고 이를 [Post](http://jekyllrb-ko.github.io/docs/posts/)라고 부른다. 하지만 내가 원했던 구조는 아래 이미지와 같았다.
 
 <br />
 
-![My structure](./img/structure_mine.png)
+![My structure](./img/structure_mine.jpg)
 
 ‘Work’, ‘Blog’, ‘About’ 3개의 메뉴로 구성된다. ‘About’과 ‘Blog’ 메뉴는 ‘Tale’과 거의 같아서 수정하기만 하면 되었다.
 문제는 ‘Work’ 메뉴였다. 각 회사에서 작업했던 프로젝트를 글로 ‘Work’ 메뉴에 업로드하려고 했다. 과거 작업에 대한 글이라서 특정 날짜를 적기가 모호했다. 그래서 날짜가 파일명에 포함되어야 하는 Post는 쓰고 싶지 않았다. 하지만 ’Tale’은 Post를 사용하고 있어서 어떻게 수정해야 할지 막막했다.[^2]
@@ -63,7 +63,7 @@ order: 4
 # Page로 해결하기
 마침내 Stockoverflow에서 [나와 비슷한 문제를 겪고 있는 이의 질문](https://stackoverflow.com/questions/17118551/generating-a-list-of-pages-not-posts-in-a-given-category/17913214#17913214)을 찾아냈다. 그리고 가장 많은 표를 받은 답변으로 의도했던 ‘Work' 메뉴 구조를 만들 수 있었다. 각 ‘Company' 이름의 폴더를 만들고 그 안에 `index.html` 혹은 `index.md`를 만든다. 그렇게 구조를 갖추면 [Page](http://jekyllrb-ko.github.io/docs/pages/) 변수를 사용할 수 있다. 그리고 그 안에 프로젝트 이름의 폴더를 만들고 또 안에 `index.html` 혹은 `index.md` 를 만들면 계속 위계를 주어 연결할 수 있다. 사실 현재 이 글이 속해있는 ‘blog’ 메뉴도 Post가 아닌 Page를 활용해서 만들었다. 현재 내 블로그의 [폴더 구조](https://github.com/iamleejihye/iamleejihye.github.io/tree/master/blog)를 보면 참고하면 좋다.
 
-![My structure](./img/page_structure_example.png)
+![My structure](./img/page_structure_example.jpg)
 
 ## Collection
 Page로 문제는 해결했지만, 나중에 알게 된 Collection이라는 기능이 ‘Work’ 메뉴를 구성하기에 더 적합하다는 걸 뒤늦게 알게 되었다. Collection으로 날짜별로 정렬하고 싶지 않지만 서로 어느 정도 관련이 있는 글에 사용한다. Collection에 대한 설명은 [Jekyll의 공식 문서](http://jekyllrb-ko.github.io/docs/collections/)를 참고하면 될 것 같다.
@@ -82,7 +82,7 @@ Output은 두 개의 중괄호로 둘러싸여 있다. 다음과 같이 사용�
 
 여기서 `skill-role` 은 `_data` 폴더에 `skill-role.yml` 을 뜻한다.  `name` 은 `role.yml`  안에 정의해놓은 변수고 name에는 `UI Design`, `UX Design` 등 스킬들을 속성 값으로 입력해놓았다. 이처럼 Output은 템플릿이 렌더링 되면 변수의 값으로 치환돼서 뿌려지게 된다.
 
-![The example of Output](./img/liquid_output_example.png)
+![The example of Output](./img/liquid_output_example.jpg)
 
  `Tag` 는 하나의 중괄호와 백분율 기호로 둘러싸여 있다. 다음과 같이 사용한다.
 
