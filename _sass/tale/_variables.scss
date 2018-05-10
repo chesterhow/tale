@@ -11,10 +11,10 @@ $shadow-color: rgba(0, 0, 0, .2);
 $code-color: #bf616a;
 
 // Fonts
-$serif-primary: Consolas, Menlo, Monaco, monospace, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
-$serif-secondary: Consolas, Menlo, Monaco, monospace, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
-$sans-serif: Consolas, Menlo, Monaco, monospace, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
-$monospaced: Consolas, Menlo, Monaco, monospace, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
+$serif-primary: Consolas, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
+$serif-secondary: Consolas, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
+$sans-serif: Consolas, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
+$monospaced: Consolas, 나눔고딕, NanumGothic, "Nanum Gothic", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
