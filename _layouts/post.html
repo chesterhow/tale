@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="post">
-  <span class="post-title">{{ page.title }}</span>
+  <div class="post-title">{{ page.title }}</div>
   <div class="post-info">
     {% if page.date %}
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      <time datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
     {% endif %}
     &nbsp;|&nbsp;
     {% if page.author %}
