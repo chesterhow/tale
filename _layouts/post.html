@@ -3,10 +3,9 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-title">{{ page.title }}</span>
   <div class="post-info">
     {% if page.date %}
-      <br>
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
     {% endif %}
     &nbsp;|&nbsp;
