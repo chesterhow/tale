@@ -1,0 +1,9 @@
+---
+layout: default
+---
+spring에 포함된 글들:
+<ul>
+	{% for post in site.categories.spring %}
+	<li><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></li>
+	{% endfor %}
+</ul>
