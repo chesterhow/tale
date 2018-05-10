@@ -4,7 +4,7 @@ title:  "스프링에서 엑셀 다운로드 구현 #1"
 author: "jaycee"
 ---
 
-``` java
+``` java linenos=table
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map createXlsxExcel(List<Map> srcList, String fileName, String[][] prmArrHdInfo) throws Exception {
