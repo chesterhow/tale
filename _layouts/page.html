@@ -1,20 +1,9 @@
 ---
-layout: default
+layout: page
 ---
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-info">
-    {% if page.date %}
-      <time datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-    {% endif %}
-    &nbsp;|&nbsp;
-    {% if page.author %}
-        {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
-    {% endif %}
-  </div>
   <div class="post-line"></div>
 
   {{ content }}
