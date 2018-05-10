@@ -15,16 +15,15 @@
   &-title {
     color: $default-shade;
     font-family: $sans-serif;
-    font-size: 4rem;
+    font-size: 2rem;
     margin: 1rem 0;
     text-align: center;
   }
 
   &-line {
-    border-top: 0.4rem solid $default-shade;
+    border-top: 0.1rem solid $default-shade;
     display: block;
     margin: 0 auto 3rem;
-    width: 4rem;
   }
 
   p {
