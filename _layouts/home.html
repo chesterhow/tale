@@ -7,7 +7,9 @@ layout: default
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
         <h1 class="catalogue-title">{{ post.title }}</h1>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <div class="catalogue-info">
+          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </div>
 
         <p>
         {% if post.discription %}
