@@ -34,7 +34,7 @@
 
   &-line {
     @include transition(all .3s ease-out);
-    border-top: .2rem solid $default-shade;
+    border-top: .2rem solid $default-color;
     display: block;
     width: 2rem;
     margin-top:10px;
