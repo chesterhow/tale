@@ -1,5 +1,16 @@
 .catalogue {
   padding: 0.5rem 0;
+
+  &-info {
+    color: $default-tint;
+    font-family: $serif-secondary;
+    letter-spacing: 0.5px;
+    padding: 0 0 10px;
+    
+    span {
+      font-style: italic;
+    }
+  }  
   
   &-item {
     border-bottom: 1px solid $grey-2;
@@ -16,14 +27,7 @@
       border: 0;
     }
   }
-
-  &-time {
-    color: $default-tint;
-    font-family: $serif-secondary;
-    letter-spacing: .5px;
-    padding-bottom: 0.2rem 0;
-  }
-
+  
   &-title {
     display: block;
     margin: .5rem 0;
@@ -38,4 +42,10 @@
     width: 2rem;
     margin: 10px 0 20px;
   }
+  
+  p {
+    margin: 0 0 1rem;
+    text-align: justify;
+  }
+  
 }
