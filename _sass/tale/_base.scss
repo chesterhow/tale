@@ -36,6 +36,8 @@ h6 {
 
 h1{
   font-size:1.8em;
+  border-left: 15px solid $default-color;
+  padding-left: 10px;
 }
 h2{font-size:1.6em;
   border-bottom: 1px dashed #cccccc;
