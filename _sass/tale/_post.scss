@@ -14,9 +14,10 @@
   &-title {
     color: $default-shade;
     font-family: $sans-serif;
-    font-size: 2rem;
     margin: 0.5rem 0;
     font-weight: 700;
+    border-left: 15px solid $default-color;
+    padding-left: 10px;
   }
 
   &-line {
