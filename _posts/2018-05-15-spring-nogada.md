@@ -59,3 +59,19 @@ AND    A.PARTCD = C.PARTCD
 AND    B.SKUCD = C.SKUCD 
 AND    #w_serchymd# BETWEEN C.TRDSTDAT AND    C.TRDEND  
 ```
+
+## 오류 로그
+```
+[14:38:53][ERROR](FcMartLogging.java:22) - org.springframework.jdbc.InvalidResultSetAccessException: SqlMapClient operation; invalid ResultSet access for SQL []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/XXXX_sqls.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the XXXX-InlineParameterMap.  
+--- Check the parameter mapping for the 'w_serchym' property.  
+--- Cause: java.sql.SQLException: 부적합한 열 인덱스
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:224)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:212)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.executeWithListResult(SqlMapClientTemplate.java:249)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.queryForList(SqlMapClientTemplate.java:296)
+```
+
