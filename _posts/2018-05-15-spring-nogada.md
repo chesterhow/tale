@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 부족합한 열 인덱스
+title: 부합한 열 인덱스
 author: jaycee
 category: "spring"
 tags: spring, error, ibatis, mybatis
-discription: "부족합한 열 인덱스 오류가 발생한 경우"
+discription: "부적합한 열 인덱스 오류가 발생한 경우"
 ---
 
 ## 원인
