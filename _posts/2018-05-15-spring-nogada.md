@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 부합한 열 인덱스
+title: 부적합한 열 인덱스
 author: jaycee
 category: "spring"
 tags: spring, error, ibatis, mybatis
@@ -18,7 +18,7 @@ discription: "부적합한 열 인덱스 오류가 발생한 경우"
 위 쿼리에서 쌍따옴표 제거하여 처리 완료..... 어이없는 실수였음..
 
 
-## 쿼리
+## 오류 쿼리
 ```
 SELECT B.COMPCD, 
        B.ACCUNT, 
