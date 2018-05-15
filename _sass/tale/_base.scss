@@ -39,7 +39,9 @@ h1{
   border-left: 15px solid $default-color;
   padding-left: 10px;
 }
-h2{font-size:1.6em;
+h2{
+  font-size:1.6em;
+  padding-bottom: 4px;
   border-bottom: 1px dashed #cccccc;
 }
 h3{font-size:1.4em}
