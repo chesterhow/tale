@@ -2,9 +2,9 @@
 
 title: 스프링 VO map 형식 변환
 author: jaycee
-discripttion: 스프링 VO map 형식 변환
+discripttion: 리플렉션을 이용한 스프링 VO map 형식 변환
 category: spring
-tag: spring,java
+tag: spring,java,reflection
 
 ---
 
