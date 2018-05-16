@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 부적합한 열 인덱스
+title: 부적합한 열 인덱스 오류 처리 내용
 author: jaycee
 category: "spring"
 tags: spring, error, ibatis, mybatis
-discription: "부적합한 열 인덱스 오류가 발생한 경우"
+discription: "부적합한 열 인덱스 오류가 발생한 경우 처리"
 ---
 
 ## 원인
@@ -15,7 +15,7 @@ discription: "부적합한 열 인덱스 오류가 발생한 경우"
 150분 디버깅 결과 select절 ''" 부분에서 쌍따옴표(") 있는 것을 발견... ㅡㅡ;
 
 ## 처리
-위 쿼리에서 쌍따옴표 제거하여 처리 완료..... 어이없는 실수였음..
+위 쿼리에서 쌍따옴표 제거하여 처리 완료..... 역시 컴퓨터는 거짓말을 하지 않는다...
 
 
 ## 오류 쿼리
