@@ -8,6 +8,10 @@ tag: spring,java,reflection
 
 ---
 
+## 용도
+- 외부 라이브러리 호출에서 java의 vo를 map형태의 파라미터로 전달해야하는 경우.
+- vo형태에 상관없이 일괄 map으로 만들어 반복 작업을 하는 경우
+
 ``` java
 /**
  * vo를 map형식으로 변환해서 반환
