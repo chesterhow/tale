@@ -62,7 +62,7 @@ AND    #w_serchymd# BETWEEN C.TRDSTDAT AND    C.TRDEND
 
 ## 오류 로그
 ```
-[14:38:53][ERROR](FcMartLogging.java:22) - org.springframework.jdbc.InvalidResultSetAccessException: SqlMapClient operation; invalid ResultSet access for SQL []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+[14:38:53][ERROR](XXXXLogging.java:22) - org.springframework.jdbc.InvalidResultSetAccessException: SqlMapClient operation; invalid ResultSet access for SQL []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
 --- The error occurred in com/XXXX_sqls.xml.  
 --- The error occurred while applying a parameter map.  
 --- Check the XXXX-InlineParameterMap.  
