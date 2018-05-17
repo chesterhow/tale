@@ -4,7 +4,7 @@ title:  "스프링으로 엑셀 다운로드 구현#1"
 author: "jaycee"
 category: "spring"
 tags: spring, poi, excel
-discription: "poi라이브러리를 이용하여 엑셀다운로드를 구현해본다."
+description: "poi라이브러리를 이용하여 엑셀다운로드를 구현해본다."
 ---
 
 ## 이것을 하는 이유
