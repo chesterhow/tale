@@ -12,7 +12,7 @@ layout: default
         </div>
 
         <p>
-        {% if post.discription %}
+        {% if post.description %}
           {{ post.description }}
         {% else %}
           {{ post.content | strip_html | truncatewords: 30 }}
