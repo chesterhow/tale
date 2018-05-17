@@ -3,7 +3,7 @@ layout: post
 title:  "글쓰기 "
 author: "jaycee"
 category: "spring"
-discription: "스프링에서 많이 쓰이는 엑셀다운로드를 구현해본다."
+description: "스프링에서 많이 쓰이는 엑셀다운로드를 구현해본다."
 ---
 
 # 제목1
