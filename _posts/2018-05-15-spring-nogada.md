@@ -4,7 +4,7 @@ title: 부적합한 열 인덱스 오류 처리 내용
 author: jaycee
 category: "spring"
 tags: spring, error, ibatis, mybatis
-discription: "부적합한 열 인덱스 오류가 발생한 경우 처리"
+description: "부적합한 열 인덱스 오류가 발생한 경우 처리"
 ---
 
 ## 원인
