@@ -261,4 +261,4 @@ public class BigGridDemo {
 ```
 
 ## 출처
-[스택오버플로](https://stackoverflow.com/questions/4740179/whats-the-difference-between-c-t-str-and-cis-in-office-open-xml?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
+[스택오버플로](https://stackoverflow.com/questions/4740179/whats-the-difference-between-c-t-str-and-cis-in-office-open-xml?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa){:target="_blank"}
