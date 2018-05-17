@@ -16,11 +16,12 @@ tag: spring,poi
 - List가 잘 처리되는 경우에도, poi에서 workbook객체로 엑셀을 작성하는데, workbook객체에 수십만 건이상이 쌓이게 되면 oom발생
 
 ## 방법
-1. ibatis 로우핸들러를 구현한다. 로우핸들러는 쿼리 조회 결과를 List로 담는 것이 아니라, 레코드 한건이 조회될 때마다 핸들러에서 지정한 작업을 수행한다.
-2. 1번에서 구해온 object를 이용하여 xml파일을 작성한다. 여기서 SpreadSheet 클래스를 이용한다. 하단 소스에 있음.
+1. ibatis 로우핸들러를 구현한다. 로우핸들러는 쿼리 조회 결과를 List로 담는 것이 아니라, 레코드 한건이 조회될 때마다 핸들러에서 지정한 작업을 수행한다. 로우핸들러 인터페이스는 이미 있으므로, 이를 구현(implements)하면된다. 인터페이스에는 handleRow라는 메소드 하나만 있으므로 구현도 이 메소드하나만 하면 됨. 
+2. 1번에서 구해온 object를 이용하여 xml파일을 작성한다. 여기서 shpreadsheetwriter 클래스를 이용한다. 하단 소스에 있음.
 3. xml 용량이 매우 크므로 압축하여 xlsx파일을 생성한다.
 
 ## 한계점
+- 구현 시 테스트할 것이 많아 개발 시간이 오래걸린다.(작업 요청한 사람은 매우 간단한 작업이라 생각할지도..)
 - 속도 느린 것은 어쩗 수 없다.
 - 대용량 엑셀다운로드 기능은 서버 부하가 발생한다. 일반적으로 고려하지 않는다. 즉, DB담당자나 개발자가 직접 뽑아주도록 하고, 불가피할 때 구현해야한다.
 
@@ -185,8 +186,11 @@ public class BigGridDemo {
          out.write(chunk,0,count);
        }
    }
+```
 
-   /**
+shpreadsheetwriter
+``` java
+   /**
     * Writes spreadsheet data in a Writer.
     * (YK: in future it may evolve in a full-featured API for streaming data in Excel)
     */
