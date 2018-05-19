@@ -48,4 +48,16 @@
     font-style: normal;
     text-align: center;
   }
+
+  // CSS for making emoji inline
+  img.emoji {
+    display: inline-block;
+    left: 0;
+    transform: none;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: text-top;
+    padding: 0;
+    margin: 0;
+  }
 }
