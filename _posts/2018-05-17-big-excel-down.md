@@ -19,138 +19,265 @@ tag: spring,poi
 아래와 같이 세가지 방법이 있다. 그나마 로우핸들러를 이용하는 것이 가장 안정적이어서 이방법을 사용하기로 한다.
 - 서버의 메모리를 늘린다. >> 당장은 테스트하여 처리될 수 있으나, 앞으로 운영 도중 엑셀로 받을 데이터가 늘어날 경우 안정성을 보장할 수 없다.
 - poi의 writebook(100) 과 같이 버퍼 사이즈를 선택해준다. >> 현재 운영 중인 시스템 poi의 버젼이 낮아 버퍼를 지원안함. 버퍼를 지원한다고 해도 ibatis에서 List를 담는 과정에서 oom이 발생할 수 있다.
-- ibatis 로우핸들러를 이용한다. 이게 가장 이상적인듯하다. 이 방법을 사용하여 구현한다ㅓ.
+- ibatis 로우핸들러를 이용한다. 이게 가장 이상적인듯하다. 이 방법을 사용하여 구현한다.
+
+## 알아둬야할 내용들
+ - XML로 엑셀파일을 생성하는 것은 엑셀로 XML파일을 여는 것이 아니다. XML과 템플릿 파일을 압축하여 XLSX파일을 생성해야한다. 아래 차례대로 진행하면 된다. 나도 자세한 것은 모르지만 XML과 템플릿을 압축하는 것이 XLSX파일이 스펙이 인 듯하다. 그냥 따르자.
+ 1. XML파일을 만든다.
+ 2. 템플릿(매핑)할 엑셀 파일을 만든다.
+ 3. XML파일과 템플릿 파일을 ZIP형식으로 압축한다. 압축된 파일의 확장자는 XLSX로 정한다.
 
 ## 프로세스 흐름
 1. ibatis 로우핸들러를 구현한다. 로우핸들러는 쿼리 조회 결과를 List로 담는 것이 아니라, 레코드 한건이 조회될 때마다 핸들러에서 지정한 작업을 수행한다. 로우핸들러 인터페이스는 이미 있으므로, 이를 구현(implements)하면된다. 인터페이스에는 handleRow라는 메소드 하나만 있으므로 구현도 이 메소드하나만 하면 됨. 
 2. 1번에서 구해온 object를 이용하여 xml파일을 작성한다. 여기서 shpreadsheetwriter 클래스를 이용한다. 하단 소스에 있음.
-3. xml 용량이 매우 크므로 압축하여 xlsx파일을 생성한다.
+3. XML파일을 생성하고 템플릿용 엑셀 파일을 생성하고, 이 두 파일을 zip형식으로 압축한다. 그러나 확장자는 XLSX로 지정한다.
+4. 생성된 파일을 responseBody를 이용하여 다운로드 시키거나, 클라이언트(웹브라우져) 콜백으로 다운로드 시킨다.
 
 ## 한계점
 - 구현 시 테스트할 것이 많아 개발 시간이 오래걸린다.(작업 요청한 사람은 매우 간단한 작업이라 생각할지도..)
 - 속도 느린 것은 어쩗 수 없다.
 - 대용량 엑셀다운로드 기능은 서버 부하가 발생한다. 일반적으로 고려하지 않는다. 즉, DB담당자나 개발자가 직접 뽑아주도록 하고, 불가피할 때 구현해야한다.
 
-## 소스코드
+## 실행 코드
+
+## 엑셀 파라미터용 VO
 ``` java
-import java.io.*;
-import java.util.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipOutputStream;
+public class ExcelInfoVO {
 
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFDataFormat;
-import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+	/** 처리 건수*/
+	private int rowCnt;
+	
+	/** 처리 결과*/
+	private String result;
+	
+	/** 결과를 받아올 쿼리 id */
+	private String queryId;
+	
+	/** 엑셀의 헤더/셀 정보 리스트*/
+	private List<ExcelCellInfoVO> arrExcelCellInfo;
+	
+	/** 생성할 엑셀 파일 이름 */
+	private String fileName;
 
-public class BigGridDemo {
-   private static final String XML_ENCODING = "UTF-8";
 
-   public static void main(String[] args) throws Exception {
+	/**
+	 * 생성할 엑셀 정의
+	 * @param queryId 겨로가 받아올 쿼리 아이디
+	 * @param fileName 다운로드할 엑셀 파일 명칭
+	 * @param arrExcelCellInfo 엑셀의 헤더/셀 정보 리스트
+	 */
+	public ExcelInfoVO(String queryId, String fileName, List<ExcelCellInfoVO> arrExcelCellInfo) {
+		this.setQueryId(queryId);
+		this.setFileName(fileName);
+		this.arrExcelCellInfo = arrExcelCellInfo;
+	}
 
-       // Step 1. Create a template file. Setup sheets and workbook-level objects such as
-       // cell styles, number formats, etc.
 
-       XSSFWorkbook wb = new XSSFWorkbook();
-       XSSFSheet sheet = wb.createSheet("Big Grid");
+	public int getRowCnt() {
+		return rowCnt;
+	}
 
-       Map<String, XSSFCellStyle> styles = createStyles(wb);
-       //name of the zip entry holding sheet data, e.g. /xl/worksheets/sheet1.xml
-       String sheetRef = sheet.getPackagePart().getPartName().getName();
+	public void setRowCnt(int rowCnt) {
+		this.rowCnt = rowCnt;
+	}
 
-       //save the template
-       FileOutputStream os = new FileOutputStream("template.xlsx");
-       wb.write(os);
-       os.close();
+	public String getResult() {
+		return result;
+	}
 
-       //Step 2. Generate XML file.
-       File tmp = File.createTempFile("sheet", ".xml");
-       Writer fw = new OutputStreamWriter(new FileOutputStream(tmp), XML_ENCODING);
-       generate(fw, styles);
-       fw.close();
+	public void setResult(String result) {
+		this.result = result;
+	}
 
-       //Step 3. Substitute the template entry with the generated data
-       FileOutputStream out = new FileOutputStream("big-grid.xlsx");
-       substitute(new File("template.xlsx"), tmp, sheetRef.substring(1), out);
-       out.close();
-   }
+	public List<ExcelCellInfoVO> getArrExcelCellInfo() {
+		return arrExcelCellInfo;
+	}
 
-   /**
-    * Create a library of cell styles.
-    */
-   private static Map<String, XSSFCellStyle> createStyles(XSSFWorkbook wb){
-       Map<String, XSSFCellStyle> styles = new HashMap<String, XSSFCellStyle>();
-       XSSFDataFormat fmt = wb.createDataFormat();
+	public void setArrExcelCellInfo(List<ExcelCellInfoVO> arrExcelCellInfo) {
+		this.arrExcelCellInfo = arrExcelCellInfo;
+	}
 
-       XSSFCellStyle style1 = wb.createCellStyle();
-       style1.setAlignment(XSSFCellStyle.ALIGN_RIGHT);
-       style1.setDataFormat(fmt.getFormat("0.0%"));
-       styles.put("percent", style1);
 
-       XSSFCellStyle style2 = wb.createCellStyle();
-       style2.setAlignment(XSSFCellStyle.ALIGN_CENTER);
-       style2.setDataFormat(fmt.getFormat("0.0X"));
-       styles.put("coeff", style2);
+	public String getFileName() {
+		return fileName;
+	}
 
-       XSSFCellStyle style3 = wb.createCellStyle();
-       style3.setAlignment(XSSFCellStyle.ALIGN_RIGHT);
-       style3.setDataFormat(fmt.getFormat("$#,##0.00"));
-       styles.put("currency", style3);
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 
-       XSSFCellStyle style4 = wb.createCellStyle();
-       style4.setAlignment(XSSFCellStyle.ALIGN_RIGHT);
-       style4.setDataFormat(fmt.getFormat("mmm dd"));
-       styles.put("date", style4);
+	public String getQueryId() {
+		return queryId;
+	}
 
-       XSSFCellStyle style5 = wb.createCellStyle();
-       XSSFFont headerFont = wb.createFont();
-       headerFont.setBold(true);
-       style5.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-       style5.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);
-       style5.setFont(headerFont);
-       styles.put("header", style5);
+	public void setQueryId(String queryId) {
+		this.queryId = queryId;
+	}
+}
+```
 
-       return styles;
-   }
+## 엑셀 셀정보 VO
+``` java
 
-   private static void generate(Writer out, Map<String, XSSFCellStyle> styles) throws Exception {
+```
 
-       Random rnd = new Random();
-       Calendar calendar = Calendar.getInstance();
+## 엑셀 서비스 공통 코드
+``` java
+public class ExcelService {
+	@Autowired
+	SqlMapClientTemplate mapTemplate;
 
+	String filePath =  "C:\\";
+	
+	Logger log = LoggerFactory.getLogger(this.getClass());
+	
+	private static final String XML_ENCODING = "UTF-8";
+   
+   @SuppressWarnings({ "rawtypes", "unchecked"})
+	public Map createXlsxExcel(Map paramMap, ExcelInfoVO excelInfoVO) throws Exception {
+		Map rtnMap = new HashMap();
+
+        XSSFWorkbook wb = new XSSFWorkbook();
+        //시트명칭 설정
+        XSSFSheet sheet = wb.createSheet("Big Grid");
+        
+        /*
+        int headStyleSize = excelInfoVO.getArrExcelCellInfo().size();
+        
+        for (int i = 0; i < headStyleSize; i++) {
+        	log.error(String.valueOf(i)+"번째 width:"+String.valueOf(excelInfoVO.getArrExcelCellInfo().get(i).getColumnWidth()));
+			sheet.setColumnWidth(i, (int)excelInfoVO.getArrExcelCellInfo().get(i).getColumnWidth());
+		}
+        sheet.createFreezePane(0, 1,0,1);
+        */
+        
+        //셀스타일을 생성
+        Map<String, XSSFCellStyle> styles = createStyles(wb, excelInfoVO);
+        
+        //name of the zip entry holding sheet data, e.g. /xl/worksheets/sheet1.xml
+        String sheetRef = sheet.getPackagePart().getPartName().getName();
+
+        //save the template
+        //템플릿 파일 생성
+        FileOutputStream os = new FileOutputStream(filePath + File.separator +"template.xlsx");
+        wb.write(os);
+        os.close();
+
+        //Step 2. Generate XML file.
+        //엑셀에 담길 실제 내용인 XML파일을 생성
+        File tmp = File.createTempFile("sheet", ".xml");
+        Writer fw = new OutputStreamWriter(new FileOutputStream(tmp), XML_ENCODING);
+
+        //헤더 생성
+        generateHead(fw, styles, excelInfoVO);
+        
+        //generateBody(fw, styles);
+        ExcelResultHandler handler = new ExcelResultHandler();
+        handler.setOut(fw);
+        handler.setStyleMap(styles);
+        handler.setExcelInfoVO(excelInfoVO);
+        mapTemplate.queryWithRowHandler(excelInfoVO.getQueryId(), paramMap, handler);
+        
+        //푸터 생성
+        generateFoot(fw, styles);
+        
+        fw.close();
+
+        //Step 3. Substitute the template entry with the generated data
+        //템플릿과 생성된 XML을 압축하여 XLSX파일을 만든다.
+        FileOutputStream out = new FileOutputStream(filePath + File.separator +excelInfoVO.getFileName());
+        substitute(new File(filePath + File.separator +"template.xlsx"), tmp, sheetRef.substring(1), out);
+        out.close();
+		
+		rtnMap.put("fileName",excelInfoVO.getFileName());
+		rtnMap.put("listCnt", handler.getRowNum());
+		
+		return rtnMap;
+	}
+	
+	private static Map<String, XSSFCellStyle> createStyles(XSSFWorkbook wb, ExcelInfoVO prmExcelInfoVO){
+	       
+		Map<String, XSSFCellStyle> styleMap = new HashMap<String, XSSFCellStyle>();
+
+		XSSFDataFormat fmt = wb.createDataFormat();
+
+		
+		// 헤더 스타일
+		XSSFCellStyle styleHead = wb.createCellStyle();
+		XSSFFont headerFont = wb.createFont();
+		//headerFont.setFontName("맑은 고딕");
+		headerFont.setBold(true);
+		//headerFont.setFontHeightInPoints((short) 9);
+		styleHead.setFont(headerFont);
+		styleHead.setBorderBottom(BorderStyle.THIN);
+		styleHead.setVerticalAlignment(VerticalAlignment.CENTER);
+		styleMap.put("head", styleHead);
+
+		
+		// 2. 각 컬럼별로 스타일 생성
+		// [{columnId, headerDesc, displayType, align, format}]
+		List<ExcelCellInfoVO> arrExcelCellInfo = prmExcelInfoVO.getArrExcelCellInfo();
+		for (int iColIndex = 0; iColIndex < arrExcelCellInfo.size(); iColIndex++) {
+			
+			// 2.1. 컬럼 설정 정보 가져오기
+			String sColumnId = arrExcelCellInfo.get(iColIndex).getColumnId();
+			String sDisplayType = arrExcelCellInfo.get(iColIndex).getDisplayType();
+			String sAlign = arrExcelCellInfo.get(iColIndex).getAlign();
+			String sFormat = arrExcelCellInfo.get(iColIndex).getFormat();
+			
+			// 2.2. Data 셀 스타일 생성
+			XSSFFont dataFont = wb.createFont();
+			XSSFCellStyle dataStyle = wb.createCellStyle();
+			dataStyle.setWrapText(true); // - 텍스트 줄 바꿈
+			dataStyle.setFont(dataFont);
+
+			// - 정렬 : left(Default), center, right
+			if ("right".equalsIgnoreCase(sAlign)) {
+				dataStyle.setAlignment(HorizontalAlignment.RIGHT);
+			} else if ("center".equalsIgnoreCase(sAlign)) {
+				dataStyle.setAlignment(HorizontalAlignment.CENTER);
+			} else {
+				dataStyle.setAlignment(HorizontalAlignment.LEFT);
+			}
+			
+			// - 포맷팅 : 타입이 "number"일 경우, 처리 : "#,##0", "#,##0.00", "0.0%"
+			if ("number".equalsIgnoreCase(sDisplayType)) {
+				if (sFormat != null && !"".equals(sFormat)) {
+					dataStyle.setDataFormat(fmt.getFormat(sFormat));
+				}
+			}
+			styleMap.put(sColumnId, dataStyle);
+		}
+		
+		return styleMap;
+	}
+
+   private static void generateHead(Writer out, Map<String, XSSFCellStyle> styleMap, ExcelInfoVO prmExcelInfoVO) throws Exception {
+
+	   List<ExcelCellInfoVO> arrExcelCellInfo = prmExcelInfoVO.getArrExcelCellInfo();
        SpreadsheetWriter sw = new SpreadsheetWriter(out);
+
        sw.beginSheet();
-
-       //insert header row
+       
        sw.insertRow(0);
-       int styleIndex = styles.get("header").getIndex();
-       sw.createCell(0, "Title", styleIndex);
-       sw.createCell(1, "% Change", styleIndex);
-       sw.createCell(2, "Ratio", styleIndex);
-       sw.createCell(3, "Expenses", styleIndex);
-       sw.createCell(4, "Date", styleIndex);
+       for(int iColIndex = 0 ; iColIndex < arrExcelCellInfo.size() ; iColIndex++) {
 
-       sw.endRow();
+			// 2. 스타일 가져오기
+			XSSFCellStyle cellStyle = null;
+			cellStyle = styleMap.get("head");
 
-       //write data rows
-       for (int rownum = 1; rownum < 100000; rownum++) {
-           sw.insertRow(rownum);
-
-           sw.createCell(0, "Hello, " + rownum + "!");
-           sw.createCell(1, (double)rnd.nextInt(100)/100, styles.get("percent").getIndex());
-           sw.createCell(2, (double)rnd.nextInt(10)/10, styles.get("coeff").getIndex());
-           sw.createCell(3, rnd.nextInt(10000), styles.get("currency").getIndex());
-           sw.createCell(4, calendar, styles.get("date").getIndex());
-
-           sw.endRow();
-
-           calendar.roll(Calendar.DAY_OF_YEAR, 1);
+			// 3. 생성할 컬럼 값 가져오기
+			String oValue = arrExcelCellInfo.get(iColIndex).getHeaderDesc()[0];
+         
+			// 4. 컬럼 생성
+			sw.createCell(iColIndex, oValue, cellStyle.getIndex());
        }
+       sw.endRow();
+       
+   }
+   
+   private static void generateFoot(Writer out, Map<String, XSSFCellStyle> styles) throws Exception {
+       SpreadsheetWriter sw = new SpreadsheetWriter(out);
        sw.endSheet();
    }
 
@@ -181,22 +308,19 @@ public class BigGridDemo {
        InputStream is = new FileInputStream(tmpfile);
        copyStream(is, zos);
        is.close();
-
        zos.close();
+       zip.close();
    }
 
    private static void copyStream(InputStream in, OutputStream out) throws IOException {
-       byte[] chunk = new byte[1024];
+       byte[] bfSize = new byte[1024];
        int count;
-       while ((count = in.read(chunk)) >=0 ) {
-         out.write(chunk,0,count);
+       while ((count = in.read(bfSize)) >=0 ) {
+         out.write(bfSize,0,count);
        }
    }
-```
 
-shpreadsheetwriter.java
-``` java
-   /**
+   /**
     * Writes spreadsheet data in a Writer.
     * (YK: in future it may evolve in a full-featured API for streaming data in Excel)
     */
@@ -236,16 +360,25 @@ shpreadsheetwriter.java
            _out.write("</row>\n");
        }
 
-       public void createCell(int columnIndex, String value, int styleIndex) throws IOException {
+       public void createCell(int columnIndex, Object value, int styleIndex) throws IOException {
            String ref = new CellReference(_rownum, columnIndex).formatAsString();
-           _out.write("<c r=\""+ref+"\" t=\"inlineStr\"");
-           if(styleIndex != -1) _out.write(" s=\""+styleIndex+"\"");
-           _out.write(">");
-           _out.write("<is><t>"+value+"</t></is>");
+
+           if(value instanceof BigDecimal) {
+               _out.write("<c r=\"" + ref + "\" t=\"n\"");
+               if(styleIndex != -1) _out.write(" s=\"" + styleIndex + "\"");
+               _out.write(">");
+               _out.write("<v><![CDATA[" + (value == null ? "" : value) + "]]></v>");
+           } else {
+               _out.write("<c r=\"" + ref + "\" t=\"inlineStr\"");
+               if(styleIndex != -1) _out.write(" s=\"" + styleIndex + "\"");
+               _out.write(">");
+               _out.write("<is><t><![CDATA[" + (value == null ? "" : value) + "]]></t></is>");
+           }
+           
            _out.write("</c>");
        }
 
-       public void createCell(int columnIndex, String value) throws IOException {
+       public void createCell(int columnIndex, Object value) throws IOException {
            createCell(columnIndex, value, -1);
        }
 
@@ -266,6 +399,90 @@ shpreadsheetwriter.java
            createCell(columnIndex, DateUtil.getExcelDate(value, false), styleIndex);
        }
    }
+	
+}
+
+```
+
+로우 핸들러 코드 
+
+``` java
+
+public class ExcelResultHandler implements RowHandler {
+	private Logger log = LoggerFactory.getLogger(ExcelResultHandler.class);
+
+	private int rowNum;
+	private Writer out;
+	private Map<String, XSSFCellStyle> styleMap;
+	private ExcelInfoVO excelInfoVO;
+	
+
+	public int getRowNum() {
+		return rowNum;
+	}
+
+	public void setRowNum(int rowNum) {
+		this.rowNum = rowNum;
+	}
+
+	public Writer getOut() {
+		return out;
+	}
+
+	public void setOut(Writer out) {
+		this.out = out;
+	}
+
+
+	public Map<String, XSSFCellStyle> getStyleMap() {
+		return styleMap;
+	}
+
+	public void setStyleMap(Map<String, XSSFCellStyle> styleMap) {
+		this.styleMap = styleMap;
+	}
+
+	public ExcelInfoVO getExcelInfoVO() {
+		return excelInfoVO;
+	}
+
+	public void setExcelInfoVO(ExcelInfoVO excelInfoVO) {
+		this.excelInfoVO = excelInfoVO;
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public void handleRow(Object obj) {
+		Map objMap = (Map)obj;
+		List<ExcelCellInfoVO> arrExcelCellInfo = excelInfoVO.getArrExcelCellInfo();
+
+		rowNum++;
+
+		SpreadsheetWriter sw = new SpreadsheetWriter(out);
+		try {
+			
+			sw.insertRow(rowNum);
+			for (int iColIndex = 0; iColIndex < arrExcelCellInfo.size(); iColIndex++) {
+
+				// 1. 컬럼 설정 정보 가져오기
+				String sColumnId = arrExcelCellInfo.get(iColIndex).getColumnId();
+
+				XSSFCellStyle cellStyle = this.styleMap.get(sColumnId);
+
+				// 3. 생성할 컬럼 값 가져오기
+				Object oValue = (objMap == null)? "" : objMap.get(sColumnId);
+
+				// 4. 컬럼 생성
+				sw.createCell(iColIndex, oValue, cellStyle.getIndex());
+
+			}
+			sw.endRow();
+		} catch (Exception e) {
+			log.error(String.valueOf(rowNum)+"번째 본문 생성중 에러발생",e);
+		}
+
+	}
+
 }
 
 ```
