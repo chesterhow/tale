@@ -11,7 +11,7 @@ tag: spring,poi
 대용량 엑셀의 다운로드
 
 ## 스프링 기존 방식으로 대용량 엑셀 다운로드 구현 시 발생 오류
-대용량 엑셀 생성 시 스프링 기존 방식으로하면 OOM(out of memory) 발생. 아래와 같이 두가지 경우에서 오류가 발생한다.
+대용량 엑셀 생성 시 스프링의 일반적인 방식인 queryForList를 호출하게 되면 OOM(out of memory) 발생. 아래와 같이 두가지 경우에서 오류가 발생한다.
 - ibatis,mybatis에서는 쿼리결과를 보통 List\<map> 또는 List\<vo>형태로 담게 되는데. 이 List에 수십만 건이상 쌓이게 되면 oom발생
 - List가 잘 처리되는 경우에도, poi에서 workbook객체로 엑셀을 작성하는데, workbook객체에 수십만 건이상이 쌓이게 되면 oom발생
 
@@ -39,8 +39,42 @@ tag: spring,poi
 - 대용량 엑셀다운로드 기능은 서버 부하가 발생한다. 일반적으로 고려하지 않는다. 즉, DB담당자나 개발자가 직접 뽑아주도록 하고, 불가피할 때 구현해야한다.
 
 ## 실행 코드
+``` java
+public void main() throws Exception {
 
-## 엑셀 파라미터용 VO
+	Map paramMap = null; //select 쿼리에 넣을 파라미터 맵
+	String fileName = null; //파일명
+	Map rtnMap = null; 
+
+	try {
+		// 엑셀의 헤더/데이터 VO 설정
+		List<ExcelCellInfoVO> arrExcelCellInfo = new ArrayList<ExcelCellInfoVO>();
+		arrExcelCellInfo.add(new ExcelCellInfoVO("COMPCD","제조사","text","center","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("GCODE","대분류","text","center","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("GCODENM","대분류명","text","left","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("MCODE","중분류","text","center","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("MCODENM","중분류명","text","left","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("DCODE","소분류","text","center","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("DCODENM","소분류명","text","left","",0));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("PRDCD","상품코드","text","left","",200));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("PRDNM","상품명","text","left","",200));
+		arrExcelCellInfo.add(new ExcelCellInfoVO("PRC","가격","number","right","#,##0",0));
+
+		// 엑셀 생성 관련 정보 설정
+		ExcelInfoVO excelInfoVO = new ExcelInfoVO("com.test.project.selectPrdtCd", fileName, arrExcelCellInfo);
+
+	rtnMap = excelService.createXlsxExcel(paramMap, excelInfoVO);			
+	}catch(Exception e) {
+		log.error(this.getClass().toString(),e);
+	}
+
+	return rtnMap;
+
+}
+
+```
+
+## 엑셀 파라미터용 VO 코드
 ``` java
 public class ExcelInfoVO {
 
@@ -116,9 +150,162 @@ public class ExcelInfoVO {
 }
 ```
 
-## 엑셀 셀정보 VO
+## 엑셀 셀정보 VO 
 ``` java
+public class ExcelCellInfoVO {
 
+	private String columnId;		// - 셀에 넣을 Column ID. ex) coCd, dtbtGpCd
+	private String[] headerDesc;	// - 헤더에 표현할 문자열. 다중 헤더 구성 가능(테스트 필요). ex) {"회사코드"}
+	private String displayType;		// - 데이터를 표현할 방법. 기본은 "text". ex) "text", "number"
+	private String align;			// - 데이터의 정렬 방법. 기본은 "left". ex) "left", "center", "right"
+	private String format;			// - 데이터의 표현이 숫자(number)일 경우, 해당 표현법. 엑셀 포맷팅을 사용한다. ex) "#,##0", "#,##0.00", "0.0%"
+	private double columnWidth = 72; // - 컬럼의 너비. 기본값은 72px(72px * 0.125 = 9 로 들어갈 예정)
+
+	/**
+	 * 셀의 표현정보를 정의한다.
+	 * @param columnId 셀에 넣을 Column ID. ex) coCd, dtbtGpCd
+	 * @param headerDesc 헤더에 표현할 문자열
+	 * @param displayType 데이터를 표현할 방법. 기본은 "text". ex) "text", "number"
+	 * @param align 데이터의 정렬 방법. 기본은 "left". ex) "left", "center", "right"
+	 * @param format 데이터의 표현이 숫자(number)일 경우, 해당 표현법. 엑셀 포맷팅을 사용한다. ex) "#,##0", "#,##0.00", "0.0%"
+	 * @param columnWidth 컬럼의 너비. 기본값은 72px(72px * 0.125 = 9 로 들어갈 예정)
+	 */
+	public ExcelCellInfoVO(String columnId, String headerDesc, String displayType, String align, String format, double columnWidth) {
+		this.columnId = columnId;
+		this.headerDesc = new String[]{headerDesc};
+		this.displayType = displayType;
+		this.align = align;
+		this.format = format;
+		this.columnWidth = columnWidth;
+	}
+
+	/**
+	 * 셀의 표현정보를 정의한다.
+	 * @param columnId 셀에 넣을 Column ID. ex) coCd, dtbtGpCd
+	 * @param headerDesc 헤더에 표현할 문자열
+	 * @param displayType 데이터를 표현할 방법. 기본은 "text". ex) "text", "number"
+	 * @param align 데이터의 정렬 방법. 기본은 "left". ex) "left", "center", "right"
+	 * @param format 데이터의 표현이 숫자(number)일 경우, 해당 표현법. 엑셀 포맷팅을 사용한다. ex) "#,##0", "#,##0.00", "0.0%"
+	 */
+	public ExcelCellInfoVO(String columnId, String headerDesc, String displayType, String align, String format) {
+		this.columnId = columnId;
+		this.headerDesc = new String[]{headerDesc};
+		this.displayType = displayType;
+		this.align = align;
+		this.format = format;
+	}
+
+	/**
+	 * 셀의 표현정보를 정의한다.
+	 * <li>문자형(text)은 좌측, 숫자형(number)은 우측 정렬
+	 * <li>숫자형(number)은 "#,##0" 형식으로 표현
+	 * @param columnId 셀에 넣을 Column ID. ex) coCd, dtbtGpCd
+	 * @param headerDesc 헤더에 표현할 문자열
+	 * @param displayType 데이터를 표현할 방법. 기본은 "text". ex) "text", "number"
+	 */
+	public ExcelCellInfoVO(String columnId, String headerDesc, String displayType) {
+		this.columnId = columnId;
+		this.headerDesc = new String[]{headerDesc};
+		this.displayType = displayType;
+		this.align = ("number".equals(displayType) ? "right" : "left");
+		this.format = ("number".equals(displayType) ? "#,##0" : "");
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "ExcelCellInfoVO [columnId=" + columnId + ", headerDesc="
+				+ Arrays.toString(headerDesc) + ", displayType=" + displayType
+				+ ", align=" + align + ", format=" + format + "]";
+	}
+
+	/**
+	 * @return the columnId
+	 */
+	public String getColumnId() {
+		return columnId;
+	}
+
+	/**
+	 * @param columnId the columnId to set
+	 */
+	public void setColumnId(String columnId) {
+		this.columnId = columnId;
+	}
+
+	/**
+	 * @return the headerDesc
+	 */
+	public String[] getHeaderDesc() {
+		return headerDesc;
+	}
+
+	/**
+	 * @param headerDesc the headerDesc to set
+	 */
+	public void setHeaderDesc(String[] headerDesc) {
+		this.headerDesc = headerDesc;
+	}
+
+	/**
+	 * @return the displayType
+	 */
+	public String getDisplayType() {
+		return displayType;
+	}
+
+	/**
+	 * @param displayType the displayType to set
+	 */
+	public void setDisplayType(String displayType) {
+		this.displayType = displayType;
+	}
+
+	/**
+	 * @return the align
+	 */
+	public String getAlign() {
+		return align;
+	}
+
+	/**
+	 * @param align the align to set
+	 */
+	public void setAlign(String align) {
+		this.align = align;
+	}
+
+	/**
+	 * @return the format
+	 */
+	public String getFormat() {
+		return format;
+	}
+
+	/**
+	 * @param format the format to set
+	 */
+	public void setFormat(String format) {
+		this.format = format;
+	}
+
+	/**
+	 * @return the columnWidth
+	 */
+	public double getColumnWidth() {
+		return columnWidth;
+	}
+
+	/**
+	 * @param columnWidth the columnWidth to set
+	 *                    <br>기본값은 72px(72px * 0.125 = 9 로 들어갈 예정)
+	 */
+	public void setColumnWidth(double columnWidth) {
+		this.columnWidth = columnWidth;
+	}
+}
 ```
 
 ## 엑셀 서비스 공통 코드
@@ -205,9 +392,7 @@ public class ExcelService {
 		// 헤더 스타일
 		XSSFCellStyle styleHead = wb.createCellStyle();
 		XSSFFont headerFont = wb.createFont();
-		//headerFont.setFontName("맑은 고딕");
 		headerFont.setBold(true);
-		//headerFont.setFontHeightInPoints((short) 9);
 		styleHead.setFont(headerFont);
 		styleHead.setBorderBottom(BorderStyle.THIN);
 		styleHead.setVerticalAlignment(VerticalAlignment.CENTER);
@@ -335,6 +520,19 @@ public class ExcelService {
        public void beginSheet() throws IOException {
            _out.write("<?xml version=\"1.0\" encoding=\""+XML_ENCODING+"\"?>" +
                    "<worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">" );
+			// 컬럼의 너비 정의
+			this._out.write("<cols>");
+			for (int c = 0; c < prmExcelInfoVO.getArrExcelCellInfo().size(); c++) {
+				double columnWidthPx = 0;
+				columnWidthPx = (prmExcelInfoVO.getArrExcelCellInfo().get(c).getColumnWidth() == 0) ? 72d
+						: (double) prmExcelInfoVO.getArrExcelCellInfo().get(c).getColumnWidth();
+
+				// - 엑셀의 XML 너비 = ?? px * 0.125
+				this._out.write("<col min=\"" + (c + 1) + "\" max=\"" + (c + 1) + "\" width=\""
+						+ (columnWidthPx * 0.125) + "\" customWidth=\"true\"/>");
+			}
+			this._out.write("</cols>");
+				
            _out.write("<sheetData>\n");
        }
 
