@@ -447,15 +447,15 @@ public class ExcelService {
        sw.insertRow(0);
        for(int iColIndex = 0 ; iColIndex < arrExcelCellInfo.size() ; iColIndex++) {
 
-			// 2. 스타일 가져오기
-			XSSFCellStyle cellStyle = null;
-			cellStyle = styleMap.get("head");
+		// 스타일 가져오기
+		XSSFCellStyle cellStyle = null;
+		cellStyle = styleMap.get("head");
 
-			// 3. 생성할 컬럼 값 가져오기
-			String oValue = arrExcelCellInfo.get(iColIndex).getHeaderDesc()[0];
+		// 생성할 컬럼 값 가져오기
+		String oValue = arrExcelCellInfo.get(iColIndex).getHeaderDesc()[0];
          
-			// 4. 컬럼 생성
-			sw.createCell(iColIndex, oValue, cellStyle.getIndex());
+		// 컬럼 생성
+		sw.createCell(iColIndex, oValue, cellStyle.getIndex());
        }
        sw.endRow();
        
@@ -662,15 +662,15 @@ public class ExcelResultHandler implements RowHandler {
 			sw.insertRow(rowNum);
 			for (int iColIndex = 0; iColIndex < arrExcelCellInfo.size(); iColIndex++) {
 
-				// 1. 컬럼 설정 정보 가져오기
+				// 컬럼 설정 정보 가져오기
 				String sColumnId = arrExcelCellInfo.get(iColIndex).getColumnId();
 
 				XSSFCellStyle cellStyle = this.styleMap.get(sColumnId);
 
-				// 3. 생성할 컬럼 값 가져오기
+				// 생성할 컬럼 값 가져오기
 				Object oValue = (objMap == null)? "" : objMap.get(sColumnId);
 
-				// 4. 컬럼 생성
+				// 컬럼 생성
 				sw.createCell(iColIndex, oValue, cellStyle.getIndex());
 
 			}
@@ -686,4 +686,4 @@ public class ExcelResultHandler implements RowHandler {
 ```
 
 ## 출처
-- <a href="https://stackoverflow.com/questions/4740179/whats-the-difference-between-c-t-str-and-cis-in-office-open-xml?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa" target="_blank">스택오버플로 -How to add Cell Comments to Excel sheet using POI?</a>
+- <a href="https://stackoverflow.com/questions/7153254/how-to-add-cell-comments-to-excel-sheet-using-poi?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa" target="_blank">스택오버플로 -How to add Cell Comments to Excel sheet using POI?</a>
