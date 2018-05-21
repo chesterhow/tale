@@ -3,7 +3,7 @@
 title: 자바 인코딩 한번에 처리하는 코드
 category: java
 tag: java
-discription: 귀찮을 때 한번에 찾는 코드
+description: 인코딩 뭘로 해야되는지 찾는게 귀찮을 때 한번에 찾자
 
 
 ---
