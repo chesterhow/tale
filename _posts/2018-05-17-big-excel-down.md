@@ -40,7 +40,7 @@ tag: spring,poi
 
 ## 실행 코드
 ``` java
-public void main() throws Exception {
+public static void main(String[] args) throws Exception {
 
 	Map paramMap = null; //select 쿼리에 넣을 파라미터 맵
 	String fileName = null; //파일명
