@@ -21,6 +21,7 @@ sass:
 # Gems
 plugins:
   - jekyll-paginate
+  # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
