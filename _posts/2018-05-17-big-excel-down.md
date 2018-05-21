@@ -328,16 +328,6 @@ public class ExcelService {
         //시트명칭 설정
         XSSFSheet sheet = wb.createSheet("Big Grid");
         
-        /*
-        int headStyleSize = excelInfoVO.getArrExcelCellInfo().size();
-        
-        for (int i = 0; i < headStyleSize; i++) {
-        	log.error(String.valueOf(i)+"번째 width:"+String.valueOf(excelInfoVO.getArrExcelCellInfo().get(i).getColumnWidth()));
-			sheet.setColumnWidth(i, (int)excelInfoVO.getArrExcelCellInfo().get(i).getColumnWidth());
-		}
-        sheet.createFreezePane(0, 1,0,1);
-        */
-        
         //셀스타일을 생성
         Map<String, XSSFCellStyle> styles = createStyles(wb, excelInfoVO);
         
