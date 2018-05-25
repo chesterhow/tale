@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Example Content"
+title: "마크다운 예제 markdown example"
 author: "Chester"
 ---
 
