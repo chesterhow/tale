@@ -1,6 +1,7 @@
 ---
 
 title: 자바 인코딩 한번에 찾는 코드
+author: jaycee
 category: java
 tag: java
 description: 인코딩 뭘로 해야되는지 찾는게 귀찮을 때 한번에 찾자
