@@ -1,6 +1,6 @@
 ---
 
-title: 자바 인코딩 한번에 처리하는 코드
+title: 자바 인코딩 한번에 찾는 코드
 category: java
 tag: java
 description: 인코딩 뭘로 해야되는지 찾는게 귀찮을 때 한번에 찾자
@@ -10,9 +10,8 @@ description: 인코딩 뭘로 해야되는지 찾는게 귀찮을 때 한번에 
 
 
 
-
+## 코드
 ``` java
-
 String word = "무궁화 꽃이 피었습니다.";
 System.out.println("utf-8 -> euc-kr : " + new String(word.getBytes("utf-8"), "euc-kr"));
 System.out.println("utf-8 -> ksc5601 : " + new String(word.getBytes("utf-8"), "ksc5601"));
