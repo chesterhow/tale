@@ -33,7 +33,4 @@ System.out.println("x-windows-949 -> euc-kr : " + new String(word.getBytes("x-wi
 System.out.println("x-windows-949 -> utf-8 : " + new String(word.getBytes("x-windows-949"), "utf-8"));
 System.out.println("x-windows-949 -> ksc5601 : " + new String(word.getBytes("x-windows-949"), "ksc5601"));
 System.out.println("x-windows-949 -> iso-8859-1 : " + new String(word.getBytes("x-windows-949"), "iso-8859-1"));
-
-
-
 ```
