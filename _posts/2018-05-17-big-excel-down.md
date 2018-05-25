@@ -333,17 +333,19 @@ public class ExcelService {
         
         //name of the zip entry holding sheet data, e.g. /xl/worksheets/sheet1.xml
         String sheetRef = sheet.getPackagePart().getPartName().getName();
-
-        //save the template
-        //템플릿 파일 생성
+		File dir = new File(filePath);
+		if (!dir.isDirectory()) {
+			dir.mkdirs();
+		}
+        
         FileOutputStream os = new FileOutputStream(filePath + File.separator +"template.xlsx");
         wb.write(os);
         os.close();
 
         //Step 2. Generate XML file.
         //엑셀에 담길 실제 내용인 XML파일을 생성
-        File tmp = File.createTempFile("sheet", ".xml");
-        Writer fw = new OutputStreamWriter(new FileOutputStream(tmp), XML_ENCODING);
+        File tmpFile = File.createTempFile("sheet", ".xml");
+        Writer fw = new OutputStreamWriter(new FileOutputStream(tmpFile), XML_ENCODING);
 
         //헤더 생성
         generateHead(fw, styles, excelInfoVO);
@@ -363,13 +365,16 @@ public class ExcelService {
         //Step 3. Substitute the template entry with the generated data
         //템플릿과 생성된 XML을 압축하여 XLSX파일을 만든다.
         FileOutputStream out = new FileOutputStream(filePath + File.separator +excelInfoVO.getFileName());
-        substitute(new File(filePath + File.separator +"template.xlsx"), tmp, sheetRef.substring(1), out);
+        substitute(new File(filePath + File.separator +"template.xlsx"), tmpFile, sheetRef.substring(1), out);
         out.close();
 		
-		rtnMap.put("fileName",excelInfoVO.getFileName());
-		rtnMap.put("listCnt", handler.getRowNum());
+        //JVM 종료 시 임시 생성된 파일 삭제. 임시파일 경로 확인 방법 - log.error(System.getProperty("java.io.tmpdir")); 또는 log.error(tempfile.getAbsolutePath());
+        tmpFile.deleteOnExit();
 		
-		return rtnMap;
+	rtnMap.put("fileName",excelInfoVO.getFileName());
+	rtnMap.put("listCnt", handler.getRowNum());
+
+	return rtnMap;
 	}
 	
 	private static Map<String, XSSFCellStyle> createStyles(XSSFWorkbook wb, ExcelInfoVO prmExcelInfoVO){
