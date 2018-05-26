@@ -50,8 +50,11 @@ public void delteAll throw Exception{
 
 ## 3.2.2 분리와 재사용을 위한 디자인 패턴 적용
 ### 개선점
-- 만약 여러 패키지의 dao에서 쿼리를 실행한다면 try/catch/finally 와 객체 선언 부분은 변하지 않고 사용되는 소스들이다.
-- 이것을 공통부분으로 쓰고 쿼리 처리가 변하는 것이므로 쿼리 처리 부분을 인터페이스로 분리한여 의존성 주입을 한다.
+변하지 않는 부분과 변하지 않는 부분을 구분하고, 변하지 않는 부분을 인터페이스로 구현하여 DI한다.
+
+위 소스에서 본다면, try/catch/finally절과 객체 선언 부분은 변하지 않는 부분이다.
+
+이것을 공통부분으로 쓰고 쿼리 처리가 변하는 것이므로 쿼리 처리 부분을 인터페이스로 분리하여 의존성 주입을 한다.
 
 ### 컨텍스트 소스
 ``` java
@@ -74,7 +77,7 @@ public void jdbcContextWithStatementStrategy(StatementStrategy stmt) throws SQLE
 }
 ```
 
-### 클라리언트 소스
+### 클라이언트 소스
 ``` java
 public void deleteAllStatement() implements StatementStrategy {
   public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
@@ -83,5 +86,74 @@ public void deleteAllStatement() implements StatementStrategy {
 }
 ```
 
-## JDBC 전략 패턴의 최적화
+## 3.3 JDBC 전략 패턴의 최적화
+### 3.3.2 전략과 클라이너트의 동거#1 - 로컬 클래스를 이용한 소스 개선
+#### 개선점
+- 클래스가 너무 많이 생성되므로 통합한다. 로컬클래스를 이용하여 클래스를 하나로 처리한다.(이번 경우에는 add와 addStatement를 하나의 메소드로 묶는다.)
+- 멤버변수 user를 같은 클래스안에서 사용할 수 있음므로 메소드간 user 오브젝트를 전달해주지 않아도 된다.
 
+#### 로컬 클래스란?
+로컬 변수를 선언하듯 클래스나 메소드 내에 클래스를 선언하는 것. 자바에서 기본적으로 허용하는 문법이다. 이번 경우에는 add 메소드 내에 StatementStrategy 인터페이스를 구현한다.
+
+로컬 변수를 사용함으로써 장점으로는..
+- 결합도가 강한 경우 사용하면 불필요한 클래스 파일 생성을 막을 수 있다.
+- 가독성이 향상된다.
+- 변수를 공유해서 사용하므로 변수가 줄어든다.
+그런데 개인적으로는 익숙치는 않아서 가독성이 좋아질 것 같진 않다.
+
+#### 소스 코드
+``` java
+public void add(User user) throws SQLException{
+  class AddStatement implements StatementStrategy{
+    User user;
+    
+    public AddStatement(final User user){
+      this.user = user;
+    }
+    public PreparedStatement makePreparedStatement(Connection c) throws SQLException{
+      PreparedStatement ps = c.prepareStatement("insert into users(id, name, password) values(?, ?, ?)");
+      ps.setString(1, user.getId());
+      ps.setString(2, user.getName());
+      ps.setString(3, user.getPassword());
+      
+      return ps;
+    }
+  }
+  
+  StatementStrategy st = new AddStatement(user);
+  jdbcContextWithStatementStrategy(st);
+}
+```
+
+### 3.3.2 전략과 클라이너트의 동거#2 - 익명 내부 클래스를 이용한 소스 개선
+#### 개선점
+- 익명 내부 클래스를 이용하여 구현체(implements)도 제거한다.
+
+#### 익명 내부 클래스란?
+- 이름을 갖지 않은 클래스로, 클래스선언과 오브젝트 생성이 결합된 형태로 만들어진다.
+- 딱 한 번만 사용 하는 클래스의 경우, 굳이 따로 담아둘 필요가 없다. 이런 클래스는 익명 내부 클래스를 사용하면 소스를 더욱 간결하게 작성할 수 있다.
+- new 인터페이스이름(){클래스 본문}; 문법으로 사용한다.
+- 이번 예제의 경우, 떨어져 있었던 StatementStrategy st = new AddStatement(user), jdbcContextWithStatementStrategy(st)이 하나의 메소드로 녹아있는 것을 볼 수 있다.
+
+``` java
+public void add(final User user) throws SQLException {
+  jdbcContextWithStatementStrategy(
+      new StatementStrategy() {			
+        public PreparedStatement makePreparedStatement(Connection c)
+        throws SQLException {
+          PreparedStatement ps = 
+            c.prepareStatement("insert into users(id, name, password) values(?,?,?)");
+          ps.setString(1, user.getId());
+          ps.setString(2, user.getName());
+          ps.setString(3, user.getPassword());
+
+          return ps;
+        }
+      }
+  );
+}
+```
+
+## 3.4 컨텍스트와 DI
+### 개선점
+- 다른 DAO에서도 사용할 수 있도록 소스를 개선한다.
