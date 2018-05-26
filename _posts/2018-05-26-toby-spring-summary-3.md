@@ -186,9 +186,9 @@ public void add(final User user) throws SQLException {
 ## 3.4 컨텍스트와 DI
 ### 개선점
 - 다른 DAO에서도 사용할 수 있도록 소스를 개선한다. 위 소스 같은 경우 user에 관련되어 하드코딩되어있다. 
-예를 들어, 앞으로 group, office 등 추가적으로 모델이 추가될 때 이것에도 대응이 되어야 하는데, 그 때마다 jdbcContextWithStatementStrategy 클래스를 생성해야한다.
+예를 들어, 앞으로 group, office 등 추가적으로 모델이 추가될 때, 그 때마다 jdbcContextWithStatementStrategy 클래스를 생성해야한다.
 - 반복되는 jdbcContextWithStatementStrategy를 분리한다. 변경되는 UserDao에서 jdbcContext를 DI받아 사용한다. 
->> 이 구조라 가정할 때 GroupDao를 만든다고하면 GroupDao에서 jdbcContext를 간단하게 DI받아 사용할 수 있다.
+- 이 구조라 가정할 때 GroupDao를 만든다고하면 GroupDao에서 jdbcContext를 간단하게 DI받아 사용할 수 있다.
 
 ### JdbcContext 소스 코드
 ``` java
@@ -265,7 +265,7 @@ public class UserDao {
 
 ## 3.5 템플릿과 콜백
 ### 개선점
-- prepareStatement("쿼리")부분도 개선해본다. 이 부분을 보면 prepareStatement는 계속해서 반복되며, *쿼리*부분만 변경이 된다는 것을 알 수 있다.
+- prepareStatement("쿼리")부분도 개선해본다. 이 부분을 보면 prepareStatement는 계속해서 반복되며, **쿼리**부분만 변경이 된다는 것을 알 수 있다.
 
 ### 변하는 부분과 변하지 않는 부분 분리
 아래와 같이 두가지로 분리하여 생각해볼 수 있다.
@@ -291,6 +291,8 @@ public void executeSql(final String query) throws SQLException {//변하지 않�
 ### 변하는 부분과 변하지 않는 부분 재결합
 아래와 같이 JdbcContext에 공통된 반복부분을 결합시킨다. 정말 집요하게 리팩토링한다..
 
+아래의 JdbcContext와 같은 방식으로 JdbcTemplate이 동작한다. 오버라이드와 제너릭을 사용하면 쿼리 결과를 List로 받거나, 다양한 모델을 쿼리의 파라미터로 집어넣을 수 있다.
+
 #### deleteAll 클래스
 ``` java
 public void deleteAll() throws SQLException {//변하는 부분
@@ -315,3 +317,46 @@ public class JdbcContext {
 }
 ```
 
+## 3.6 스프링의 JdbcTemplate
+### 개선점
+- 위의 과정으로 JdbcTemplate의 동작과정을 알아봤다. 이번에는 jdbcTemplate를 DI받아서 사용하면된다. 
+- 가장 앞에 있는 소스와 비교해본다면 확연히 달라진 것을 알 수 있다.
+
+### 최종 UserDao
+``` java
+public class UserDao {
+	public void setDataSource(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	private RowMapper<User> userMapper = 
+		new RowMapper<User>() {
+				public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				User user = new User();
+				user.setId(rs.getString("id"));
+				user.setName(rs.getString("name"));
+				user.setPassword(rs.getString("password"));
+				return user;
+			}
+		};
+
+	
+	public void add(final User user) {
+		this.jdbcTemplate.update("insert into users(id, name, password) values(?,?,?)",
+						user.getId(), user.getName(), user.getPassword());
+	}
+
+	public User get(String id) {
+		return this.jdbcTemplate.queryForObject("select * from users where id = ?",
+				new Object[] {id}, this.userMapper);
+	} 
+
+	public void deleteAll() {
+		this.jdbcTemplate.update("delete from users");
+	}
+
+
+}
+```
