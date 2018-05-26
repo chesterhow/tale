@@ -1,7 +1,8 @@
 ---
-title: 토비의 스프링 3장 템플릿 요약/정리
-author: 박종철
+title: 토비의 스프링 3장 템플릿 정리
+author: jaycee
 category: spring
+tag: toby
 description: 반복되는 소스들을 개선하면서 JDBC 템플릿(JdbcTemplate)이 어떻게 지금의 모습을 갖췄는지 알아본다.
 ---
 
