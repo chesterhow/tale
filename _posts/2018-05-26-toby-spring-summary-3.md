@@ -77,7 +77,15 @@ public void jdbcContextWithStatementStrategy(StatementStrategy stmt) throws SQLE
 }
 ```
 
-### 클라이언트 소스
+### 클라이언트 소스 - deleteAll
+``` java
+public void deleteAll() throws SQLException{
+  StatementStrategy st = new deleteAllStatement();
+  jdbcContextWithStatementStrategy(st);
+}
+```
+
+### 인터페이스 구현 소스 - deleteAll
 ``` java
 public void deleteAllStatement() implements StatementStrategy {
   public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
@@ -86,10 +94,31 @@ public void deleteAllStatement() implements StatementStrategy {
 }
 ```
 
+### 클라이언트 소스 - add
+``` java
+public void add(User user) throws SQLException{
+  StatementStrategy st = new AddStatement(user);
+  jdbcContextWithStatementStrategy(st);
+}
+```
+
+### 인터페이스 구현 소스 - addStatement
+``` java
+public void addStatement(final User user) throws SQLException {
+  public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
+    PreparedStatement ps = c.prepareStatement("insert into users(id, name, password) values(?,?,?)");
+    ps.setString(1, user.getId());
+    ps.setString(2, user.getName());
+    ps.setString(3, user.getPassword());
+    return ps;
+  }
+}
+```
+
 ## 3.3 JDBC 전략 패턴의 최적화
-### 3.3.2 전략과 클라이너트의 동거#1 - 로컬 클래스를 이용한 소스 개선
+### 3.3.2 전략과 클라이트의 동거#1 - 로컬 클래스를 이용한 소스 개선
 #### 개선점
-- 클래스가 너무 많이 생성되므로 통합한다. 로컬클래스를 이용하여 클래스를 하나로 처리한다.(이번 경우에는 add와 addStatement를 하나의 메소드로 묶는다.)
+- 클래스가 너무 많이 생성되므로 통합한다. 로컬클래스를 이용하여 클래스를 하나로 처리한다. 이번 경우에는 add와 addStatement를 하나의 메소드로 묶는다. 클래스의 갯수가 5개에서 3개로 줄어들었다.
 - 멤버변수 user를 같은 클래스안에서 사용할 수 있음므로 메소드간 user 오브젝트를 전달해주지 않아도 된다.
 
 #### 로컬 클래스란?
@@ -125,9 +154,9 @@ public void add(User user) throws SQLException{
 }
 ```
 
-### 3.3.2 전략과 클라이너트의 동거#2 - 익명 내부 클래스를 이용한 소스 개선
+### 3.3.2 전략과 클라이트의 동거#2 - 익명 내부 클래스를 이용한 소스 개선
 #### 개선점
-- 익명 내부 클래스를 이용하여 구현체(implements)도 제거한다.
+- 익명 내부 클래스를 이용하여 구현체(implements) 클래스 선언도 제거하여 소스를 더욱 간결하게 만든다.
 
 #### 익명 내부 클래스란?
 - 이름을 갖지 않은 클래스로, 클래스선언과 오브젝트 생성이 결합된 형태로 만들어진다.
