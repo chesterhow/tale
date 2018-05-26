@@ -168,8 +168,7 @@ public void add(User user) throws SQLException{
 public void add(final User user) throws SQLException {
   jdbcContextWithStatementStrategy(
       new StatementStrategy() {			
-        public PreparedStatement makePreparedStatement(Connection c)
-        throws SQLException {
+        public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
           PreparedStatement ps = 
             c.prepareStatement("insert into users(id, name, password) values(?,?,?)");
           ps.setString(1, user.getId());
@@ -236,8 +235,7 @@ public class UserDao {
 	public void add(final User user) throws SQLException {
 		this.jdbcContext.workWithStatementStrategy(
 				new StatementStrategy() {			
-					public PreparedStatement makePreparedStatement(Connection c)
-					throws SQLException {
+					public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
 						PreparedStatement ps = 
 							c.prepareStatement("insert into users(id, name, password) values(?,?,?)");
 						ps.setString(1, user.getId());
@@ -253,8 +251,7 @@ public class UserDao {
 	public void deleteAll() throws SQLException {
 		this.jdbcContext.workWithStatementStrategy(
 			new StatementStrategy() {
-				public PreparedStatement makePreparedStatement(Connection c)
-						throws SQLException {
+				public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
 					return c.prepareStatement("delete from users");
 				}
 			}
@@ -306,8 +303,7 @@ public class JdbcContext {
 	public void executeSql(final String query) throws SQLException {
 		workWithStatementStrategy(
 			new StatementStrategy() {
-				public PreparedStatement makePreparedStatement(Connection c)
-						throws SQLException {
+				public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
 					return c.prepareStatement(query);
 				}
 			}
