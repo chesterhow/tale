@@ -2,20 +2,20 @@
 
 title: 스프링+POI로 대용량 엑셀 다운로드
 author: jaycee
-description: 스프링+POI로 대용량 엑셀 다운로드
+description: POI를 이용하여 OOM으로부터 안전한 대용량 엑셀의 다운로드 기능을 구현한다.
 category: spring
 tag: spring,poi
 
 ---
 ## 목적
-OOM을피해 대용량 엑셀의 다운로드를 구현한다.
+POI를 이용하여 OOM으로부터 안전한 대용량 엑셀의 다운로드 기능을 구현한다.
 
 ## POI란?
 아파치 재단에서 개발한 자바 라이브러리이다. 
 
 엑셀파일 읽는 기능, 생성하는 기능을 제공한다.
 
-역사,버젼 정보 등 자세한 사항은 <a href="https://poi.apache.org/">여기</a>를 클릭하여 확인할 수 다.
+역사,버젼 정보 등 자세한 사항은 <a href="https://poi.apache.org/" target="_blank">여기</a>를 클릭하여 확인할 수 있다.
 
 ## 스프링 기존 방식으로 대용량 엑셀 다운로드 구현 시 발생 오류
 대용량 엑셀 생성 시 스프링의 일반적인 방식인 queryForList를 호출하게 되면 OOM(out of memory) 발생. 아래와 같이 두가지 경우에서 오류가 발생한다.
