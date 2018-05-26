@@ -13,9 +13,9 @@ description: 반복되는 소스들을 개선하면서 JDBC 템플릿이 어떻�
 
 하지만 정말 과거에는 그랬다.
 
-간단한 조회 하나만 하려해도 커넥션, 스테이트먼트, 리절트 셋에 대한 선언 및 에러처리까지 해줘야했다.
+간단한 조회 하나만 만드려해도 커넥션, 스테이트먼트, 리절트 셋에 대한 선언 및 에러처리까지 해줘야했다.
 
-자칫 잘못 복사해서 저 중 하나의 리소스를 닫지 않아서 메모리 오류 또는 커넥션 풀 오류가 발생한다면 매우 찾기 힘들었을 것이다.
+만드는 것도 손이 너무 많이 갈 뿐더러, 자칫 잘못 복사해서 저 중 하나의 리소스를 닫지 않아서 메모리 오류 또는 커넥션 풀 오류가 발생한다면 매우 찾기 힘들었을 것이다.
 
 토비의 스프링 챕터3 템플릿에서는 이 것을 개선하면서 JDBC 템플릿이 어떻게 지금의 모습을 갖췄는지 잘 설명되어있다.
 
@@ -185,4 +185,133 @@ public void add(final User user) throws SQLException {
 
 ## 3.4 컨텍스트와 DI
 ### 개선점
-- 다른 DAO에서도 사용할 수 있도록 소스를 개선한다.
+- 다른 DAO에서도 사용할 수 있도록 소스를 개선한다. 위 소스 같은 경우 user에 관련되어 하드코딩되어있다. 
+예를 들어, 앞으로 group, office 등 추가적으로 모델이 추가될 때 이것에도 대응이 되어야 하는데, 그 때마다 jdbcContextWithStatementStrategy 클래스를 생성해야한다.
+- 반복되는 jdbcContextWithStatementStrategy를 분리한다. 변경되는 UserDao에서 jdbcContext를 DI받아 사용한다. 
+>> 이 구조라 가정할 때 GroupDao를 만든다고하면 GroupDao에서 jdbcContext를 간단하게 DI받아 사용할 수 있다.
+
+### JdbcContext 소스 코드
+``` java
+public class JdbcContext {
+	DataSource dataSource;
+	
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+	
+	public void workWithStatementStrategy(StatementStrategy stmt) throws SQLException {
+		Connection c = null;
+		PreparedStatement ps = null;
+
+		try {
+			c = dataSource.getConnection();
+
+			ps = stmt.makePreparedStatement(c);
+		
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			if (ps != null) { try { ps.close(); } catch (SQLException e) {} }
+			if (c != null) { try {c.close(); } catch (SQLException e) {} }
+		}
+	}
+}
+```
+
+### UserDao 소스 코드
+``` java
+public class UserDao {
+	private DataSource dataSource;
+		
+	public void setDataSource(DataSource dataSource) {
+		this.jdbcContext = new JdbcContext();
+		this.jdbcContext.setDataSource(dataSource);
+
+		this.dataSource = dataSource;
+	}
+	
+	private JdbcContext jdbcContext;
+	
+	public void add(final User user) throws SQLException {
+		this.jdbcContext.workWithStatementStrategy(
+				new StatementStrategy() {			
+					public PreparedStatement makePreparedStatement(Connection c)
+					throws SQLException {
+						PreparedStatement ps = 
+							c.prepareStatement("insert into users(id, name, password) values(?,?,?)");
+						ps.setString(1, user.getId());
+						ps.setString(2, user.getName());
+						ps.setString(3, user.getPassword());
+						
+						return ps;
+					}
+				}
+		);
+	}
+
+	public void deleteAll() throws SQLException {
+		this.jdbcContext.workWithStatementStrategy(
+			new StatementStrategy() {
+				public PreparedStatement makePreparedStatement(Connection c)
+						throws SQLException {
+					return c.prepareStatement("delete from users");
+				}
+			}
+		);
+	}
+}
+```
+
+## 3.5 템플릿과 콜백
+### 개선점
+- prepareStatement("쿼리")부분도 개선해본다. 이 부분을 보면 prepareStatement는 계속해서 반복되며, *쿼리*부분만 변경이 된다는 것을 알 수 있다.
+
+### 변하는 부분과 변하지 않는 부분 분리
+아래와 같이 두가지로 분리하여 생각해볼 수 있다.
+#### deleteAll 클래스
+``` java
+public void deleteAll() throws SQLException {//변하는 부분
+		executeSql("delete from users");
+	}
+```
+#### executeSql 클래스
+``` java
+public void executeSql(final String query) throws SQLException {//변하지 않는 부분
+  this.jdbcContext.workWithStatementStrategy(
+    new StatementStrategy() {
+      public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
+        return c.prepareStatement(query);
+      }
+    }
+  );
+}	
+```
+
+### 변하는 부분과 변하지 않는 부분 재결합
+아래와 같이 JdbcContext에 공통된 반복부분을 결합시킨다. 정말 집요하게 리팩토링한다..
+
+#### deleteAll 클래스
+``` java
+public void deleteAll() throws SQLException {//변하는 부분
+		executeSql("delete from users");
+	}
+```
+#### JdbcContext 클래스
+``` java
+public class JdbcContext {
+	...
+	public void executeSql(final String query) throws SQLException {
+		workWithStatementStrategy(
+			new StatementStrategy() {
+				public PreparedStatement makePreparedStatement(Connection c)
+						throws SQLException {
+					return c.prepareStatement(query);
+				}
+			}
+		);
+	}	
+  ...
+}
+```
+
