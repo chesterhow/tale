@@ -17,7 +17,7 @@ description: rawType을 되도록 쓰지 말아야하는 이유와 전환 방법
 List srcList = new ArrayList();
 ```
 위 같이 선언 시 warning 이 뜬다.
->> ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized.
+> ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized.
 
 즉, 강제하진 않지만 수정을 권고 한다.
 
@@ -73,10 +73,8 @@ public class test {
 
 ```
 에러 내용
-```
-Exception in thread "main" java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
+> Exception in thread "main" java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
 	at test.main(test.java:15)
-```
 
 ## 그런데 왜 rawType을 사용하는가?
 자바 1.5 이하 버전에서는 generic이 없어서 raw type을 사용했다. 
