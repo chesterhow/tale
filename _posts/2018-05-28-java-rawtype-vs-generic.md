@@ -9,6 +9,7 @@ description: rawType을 되도록 쓰지 말아야하는 이유. 그리고 rawTy
 
 ## rawType이란?
 직역하면 원천 유형이라는 뜻으로, 클래스의 타입을 가리지 않고 처리하기 위해 만들어졌다.
+
 예) List, Map, ArrayList, Arrays 등..
 
 ## rawType 사용 시 문제가 되는 이유
@@ -16,6 +17,7 @@ description: rawType을 되도록 쓰지 말아야하는 이유. 그리고 rawTy
 List srcList = new ArrayList();
 ```
 위 같이 선언 시 warning 이 뜬다. 에러내용: ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized.
+
 즉, 강제하진 않지만 수정을 권고 한다.
 
 
@@ -88,13 +90,13 @@ Exception in thread "main" java.lang.ClassCastException: java.lang.Integer canno
 ## 그렇다면 어떻게 해야할까?
 선언 시 generic Type을 이용하여 인자로 들어가는 자료 유형을 강제로 제한한다.
 
-잘못된 경우(raw Type)
+### 잘못된 경우(raw Type)
 ``` java
 List srcList = new ArrayList();
 ```
 혹은 불가피하게 raw Type을 써야한다면, 오류가 없는 것을 충분히 검증 후 @SuppressWarnings({ "rawtypes"}) 어노테이션을 붙여준다.
 
-잘처리한 경우(generic Type)
+### 잘처리한 경우(generic Type)
 ``` java
 List srcList<String> = new ArrayList<String>();
 ```
