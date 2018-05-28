@@ -1,9 +1,9 @@
 ---
 
-title: "rawType을 쓰지 말아야하는 이유"
+title: "rawType을 되도록 쓰지 말아야하는 이유"
 author: jaycee
 category: java
-description: rawType을 되도록 쓰지 말아야하는 이유. 그리고 rawType과 generic 비교.
+description: rawType을 되도록 쓰지 말아야하는 이유와 전환 방법.
 
 ---
 
