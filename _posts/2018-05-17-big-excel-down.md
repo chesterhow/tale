@@ -1,6 +1,6 @@
 ---
 
-title: 스프링+POI로 대용량 엑셀 다운로드
+title: POI+로우핸들러 구현으로 OOM으로부터 안전한 대용량 엑셀 다운로드
 author: jaycee
 description: POI를 이용하여 OOM으로부터 안전한 대용량 엑셀의 다운로드 기능을 구현한다.
 category: spring
