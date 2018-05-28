@@ -94,7 +94,7 @@ Exception in thread "main" java.lang.ClassCastException: java.lang.Integer canno
 ``` java
 List srcList = new ArrayList();
 ```
-혹은 불가피하게 raw Type을 써야한다면, 오류가 없는 것을 충분히 검증 후 @SuppressWarnings({ "rawtypes"}) 어노테이션을 붙여준다.
+혹은 불가피하게 raw Type을 써야한다면, 오류가 없는 것/발생할 가능성이 없다는 것을 충분히 검증 후 @SuppressWarnings({ "rawtypes"}) 어노테이션을 붙여준다. (하지만 계속 유지보수하다보면 스파게티 소스가 될 가능성이 있다.)
 
 ### 잘처리한 경우(generic Type)
 ``` java
