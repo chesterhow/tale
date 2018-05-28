@@ -16,7 +16,8 @@ description: rawType을 되도록 쓰지 말아야하는 이유와 전환 방법
 ``` java
 List srcList = new ArrayList();
 ```
-위 같이 선언 시 warning 이 뜬다. 에러내용: ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized.
+위 같이 선언 시 warning 이 뜬다.
+>> ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized.
 
 즉, 강제하진 않지만 수정을 권고 한다.
 
