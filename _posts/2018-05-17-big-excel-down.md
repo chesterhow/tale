@@ -374,13 +374,12 @@ public class ExcelService {
         out.close();
 		
 	tmpFile.delete();
-	
+        new File(templateFilePath).delete();
+        
         if(handler.getRowNum()<1) {//조회된 건수가 0건이면 생성된 파일 삭제
-		new File(templateFilePath).delete();
         	new File(filePath + File.separator +excelInfoVO.getFileName()).delete();
         }
         
-		
 	rtnMap.put("fileName",excelInfoVO.getFileName());
 	rtnMap.put("listCnt", handler.getRowNum());
 
