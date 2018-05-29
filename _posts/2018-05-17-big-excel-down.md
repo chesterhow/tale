@@ -373,8 +373,13 @@ public class ExcelService {
         substitute(new File(filePath + File.separator +"template.xlsx"), tmpFile, sheetRef.substring(1), out);
         out.close();
 		
-        //JVM 종료 시 임시 생성된 파일 삭제. 임시파일 경로 확인 방법 - log.error(System.getProperty("java.io.tmpdir")); 또는 log.error(tempfile.getAbsolutePath());
-        tmpFile.deleteOnExit();
+	tmpFile.delete();
+	
+        if(handler.getRowNum()<1) {//조회된 건수가 0건이면 생성된 파일 삭제
+		new File(templateFilePath).delete();
+        	new File(filePath + File.separator +excelInfoVO.getFileName()).delete();
+        }
+        
 		
 	rtnMap.put("fileName",excelInfoVO.getFileName());
 	rtnMap.put("listCnt", handler.getRowNum());
