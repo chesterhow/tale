@@ -19,7 +19,7 @@ Strona w budowie, podane dane nie są zgodne ze stanem faktycznym!
 <i><h4> Dni powszednie</h4></i>
 10:00<br>
 18:00<br>
-</ul> </center>
+ </center>
      </td>
      <td width="50%">
    <center><u><h1>Bichniów</h1></u>
