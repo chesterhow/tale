@@ -5,17 +5,15 @@ category: 전자정부프레임워크
 tags: 전자정부프레임워크
 --- 
 
-나는 일단 hello world를 찍어보고 시작하는 편이라, 가이드에 따라 시작해본다. 
+나는 일단 hello world를 찍어보고 시작하는 편이라, <a href="https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev3.7:clntinstall" target="_blank">가이드</a>에 따라 시작해본다.
+
+전자정부 이클립스 다운로드 후 새로운 전자정부 프로젝트를 생성한다.
 
 ## 1. 샘플 소스에 hsql이 없음.......
 오늘자 기준으로 전자정부프레임워크의 가장 최신 버젼은 3.7.0이다.
-다운로드 후 설치가이드를 따라해봤는데... 가이드에서 메모리 db 역할을할 hsql을 실행하라고 적혀있는데, 실행파일이 없음.......
+<a href="http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:dbio_editor:hsqldb_guide" target="_blank">hsql가이드</a>에서 메모리 db 역할을할 hsql을 실행하라고 적혀있는데, 실행파일이 없음.......  
 분명 이렇게 적혀있는데..
 > 생성한 프로젝트의 디렉토리에 있는 DATABASE>db 폴더에 있는 runHsqlDB.cmd 파일을 실행시킨다.
-
-참고한 가이드
-- <a href="https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev3.7:clntinstall" target="_blank">설치 가이드</a>
-- <a href="http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:dbio_editor:hsqldb_guide" target="_blank">hsql 세팅 가이드</a>
 
 그래서 마리아DB를 설치하여 jdbc 드라이버를 잡고 세팅해보기로 한다.
 
@@ -75,6 +73,13 @@ context-transaction.xml - 변경 후
   </tx:attributes>
 </tx:advice>
 ```
+
+## 4. 톰캣 구동 시 Deploying Maven project throws java.util.zip.ZipException: invalid LOC header (bad signature) 에러
+위 에러는 maven에 추가한 라이브러리가 깨졌을 때 주로 발생한다.
+
+이것은 전자정부 프레임워크와는 무관하게 자주 발생할 수 있는 에러임.
+
+이클립스 종료 후 로컬 리파지토리 .m2 폴더를 지우고 다시 구동, 프로젝트에서 오른쪽 클릭 후 Maven>Update Project 선택 하여 다시 다운로드 받는다.
 
 ## 마치며..
 과연 전자정부 프레임워크를 만드는 분들이 아무것도 없는 환경에서 테스트를 해보고 올린 것일까? 아마도 개발자가 자기 환경에서 자기 멋대로 세팅하고 메뉴얼을 작성한거 같다는 생각이 든다.
