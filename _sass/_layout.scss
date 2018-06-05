@@ -15,6 +15,7 @@ footer,
 .nav {
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
+  background: green;
 
   &-container {
     margin: 1rem auto;
