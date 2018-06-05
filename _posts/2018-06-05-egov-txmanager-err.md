@@ -14,8 +14,8 @@ tags: 전자정부프레임워크
 > 1. 생성한 프로젝트의 디렉토리에 있는 DATABASE > db 폴더에 있는 runHsqlDB.cmd 파일을 실행시킨다.
 
 참고한 가이드
-<a href="https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev3.7:clntinstall" target="_blank">설치 가이드</a>
-<a href="http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:dbio_editor:hsqldb_guide" target="_blank">hsql 세팅 가이드</a>
+- <a href="https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev3.7:clntinstall" target="_blank">설치 가이드</a>
+- <a href="http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev2:imp:dbio_editor:hsqldb_guide" target="_blank">hsql 세팅 가이드</a>
 
 그래서 마리아DB를 설치하여 jdbc 드라이버를 잡고 세팅해보기로 한다.
 
