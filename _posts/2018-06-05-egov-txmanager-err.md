@@ -37,7 +37,7 @@ pom.xml을 열어 db 라이브러리 관련된 주석을 푸니까 바로 jar를
 
 그래서 오라클 리파지토리와 라이브러리 설정을 변경해봤지만, 다른 오류들은 지워지지 않는다.
 
-이것은 확실히 오라클 라이브러리일 뿐이군 하고 가뿐히 지우고 넘어간다.
+이것은 오라클 라이브러리라는 확실한 판단을 하고 가뿐히 지우고 넘어간다.
 
 
 ## 3. Class 'org.springframework.jdbc.datasource.DataSourceTransactionManager' not found 오류
