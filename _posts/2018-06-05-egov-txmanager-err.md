@@ -24,7 +24,7 @@ context-transaction.xml - 기존
 
 context-transaction.xml - 변경 후
 ``` xml
-<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
   <property name="dataSource" ref="dataSource"/>
 </bean>
 
