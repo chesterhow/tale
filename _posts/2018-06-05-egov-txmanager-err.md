@@ -5,9 +5,9 @@ category: 전자정부프레임워크
 tags: 전자정부프레임워크
 --- 
 
-JPA에서 내부적으로 같은이름을 참조하기 때문에 txManager가 아닌 transactionManager로 사용한다...
+내부적으로 같은이름을 참조하기 때문에 txManager가 아닌 transactionManager로 사용한다...
 
-후.. 이걸로 세시간 헛고생.. 전자정부 만드시는 분들은 왜 이렇게 만드셨을까..
+이걸로 세시간 헛고생.. 전자정부 배포하시는 분들은 왜 이 상태로 배포하셨을까 원망스럽다..
 
 context-transaction.xml - 기존
 ``` xml
