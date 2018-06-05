@@ -11,7 +11,7 @@ tags: 전자정부프레임워크
 오늘자 기준으로 전자정부프레임워크의 가장 최신 버젼은 3.7.0이다.
 다운로드 후 설치가이드를 따라해봤는데... 가이드에서 메모리 db 역할을할 hsql을 실행하라고 적혀있는데, 실행파일이 없음.......
 분명 이렇게 적혀있는데..
-> 1. 생성한 프로젝트의 디렉토리에 있는 DATABASE > db 폴더에 있는 runHsqlDB.cmd 파일을 실행시킨다.
+> 생성한 프로젝트의 디렉토리에 있는 DATABASE>db 폴더에 있는 runHsqlDB.cmd 파일을 실행시킨다.
 
 참고한 가이드
 - <a href="https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev3.7:clntinstall" target="_blank">설치 가이드</a>
