@@ -5,6 +5,7 @@ category: 전자정부프레임워크
 tags: 전자정부프레임워크
 --- 
 
+## 시작하며..
 나는 일단 hello world를 찍어보고 시작하는 편이라, <a href="https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:dev3.7:clntinstall" target="_blank">개발자 개발환경 설치가이드</a>에 따라 시작해본다.
 
 전자정부 이클립스 다운로드 후 example source를 포함하는 새로운 전자정부 프로젝트를 생성한다.
