@@ -1,7 +1,7 @@
 # Site settings
 title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
+baseurl:        "/eliottbrion.github.io"
 url:            "https://chesterhow.github.io"
 
 # Author
