@@ -9,6 +9,7 @@ author:
   email:        eliott.brion@gmail.com
 
 # Build settings
+baseur1: /
 markdown:       kramdown
 
 # Assets
