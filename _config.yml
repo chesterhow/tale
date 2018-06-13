@@ -5,9 +5,9 @@ url:            "https://eliottbrion.github.io"
 
 # Author
 author:
-  name:         Chester How
+  name:         Eliott Brion
   url:          https://chester.how
-  email:        chesterhow@gmail.com
+  email:        eliott.brion@gmail.com
 
 # Build settings
 markdown:       kramdown
