@@ -2,6 +2,7 @@
 title:          Eliott Brion Blog
 description:    "Eliott Brion Blog"
 url:            "https://eliottbrion.github.io"
+baseurl:        "/"
 
 # Author
 author:
@@ -9,7 +10,6 @@ author:
   email:        eliott.brion@gmail.com
 
 # Build settings
-baseur1: /
 markdown:       kramdown
 
 # Assets
