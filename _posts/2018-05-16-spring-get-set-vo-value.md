@@ -4,6 +4,7 @@ title: 스프링 vo 변수값 가져오기
 author: jaycee
 description: 리플렉션을 이용해 스프링 vo 변수값 가져오기
 tag: reflection.spring,java
+published : false
 
 ---
 
