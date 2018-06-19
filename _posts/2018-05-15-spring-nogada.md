@@ -4,6 +4,7 @@ title: 부적합한 열 인덱스 오류 처리 내용
 author: jaycee
 category: "spring"
 tags: spring, error, ibatis, mybatis
+published : false
 description: "부적합한 열 인덱스 오류가 발생한 경우 처리"
 ---
 
@@ -20,22 +21,7 @@ description: "부적합한 열 인덱스 오류가 발생한 경우 처리"
 
 ## 오류 쿼리
 ```
-SELECT B.COMPCD, 
-       B.ACCUNT, 
-       B.SBACCUNT, 
-       B.PCSLYMD, 
-       C.GCODE, 
-       F_GET_UP_GMDNM_NEW (B.COMPCD, #w_serchym#, A.PARTCD, C.DCODE, '3', '2'), 
-       C.MCODE, 
-       F_GET_UP_GMDNM_NEW (B.COMPCD, #w_serchym#, A.PARTCD, C.DCODE, '2', '2'), 
-       C.DCODE, 
-       F_GMDNM_NEW(B.COMPCD, #w_serchym#, A.PARTCD, '1', C.DCODE), 
-       B.SKUCD, 
-       C.SKUNM, 
-       '69'                    IODIVCD, 
-       '대출' IODIVNM, 
-       B.EXSYSLNO              CASLNO, 
-       B.CSPC, 
+SELECT 
        '', 
        '', 
        '', 
@@ -48,16 +34,10 @@ SELECT B.COMPCD,
 FROM   tblA A, 
        tblB B, 
        tblC C 
-WHERE  A.COMPCD = '10' 
-AND    A.ACCUNT = 'C04' 
+WHERE  A.COMPCD = '1110' 
+AND    A.ACCUNT = 'AAA' 
 AND    A.COMPCD = B.COMPCD 
-AND    A.ACCUNT = B.ACCUNT 
-AND    A.SBACCUNT = B.SBACCUNT 
-AND    B.PCSLYMD BETWEEN #w_serchym# || '01' AND #w_serchymd# 
-AND    A.COMPCD = C.COMPCD 
-AND    A.PARTCD = C.PARTCD 
-AND    B.SKUCD = C.SKUCD 
-AND    #w_serchymd# BETWEEN C.TRDSTDAT AND    C.TRDEND  
+AND    A.NAME = B.NAME
 ```
 
 ## 오류 로그
