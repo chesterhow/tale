@@ -3,6 +3,7 @@
 title : XML 파싱 시 DOM방식과 SAX방식 비교
 category : java
 tag : java
+description: dom과 sax 방식 비교 및 적합한 사용 방법.
 
 ---
 
