@@ -35,7 +35,7 @@ var map = new naver.maps.Map('map', {
 
 for(i=0;i<surfObj.length;i++){
 
-    var surfTarget = new naver.maps.LatLng(surfObj[0].latitude, surfObj[0].longitude),
+    var surfTarget = new naver.maps.LatLng(surfObj[i].latitude, surfObj[i].longitude),
         map,
         marker = new naver.maps.Marker({
             map: map,
@@ -46,8 +46,8 @@ for(i=0;i<surfObj.length;i++){
         '<div class="iw_inner">',
         '   <h3>장소'+i+'</h3>',
         '   <p>수온/기온:시원<br />',
-        '       파고:'+surfObj[0].wh+'<br />',
-        '       바람:'+surfObj[0].ws+'<br />',
+        '       파고:'+surfObj[i].wh+'<br />',
+        '       바람:'+surfObj[i].ws+'<br />',
         '   </p>',
         '</div>'
     ].join('');
