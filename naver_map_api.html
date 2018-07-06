@@ -11,18 +11,18 @@
 <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
-var cityhall = new naver.maps.LatLng(37.5666805, 126.9784147),
+var surfTarget = new naver.maps.LatLng(37.968241, 128.763522),
     map = new naver.maps.Map('map', {
         center: cityhall.destinationPoint(0, 500),
         zoom: 10
     }),
     marker = new naver.maps.Marker({
         map: map,
-        position: cityhall
+        position: surfTarget
     });
     
 var mapOptions = {
-    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    center: new naver.maps.LatLng(37.968241, 128.763522),
     zoom: 10
 };
 
@@ -30,9 +30,10 @@ var map = new naver.maps.Map('map', mapOptions);
     
 var contentString = [
         '<div class="iw_inner">',
-        '   <h3>서울특별시청</h3>',
-        '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
-        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
+        '   <h3>인구해변</h3>',
+        '   <p>수온/기온:시원<br />',
+        '       파고:적당<br />',
+        '       바람:<br />',
         '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
         '   </p>',
         '</div>'
