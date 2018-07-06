@@ -11,7 +11,18 @@
 <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
-var surfTarget = new naver.maps.LatLng(37.968241, 128.763522),
+var surfObj =_{
+                {"latitude":37.968241,
+                "longitude":128.763522,
+                "wf":"구름조금",
+                "wh":"6",
+                "wd":"서풍",
+                "ws":"매우강"    
+                }
+}
+    
+    
+var surfTarget = new naver.maps.LatLng(surfObj[0].latitude, surfObj[0].longitude),
     map = new naver.maps.Map('map', {
         center: surfTarget.destinationPoint(0, 500),
         zoom: 10
@@ -23,11 +34,10 @@ var surfTarget = new naver.maps.LatLng(37.968241, 128.763522),
     
 var contentString = [
         '<div class="iw_inner">',
-        '   <h3>인구해변</h3>',
+        '   <h3>장소1</h3>',
         '   <p>수온/기온:시원<br />',
-        '       파고:적당<br />',
-        '       바람:<br />',
-        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+        '       파고:'+surfObj[0].wh+'<br />',
+        '       바람:'+surfObj[0].ws+'<br />',
         '   </p>',
         '</div>'
     ].join('');
@@ -47,9 +57,7 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 infowindow.open(map, marker);
     
 </script>
-
-<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/gisamun_beach?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=2&show_day=1"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/gisamun_beach?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Gisamun Beach</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
-    
+ 
     
     
 </body>
