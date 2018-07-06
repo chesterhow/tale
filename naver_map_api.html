@@ -11,14 +11,41 @@
 <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
+var cityhall = new naver.maps.LatLng(37.5666805, 126.9784147),
+    map = new naver.maps.Map('map', {
+        center: cityhall.destinationPoint(0, 500),
+        zoom: 10
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: cityhall
+    });
+    
 var mapOptions = {
     center: new naver.maps.LatLng(37.3595704, 127.105399),
     zoom: 10
 };
 
 var map = new naver.maps.Map('map', mapOptions);
-</script>
     
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>서울특별시청</h3>',
+        '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
+        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
+        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+infowindow.open(map, marker);
+    
+</script>
+
 <script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/gisamun_beach?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=2&show_day=1"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/gisamun_beach?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Gisamun Beach</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
     
     
