@@ -18,23 +18,33 @@ var surfObj = [
                 "wh":"6",
                 "wd":"서풍",
                 "ws":"매우강"    
+                },
+                {"latitude":37.967241,
+                "longitude":128.762522,
+                "wf":"맑음",
+                "wh":"1",
+                "wd":"동풍",
+                "ws":"약"    
                 }
 ]
     
-    
-var surfTarget = new naver.maps.LatLng(surfObj[0].latitude, surfObj[0].longitude),
-    map = new naver.maps.Map('map', {
+var map = new naver.maps.Map('map', {
         center: surfTarget.destinationPoint(0, 500),
         zoom: 10
-    }),
-    marker = new naver.maps.Marker({
-        map: map,
-        position: surfTarget
     });
+
+for(i=0;i<surfObj.length;i++){
+
+    var surfTarget = new naver.maps.LatLng(surfObj[0].latitude, surfObj[0].longitude),
+        map,
+        marker = new naver.maps.Marker({
+            map: map,
+            position: surfTarget
+        });
     
-var contentString = [
+    var contentString = [
         '<div class="iw_inner">',
-        '   <h3>장소1</h3>',
+        '   <h3>장소'+i+'</h3>',
         '   <p>수온/기온:시원<br />',
         '       파고:'+surfObj[0].wh+'<br />',
         '       바람:'+surfObj[0].ws+'<br />',
@@ -42,19 +52,21 @@ var contentString = [
         '</div>'
     ].join('');
 
-var infowindow = new naver.maps.InfoWindow({
-    content: contentString
-});
+    var infowindow = new naver.maps.InfoWindow({
+        content: contentString
+    });
 
-naver.maps.Event.addListener(marker, "click", function(e) {
-    if (infowindow.getMap()) {
-        infowindow.close();
-    } else {
-        infowindow.open(map, marker);
-    }
-});
+
+    naver.maps.Event.addListener(marker, "click", function(e) {
+        if (infowindow.getMap()) {
+            infowindow.close();
+        } else {
+            infowindow.open(map, marker);
+        }
+    });
     
-infowindow.open(map, marker);
+}
+
     
 </script>
  
