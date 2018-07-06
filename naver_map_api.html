@@ -21,13 +21,6 @@ var surfTarget = new naver.maps.LatLng(37.968241, 128.763522),
         position: surfTarget
     });
     
-var mapOptions = {
-    center: new naver.maps.LatLng(37.968241, 128.763522),
-    zoom: 10
-};
-
-var map = new naver.maps.Map('map', mapOptions);
-    
 var contentString = [
         '<div class="iw_inner">',
         '   <h3>인구해변</h3>',
@@ -43,6 +36,14 @@ var infowindow = new naver.maps.InfoWindow({
     content: contentString
 });
 
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+    
 infowindow.open(map, marker);
     
 </script>
