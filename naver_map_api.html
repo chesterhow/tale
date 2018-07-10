@@ -13,116 +13,131 @@
 
 <script>
     
-var markers = [],
+$.ajax({
+  url: "http://newsky2.kma.go.kr/service/VilageFrcstDspthDocInfoService/WidSeaForecast?serviceKey=IrG0jJdO82DYEygUrd%2BnGEO%2FptYeVurRUuYMIj1TRJU66GoSw0OVFrxfC3twC%2BJNVi31BcfMTvG1q6UxuEY8QQ%3D%3D&regId=12C20100&numOfRows=10&pageSize=10&pageNo=1&startPage=1",
+  data: {
+  
+  },
+  success: function( result ) {
+    alert(result + " degrees");
+  }
+});
+    
+    
+    
+function drawMap(){
+
+    var markers = [],
     infoWindows = [];
     
-var surfObj = [
-                {
-                "title":"기문산",
-                "latitude":37.968241,
-                "longitude":128.763522,
-                "wf":"구름조금",
-                "wh":"6",
-                "wd":"서풍",
-                "ws":"매우강"    
-                },
-                {
-                "title":"부산",    
-                "latitude":37.967241,
-                "longitude":128.762522,
-                "wf":"맑음",
-                "wh":"1",
-                "wd":"동풍",
-                "ws":"약"    
-                }
-]
-    
-var map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.3614483, 129.1114883),
-        zoom: 10
+    var surfObj = [
+                    {
+                    "title":"기문산",
+                    "latitude":37.968241,
+                    "longitude":128.763522,
+                    "wf":"구름조금",
+                    "wh":"6",
+                    "wd":"서풍",
+                    "ws":"매우강"    
+                    },
+                    {
+                    "title":"부산",    
+                    "latitude":37.967241,
+                    "longitude":128.762522,
+                    "wf":"맑음",
+                    "wh":"1",
+                    "wd":"동풍",
+                    "ws":"약"    
+                    }
+    ]
+
+    var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.3614483, 129.1114883),
+            zoom: 10
+        });
+
+    for(i=0;i<surfObj.length;i++){
+
+        var position = new naver.maps.LatLng(surfObj[i].latitude, surfObj[i].longitude);
+
+        var marker = new naver.maps.Marker({
+            map: map,
+            position: position,
+            title: surfObj[i].title,
+            zIndex: 100
+        });
+
+        var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>장소'+i+'</h3>',
+            '   <p>수온/기온:시원<br />',
+            '       파고:'+surfObj[i].wh+'<br />',
+            '       바람:'+surfObj[i].ws+'<br />',
+            '   </p>',
+            '</div>'
+        ].join('');
+
+        var infoWindow = new naver.maps.InfoWindow({
+            content: contentString
+        });
+
+        markers.push(marker);
+        infoWindows.push(infoWindow);
+
+    }
+
+
+    naver.maps.Event.addListener(map, 'idle', function() {
+        updateMarkers(map, markers);
     });
 
-for(i=0;i<surfObj.length;i++){
+    function updateMarkers(map, markers) {
 
-    var position = new naver.maps.LatLng(surfObj[i].latitude, surfObj[i].longitude);
-    
-    var marker = new naver.maps.Marker({
-        map: map,
-        position: position,
-        title: surfObj[i].title,
-        zIndex: 100
-    });
-    
-    var contentString = [
-        '<div class="iw_inner">',
-        '   <h3>장소'+i+'</h3>',
-        '   <p>수온/기온:시원<br />',
-        '       파고:'+surfObj[i].wh+'<br />',
-        '       바람:'+surfObj[i].ws+'<br />',
-        '   </p>',
-        '</div>'
-    ].join('');
+        var mapBounds = map.getBounds();
+        var marker, position;
 
-    var infoWindow = new naver.maps.InfoWindow({
-        content: contentString
-    });
+        for (var i = 0; i < markers.length; i++) {
 
-    markers.push(marker);
-    infoWindows.push(infoWindow);
-    
-}
+            marker = markers[i]
+            position = marker.getPosition();
 
-
-naver.maps.Event.addListener(map, 'idle', function() {
-    updateMarkers(map, markers);
-});
-
-function updateMarkers(map, markers) {
-
-    var mapBounds = map.getBounds();
-    var marker, position;
-
-    for (var i = 0; i < markers.length; i++) {
-
-        marker = markers[i]
-        position = marker.getPosition();
-
-        if (mapBounds.hasLatLng(position)) {
-            showMarker(map, marker);
-        } else {
-            hideMarker(map, marker);
+            if (mapBounds.hasLatLng(position)) {
+                showMarker(map, marker);
+            } else {
+                hideMarker(map, marker);
+            }
         }
     }
-}
 
-function showMarker(map, marker) {
+    function showMarker(map, marker) {
 
-    if (marker.setMap()) return;
-    marker.setMap(map);
-}
+        if (marker.setMap()) return;
+        marker.setMap(map);
+    }
 
-function hideMarker(map, marker) {
+    function hideMarker(map, marker) {
 
-    if (!marker.setMap()) return;
-    marker.setMap(null);
-}
+        if (!marker.setMap()) return;
+        marker.setMap(null);
+    }
 
-// 해당 마커의 인덱스를 seq라는 클로저 변수로 저장하는 이벤트 핸들러를 반환합니다.
-function getClickHandler(seq) {
-    return function(e) {
-        var marker = markers[seq],
-            infoWindow = infoWindows[seq];
+    // 해당 마커의 인덱스를 seq라는 클로저 변수로 저장하는 이벤트 핸들러를 반환합니다.
+    function getClickHandler(seq) {
+        return function(e) {
+            var marker = markers[seq],
+                infoWindow = infoWindows[seq];
 
-        if (infoWindow.getMap()) {
-            infoWindow.close();
-        } else {
-            infoWindow.open(map, marker);
+            if (infoWindow.getMap()) {
+                infoWindow.close();
+            } else {
+                infoWindow.open(map, marker);
+            }
         }
     }
-}
-    
-for (var i=0, ii=markers.length; i<ii; i++) {
-    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+
+    for (var i=0, ii=markers.length; i<ii; i++) {
+        naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+    }
 }
     
 </script>
