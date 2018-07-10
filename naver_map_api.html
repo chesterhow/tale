@@ -11,15 +11,23 @@
 <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
+    
+var markers = [],
+    infoWindows = [];
+    
 var surfObj = [
-                {"latitude":37.968241,
+                {
+                "title":"기문산",
+                "latitude":37.968241,
                 "longitude":128.763522,
                 "wf":"구름조금",
                 "wh":"6",
                 "wd":"서풍",
                 "ws":"매우강"    
                 },
-                {"latitude":37.967241,
+                {
+                "title":"부산",    
+                "latitude":37.967241,
                 "longitude":128.762522,
                 "wf":"맑음",
                 "wh":"1",
@@ -35,12 +43,14 @@ var map = new naver.maps.Map('map', {
 
 for(i=0;i<surfObj.length;i++){
 
-    var surfTarget = new naver.maps.LatLng(surfObj[i].latitude, surfObj[i].longitude),
-        map,
-        marker = new naver.maps.Marker({
-            map: map,
-            position: surfTarget
-        });
+    var position = new naver.maps.LatLng(surfObj[i].latitude, surfObj[i].longitude);
+    
+    var marker = new naver.maps.Marker({
+        map: map,
+        position: position,
+        title: surfObj[i].title,
+        zIndex: 100
+    });
     
     var contentString = [
         '<div class="iw_inner">',
@@ -56,17 +66,63 @@ for(i=0;i<surfObj.length;i++){
         content: contentString
     });
 
-
-    naver.maps.Event.addListener(marker, "click", function(e) {
-        if (infowindow.getMap()) {
-            infowindow.close();
-        } else {
-            infowindow.open(map, marker);
-        }
-    });
+    markers.push(marker);
+    infoWindows.push(infoWindow);
     
 }
 
+
+naver.maps.Event.addListener(map, 'idle', function() {
+    updateMarkers(map, markers);
+});
+
+function updateMarkers(map, markers) {
+
+    var mapBounds = map.getBounds();
+    var marker, position;
+
+    for (var i = 0; i < markers.length; i++) {
+
+        marker = markers[i]
+        position = marker.getPosition();
+
+        if (mapBounds.hasLatLng(position)) {
+            showMarker(map, marker);
+        } else {
+            hideMarker(map, marker);
+        }
+    }
+}
+
+function showMarker(map, marker) {
+
+    if (marker.setMap()) return;
+    marker.setMap(map);
+}
+
+function hideMarker(map, marker) {
+
+    if (!marker.setMap()) return;
+    marker.setMap(null);
+}
+
+// 해당 마커의 인덱스를 seq라는 클로저 변수로 저장하는 이벤트 핸들러를 반환합니다.
+function getClickHandler(seq) {
+    return function(e) {
+        var marker = markers[seq],
+            infoWindow = infoWindows[seq];
+
+        if (infoWindow.getMap()) {
+            infoWindow.close();
+        } else {
+            infoWindow.open(map, marker);
+        }
+    }
+}
+    
+for (var i=0, ii=markers.length; i<ii; i++) {
+    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+}
     
 </script>
  
