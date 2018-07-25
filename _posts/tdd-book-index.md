@@ -8,7 +8,7 @@ published: false
 
 1. 서론
 2. TDD를 위한 준비
- - JUNIT으로 hello world 출력
+ - Junit으로 hello world 출력
  - test case 만들기
  - spring 설정 및 의존성 주입
  - transaction 설정
