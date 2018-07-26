@@ -24,7 +24,7 @@ published: true
 # 목차
 1. 서론
 2. TDD를 해야하는 이유
-3. TDD를 위한 준비
+3. TDD를 위한 준비 - Junit을 이용한 단위 테스트
  - Junit 환경설정 세팅
  - test case 생성
  - spring 설정 및 의존성 주입
