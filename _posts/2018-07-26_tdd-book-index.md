@@ -1,10 +1,10 @@
-=== 
+---
 
 title: TDD 책 목차
 author: 박종철
 published: true
 
-=== 
+--- 
 
 # AS-IS 기존 IT서적의 단점
 1. 두꺼움 > 1권 다 읽기 어려움, 책을 막상 펼치기 힘듦
