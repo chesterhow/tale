@@ -2,7 +2,7 @@
 
 title: TDD 책 목차
 author: 박종철
-published: false
+published: true
 
 === 
 
