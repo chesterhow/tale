@@ -1,8 +1,6 @@
 ---
-
 title: Quick start TDD with eGovFW 기획
 author: 박종철
-
 --- 
 
 # 책 제목
@@ -41,4 +39,3 @@ Quick start TDD with eGovFW(부제: 전자정부 프레임워크로 빠르게 �
  - TDD의 장단점
  - 꼭필요한가?
  - 결론
- 
