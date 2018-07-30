@@ -45,7 +45,7 @@ a {
 blockquote {
   border-left: .25rem solid $grey-2;
   color: $grey-1;
-  margin: .8rem 0;
+  margin: .8rem 0 1rem 0;
   padding: .5rem 1rem;
 
   p:last-child {
@@ -53,7 +53,7 @@ blockquote {
   }
 
   @media (min-width: 600px) {
-    padding: 0 5rem 0 1.25rem;
+    padding: 0 0 0 1.25rem;
   }
 }
 
