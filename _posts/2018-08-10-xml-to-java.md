@@ -89,3 +89,6 @@ public class MyConfiguration {
    context.register(MyConfiguration.class);  
    context.refresh();  
    ```
+
+
+출처: <a href="https://stackoverflow.com/questions/45880027/how-to-convert-spring-bean-integration-from-xml-to-java-annotation-based-config" target="_blank">stack overflow - How to convert spring bean integration From XML to Java annotation based Config</a>
