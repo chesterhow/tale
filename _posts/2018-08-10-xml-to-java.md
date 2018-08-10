@@ -75,7 +75,6 @@ public class MyConfiguration {
     }
 }
 ```
-
 2. 생성된 빈들은 스프링 컨테이너에 등록할 수 있도록 설정해준다. 다음과 같은 두가지 방법이 있다.
   - 컴포넌트 스캔 어노테이션을 이용(Component scanning)  
    ``` java
