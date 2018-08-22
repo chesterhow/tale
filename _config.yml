@@ -1,14 +1,14 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          Terragon Data
+description:    "Terragon Data"
+# baseurl:        "/tale"
+url:            "terragondata.github.io"
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Terragon Data
+  url:          terragondata.github.io
+  email:        data@terragonltd.com
 
 # Build settings
 markdown:       kramdown
@@ -20,7 +20,6 @@ sass:
 
 # Gems
 plugins:
-  - jekyll-feed
   - jekyll-paginate
   # - jemoji #Uncomment this to allow emoji in your post
 
