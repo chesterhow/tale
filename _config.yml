@@ -1,14 +1,14 @@
 # Site settings
 title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+baseurl:        "/"
+url:            "https://crobbit-lucy.github.io"
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         SeungHyeon Tak
+  url:          https://crobbit-lucy.github.io
+  email:        crobbitlucy@gmail.com
 
 # Build settings
 markdown:       kramdown
