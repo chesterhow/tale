@@ -17,5 +17,5 @@ tags: spring,maven,ant
 
 3. 빌드툴 이용
 기본적으로 빌드 시 파라미터를 붙여서 빌드한다. (예:ant build.xml -Denv_var=dev...)
-  1. ant: build.xml(배포 스크립트) 에서 컴파일 전에 xml이나 property파일을 해당 환경의 설정파일로 덮어씌워 복사한다.
-  2. maven: profile을 이용한다.
+  - ant: build.xml(배포 스크립트) 에서 컴파일 전에 xml이나 property파일을 해당 환경의 설정파일로 덮어씌워 복사한다.
+  - maven: profile을 이용한다.
