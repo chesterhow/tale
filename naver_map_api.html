@@ -56,8 +56,8 @@ function drawMap(){
     var centerLongit = 0;
     
     for(i=0;i<surfObj.length;i++){
-     centerLatit += surfObj.latitude;
-     centerLongit += surfObj.longitude;
+     centerLatit += surfObj[i].latitude;
+     centerLongit += surfObj[i].longitude;
     }
     
     centerLatit = centerLatit/surfObj.length;
