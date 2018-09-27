@@ -13,18 +13,128 @@ author: 박종철
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>간단한 지도 표시하기</title>
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YOUR_CLIENT_ID"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=H8m5Fb98pmWQ04j1aHH6"></script>
 </head>
 <body>
 <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
-var mapOptions = {
-    center: new naver.maps.LatLng(37.3595704, 127.105399),
-    zoom: 10
-};
 
-var map = new naver.maps.Map('map', mapOptions);
+function drawMap(){
+
+    var markers = [],
+    infoWindows = [];
+    
+    var surfObj = [
+                    {
+                    "title":"기문산",
+                    "latitude":37.968241,
+                    "longitude":128.763522,
+                    "wf":"구름조금",
+                    "wh":"6",
+                    "wd":"서풍",
+                    "ws":"매우강"    
+                    },
+                    {
+                    "title":"부산",    
+                    "latitude":37.967241,
+                    "longitude":128.762522,
+                    "wf":"맑음",
+                    "wh":"1",
+                    "wd":"동풍",
+                    "ws":"약"    
+                    }
+    ]
+
+    var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.3614483, 129.1114883),
+            zoom: 10
+        });
+
+    for(i=0;i<surfObj.length;i++){
+
+        var position = new naver.maps.LatLng(surfObj[i].latitude, surfObj[i].longitude);
+
+        var marker = new naver.maps.Marker({
+            map: map,
+            position: position,
+            title: surfObj[i].title,
+            zIndex: 100
+        });
+
+        var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>장소'+i+'</h3>',
+            '   <p>수온/기온:시원<br />',
+            '       파고:'+surfObj[i].wh+'<br />',
+            '       바람:'+surfObj[i].ws+'<br />',
+            '   </p>',
+            '</div>'
+        ].join('');
+
+        var infoWindow = new naver.maps.InfoWindow({
+            content: contentString
+        });
+
+        markers.push(marker);
+        infoWindows.push(infoWindow);
+
+    }
+
+
+    naver.maps.Event.addListener(map, 'idle', function() {
+        updateMarkers(map, markers);
+    });
+
+    function updateMarkers(map, markers) {
+
+        var mapBounds = map.getBounds();
+        var marker, position;
+
+        for (var i = 0; i < markers.length; i++) {
+
+            marker = markers[i]
+            position = marker.getPosition();
+
+            if (mapBounds.hasLatLng(position)) {
+                showMarker(map, marker);
+            } else {
+                hideMarker(map, marker);
+            }
+        }
+    }
+
+    function showMarker(map, marker) {
+
+        if (marker.setMap()) return;
+        marker.setMap(map);
+    }
+
+    function hideMarker(map, marker) {
+
+        if (!marker.setMap()) return;
+        marker.setMap(null);
+    }
+
+    // 해당 마커의 인덱스를 seq라는 클로저 변수로 저장하는 이벤트 핸들러를 반환합니다.
+    function getClickHandler(seq) {
+        return function(e) {
+            var marker = markers[seq],
+                infoWindow = infoWindows[seq];
+
+            if (infoWindow.getMap()) {
+                infoWindow.close();
+            } else {
+                infoWindow.open(map, marker);
+            }
+        }
+    }
+
+    for (var i=0, ii=markers.length; i<ii; i++) {
+        naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+    }
+}
+
 </script>
 </body>
 </html>
