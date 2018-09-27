@@ -52,8 +52,19 @@ function drawMap(){
                     }
     ]
 
+    var centerLatit = 0;
+    var centerLongit = 0;
+    
+    for(i=0;i<surfObj.length;i++){
+     centerLatit += surfObj.latitude;
+     centerLongit += surfObj.longitude;
+    }
+    
+    centerLatit = centerLatit/surfObj.length;
+    centerLongit = centerLongit/surfObj.length;
+    
     var map = new naver.maps.Map('map', {
-            center: new naver.maps.LatLng(37.3614483, 129.1114883),
+            center: new naver.maps.LatLng(centerLatit, centerLongit),
             zoom: 10
         });
 
