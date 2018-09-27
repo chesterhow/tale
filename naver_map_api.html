@@ -39,7 +39,8 @@ function drawMap(){
                     "wf":"구름조금",
                     "wh":"6",
                     "wd":"서풍",
-                    "ws":"매우강"    
+                    "ws":"매우강",
+                    "rate":"★★★★☆"
                     },
                     {
                     "title":"인구해변",    
@@ -48,7 +49,8 @@ function drawMap(){
                     "wf":"맑음",
                     "wh":"1",
                     "wd":"동풍",
-                    "ws":"약"    
+                    "ws":"약",
+                    "rate":"★★"
                     }
     ]
 
@@ -85,6 +87,7 @@ function drawMap(){
             '   <p>수온/기온:시원<br />',
             '       -파고:'+surfObj[i].wh+'<br />',
             '       -바람:'+surfObj[i].ws+'<br />',
+            '       -파도타기 추천 정도:'+surfObj[i].rate+'<br />',
             '   </p>',
             '</div>'
         ].join('');
