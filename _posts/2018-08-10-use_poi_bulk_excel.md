@@ -4,7 +4,7 @@ title: POI+로우핸들러 구현으로 OOM으로부터 안전한 대용량 엑�
 author: jaycee
 description: POI를 이용하여 OOM으로부터 안전한 대용량 엑셀의 다운로드 기능을 구현한다.
 category: spring
-published : false
+published : true
 tag: spring,poi
 
 ---
@@ -55,13 +55,13 @@ Map rtnMap = null;
 try {
 // 엑셀의 헤더/데이터 VO 설정
 List<ExcelCellInfoVO> arrExcelCellInfo = new ArrayList<ExcelCellInfoVO>();
-arrExcelCellInfo.add(new ExcelCellInfoVO("COMPCD","제조사","text","center","",0));
-arrExcelCellInfo.add(new ExcelCellInfoVO("GCODE","대분류","text","center","",0));
-arrExcelCellInfo.add(new ExcelCellInfoVO("GCODENM","대분류명","text","left","",0));
-arrExcelCellInfo.add(new ExcelCellInfoVO("MCODE","중분류","text","center","",0));
-arrExcelCellInfo.add(new ExcelCellInfoVO("MCODENM","중분류명","text","left","",0));
-arrExcelCellInfo.add(new ExcelCellInfoVO("DCODE","소분류","text","center","",0));
-arrExcelCellInfo.add(new ExcelCellInfoVO("DCODENM","소분류명","text","left","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("COMCD","제조사","text","center","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("GCD","대분류","text","center","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("GCDNM","대분류명","text","left","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("MCD","중분류","text","center","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("MCDNM","중분류명","text","left","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("DCD","소분류","text","center","",0));
+arrExcelCellInfo.add(new ExcelCellInfoVO("DCDNM","소분류명","text","left","",0));
 arrExcelCellInfo.add(new ExcelCellInfoVO("PRDCD","상품코드","text","left","",200));
 arrExcelCellInfo.add(new ExcelCellInfoVO("PRDNM","상품명","text","left","",200));
 arrExcelCellInfo.add(new ExcelCellInfoVO("PRC","가격","number","right","#,##0",0));
