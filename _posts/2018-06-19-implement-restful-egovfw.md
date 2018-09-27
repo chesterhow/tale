@@ -1,7 +1,7 @@
 ---
 title: 전자정부 프레임워크에서 RESTful 구현
 author: jaycee
-description: RESTful 개요 및 전자정부 프레임워크에서 RESTful 구현하기
+description: RESTful 개요 및 전자정부 프레임워크에서 RESTful 구현하기(작성중)
 tag: reflection.spring,java,전자정부프레임워크
 ---
 
