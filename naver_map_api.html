@@ -33,7 +33,7 @@ function drawMap(){
     
     var surfObj = [
                     {
-                    "title":"기문산",
+                    "title":"죽도해변",
                     "latitude":37.968241,
                     "longitude":128.763522,
                     "wf":"구름조금",
@@ -81,10 +81,10 @@ function drawMap(){
 
         var contentString = [
             '<div class="iw_inner">',
-            '   <h3>장소'+i+'</h3>',
+            '   <h3>'+surfObj[i].title+'</h3>',
             '   <p>수온/기온:시원<br />',
-            '       파고:'+surfObj[i].wh+'<br />',
-            '       바람:'+surfObj[i].ws+'<br />',
+            '       -파고:'+surfObj[i].wh+'<br />',
+            '       -바람:'+surfObj[i].ws+'<br />',
             '   </p>',
             '</div>'
         ].join('');
