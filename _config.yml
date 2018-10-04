@@ -1,13 +1,13 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-url:            "https://chesterhow.github.io"
+title:          Dev Blog
+description:    "Sangbeom's blog"
+url:            "https://uronly14me.github.io"
 
 # Author
 author:
-  name:         Chester How
+  name:         Sangbeom Han
   url:          https://chester.how
-  email:        chesterhow@gmail.com
+  email:        uronly14me@gmail.com
 
 # Build settings
 markdown:       kramdown
@@ -25,4 +25,4 @@ plugins:
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
-paginate:       5
+paginate:       10
