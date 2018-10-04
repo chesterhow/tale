@@ -1,4 +1,6 @@
 ---
+layout: post
+author: "Sangbeom"
 title: "전가상화/반가상화"
 categories:
   - 서버
