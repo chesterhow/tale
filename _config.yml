@@ -4,6 +4,9 @@ description:    "Minimal Jekyll theme for storytellers"
 baseurl:        "/tale"
 url:            "https://chesterhow.github.io"
 
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
+
 # Author
 author:
   name:         Chester How
@@ -24,6 +27,7 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
