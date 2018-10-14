@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "안녕하세요, 한글 테스트!"
 author: "Jekyll"
 ---
 
