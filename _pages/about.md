@@ -13,33 +13,3 @@ While doing some research up on GitHub Pages, I accidentally chanced upon this _
 Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
 
 Thanks for reading!
-
-<section>
-		 	<div style="text-align: center; padding-bottom: 2%;">
-		 		<ul id="mysocial">
-		 			<li>
-		 				<a class="social-icon" href="https://dribbble.com/cheecheelin" target="_blank">
-		 					<i class="fa fa-dribbble" aria-hidden="true"></i>
-		 				</a>
-		 			</li>
-		 			<li>
-		 				<a class="social-icon" href="https://www.instagram.com/chee.design/" target="_blank">
-		 					<i class="fa fa-instagram" aria-hidden="true"></i>
-		 				</a>
-		 			</li>
-		 			<li>
-		 				<a class="social-icon" href="https://www.linkedin.com/in/cheecheelin" target="_blank">
-		 					<i class="fa fa-linkedin" aria-hidden="true"></i>
-		 				</a>
-		 			</li>
-		 			<li>
-		 				<a class="social-icon" href="https://github.com/cheecheelin" target="_blank">
-		 					<i class="fa fa-code-fork" aria-hidden="true"></i>
-		 				</a>
-		 				<a class="social-icon" href="https://twitter.com/cheecheelin" target="_blank">
-		 					<i class="fa fa-twitter" aria-hidden="true"></i>
-		 				</a>
-		 			</li>
-		 		</ul>
-		 	</div>
-		 </section>
