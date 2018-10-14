@@ -8,9 +8,9 @@ google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
+  name:         Hyoyoung Kim
   url:          https://chester.how
-  email:        chesterhow@gmail.com
+  email:        hyoyoung.j.kim@gmail.com
 
 # Build settings
 markdown:       kramdown
