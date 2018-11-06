@@ -1,17 +1,16 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          Sojeong's Blog
+description:    "Sojeong's Life(Blog) _since 2018.10.18"
+url:            "https://sojeo2.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Sojeong Park
+  url:          https://sojeo2.github.io
+  email:        sojeong963@gmail.com
 
 # Build settings
 markdown:       kramdown
@@ -28,7 +27,10 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-remote-theme
   # - jemoji #Uncomment this to allow emoji in your post
+
+remote_theme:   chesterhow/tale
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
