@@ -1,14 +1,14 @@
 # Site settings
-title:          Sojeong's Blog
+title:          Sojeong's blog
 description:    "Sojeong's Life(Blog) _since 2018.10.18"
 url:            "https://sojeo2.github.io"
 
 # Google Analytics
-google_analytics: UA—XXXXXXXX-X
+google_analytics: #UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Sojeong Park
+  name:         Sojeong, Park
   url:          https://sojeo2.github.io
   email:        sojeong963@gmail.com
 
