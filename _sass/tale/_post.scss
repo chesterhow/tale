@@ -3,7 +3,7 @@
 
   &-info {
     color: $default-tint;
-    font-family: $serif-secondary;
+    font-family: $serif-primary;
     letter-spacing: 0.5px;
     text-align: center;
 
@@ -14,8 +14,8 @@
 
   &-title {
     color: $default-shade;
-    font-family: $sans-serif;
-    font-size: 4rem;
+    font-family: $serif-primary;
+    font-size: 1rem;
     margin: 1rem 0;
     text-align: center;
   }
