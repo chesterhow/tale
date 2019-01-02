@@ -100,10 +100,27 @@ print s
 
 Adding `linenos` to the Pygments tag enables line numbers.
 
-{% highlight js  linenos %}
+{% highlight js linenos %}
 // Sample javascript code
 var s = "JavaScript syntax highlighting";
 alert(s);
+{% endhighlight %}
+
+{% highlight csharp linenos %}
+/// <summary>
+/// Main class of the project
+/// </summary>
+class Program
+{
+    /// <summary>
+    /// Main entry point of the program
+    /// </summary>
+    /// <param name="args">Command line args</param>
+    static void Main(string[] args)
+    {
+        //Do stuff
+    }
+}
 {% endhighlight %}
 
 # Blockquotes

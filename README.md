@@ -13,6 +13,7 @@ Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here
 - Syntax highlighting, with the help of Pygments
 - Markdown and HTML text formatting
 - Pagination of posts
+- Disqus comments
 
 ## Installation
 There are 3 ways to install this theme

@@ -7,6 +7,10 @@ url:            "https://chesterhow.github.io"
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
+# Comments - provide a discuss shortname to enable comments
+disqus:
+    shortname: # disquss_shortname
+
 # Author
 author:
   name:         Chester How
