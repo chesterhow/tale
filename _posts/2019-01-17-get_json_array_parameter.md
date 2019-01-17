@@ -30,6 +30,9 @@ objPrmtr.trgtObj = 'objCity' 로 입력하여 요청하면 응답받는 data에�
 ``` javascript
 function fn_initCmmnnCd(){
 
+  var arrPrmtr = new Array(); //Object를 배열로 저장할 Array
+  var objPrmtr = new Object(); //key, value형태로 저장할 Object
+  
   //시도 조회
   objPrmtr = new Object();
   objPrmtr.trgtObj = 'objCity';
