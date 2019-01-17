@@ -37,7 +37,7 @@ select * from
     	      , level as day_Ord
     	      , 100000 as rent_Prc --렌트 금액 
           from dual
-    connect by level < TO_DATE('20190120','YYYYMMDD') - TO_DATE('20190101','YYYYMMDD')
+    connect by level < TO_DATE('20190120','YYYYMMDD') - TO_DATE('20190101','YYYYMMDD') + 2
 	)
 ```
 
@@ -56,7 +56,7 @@ select * from
 		      , level as day_Ord
 		      , 100000 as rent_Prc
 		  from dual
-		connect by level < TO_DATE('20190120','YYYYMMDD') - TO_DATE('20190101','YYYYMMDD')
+		connect by level < TO_DATE('20190120','YYYYMMDD') - TO_DATE('20190101','YYYYMMDD') + 2
 		) STD --기준가격 테이블
 		,(
 		select 50000 as rent_Prc
@@ -96,7 +96,7 @@ SELECT RES_NAME AS RES_NAME
 		      , level as day_Ord
 		      , 100000 as rent_Prc
 		  from dual
-		connect by level < TO_DATE('20190120','YYYYMMDD') - TO_DATE('20190101','YYYYMMDD')
+		connect by level < TO_DATE('20190120','YYYYMMDD') - TO_DATE('20190101','YYYYMMDD') + 2
 		) STD --기준가격 
 		,(
 		select 50000 as rent_Prc
