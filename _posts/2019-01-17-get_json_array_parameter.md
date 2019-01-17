@@ -50,21 +50,21 @@ function fn_initCmmnnCd(){
   $.ajax({
           url:'/rep/cm/selectCmmnnCodeList.do',
           type:'post',
-	  contentType:'application/json; charset=UTF-8'
+          contentType:'application/json; charset=UTF-8'
           dataType:'json',
           data:JSON.stringify(arrPrmtr),
           success:function(data){
 
-              //시도 세팅
-              data.objCity.forEach(function(item, idx, arr){
-                $('#select_locate').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
-              });
+			  //시도 세팅
+			  data.objCity.forEach(function(item, idx, arr){
+				  $('#select_locate').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
+			  });
 
-              //상품종류 세팅
-              data.objGoodsType.forEach(function(item, idx, arr){
-                $('#selectGoodsType').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
-              });
-           }
+			  //상품종류 세팅
+			  data.objGoodsType.forEach(function(item, idx, arr){
+				  $('#selectGoodsType').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
+			  });
+          }
   });
 }
 ```
