@@ -27,8 +27,7 @@ jsp로 서블릿 페이지로 한번에 화면을 그릴 수도 있지만, ajax�
 objPrmtr.trgtObj = 'objCity' 로 입력하여 요청하면 응답받는 data에서 data.objCity 형태로 읽어와서 사용할 수 있다.
 
 ## javascript
-``` html
-자바스크립트 함수 부분
+``` javascript
 function fn_initCmmnnCd(){
 
   //시도 조회
