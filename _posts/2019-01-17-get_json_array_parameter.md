@@ -56,9 +56,9 @@ function fn_initCmmnnCd(){
                 $('#select_locate').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
               });
 
-              //인원수 세팅
-        	    data.objGoodsType.forEach(function(item, idx, arr){
-            	    $('#selectGoodsType').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
+              //상품종류 세팅
+              data.objGoodsType.forEach(function(item, idx, arr){
+                $('#selectGoodsType').append("<option value='"+item.detailCode+"'>"+item.codeNm+"</option>");
               });
            }
   });
@@ -83,7 +83,7 @@ public ModelAndView selectCmmnnCodeList(@RequestBody CmmnnCdVO[] srchCmmnnCdArr)
 ## 공통코드 및 검색 기능 겸용 VO
 ``` java
 public class CmmnnCdVO implements Serializable {
-  /** 웹으로 출력 시 입력시킬 대상 오브젝트*/
+	/** 웹으로 출력 시 입력시킬 대상 오브젝트명*/
 	private String trgtObj;
 
 	/**
@@ -117,7 +117,7 @@ public class CmmnnCdVO implements Serializable {
 	private String upperCodeId;
 	/** 상위상세코드 */
 	private String upperDetailCode;
-	
+
 	/**
 	 * @return the codeId
 	 * @see #codeId
