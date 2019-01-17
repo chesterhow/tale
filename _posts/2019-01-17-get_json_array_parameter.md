@@ -50,6 +50,7 @@ function fn_initCmmnnCd(){
   $.ajax({
           url:'/rep/cm/selectCmmnnCodeList.do',
           type:'post',
+	  contentType:'application/json; charset=UTF-8'
           dataType:'json',
           data:JSON.stringify(arrPrmtr),
           success:function(data){
