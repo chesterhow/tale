@@ -248,3 +248,9 @@ public class CmmnnCdVO implements Serializable {
 
 }
 ```
+### 요청 파라미터
+![image](https://user-images.githubusercontent.com/35021788/51358067-130e4700-1b05-11e9-9e71-4708d3d23976.png)
+
+### 응답 
+![image](https://user-images.githubusercontent.com/35021788/51358083-291c0780-1b05-11e9-8e9a-e9c2890c68f6.png)
+
