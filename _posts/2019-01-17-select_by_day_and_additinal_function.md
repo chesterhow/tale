@@ -112,3 +112,4 @@ SELECT RES_NAME AS RES_NAME
   )
   
 ```
+![image](https://user-images.githubusercontent.com/35021788/51357692-7f884680-1b03-11e9-9f2f-589cc60540c9.png)
