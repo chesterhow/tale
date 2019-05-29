@@ -1,16 +1,16 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-url:            "https://chesterhow.github.io"
+title:          Lucas M. Braz
+description:    ""
+url:            "https://lucasmbraz.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Lucas M. Braz
+  url:          https://lucasmbraz.com
+  email:        lmonteirobraz@gmail.com
 
 # Build settings
 markdown:       kramdown
