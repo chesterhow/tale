@@ -12,16 +12,20 @@ body {
 
 html {
   font-family: $serif-primary;
-  font-size: 14px;
+  font-size: 18px;
   overflow-y: scroll;
 
-  @media (min-width: 600px) {
-    font-size: 16px;
+  @media (min-width: 800px) {
+    font-size: 22px;
   }
 }
 
 body {
   -webkit-text-size-adjust: 100%;
+  font-family: $lora;
+  line-height: 1.6;
+  min-width: 300px;
+  display: block;
 }
 
 h1,

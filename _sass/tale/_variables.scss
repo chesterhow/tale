@@ -1,5 +1,5 @@
 // Colors
-$default-color: #555;
+$default-color: #333333;
 $default-shade: #353535;
 $default-tint: #aaa;
 $grey-1: #979797;
@@ -11,7 +11,8 @@ $shadow-color: rgba(0, 0, 0, .2);
 $code-color: #bf616a;
 
 // Fonts
-$serif-primary: 'Libre Baskerville', 'Times New Roman', Times, serif;
+$lora: "Lora", sans-serif;
+$serif-primary: sans-serif;
 $serif-secondary: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
 $sans-serif: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 $monospaced: Menlo, Monaco, monospace;
