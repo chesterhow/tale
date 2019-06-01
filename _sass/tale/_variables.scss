@@ -17,7 +17,7 @@ $serif-secondary: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqu
 $sans-serif: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 $monospaced: Menlo, Monaco, monospace;
 
-@mixin box-sizing($type: border-box) {
+@mixin box-sizing($type: content-box) {
   -webkit-box-sizing: $type;
      -moz-box-sizing: $type;
           box-sizing: $type;
