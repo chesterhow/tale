@@ -14,4 +14,4 @@ Game Developer
 - Elixir
 
 ## Links
-[GitHub](https://github.com/Fades)
+[GitHub](https://github.com/Vernon)
