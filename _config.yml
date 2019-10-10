@@ -1,16 +1,16 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-url:            "https://chesterhow.github.io"
+title:          Rafael Martins
+description:    "Compartilho aqui meus pensamentos | Desenvolvedor viciado em café e coca-cola"
+url:            "https://ohrafaelmartins.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Rafael Martins
+  url:          https://ohrafaelmartins.github.io
+  email:        rafaelmartins025@outlook.com
 
 # Build settings
 markdown:       kramdown
