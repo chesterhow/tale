@@ -13,6 +13,7 @@ Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here
 - Syntax highlighting, with the help of Pygments
 - Markdown and HTML text formatting
 - Pagination of posts
+- [Enabling Comments (via Disqus)](#enabling-comments-via-disqus)
 
 ## Installation
 There are 3 ways to install this theme
@@ -111,6 +112,21 @@ $ bundle exec jekyll serve
 ```
 
 And you're all set! Head over to http://127.0.0.1:4000/ to see your site in action.
+
+
+### Enabling Comments (via Disqus)
+
+Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
+
+To enable it, add the following lines to your Jekyll site:
+
+```yml
+disqus: your_disqus_id
+```
+
+You can find out more about Disqus' shortnames [here](https://help.disqus.com/installation/whats-a-shortname).
+
+Comments are disabled by default and will only appear in when adding `comments: true` to that post's YAML Front Matter
 
 ## Contributing
 Found a bug or have a suggestion? Feel free to create an issue or make a pull request!
