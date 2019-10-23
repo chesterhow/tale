@@ -23,7 +23,9 @@ layout: default
   {{ content }}
 
 </div>
-
+{% if page.comments %}
+  {% include disqus_comment.html %}
+{% endif %}
 <div class="pagination">
   {% if page.next.url %}
     <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
