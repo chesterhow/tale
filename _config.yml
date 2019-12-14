@@ -1,6 +1,6 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
+title:          a tale of a boy gone astray
+description:    "Ram's blog"
 url:            "https://chesterhow.github.io"
 
 # Google Analytics
@@ -8,9 +8,9 @@ google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Ramansh Sharma
+  url:          https://ramanshsharma2806.github.io/
+  email:        sharmar@bxscience.edu
 
 # Build settings
 markdown:       kramdown
