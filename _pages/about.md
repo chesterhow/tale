@@ -5,7 +5,8 @@ author: "Ram"
 permalink: /about/
 ---
 
-![image](me.png?raw=true "Ramansh Sharma")
+![My image](/_pages/me.png)
+
 
 Hi, my name is Ram! I am a freshman at SRM Institute of Science and Technology, Ramapuram.
 I am majoring in Computer Science with a specialization in Machine Learning.
