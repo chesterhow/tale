@@ -1,15 +1,25 @@
 ---
 layout: post
 title: "About"
-author: "Chester"
+author: "Ram"
 permalink: /about/
 ---
 
-A friend of mine writes short stories. One sunny day, I asked if he wanted a website to showcase his works and he agreed. I decided to use GitHub Pages to host his site. That way he wouldn't have to buy a domain and a server.
+![My image](/_pages/me.png)
 
-While doing some research up on GitHub Pages, I accidentally chanced upon this _simple, blog-aware, static site generator_ called [Jekyll](https://jekyllrb.com/) which works really well with GitHub Pages. I figured it would do just fine for my friend and I set about searching for a pretty theme. I wanted a theme with a _book-ish_ vibe. Unfortunately, most of the themes were too modern. Eventually, I caved and begun working on my own theme. With the help of [Poole](https://github.com/poole/poole), the Jekyll Butler, I was able to build **Tale**.
 
-## Contribute
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
+Hi, my name is Ram! I am a freshman at SRM Institute of Science and Technology, Ramapuram.
+I am majoring in Computer Science with a specialization in Machine Learning.
 
-Thanks for reading!
+As William Glasser puts it -
+
+> ...We learn 95% of what we teach to someone else.
+
+Therefore, through this blog, I want to explain some concepts of Machine Learning to my readers.
+This is because I have been told many times that Computer Science is clerical work, devoid of any true
+thinking. With respect to this appalling sense, I want my readers to see just how sophisticated and fun
+the world of Computer Science can be!
+
+
+### Contact
+For any query regarding any matter, reach out to me at [sharmar@bxscience.edu](mailto:sharmar@bxscience.edu).
