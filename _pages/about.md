@@ -5,7 +5,7 @@ author: "Ram"
 permalink: /about/
 ---
 
-![My image](/_pages/me.png)
+![My image](/blog/_pages/me.png)
 
 
 Hi, my name is Ram! I am a freshman at SRM Institute of Science and Technology, Ramapuram.
