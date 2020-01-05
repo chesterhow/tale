@@ -1,25 +1,26 @@
 # Site settings
-title:          oowgnoj's blog
-description:    "think"
-url:            "https://oowgnoj.github.io"
+title: oowgnoj's blog
+description: "Minimal Jekyll theme for storytellers"
+url: "https://oowgnoj.github.io"
 
 # Google Analytics
-# google_analytics: UA—XXXXXXXX-X
+google_analytics: UA—XXXXXXXX-X
+
 # Author
-author: jongwoo park
-  name:         jongwoo park
-  url:          https://github.com/oowgnoj
-  email:        oowgnoj@gmail.com
+author:
+  name: Chester How
+  url: https://chester.how
+  email: chesterhow@gmail.com
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 include:
   - _pages
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
 # Gems
 plugins:
@@ -29,11 +30,11 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+permalink: /:year-:month-:day/:title
+paginate: 5
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+exclude: [Gemfile, Gemfile.lock, tale.gemspec]
 
 # Disqus (Set to your disqus id)
-disqus:         jekyll-tale
+disqus: jekyll-tale
