@@ -1,16 +1,16 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
+title:          oowgnoj's blog
+description:    "think"
 url:            "https://oowgnoj.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
-author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+author: jongwoo park
+  name:         박종우
+  url:          https://github.com/oowgnoj
+  email:        oowgnoj@gmail.com
 
 # Build settings
 markdown:       kramdown
