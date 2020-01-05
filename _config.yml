@@ -4,11 +4,10 @@ description:    "think"
 url:            "https://oowgnoj.github.io"
 
 # Google Analytics
-google_analytics: UA—XXXXXXXX-X
-
+# google_analytics: UA—XXXXXXXX-X
 # Author
 author: jongwoo park
-  name:         박종우
+  name:         jongwoo park
   url:          https://github.com/oowgnoj
   email:        oowgnoj@gmail.com
 
