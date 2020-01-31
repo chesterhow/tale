@@ -13,8 +13,9 @@ $code-color: #bf616a;
 // Fonts
 $serif-primary: "Noto Sans KR";
 $serif-secondary: "Noto Sans KR";
-$sans-serif: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-$monospaced: Menlo, Monaco, monospace;
+$sans-serif: "Noto Sans KR", "Helvetica Neue", "Segoe UI", Helvetica, Arial,
+  sans-serif;
+$monospaced: "Noto Sans KR", Monaco, monospace;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
