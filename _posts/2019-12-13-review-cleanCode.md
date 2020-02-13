@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "컴포넌트 리팩토링"
+title: "Clean code를 읽고"
 author: "oowgnoj"
 catalog: true
 tags:

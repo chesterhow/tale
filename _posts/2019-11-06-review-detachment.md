@@ -5,7 +5,7 @@ author: "oowgnoj"
 header-img: "img/post-bg-universe.jpg"
 catalog: true
 tags:
-  - 독서
+  - 영화
   - 리뷰
 ---
 
