@@ -1,5 +1,12 @@
-
-# 書로모임 프로젝트 소개
+---
+layout: post
+title: "書로모임 프로젝트 소개"
+author: "oowgnoj"
+catalog: true
+tags:
+  - web
+  - front-end
+---
 
 “서로모임에 오신 분들께 당신만의 서평과 북 큐레이션을 공유하여 주세요”
 
@@ -7,7 +14,7 @@
 
 저는 이 프로젝트에서 프론트엔드 개발을 담당해 나의서재, 나의서평 / 큐레이션, 좋아요 페이지를 구현했습니다.
 
-![booktogether.org](https://cdn-images-1.medium.com/max/5472/1*iTsOACnKarJYbcpWnJeq-g.png)*booktogether.org*
+![booktogether.org](https://cdn-images-1.medium.com/max/5472/1*iTsOACnKarJYbcpWnJeq-g.png)_booktogether.org_
 
 ### 서비스 소개 , 주요기능
 
@@ -37,11 +44,12 @@
 
 ### 기술 스택 (front-end)
 
-![서로모임 front-end 기술스택](https://cdn-images-1.medium.com/max/2000/1*V5ts9OEB7uEjvP4WwnTHwQ.png)*서로모임 front-end 기술스택*
+![서로모임 front-end 기술스택](https://cdn-images-1.medium.com/max/2000/1*V5ts9OEB7uEjvP4WwnTHwQ.png)_서로모임 front-end 기술스택_
 
 ![](https://cdn-images-1.medium.com/max/2180/1*zcj0QCN-4iRl0n6b3EvwQA.png)
 
 ### 기획 및 설계
+
 > 타임라인 및 프로젝트 구체화
 
 프로젝트 시작 단계에서 저희는 노션 문서를 통해 프로젝트를 구체화 하고 공동의 목표를 수립했습니다.
@@ -49,11 +57,13 @@
 ![](https://cdn-images-1.medium.com/max/4384/1*l80G-H0BwtJyAfW5zpyx9w.png)
 
 이 과정에서 팀원간의 자유롭게 의견을 개진하며 **기능을 확정하고 우선순위를 나누어 배포 일정 별로 action plan 을 세웠습니다.**
+
 > UI prototyping (Adobe XD)
 
 ![](https://cdn-images-1.medium.com/max/2100/1*TX96H8QklBVE9veNqWS9vw.png)
 
 다음으로 prototype을 제작했습니다. 이 과정에서 **팀원들의 머릿속에 있는 UI를 구체화시켜 모든 페이지에 대한 이해도를 가질 수 있었습니다. 또한 프론트 팀원들이 여럿이다보니 발생할 수 있는 페이지마다 다른 UI 도 최소화 할 수 있었다고 생각합니다.**
+
 > component 설계 (miro)
 
 ![](https://cdn-images-1.medium.com/max/3624/1*RnP36R_1FlSe6hKCrdS5Lg.png)
@@ -61,13 +71,14 @@
 다음으로 Miro에서 페이지 별 component에 대한 구조와 데이터 흐름, shared component에 대한 파악을 진행했습니다.
 
 **팀원간에 공용으로 사용될 수 있는 컴포넌트를 파악해 작업을 분산시켜, 생산성을 높일 수 있었던 과정이라고 생각합니다.**
+
 > daily
 
-* 애자일 스크럼 (agile scrum)
+- 애자일 스크럼 (agile scrum)
 
 ![](https://cdn-images-1.medium.com/max/5308/1*XaQqQ6kT16BtyCt50Msc2g.png)
 
-*애자일 스크럼 규칙*
+_애자일 스크럼 규칙_
 
 1. 배포단위별로 할 일 (To-Do) 목록을 정리했습니다.
 
@@ -75,7 +86,7 @@
 
 1. 매일 두차례 (stand-up meeting, code review) 시간에 카드를 다같이 확인하며 동료들의 진행상황을 파악했습니다. 또한 미처 카드를 넘기지 못한 경우에 같이 관리하며 최대한 반영하려 노력했습니다.
 
-* stand-up meeting
+- stand-up meeting
 
 ![](https://cdn-images-1.medium.com/max/2888/1*ZQrcmxdx_oD2Y67vh0WBGw.png)
 

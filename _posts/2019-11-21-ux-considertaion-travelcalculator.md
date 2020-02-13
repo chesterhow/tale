@@ -1,5 +1,13 @@
-
-# UX 고민 : 긴 로딩시간
+---
+layout: post
+title: "여행계산기 UX 고민 : 긴 로딩시간"
+author: "oowgnoj"
+header-img: "img/post-bg-universe.jpg"
+catalog: true
+tags:
+  - UI
+  - front-end
+---
 
 이번 블로그에서 Travel Calculator 의 client side를 구현하며 했던 긴 로딩시간에 대한 고민과 해결방안을 공유하려고 합니다.
 
@@ -17,13 +25,13 @@ Ant Design, Material UI 등 여러 design framework 를 통해 spinner 컴포넌
 
 ### 두번째 대처 방법은 gif 입니다.
 
-![countdown gif](https://cdn-images-1.medium.com/max/2000/1*UazJaqHlmjrTg1_alpSKNw.gif)*countdown gif*
+![countdown gif](https://cdn-images-1.medium.com/max/2000/1*UazJaqHlmjrTg1_alpSKNw.gif)_countdown gif_
 
 다섯부터 count down하는 gif를 사용해서 유저에게 *‘데이터를 준비하고 있어요, 기다려 주세요’ *라는 메세지를 전달하고 싶었습니다. 하지만 반복되는 countdown도 15초의 시간을 매우기에 충분하지 않다고 느꼈습니다.
 
 다른 항공권 사이트를 둘러봤습니다. 스피너 혹은 ‘데이터를 준비중입니다’, ‘조회중 입니다’ 등 유저에게 직접적인 흥미요소나 정보를 주고 있지는 않았습니다.
 
-![네이버 항공권 로딩 페이지](https://cdn-images-1.medium.com/max/2000/1*uMONdHHJ2IYGp1OcUZWImQ.png)*네이버 항공권 로딩 페이지*
+![네이버 항공권 로딩 페이지](https://cdn-images-1.medium.com/max/2000/1*uMONdHHJ2IYGp1OcUZWImQ.png)_네이버 항공권 로딩 페이지_
 
 ### 세번째, 자체 데이터를 활용, 흥미로운 정보 노출
 

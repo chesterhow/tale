@@ -1,7 +1,13 @@
-
-# 영화 detachment 후기
-
-
+---
+layout: post
+title: "영화 detachment 후기"
+author: "oowgnoj"
+header-img: "img/post-bg-universe.jpg"
+catalog: true
+tags:
+  - 독서
+  - 리뷰
+---
 
 종종 나는 객관적 기준과 주관적 믿음 가운데 갈등한다. 며칠 전 한 친구가 말했다. “너가 하고 싶은걸 하려면 우선 돈이 있어야 해. 그럴려면 취직을 해야하고, 그러기 위해선……”. 충분히 합리적이다. 하지만 항상 그렇게 믿는것은 아니다. 내가 좋아하는 것이 있고 그러므로 잘 할 수 있는 것이 있다고 본다. 세상의 기준에 맞추고자 아등바등 하루를 보내고 싶지는 않다. 행복한 삶을 위해 무엇을 추구해야 할까 고민했지만 아직 뾰족한 수를 찾지 못했다. 두가지 다 말이 된다고 생각하기 때문이다.
 
@@ -18,6 +24,7 @@ Henry는 세상에 무심하고 초연하다. 이러한 성격은 어린시절 �
 ![](https://cdn-images-1.medium.com/max/2000/0*jpav_9af5hYfJjmJ)
 
 주인공의 내면을 잘 보여주는 신(scene)이다. 그는 한 학교의 임시 교사직을 맡는다. 학생 대부분은 구제불능, 사고뭉치라는 말이 잘 어울린다. 첫 수업에서 한 학생은 자신의 질문을 무시했다는 이유로 주인공의 가방을 집어던진다. 그는 학생에게 이렇게 말한다.
+
 > “That bag, it doesn’t have any feeling. it’s empty. I don’t have any feelings that you can hurt either. okay?”
 > “저 가방, 저런다고 아무런 느낌 받지 않아. 저건 비었거든. 난 아무것도 느끼지 않고 네가 날 상처주지도 못해.”
 
