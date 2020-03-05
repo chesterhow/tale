@@ -4,10 +4,10 @@
       <h2 class="nav-title">{{ site.title }}</h2>
     </a>
     <ul>
-      <li><a href="{{ '/' | prepend: site.baseurl }}">Home</a></li>
-      <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-      <li><a href="{{ '/blog' | prepend: site.baseurl }}/">Blog</a></li>
-      <li><a href="{{ '/category' | prepend: site.baseurl }}/">Categories</a></li>
+      <li {% if page.url == '/' %}class="active"{% endif %}><a href="{{ '/' | prepend: site.baseurl }}">Home</a></li>
+      <li {% if page.url == '/about/' %}class="active"{% endif %}><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+      <li {% if page.url == '/blog/' %}class="active"{% endif %}><a href="{{ '/blog' | prepend: site.baseurl }}/">Blog</a></li>
+      <li {% if page.url == '/category/' %}class="active"{% endif %}><a href="{{ '/category' | prepend: site.baseurl }}/">Categories</a></li>
     </ul>
   </div>
 </nav>

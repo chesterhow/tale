@@ -55,7 +55,8 @@ footer,
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.active  {
       opacity: 1;
     }
   }
