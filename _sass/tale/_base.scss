@@ -65,9 +65,25 @@ td {
   vertical-align: top;
 }
 
+// All personal styles
+
+.dummy-anchor {
+  color: $blue;
+  cursor: pointer;
+}
+
+.profile-img {
+  border-radius: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 5px solid white;
+  box-shadow: 0 5px 15px -10px black;
+}
 
 .social-links {
-  margin-top: 20px
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-links>.link {
@@ -76,7 +92,8 @@ td {
   position: relative;
   display: inline-block;
   height: 35px;
-  width: 35px
+  width: 35px;
+  text-align: center;
 }
 
 .social-links>.link:hover>.icon {
