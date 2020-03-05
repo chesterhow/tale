@@ -1,7 +1,6 @@
 # Site settings
 title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
 url:            "https://chesterhow.github.io"
 
 # Google Analytics
@@ -32,10 +31,14 @@ plugins:
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
-paginate:       5
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
 # Disqus (Set to your disqus id)
 disqus:         jekyll-tale
+
+theme:      tale
+
+permalink:  /:year-:month-:day/:title
+paginate:   5

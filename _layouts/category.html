@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<script>
+    
+</script>
+<div>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-line"></div>
+  {% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="{{category_name}}">
+      <div id="#{{ category_name | slugize }}"></div>
+      <h2 class="category-head">{{ category_name }}</h2>
+      <ul>
+      {% for post in site.categories[category_name] %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+          <time datetime="{{ post.date }}" class="catalogue-time"> - {{ post.date | date: "%B %d, %Y" }}</time>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

@@ -14,7 +14,19 @@ layout: default
     {% if page.date %}
       <br>
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      <br><br>
     {% endif %}
+    {% for tag in page.tags %}
+      {% if forloop.first %}
+        &#x5b;
+      {% endif %}
+      {{ tag }}
+      {% if forloop.last %}
+        &#x5D;
+      {% else %}
+        &#44;
+      {% endif %}
+    {% endfor %}
   </div>
 
   <h1 class="post-title">{{ page.title }}</h1>

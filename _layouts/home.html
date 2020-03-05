@@ -2,30 +2,23 @@
 layout: default
 ---
 
-<div class="catalogue">
-  {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      <div>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-        <h1 class="catalogue-title">{{ post.title }}</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-          {{ post.content | strip_html | truncatewords: 30 }}
-        </p>
-
-      </div>
-    </a>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
-
-  <span>{{ paginator.page }}</span>
+<h1 class="post-title">{{ page.title }}</h1>
+<div class="post-line"></div>
+<p class="post-info">A Man who travels the world eating noodles</p>
+<div class="social-links"> 
+  <a class="link" data-title="facebook.com/myfacebook" href="http://facebook.com/myfacebook" target="_blank"> 
+    <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg> 
+  </a> 
+  <a class="link" data-title="twitter.com/mytwitter" href="http://twitter.com/mytwitter" target="_blank"> 
+    <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+  </a>
+  <a class="link" data-title="github.com/mygithub" href="https://github.com/mygithub" target="_blank"> 
+    <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg> 
+  </a> 
+  <a class="link" data-title="medium.com/@medium" href="https://medium.com/@medium" target="_blank"> 
+    <svg class="icon icon-medium"><use xlink:href="#icon-medium"></use></svg> 
+  </a> 
+  <a class="link" data-title="myemail@gmail.com" href="mailto:myemail@gmail.com"> 
+    <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg> 
+  </a> 
 </div>
