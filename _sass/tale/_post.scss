@@ -31,9 +31,10 @@
     margin: 0 0 1rem;
     text-align: justify;
   }
-
-  a:hover {
-    text-decoration: underline;
+  .post-body {
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   img {

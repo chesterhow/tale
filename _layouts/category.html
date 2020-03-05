@@ -2,13 +2,22 @@
 layout: default
 ---
 
-<div>
+<div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
+  <div class="checkbox">
+    {% for category in site.categories %}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <span class="checkbox">
+      <input type="checkbox" id="checkbox-{{ category_name | slugify }}">
+      <label for="checkbox-{{ category_name | slugify }}" value="{{ category_name | slugify }}">{{ category_name }}</label>
+    </span>
+    {% endfor %}
+  </div>
+  <button class="custom-btn btn-6" id="show-all-btn"><span>Show all categories</span></button>
   {% for category in site.categories %}
   {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="{{category_name}}">
-      <div id="#{{ category_name | slugize }}"></div>
+    <div id="{{ category_name | slugify }}" class="categories">
       <h2 class="category-head">{{ category_name }}</h2>
       <ul>
       {% for post in site.categories[category_name] %}
@@ -21,3 +30,4 @@ layout: default
     </div>
   {% endfor %}
 </div>
+<script src="{{ "/assets/js/categoryCatelog.js" | relative_url }}" /></script>

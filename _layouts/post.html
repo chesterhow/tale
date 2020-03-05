@@ -4,11 +4,9 @@ layout: default
 
 <div class="post">
   <div class="post-info">
-    <span>Written by</span>
     {% if page.author %}
+    <span>Written by</span>
         {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
     {% endif %}
 
     {% if page.date %}
@@ -16,23 +14,25 @@ layout: default
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
       <br><br>
     {% endif %}
-    {% for tag in page.tags %}
-      {% if forloop.first %}
-        &#x5b;
+
+    {% if page.categories %}
+    <span>[ 
+        {% for tag in page.categories %}
+        <a href="/category/?q={{tag}}">{{tag}}</a>
+        {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      ]</span>
       {% endif %}
-      {{ tag }}
-      {% if forloop.last %}
-        &#x5D;
-      {% else %}
-        &#44;
-      {% endif %}
-    {% endfor %}
   </div>
 
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
-
-  {{ content }}
+  <div class="post-body">
+    {{ content }}
+  </div>
+  <pre>
+    <!-- page: {{ page | jsonify | escape }} -->
+  </pre>
 </div>
 
 {% if page.comments %}
