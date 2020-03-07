@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: mangtaob@gmail.com
 description: "this is oowgnoj's blog "
 keyword: "coding, text"
-url: "https://https://oowgnoj.github.io/" # your host, for absolute URL
+url: "https://oowgnoj.github.io/" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -69,8 +69,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
