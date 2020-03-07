@@ -1,16 +1,13 @@
 ---
-
 layout: post
 title: "책 읽는 이유"
-subtitle: "읽기에 대한 생각 episode-1"
 author: "oowgnoj"
+subtitle: "읽기에 대한 생각"
 header-img: "img/post-bg-universe.jpg"
 catalog: true
 tags:
-
-- 독서
-- 독서법
----​
+  - 독서
+---
 
 > 진정한 독자가 그런 울창한 책의 세계에서 길을 잃고 압도될지, 제대로 길을 찾아 자신의 독서체험이 진정으로 스스로의 경험과 삶에 소용되게끔 만들지는 각자의 지혜나 운에 달려 있다.
 >
