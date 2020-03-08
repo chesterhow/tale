@@ -3,7 +3,7 @@ layout: post
 title: "책 읽는 이유"
 author: "oowgnoj"
 subtitle: "읽기에 대한 생각"
-header-img: "img/post-bg-universe.jpg"
+header-img: "img/in-post/header-reason-to-read.jpeg"
 catalog: true
 tags:
   - 독서
