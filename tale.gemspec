@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "tale"
-  spec.version       = "0.1.8"
+  spec.version       = "0.1.9"
   spec.authors       = ["Chester How"]
   spec.email         = ["chesterhow@gmail.com"]
 
@@ -18,5 +18,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.5"
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 12.3.3"
 end
