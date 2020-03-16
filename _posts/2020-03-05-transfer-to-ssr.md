@@ -14,7 +14,7 @@ tags:
 
   \- 독서
 
-  \- 리뷰
+  \- 리뷰s
 
 \---
 
@@ -26,7 +26,7 @@ tags:
 
 #### 검색엔진 최적화
 
-사이트가 많이 노출되기 위해, 검색엔진에서 해당 키워드를 입력했을 때 검색이 되어야 하는데요, CSR 렌더링의 경우에는 검색이 잘 되지 않습니다. 
+사이트가 많이 노출되기 위해, 검색엔진에서 해당 키워드를 입력했을 때 검색이 되어야 하는데요, CSR 경우에는 검색이 잘 되지 않습니다. 
 검색엔진이 해당 검색 결과에 맞는 사이트를 찾을 때 잘 정돈된 HTML을 좋아하기 때문입니다. 최근 구글에서는 javascript 코드블록까지 포함해 검색결과를 보여준다고 하는데, 그 외에 특히 우리나라의 네이버같은 경우는 검색결과에 잘 노출되기 위해 각 페이지 특성에 맞는 tag를 검색엔진이 사이트를 수집할 때 HTML을 보여줘야 합니다.
 
 
@@ -41,7 +41,7 @@ tags:
 
 ### NEXT JS
 
-React SSR 라이브러리로 
+
 
 작동원리
 
@@ -119,14 +119,6 @@ next.js 를 사용하는 이유
 
 
 
-### SPA 와 SSR의 차이점
-
-#### SSR과 CSR 개념 정리
-
-
-
-
-
 개발순서
 
 `yarn install next`
@@ -197,69 +189,3 @@ next-image, next-css 라이브러리 발견
 
 
 
-
-### APP
-
-#### App
-
-<fragment> 를 써서 menupanel routing 관련 switch, 조건문을 return 하는 APP 함수
-
-**routing** 이 이루어지는 부분이다 가능하고, 
-
-#### Home
-
-실질적인 본문이 나오는 부분, 
-
-<StyledApp> 이 최상단 node 이다 , (styled.main``)
-
-그 외의 Section Wrapper로 감싸져있는 각각의 secition 들이 정의되어 있다. section 의 순서는.
-
-##### WelcomeSection
-
-##### NAV
-
-##### CafeSection
-
-##### CafeDetail
-
-##### ProSection
-
-##### ProDetail
-
-##### CounselorSection
-
-##### CounselorDetailSection
-
-##### CenterSection
-
-##### EAPSection
-
-##### AtommerceSection
-
-##### FooterSection
-
-으로 이루어져 있고 몇몇 component는 두 컴포넌트가 하나의 wrapper 에 감싸져 있는 경우가 있다.
-
-
-
-#### Terms
-
-#### PRivate
-
-으로 컴포넌트 구성은 마무리 된다.
-
-
-
-그러면 내가 신경써야 할 부분은, routing 하는 부분이다. 
-
-
-
-1. CSS
-2. Routing
-3. Image Importing
-
-
-
-terms 에서 import 해올 때, footer 안에 react-router-dom code 가 있었던 듯 함
-
-그래서 잘 안된 것 같은데,
