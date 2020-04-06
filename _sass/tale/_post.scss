@@ -1,5 +1,10 @@
 .post {
   padding: 3rem 0;
+  font-size: 18px;
+  line-height: 20px;
+  @media (min-width: 600px) {
+    font-size: 19px;
+  }
 
   &-info {
     color: $default-tint;
@@ -60,5 +65,10 @@
     vertical-align: text-top;
     padding: 0;
     margin: 0;
+  }
+
+  .footnotes {
+    margin-top: 30px;
+    font-size: 14px;
   }
 }
