@@ -1,0 +1,61 @@
+// *----------------------------------*\
+//  imported from type
+// *----------------------------------*/
+
+$mq-breakpoints: (
+  mobile:  320px,
+  tablet:  640px,
+  desktop: 1024px
+);
+
+$base-spacing-unit: 16px;
+
+$global-transition: .4s;
+
+// Colors
+$color-brand: #00A0FF;
+$color-white: #FFFFFF;
+$color-text:  #323232;
+$color-gray:  #2B5F72;
+
+// Background Colors
+$bg-color-white: $color-white;
+$bg-color-dark:  #222228;
+$bg-color-gray:  #FAFAFA;
+
+// Border
+$color-border: #E9EFF3;
+
+// Links
+$color-link:        $color-text;
+$color-link-hover:  $color-brand;
+
+// Fonts
+$font-base:
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Helvetica,
+  'Microsoft YaHei',
+  华文细黑,
+  Arial,
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol';
+$font-monospace:  Courier, monospace;
+
+$font-size-base:   19px;
+$font-size-medium: 16px;
+$font-size-small:  14px;
+$font-size-tiny:   12px;
+
+$font-weight-light:   300;
+$font-weight-regular: 400;
+$font-weight-bold:    600;
+$font-weight-bolder:  900;
+
+$line-height-base:   round($font-size-base   *  1.7);
+$line-height-medium: round($font-size-medium * 1.55);
+$line-height-small:  round($font-size-small  * 1.55);
+$line-height-tiny:   round($font-size-tiny   * 1.55);

@@ -72,3 +72,27 @@
     font-size: 14px;
   }
 }
+
+.tags {
+  a {
+    display: inline-block;
+    padding: quarter($base-spacing-unit) $base-spacing-unit;
+    margin: 0 $base-spacing-unit quarter($base-spacing-unit) 0;
+
+    font-size: $font-size-small;
+    font-family: $font-base;
+    line-height: $line-height-medium;
+
+    background-color: $bg-color-gray;
+    transition: $global-transition;
+
+    @include attention() {
+      text-decoration: none;
+      background-color: $bg-color-gray;
+    }
+  }
+
+  @include mq($until: tablet) {
+    margin-bottom: $line-height-medium - half(quarter($line-height-medium));
+  }
+}
