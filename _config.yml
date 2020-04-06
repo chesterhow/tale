@@ -7,11 +7,12 @@ url:            "https://chesterhow.github.io"
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
+copyright:    'hutusi.com'
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         hutusi
+  url:          https://hutusi.com
+  email:        huziyong@gmail.com
 
 # Build settings
 markdown:       kramdown
