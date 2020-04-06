@@ -3,9 +3,21 @@
     <a href="{{ site.baseurl }}/">
       <h2 class="nav-title">{{ site.title }}</h2>
     </a>
+
     <ul>
-      <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-      <li><a href="{{ site.baseurl }}/">Posts</a></li>
+      {% for page in site.pages %}
+        {% unless page.name == '404.md' %}
+          {% if page.title %}
+            <li class='c-nav__item' role='presentation'>
+              <a class='c-nav__link' href='{{ page.url | prepend: site.baseurl }}'>{{ page.title }}</a>
+            </li>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+
+      <li class='c-nav__item' role='presentation'>
+        <a class='c-nav__link' href='{{ site.baseurl }}/feed.xml'>Feed</a>
+      </li>
     </ul>
   </div>
 </nav>
