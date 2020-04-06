@@ -37,5 +37,17 @@ paginate:       5
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
+# can be ['disqus', 'gitalk']
+comments_engine: na
+
 # Disqus (Set to your disqus id)
 disqus:         jekyll-tale
+
+gitalk:
+  client_id: ''
+  client_secret: ''
+  repo: ''
+  owner: ''
+  admin: 
+    - ''
+  

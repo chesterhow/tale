@@ -14,8 +14,11 @@ layout: default
   {{ content }}
 </div>
 
-{% if page.comments %}
+{% if site.comments_engine == 'disqus' %}
   {% include disqus_comments.html %}
+{% elsif site.comments_engine == 'gitalk' %}
+  {% include gitalk_comments.html %}
+{% else %}
 {% endif %}
 
 <div class="pagination">
