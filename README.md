@@ -14,6 +14,7 @@ Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here
 - Markdown and HTML text formatting
 - Pagination of posts
 - [Disqus comments (can be enabled if needed)](#enabling-comments)
+- YouTube video embed
 
 ## Installation
 There are 3 ways to install this theme
@@ -121,6 +122,12 @@ disqus: jekyll-tale
 ```
 
 Next, add `comments: true` to the YAML front matter of the posts which you would like to enable comments for.
+
+### Embedding YouTube video
+Replace XXXXXX with your youtube video id
+```
+{% include youtubePlayer.html id="XXXXXX" %}
+```
 
 ## Contributing
 Found a bug or have a suggestion? Feel free to create an issue or make a pull request!
