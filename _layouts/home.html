@@ -4,6 +4,9 @@ layout: default
 
 <div class="catalogue">
   {% for post in paginator.posts %}
+    {% if post.stickie != true %}
+	{% continue %}
+    {% endif %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -11,7 +14,32 @@ layout: default
         <div class="catalogue-line"></div>
 
         <p>
-          {{ post.content | strip_html | truncatewords: 30 }}
+	  {% if post.subtitle %}
+            {{ post.subtitle }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 30 }}
+	  {% endif %}
+        </p>
+
+      </div>
+    </a>
+  {% endfor %}
+  {% for post in paginator.posts %}
+    {% if post.stickie == true %}
+	{% continue %}
+    {% endif %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <div>
+        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        <h1 class="catalogue-title">{{ post.title }}</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+	  {% if post.subtitle %}
+            {{ post.subtitle }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 30 }}
+	  {% endif %}
         </p>
 
       </div>
