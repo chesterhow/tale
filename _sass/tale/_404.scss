@@ -1,64 +1,22 @@
 .notfound {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  text-align: center;
+  margin: 4rem 0;
 
-    &-main {
-        position: absolute;
-        left: 50%;
-        top: 50%;
+  &-error {
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
 
-        width: 100%;
-        line-height: 1.4;
-        text-align: center;
+  &-line {
+    border-top: 0.4rem solid $default-shade;
+    display: block;
+    margin: 0 auto 3rem;
+    width: 4rem;
+  }
 
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-
-        h2 {
-            font-size: 20px;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: #000;
-            margin-top: 0px;
-            margin-bottom: 25px;
-        }
-    }
-
-    &-content {
-        position: relative;
-        height: 260px;
-
-        h1 {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size: 256px;
-            font-weight: 800;
-            margin: 0px;
-            color: #262626;
-            text-transform: uppercase;
-            letter-spacing: -40px;
-            margin-left: -20px;
-
-            span {
-                text-shadow: -8px 0px 0px #fff;
-            }
-        }
-
-        h3 {
-            position: relative;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #262626;
-            margin: 0px;
-            letter-spacing: 3px;
-            padding-left: 6px;
-        }
-    }
-
+  &-message {
+    max-width: 25rem;
+    margin: 0 auto;
+  }
 }

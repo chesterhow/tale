@@ -2,14 +2,14 @@
 layout: default
 permalink: /404.html
 title: "404"
-description: "page not found :("
 ---
+
 <div class="notfound">
-    <div class="notfound-main">
-        <div class="notfound-content">
-            <h3>Oops! Page not found</h3>
-            <h1><span>4</span><span>0</span><span>4</span></h1>
-        </div>
-        <h2>{{page.description}}</h2>
-    </div>
+  <h1 class="notfound-error">404: Page not found</h1>
+  <div class="notfound-line"></div>
+  <p class="notfound-message">
+    Oops! We can't seem to find the page you are looking for. Let's
+    <a href="{{ site.baseurl }}/">head back home</a>.
+  </p>
+  <p></p>
 </div>
