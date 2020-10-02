@@ -20,4 +20,9 @@
   {% if site.google_analytics and jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
+
+  <!-- Google Adsense -->
+  {% if site.google_adsense and jekyll.environment == 'production' %}
+  {% include adsense.html %}
+  {% endif %}
 </head>
