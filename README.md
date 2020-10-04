@@ -135,7 +135,7 @@ disqus: jekyll-tale
 
 Next, add `comments: true` to the YAML front matter of the posts which you would like to enable comments for.
 
-To enable globally, add `comments: true` to the YAML front matter of `_layouts/post.html`
+To enable globally, add `comments: true` to  `_config.yml`
 
 ### Enabling RTL
 
