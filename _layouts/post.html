@@ -17,6 +17,13 @@ layout: default
     {% endif %}
   </div>
 
+  {% if page.tags %}
+  <div class="tags-clouds post-tags">
+    {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
 

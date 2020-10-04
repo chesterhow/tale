@@ -1,0 +1,46 @@
+//RTL overrides
+body, html {
+    direction: rtl;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, ul, time, blockquote {
+    text-align: right;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+footer .blockquote-footer,a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, 
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video, .post-title {
+    font-family: "Droid Arabic Kufi", inherit;
+}
+
+blockquote {
+    border-right: 0.25rem;
+    border-left: 0;
+    margin: 0.8rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.nav li {
+    padding: 0 0 0 2rem;
+}
+
+.nav li:last-child {
+    padding-left: 0;
+}
+
+@media (min-width: 600px) {
+    blockquote {
+        padding: 0 1.25rem 0 5rem;
+    }
+    .nav-container {
+        text-align: right;
+    }
+
+    .nav ul {
+        right: auto;
+        left: 0;
+    }
+}
