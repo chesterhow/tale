@@ -4,9 +4,10 @@ title:  "Introducing Tale"
 author: "Chester"
 comments: true
 tags: Tale
+excerpt_separator: <!--more-->
 ---
 
-Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.
+Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.<!--more-->
 
 ## Tale features
 - Compatible with GitHub Pages
