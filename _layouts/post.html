@@ -3,37 +3,80 @@ layout: default
 ---
 
 <div class="post">
-  <div class="post-info">
-    <span>Written by</span>
-    {% if page.author %}
-        {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
+    <div class="post-info">
+        <div class="post-type-tag">
+            {% if page.draft == true %}
+            <div class="catalogue-tag">
+                Coming Soon
+            </div>
+            {% endif %}
+            <div class="post-type">
+                {{ page.type }}
+            </div>
+        </div>
+        <h1 class="post-title">
+            {{ page.title }}
+        </h1>
+        <h2 class="post-subtitle">
+            {{ page.subtitle }}
+        </h2>
+    </div>
+    
+<!--포트폴리오 상단 정보-->
+    
+    {% if page.portfolio == true %}
+    <article class="portfolio-info">
+        <div>
+            <span class="info-title">Role</span>
+            <p class="info-medium">{{ page.role-title }}</p>
+            <p class="info-small">{{ page.role-specific }}</p>
+        </div>
+        <div>
+            <span class="info-title">Team</span>
+            <p class="info-medium">{{ page.team }}</p>
+        </div>
+        <div>
+            <span class="info-title">Platforms</span>
+            <p class="info-medium">{{ page.platforms }}</p>
+        </div>    
+        <div>
+            <span class="info-title">Date</span>
+            <p class="info-medium">{{ page.date }}</p>
+        </div>    
+    </article>
     {% endif %}
 
-    {% if page.date %}
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+<!--draft 일 때-->
+    
+    {% if page.draft == true %}
+        <div class="catalogue-draft-message">
+            <h1>
+                &#x1F64B; Coming Soon!
+            </h1>
+            현재 열심히 글을 쓰고 있어요. 조금만 기다려주세요!
+        </div>
     {% endif %}
-  </div>
+    
+<!--큐레이션 영역-->
+    {{ content }}
+    
+    {% if page.book == true %}
+        {% if page.ridibooks == true %}
+            {% for book-list in site.data[page.data-name] %}   
+                <a href="https://ridibooks.com/books/{{ book-list.bookid }}" target="_blank" class="book-link">
+                    <img class="book-cover transition" src="https://misc.ridibooks.com/cover/{{ book-list.bookid }}/xxlarge"/>
+                </a>   
+            {% endfor %}
+        {% endif %}
+        {% if page.ridiselect == true %}
+            {% for book-list in site.data[page.data-name] %}   
+                <a href="https://select.ridibooks.com/book/{{ book-list.bookid }}" target="_blank" class="book-link">
+                    <img class="book-cover transition" src="https://misc.ridibooks.com/cover/{{ book-list.bookid }}/xxlarge?dpi=xxhdpi"/>
+                </a>   
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+    
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
-
-  {{ content }}
-</div>
-
-{% if page.comments %}
-  {% include disqus_comments.html %}
-{% endif %}
-
-<div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
-
-  <a href="#" class="top">Top</a>
+    
 </div>

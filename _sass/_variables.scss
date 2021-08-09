@@ -1,0 +1,49 @@
+//initialize
+
+p, h2 {
+    margin: 0;
+}
+
+// color 정의
+$default-shade: #10171f;
+$default-tint: #8898aa;
+$grey-0: #333e4c;
+$grey-0-80: rgba(51, 62, 76, .8);
+$grey-1: #90949a;
+$grey-2: #D8E0E7;
+$grey-2-70: rgba(216, 224, 231, .7);
+$grey-3: #f6f9fc;
+$grey-4: #ebeff2;
+$grey-5: #c1cad4;
+$grey-6: #b3bcc4;
+$white: #fff;
+$yellow: #FEE85A;
+$shadow-color: rgba(0, 0, 0, .2);
+$ridi-blue: #1f8ce6;
+$ridi-skyblue: #66baff;
+$purple: #8565fc;
+$light-purple: #997EFA;
+
+// media
+$break-medium: 900px;
+$break-small: 670px;
+
+// font-family 정의
+$san-serif: "Source Sans Pro", "APPLE SD Gothic Neo", HelveticaNeue, Helvetica, "NanumGothic", "맑은 고딕", "Malgun Gothic", arial, sans-serif;
+$serif: "Nanum Myeongjo",sans-serif;
+$source: 'Source Sans Pro', sans-serif;
+
+$monospaced-font: Menlo, Monaco, monospace;
+$code-color: #bf616a;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}

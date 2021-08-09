@@ -1,42 +1,38 @@
-# Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        ""
-url:            "https://github.com/JihoKevin/JihoKevin.github.io/"
+# Permalinks
+permalink:      /:year-:month-:day/:title
+incremental: true
+theme:      tale
 
-# Google Analytics
-google_analytics: UA—XXXXXXXX-X
-
-# Author
-author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
-
-# Build settings
-markdown:       kramdown
-include:
-  - _pages
+# Setup
+title:          Jiho Shin
+baseurl:  "" 
+url:            "https://jihokevin.github.io"
 
 # Assets
 sass:
   sass_dir:     _sass
-  style:        compressed
+  style:        :compressed
 
-# Gems
+# Build settings
+markdown:       kramdown
+disqus: jekyll-tale
+
+# About
+author:
+  name:         Jiho Shin
+  url:          https://jihokevin.github.io/
+  email:        jhshin925@gmail.com  
+  github:       JihoKevin
+
+# Custom vars
+version:        0.0.1
+github:         
+  repo:         https://github.com/JihoKevin/JihoKevin.github.io/
+
+remote_theme: chesterhow/tale
+
+permalink:    /:year-:month-:day/:title
+paginate:     5
+
 plugins:
-  - jekyll-feed
   - jekyll-paginate
-  - jekyll-seo-tag
-  # - jemoji #Uncomment this to allow emoji in your post
-
-
-# Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-
-# Disqus (Set to your disqus id)
-disqus:         jekyll-tale
-theme:      tale
-
-permalink:  /:year-:month-:day/:title
-paginate:   5

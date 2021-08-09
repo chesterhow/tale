@@ -1,0 +1,88 @@
+* {
+  @include box-sizing;
+  line-height: 1.5;
+}
+
+html,
+body {
+  color: $grey-0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $san-serif, $source;
+  font-size: 17px;
+
+  @media (min-width: $break-small) {
+    font-size: 18px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: normal;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+a {
+  color: $grey-0;
+    text-decoration: none;
+}
+
+blockquote {
+  border-left: .25rem solid $grey-2;
+  color: $grey-1;
+  margin: .8rem 0 1rem 0;
+  padding: .5rem 1rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 600px) {
+    padding: 0 0 0 1.25rem;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 0 1rem;
+  max-width: 100%;
+}
+
+td {
+  vertical-align: top;
+}
+
+.transition {
+    transition: all 0.3s ease-in-out;
+}
+
+::selection {
+    background: $purple;
+    color: #FFF;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: $purple;
+    color: #FFF;
+    text-shadow: none;
+}
+::-webkit-selection {
+    background: $purple;
+    color: #FFF;
+    text-shadow: none;
+}

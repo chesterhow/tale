@@ -1,0 +1,97 @@
+.catalogue {
+    &-item {
+        border-bottom: 1px solid rgba(0,0,0,.07);
+        padding: 36px 0;
+        list-style: none;
+
+    &:last-child {
+        margin-bottom: 72px;
+        border: none;
+//        border-bottom: 1px solid $grey-2;
+    }
+  }
+
+    &-type {
+        color: $purple;
+        font-size: 18px;
+        font-family: $source;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+   
+    &-info {
+        display: inline-block;
+        
+        .catalogue-tag {
+            font-family: $source;
+            display: inline-block;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            padding: 4px 7px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background-color: $yellow;
+            border-radius: 8px;
+            
+            @media (max-width: $break-medium) {
+                margin: 10px 0;
+            }
+            
+        }
+        
+        h1.catalogue-title {
+            color: $grey-0;
+            display: block;
+            font-family: $san-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: -0.009em;
+            position: relative;
+
+            @media (max-width: $break-small) {
+                  font-size: 22px;
+            }
+        }
+        
+        @media (max-width: $break-medium) {
+            display: block;
+            width: 100%;
+        }
+        
+        p.catalogue-sub {
+            font-size: 18px;
+            color: $grey-1;
+            line-height: 1.75;
+            padding-bottom: 24px;
+
+            @media (max-width: $break-small) {
+                font-size: 16px;
+            }        
+        }
+
+        p.catalogue-body {
+            font-size: 16px;
+            color: $grey-1;
+        }
+        
+    }
+    
+    .catalogue-draft-message {
+        text-align: center;
+    }
+    
+}
+
+.catalogue-item:hover
+.catalogue-info {     
+    cursor: pointer;
+    opacity: .6;
+}
+
+.catalogue-img {
+    border-radius: 3px;
+//    box-shadow: 6px 0 40px 8px rgba(0,0,0,.05);
+}

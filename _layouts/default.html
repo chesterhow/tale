@@ -4,13 +4,47 @@
   {% include head.html %}
 
   <body>
-
-    {% include navigation.html %}
-
+      {% assign current = page.url | downcase | split: '/' %}
+      <nav class="nav">
+        <div class="nav-container">
+            <ul>
+                <li class="transition">
+                    <a href="{{ '' | prepend: site.baseurl }}/" {% if current[1] == "about" or current[1] == "Android" or current[1] == "Algorithm" or current[1] == "project" %} class="normal" {% endif %} class="active">Home</a>
+                </li>
+                <li class="transition">
+                    <a href="{{ '/project' | prepend: site.baseurl }}" {% if current[1] == "project" %} class="active"{% endif %} class="normal">Project</a>
+                </li>
+                <li class="transition">
+                    <a href="{{ '/Android' | prepend: site.baseurl }}" {% if current[1] == "Android" %} class="active"{% endif %} >Android</a>
+                </li>
+                <li class="transition">
+                    <a href="{{ '/Algorithm' | prepend: site.baseurl }}" {% if current[1] == "Algorithm" %} class="active"{% endif %} >Algorithm</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    
+    {% if page.post-header == true %}
+        {% include post-header.html %}
+    {% endif %}
+    {% if page.project-header == true %}
+        {% include project-header.html %}
+    {% endif %}
+      
     <main>
       {{ content }}
-    </main>
+        
+        <!-- {% if page.text == true %}
+            {% include share.html %}
+        {% endif %} -->
 
+    </main>
+      
     {% include footer.html %}
+   
   </body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSC9VLZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </html>

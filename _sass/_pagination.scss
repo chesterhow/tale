@@ -1,0 +1,41 @@
+.pagination {
+  font-family: $source;
+  padding: 1rem 0 3rem 0;
+  position: relative;
+  text-align: center;
+
+  span {
+//    color: $default-shade;
+    font-size: 1.1rem;
+  }
+
+  .top {
+    @include transition(all .3s ease-out);
+    font-size: 1.1rem;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    @include transition(all .3s ease-out);
+    color: $grey-0;
+    position: absolute;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+      text-decoration: none;
+    }
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+}

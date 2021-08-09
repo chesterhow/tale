@@ -1,0 +1,121 @@
+.second-label {
+    margin: 80px 0 20px 0;
+    font-family: $source;
+    font-size: 18px;
+    font-weight: 600;
+    color: $purple;
+    vertical-align: middle;
+    
+    .label-emoji {
+        font-size: 26px;
+    }
+    
+}
+
+div.resume-info {
+    position: relative;
+
+    svg {
+        width: 24px;
+        fill: $purple;
+        position: absolute;
+    }
+}
+
+.resume {
+    
+    .workplace {
+        width: 100%;
+        padding: 30px 0;
+        border-top: 1px solid rgba(0,0,0,.07);
+        
+        .workplace-name {
+            font-family: $san-serif;
+            font-size: 20px;
+            font-weight: 700;
+            width: 42%;
+            float: left;
+            
+            @media (max-width: $break-small) {
+                float: none;
+                width: 100%;
+            }
+            
+        }
+
+        .work-info {
+            display: inline-block;
+            
+            p.work-sub-info {
+                color: $default-tint;
+                font-size: 16px;
+                font-family: $source;
+                font-weight: 400;
+            }
+        }
+        
+        svg {
+            width: 24px;
+            float: right;
+        }
+    }
+    
+    .workplace:last-child {
+        border-bottom: 1px solid rgba(0,0,0,.07);
+    }
+    
+    a {
+        .view-all-projects {
+            display: inline-block;
+            color: $default-tint;
+            font-size: 18px;
+            font-family: $source;
+            font-weight: 600;
+            margin: 20px 0;
+            
+            svg {
+                width: 20px;
+                fill: $default-tint;
+                vertical-align: middle;
+                margin-left: 6px;
+            }
+        }
+    }
+    a:hover {
+        opacity: .6;
+    }
+}
+
+section.skill {
+    svg {
+        width: 24px;
+        fill: $purple;
+        position: absolute;
+    }
+    padding-bottom: 72px;
+    
+    li.skill_name {
+        display: inline-block;
+        font-family: $source;
+        padding: 4px 14px;
+        border-radius: 100px;
+        border: solid 1px $grey-2;
+        font-size: 16px;
+        margin: 0 8px 14px 0;
+    }
+}
+
+@keyframes moving {
+    from {
+        opacity: .3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.loading-animation {
+    animation-name: moving;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}

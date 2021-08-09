@@ -12,6 +12,9 @@ Sticky, or pinned, posts are featured on the top of every page. Tale provides so
 ## Hello
 
 Add `sticky: true` to the frontmatter of your blog post.
+```java
+private int num = 0;
+```
 
 ### Exclude sticky post from paginated posts
 

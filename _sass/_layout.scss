@@ -1,0 +1,139 @@
+.container {
+  margin: 40px auto;
+  max-width: 750px;
+  width: 80%;
+    @media (max-width: $break-small) {
+        width: 88%;
+        margin: 24px auto;
+    }
+}
+
+main,
+footer>.footer_wrap,
+.nav-container {
+  margin: 0 auto;
+  max-width: 750px;
+  width: 80%;
+    @media (max-width: $break-small) {
+        width: 88%;
+    }
+}
+
+.nav {
+    overflow: auto;
+    padding: 24px 0;
+
+  &-container {
+      margin: 0 auto;
+      padding-bottom: 10px;
+      position: relative;
+  }
+}
+
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+
+
+.nav-container {
+  li {
+      font-family: $source;
+      display: inline-block;
+      margin: 0 40px 0 0;
+      
+      &:last-child {
+          margin-right: 0;
+      }
+      
+      @media (max-width: $break-small) {
+          margin: 0 24px 0 0;
+          font-size: 16px;
+      }
+      
+  }
+    li:hover {
+          opacity: 0.5;
+    }
+}
+    
+.active {
+    padding-bottom: 6px;
+    border-bottom: 2px solid $grey-0;
+    font-weight: 700;
+    color: $grey-0;
+}
+
+.normal {
+    font-weight: 500;
+    border-style: none;
+    padding-bottom: 0;
+}
+
+a {
+//    color: $grey-0;
+}
+
+//footer
+
+footer {
+    font-family: $source;
+    padding: 36px 0 46px 0;
+    background-color: $grey-3;
+    color: $default-tint;
+    border-top: 1px solid $grey-2;
+    border-bottom: 1px solid $grey-2;
+    
+    .footer_wrap {
+        font-style: normal;
+        position: relative;
+
+        .information {
+            display: inline-block;
+
+            .myname {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 4px;
+}
+            .email {
+                font-size: 16px;
+                color: $default-tint;
+            }
+            
+            a.email:hover {
+                opacity: .6;
+            }
+            
+            .accounts {
+                margin-top: 36px;
+                a {
+                    margin-right: 24px;
+                    svg {
+                        fill: $default-tint;
+                        width: 20px;
+                    }
+                }
+                a:hover {
+                    opacity: .6;
+                }
+            }
+        }
+        .copyright {
+            float: right;
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+
+            @media (max-width: $break-small) {
+                float: none;
+                position: static;
+                margin-top: 6px;
+            }
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
