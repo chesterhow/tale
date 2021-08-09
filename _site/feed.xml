@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jihokevin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jihokevin.github.io/" rel="alternate" type="text/html" /><updated>2021-08-10T04:25:18+09:00</updated><id>https://jihokevin.github.io/feed.xml</id><title type="html">Jiho Shin</title><author><name>Jiho Shin</name><email>jhshin925@gmail.com</email></author><entry><title type="html">Sticky Posts</title><link href="https://jihokevin.github.io/2021-05-03/sticky-posts" rel="alternate" type="text/html" title="Sticky Posts" /><published>2021-05-03T00:00:00+09:00</published><updated>2021-05-03T00:00:00+09:00</updated><id>https://jihokevin.github.io/2021-05-03/sticky-posts</id><content type="html" xml:base="https://jihokevin.github.io/2021-05-03/sticky-posts">Sticky, or pinned, posts are featured on the top of every page. Tale provides some flexibility when it comes to this feature.&lt;!--more--&gt; There is no limit on the number of sticky posts you can have. Although do note that each page will show all your sticky posts + the paginated posts. So if you have 4 sticky posts and 5 posts per page, each page can display up to 9 posts.
+
+## Making a post &quot;sticky&quot;
+## Hello
+
+Add `sticky: true` to the frontmatter of your blog post.
+```java
+private int num = 0;
+```
+
+### Exclude sticky post from paginated posts
+
+By default, sticky posts are still included in the paginated posts. To exclude a sticky post from paginated posts, add `hidden: true` to the frontmatter of that blog post.
+
+## Example
+
+See the [&quot;Introducing Tale&quot; post](https://github.com/chesterhow/tale/blob/master/_posts/2017-03-29-introducing-tale.md).</content><author><name>Chester</name></author><category term="Tutorial" /><summary type="html">Sticky, or pinned, posts are featured on the top of every page. Tale provides some flexibility when it comes to this feature.</summary></entry><entry><title type="html">Managing Excerpt</title><link href="https://jihokevin.github.io/2021-04-30/managing-excerpt" rel="alternate" type="text/html" title="Managing Excerpt" /><published>2021-04-30T00:00:00+09:00</published><updated>2021-04-30T00:00:00+09:00</updated><id>https://jihokevin.github.io/2021-04-30/managing-excerpt</id><content type="html" xml:base="https://jihokevin.github.io/2021-04-30/managing-excerpt">You can customise the excerpt (the text displayed below each post on the homepage) using the `excerpt-separator`.&lt;!--more--&gt; Here's how you can do so!
+
+## Steps
+
+1. Add `excerpt_separator: &lt;!--more--&gt;` to the frontmatter of your blog post.
+
+2. Insert this `&lt;!--more--&gt;` at where you would like the excerpt to cut off in your blog post.
+
+### Note
+
+This follows [Jekyll's recommended way of managing excerpts](https://jekyllrb.com/docs/posts/#post-excerpts).
+
+## Example
+
+See [this post](https://github.com/chesterhow/tale/blob/master/_posts/2021-04-30-managing-excerpt.md) or the [&quot;Introducing Tale&quot; post](https://github.com/chesterhow/tale/blob/master/_posts/2017-03-29-introducing-tale.md).</content><author><name>Chester</name></author><category term="Tutorial" /><summary type="html">You can customise the excerpt (the text displayed below each post on the homepage) using the excerpt-separator.</summary></entry><entry><title type="html">Introducing Tale</title><link href="https://jihokevin.github.io/2017-03-29/introducing-tale" rel="alternate" type="text/html" title="Introducing Tale" /><published>2017-03-29T00:00:00+09:00</published><updated>2017-03-29T00:00:00+09:00</updated><id>https://jihokevin.github.io/2017-03-29/introducing-tale</id><content type="html" xml:base="https://jihokevin.github.io/2017-03-29/introducing-tale">Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.&lt;!--more--&gt;
+
+## Tale features
+- Compatible with GitHub Pages
+- Responsive design (looks just as good on mobile)
+- Syntax highlighting, with the help of Pygments
+- Markdown and HTML text formatting
+- Pagination of posts
+- Sticky posts
+- Tags
+- Excerpt management
+- Disqus comments
+
+Head over to the [Example Content]({{ site.baseurl }}/2017-03-16/example-content) post for a showcase of Tale's text formatting features.
+
+## Browser Support
+Tale works on most if not all modern browsers, including Chrome, Safari and Firefox 👍🏼
+
+## Download or Contribute
+Tale is publicly hosted on GitHub, so go ahead and download or fork it at the [GitHub repository](https://github.com/chesterhow/tale). If you spot any bugs or have any suggestions, feel free to create an issue or make a pull request.
+
+Thanks for checking out Tale!</content><author><name>Chester</name></author><category term="Tale" /><summary type="html">Tale is a minimal Jekyll theme curated for storytellers. It is designed and developed by myself for a friend who writes short stories.</summary></entry><entry><title type="html">Example Content</title><link href="https://jihokevin.github.io/2017-03-16/example-content" rel="alternate" type="text/html" title="Example Content" /><published>2017-03-16T00:00:00+09:00</published><updated>2017-03-16T00:00:00+09:00</updated><id>https://jihokevin.github.io/2017-03-16/example-content</id><content type="html" xml:base="https://jihokevin.github.io/2017-03-16/example-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ornare nibh, non elementum augue tempus eget. Pellentesque tempus scelerisque iaculis.&lt;!--more--&gt; Nullam interdum ultricies nibh quis sollicitudin. Donec ornare fermentum facilisis. Ut at sem ac sem imperdiet varius a eget tortor. Nam eu augue eget orci semper maximus in eget augue. Mauris ornare, nisl ut suscipit consectetur, mi quam interdum tellus, at rutrum quam eros ultrices mi.
+
+# Headers
+{% highlight markdown %}
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+{% endhighlight %}
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+# Text formatting
+{% highlight markdown %}
+- **Bold**
+- _Italics_
+- ~~Strikethrough~~
+- &lt;ins&gt;Underline&lt;/ins&gt;
+- &lt;sup&gt;Superscript&lt;/sup&gt;
+- &lt;sub&gt;Subscript&lt;/sub&gt;
+- Abbreviation: &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
+- Citation: &lt;cite&gt;&amp;mdash; Chester How&lt;/cite&gt;
+{% endhighlight %}
+
+- **Bold**
+- _Italics_
+- ~~Strikethrough~~
+- &lt;ins&gt;Underline&lt;/ins&gt;
+- &lt;sup&gt;Superscript&lt;/sup&gt;
+- &lt;sub&gt;Subscript&lt;/sub&gt;
+- Abbreviation: &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
+- Citation: &lt;cite&gt;&amp;mdash; Chester How&lt;/cite&gt;
+
+# Lists
+{% highlight markdown %}
+1. Ordered list item 1
+2. Ordered list item 2
+3. Ordered list item 3
+
+* Unordered list item 1
+* Unordered list item 2
+* Unordered list item 3
+{% endhighlight %}
+
+1. Ordered list item 1
+2. Ordered list item 2
+3. Ordered list item 3
+
+* Unordered list item 1
+* Unordered list item 2
+* Unordered list item 3
+
+# Links
+{% highlight markdown %}
+Check out tale on [GitHub](https://github.com/chesterhow/tale).
+{% endhighlight %}
+
+Check out tale on [GitHub](https://github.com/chesterhow/tale).
+
+# Images
+{% highlight markdown %}
+![Placeholder image](https://placehold.it/800x400 &quot;Placeholder image&quot;)
+
+![Image with caption](https://placehold.it/700x400 &quot;Image with caption&quot;)
+_This is an image with a caption_
+{% endhighlight %}
+
+![Placeholder image](https://placehold.it/800x400 &quot;Placeholder image&quot;)
+
+![Image with caption](https://placehold.it/700x400 &quot;Image with caption&quot;)
+_This is an image with a caption_
+
+# Code and Syntax Highlighting
+Use back-ticks for `inline code`. Multi-line code snippets are supported too through Pygments.
+
+{% highlight js %}
+// Sample javascript code
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+{% endhighlight %}
+
+{% highlight python %}
+# Sample python code
+s = &quot;Python syntax highlighting&quot;
+print s
+{% endhighlight %}
+
+Adding `linenos` to the highlight tag enables line numbers.
+
+{% highlight js  linenos %}
+// Sample javascript code
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+{% endhighlight %}
+
+# Blockquotes
+{% highlight markdown %}
+&gt; Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+{% endhighlight %}
+
+&gt; Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+# Horizontal Rule &amp; Line Break
+{% highlight markdown %}
+Use `&lt;hr&gt;` for horizontal rules
+
+&lt;hr&gt;
+
+and `&lt;br&gt;` for line breaks.
+
+&lt;br&gt;
+{% endhighlight %}
+
+Use `&lt;hr&gt;` for horizontal rules
+
+&lt;hr&gt;
+
+and `&lt;br&gt;` for line breaks.
+
+&lt;br&gt;
+
+_The end_</content><author><name>Chester</name></author><category term="Example" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ornare nibh, non elementum augue tempus eget. Pellentesque tempus scelerisque iaculis.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://jihokevin.github.io/2017-03-10/welcome-to-jekyll" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-03-10T00:00:00+09:00</published><updated>2017-03-10T00:00:00+09:00</updated><id>https://jihokevin.github.io/2017-03-10/welcome-to-jekyll</id><content type="html" xml:base="https://jihokevin.github.io/2017-03-10/welcome-to-jekyll">You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets: like these
+
+{% highlight ruby %}
+def print_hi(name)
+  puts &quot;Hi, #{name}&quot;
+end
+print_hi('Tom')
+#=&gt; prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name>Jekyll</name></author><category term="Jekyll" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">The Case of the Missing Post</title><link href="https://jihokevin.github.io/2017-03-07/the-case-of-the-missing-post" rel="alternate" type="text/html" title="The Case of the Missing Post" /><published>2017-03-07T00:00:00+09:00</published><updated>2017-03-07T00:00:00+09:00</updated><id>https://jihokevin.github.io/2017-03-07/the-case-of-the-missing-post</id><content type="html" xml:base="https://jihokevin.github.io/2017-03-07/the-case-of-the-missing-post">Kitty power! and sometimes switches in french and say &quot;miaou&quot; just because well why not man running from cops stops to pet cats, goes to jail, yet licks your face or drink water out of the faucet so jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water yet drink water out of the faucet. Pelt around the house and up and down stairs chasing phantoms.
+
+Sit in window and stare ooo, a bird! yum. Sit and stare. Sweet beast loves cheeseburgers. Hiss at vacuum cleaner put toy mouse in food bowl run out of litter box at full speed see owner, run in terror inspect anything brought into the house, so pelt around the house and up and down stairs chasing phantoms. Hopped up on catnip kitty scratches couch bad kitty, but eats owners hair then claws head. Lie on your belly and purr when you are asleep kitty power! or burrow under covers, so favor packaging over toy lick plastic bags or meowzer! yet unwrap toilet paper.
+
+[Cat Ipsum](http://www.catipsum.com/)</content><author><name>Chester</name></author><category term="Tale" /><summary type="html">Kitty power! and sometimes switches in french and say “miaou” just because well why not man running from cops stops to pet cats, goes to jail, yet licks your face or drink water out of the faucet so jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water yet drink water out of the faucet. Pelt around the house and up and down stairs chasing phantoms.</summary></entry><entry><title type="html">The Mystery of the Filler Post</title><link href="https://jihokevin.github.io/2017-03-06/the-mystery-of-the-filler-post" rel="alternate" type="text/html" title="The Mystery of the Filler Post" /><published>2017-03-06T00:00:00+09:00</published><updated>2017-03-06T00:00:00+09:00</updated><id>https://jihokevin.github.io/2017-03-06/the-mystery-of-the-filler-post</id><content type="html" xml:base="https://jihokevin.github.io/2017-03-06/the-mystery-of-the-filler-post">Hornswaggle measured fer yer chains chase run a shot across the bow Chain Shot flogging Pirate Round galleon rope's end aft. Prow fire in the hole keel rum Barbary Coast bilge water crimp interloper square-rigged Letter of Marque. Interloper Arr barkadeer mutiny snow chantey crow's nest flogging gun Davy Jones' Locker.
+
+Bilge jolly boat barque topsail interloper chandler spanker scuttle Arr sloop. Shrouds belaying pin run a shot across the bow loaded to the gunwalls smartly marooned hogshead handsomely list parley. Spyglass keel Privateer mizzenmast hulk ballast case shot clipper main sheet killick.
+
+Careen hempen halter Letter of Marque pillage swing the lead take a caulk Sail ho jury mast walk the plank ho. Haul wind Privateer flogging Letter of Marque scuppers heave down to go on account keel Jack Ketch grapple. Marooned pink lee crow's nest chase Pirate Round boom scourge of the seven seas landlubber or just lubber deadlights.
+
+[Pirate Ipsum](http://pirateipsum.me/)</content><author><name>Chester</name></author><category term="Tale" /><summary type="html">Hornswaggle measured fer yer chains chase run a shot across the bow Chain Shot flogging Pirate Round galleon rope’s end aft. Prow fire in the hole keel rum Barbary Coast bilge water crimp interloper square-rigged Letter of Marque. Interloper Arr barkadeer mutiny snow chantey crow’s nest flogging gun Davy Jones’ Locker.</summary></entry><entry><title type="html">Pagination Post</title><link href="https://jihokevin.github.io/2017-03-05/pagination-post" rel="alternate" type="text/html" title="Pagination Post" /><published>2017-03-05T00:00:00+09:00</published><updated>2017-03-05T00:00:00+09:00</updated><id>https://jihokevin.github.io/2017-03-05/pagination-post</id><content type="html" xml:base="https://jihokevin.github.io/2017-03-05/pagination-post">Here we see **Tale's** pagination feature in action. It is set to 5 posts per page by default. Feel free to change this number in the `_config.yml` file!</content><author><name>Chester</name></author><category term="Tale" /><summary type="html">Here we see Tale’s pagination feature in action. It is set to 5 posts per page by default. Feel free to change this number in the _config.yml file!</summary></entry></feed>
