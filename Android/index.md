@@ -11,7 +11,7 @@ header-img: img/about.jpg
 <div class="catalogue">
     {% assign sorted = site.pages | sort: 'order' | reverse %}
     {% for page in sorted %}
-    {% if page.blog == true %}
+    {% if page.android == true %}
     
          {% include post-list.html %}
     

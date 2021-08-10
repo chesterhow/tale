@@ -33,6 +33,6 @@ remote_theme: chesterhow/tale
 
 permalink:    /:year-:month-:day/:title
 paginate:     5
-
+category-list: [android, algorithm]
 plugins:
   - jekyll-paginate
