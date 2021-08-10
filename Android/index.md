@@ -2,7 +2,7 @@
 layout: default
 title: "Android"
 work: true
-description: 아주 가끔씩 관심 분야의 글을 올려요.
+description: 안드로이드 개발 공부 과정을 담은 페이지 입니다.
 main: true
 project-header: true
 header-img: img/about.jpg
