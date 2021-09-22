@@ -15,6 +15,12 @@
     }
   }
 
+  &-pinned {
+    color: $default-tint;
+    font-family: $serif-secondary;
+    letter-spacing: .5px;
+  }
+
   &-time {
     color: $default-tint;
     font-family: $serif-secondary;

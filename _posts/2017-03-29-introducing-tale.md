@@ -3,9 +3,13 @@ layout: post
 title:  "Introducing Tale"
 author: "Chester"
 comments: true
+tags: Tale
+excerpt_separator: <!--more-->
+sticky: true
+hidden: true
 ---
 
-Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.
+Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.<!--more-->
 
 ## Tale features
 - Compatible with GitHub Pages
@@ -13,6 +17,10 @@ Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers
 - Syntax highlighting, with the help of Pygments
 - Markdown and HTML text formatting
 - Pagination of posts
+- Sticky posts
+- Tags
+- Excerpt management
+- Disqus comments
 
 Head over to the [Example Content]({{ site.baseurl }}/2017-03-16/example-content) post for a showcase of Tale's text formatting features.
 
