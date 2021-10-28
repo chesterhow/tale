@@ -1,17 +1,16 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          Bhoomika Ojha
+description:    "Homepage"
+url:            "https://bhoomikaojha.com"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Bhoomika Ojha
+  url:          https://bhoomikaojha.com
+  email:        ojhabhoomika@gmail.com
 
 # Build settings
 markdown:       kramdown
@@ -23,11 +22,13 @@ sass:
   sass_dir:     _sass
   style:        compressed
 
+remote_theme: chesterhow/tale
 # Gems
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-remote-theme
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
