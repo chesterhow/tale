@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Pagination Post"
-author: "Chester"
-tags: Tale
+title: "한글테스트"
+author: "한글테스트"
+tags: 한글헤트스
 ---
 
-Here we see **Tale's** pagination feature in action. It is set to 5 posts per page by default. Feel free to change this number in the `_config.yml` file!
+한글은 어떻게 나오는가요
