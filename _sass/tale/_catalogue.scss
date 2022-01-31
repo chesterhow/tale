@@ -38,6 +38,7 @@
 
   &-line {
     @include transition(all .3s ease-out);
+    font-family: $sans-serif;
     border-top: .2rem solid $default-shade;
     display: block;
     width: 2rem;
