@@ -1,6 +1,6 @@
 # Site settings
 title:          Nostrss
-description:    "jin take coding note"
+description:    "Nostrss coding note"
 url:            "https://nostrss.github.io"
 
 # Google Analytics
@@ -8,9 +8,9 @@ google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Nostrss
+  url:          
+  email:        jintagi@gmail.com
 
 # Build settings
 markdown:       kramdown
