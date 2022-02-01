@@ -10,6 +10,6 @@ hidden:
 ---
 test
 
-![Image with caption](./assets/image/auto_rename_tag "Auto Rename Tag")
+![Image with caption](./assets/image/auto_rename_tag.gif "Auto Rename Tag")
 
-![Placeholder image](./assets/image/auto_rename_tag "Auto Rename Tag")
+![Placeholder image](./assets/image/auto_rename_tag.gif "Auto Rename Tag")
