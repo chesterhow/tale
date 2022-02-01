@@ -4,7 +4,7 @@ title:  "온라인 강의 사이트 리스트"
 author: "Nostrss"
 comments: true
 tags: site
-excerpt_separator: <!--more-->
+excerpt_separator: 
 sticky: 
 hidden: 
 ---
