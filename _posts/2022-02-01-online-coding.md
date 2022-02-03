@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "온라인 코딩 강의 사이트 리스트"
+title:  "코딩 강의 사이트 리스트"
 author: "Nostrss"
 comments: true
-tags: site
+tags: site memo
 excerpt_separator: 
 sticky: 
 hidden: 
