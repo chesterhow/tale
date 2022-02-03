@@ -3,7 +3,7 @@ layout: post
 title:  "코딩 부트캠프 모음"
 author: "Nostrss"
 comments: true
-tags: site
+tags: etc
 excerpt_separator: 
 sticky: 
 hidden: 
