@@ -3,7 +3,7 @@ layout: post
 title:  "코딩 강의 사이트 리스트"
 author: "Nostrss"
 comments: true
-tags: site memo
+tags: etc
 excerpt_separator: 
 sticky: 
 hidden: 

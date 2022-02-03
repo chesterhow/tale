@@ -3,7 +3,7 @@ layout: post
 title:  "Java Script Reference "
 author: "Nostrss"
 comments: true
-tags: REFERNECE
+tags: reference
 excerpt_separator: 
 sticky: 
 hidden: 
