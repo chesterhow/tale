@@ -10,14 +10,14 @@ hidden:
 ---
 
 
-## MDN Web Docs
+## 1. MDN Web Docs
 [사이트 바로가기](https://developer.mozilla.org/ko/) 
 
 자바스크립트 뿐만 아니라 HTML, CSS 공부시에도 표준 문서처럼 참고하는 사이트이다. 항상 가까이 해야할 사이트이다.
 
 <hr>
 
-## 모던 JavaScript 튜토리얼
+## 2. 모던 JavaScript 튜토리얼
 [사이트 바로가기](https://ko.javascript.info)
 
 스마트폰 앱들이 업데이트 되듯이 자바스크립트도 시대에 따라 변해가나 보다. 그래도 현재 대중적으로 쓰이는 버전의 자바스크립트를 모던 자바스크립트라고 부르는 듯 하다. 
@@ -30,7 +30,7 @@ hidden:
 
 <hr>
 
-## PoiemaWeb
+## 3. PoiemaWeb
 [사이트 바로가기](https://poiemaweb.com/)
 
 ![모던자바스크립트 Deep Dive](http://image.kyobobook.co.kr/images/book/xlarge/239/x9791158392239.jpg "모던자바스크립트 Deep Dive")
