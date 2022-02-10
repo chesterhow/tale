@@ -9,8 +9,8 @@ sticky:
 hidden: 
 ---
 
-아직 git이 익숙하지 않아서 github Repository를 잘못 연결하는 경우가 종종 있다.
-그때 vscode 터미널에서 아래와 같이 재 설정을 해주면 된다.
+아직 `git`이 익숙하지 않아서 `github Repository`를 잘못 연결하는 경우가 종종 있다.
+그때 `vscode` 터미널에서 아래와 같이 재 설정을 해주면 된다.
 
 ```
 git git remote set-url origin [연결할 깃허브 URL]
