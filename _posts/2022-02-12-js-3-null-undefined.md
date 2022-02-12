@@ -20,9 +20,9 @@ let variable; // 선언
 typeof variable; // undefined
 ```
 
-이렇게 변수가 선언만 되고 정의가 되지 않은 경우 undefined 값이 들어 있게 된다.
+이렇게 변수가 선언만 되고 정의가 되지 않은 경우 `undefined` 값이 들어 있게 된다.
 
-현업에서는 이렇게 선언할떄 undefined로 그냥 둘지 아니면 NULL로 할당을 해둘지 팀에서 결정해서 사용하는 경우가 있다고 한다.
+> 현업에서는 이렇게 선언할떄 `undefined`로 그냥 둘지 아니면 `NULL`로 할당을 해둘지 팀에서 결정해서 사용하는 경우가 있다고 한다.
 
 ## 이상한 NULL과 요상한 undefined 관계
 
@@ -33,9 +33,13 @@ typeof variable; // undefined
 !!null; // false
 ```
 
-NULL의 반대가 true라고 나온다.
+`NULL`의 반대가 `true`라고 나온다.
 
-그런데 다시 반대로 하면 false가 나온다. 나는 다시 NULL이 나와야 한다고 생각하는데, false가 나오니 당황스럽다.
+그런데 다시 반대로 하면 `false`가 나온다.
+
+> ???????????????????
+
+나는 다시 `NULL`이 나와야 한다고 생각하는데, `false`가 나오니 당황스럽다.
 
 나는 반대라 하면 아래와 같은 수식이 생각된다.
 
@@ -44,19 +48,19 @@ NULL의 반대가 true라고 나온다.
 -1 * -1 = 1
 ```
 
-수학시간에 배운것 처럼 -1을 곱하는 것이 내가 가진 반대라는 단어의 정보인데, NULL을 2번 반대하면 false가 나온다.
-NULL은 boolean이 아닌데 말이다.
+수학시간에 배운것 처럼 `-1`을 곱하는 것이 내가 가진 반대라는 단어의 정보인데, `NULL`을 2번 반대하면 `false`가 나온다.
+`NULL`은 `boolean`이 아닌데 말이다.
 
 ### 요상한 undefined 값의 변화
 
-undefined도 참 요상하다
+`undefined`도 참 요상하다
 
 ```javascript
 !undefined; // true
 !!undefined; // false
 ```
 
-NULL처럼 똑같이 당혹스럽다.
+`NULL`처럼 똑같이 당혹스럽다.
 
 ### NULL과 undefined
 
