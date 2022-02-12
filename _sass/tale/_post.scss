@@ -27,7 +27,10 @@
     width: 4rem;
   }
 
-  p, ul, li {
+  p,
+  ul,
+  li,
+  ol {
     margin: 0 0 1rem;
     text-align: justify;
     font-family: $sans-serif;
