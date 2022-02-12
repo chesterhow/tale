@@ -35,7 +35,7 @@ let lang2 = "JavaScript"; //선언 + 할당
 
 ```javascript
 // 비추천 작성법
-ㅣet count = 0;
+let count = 0;
 count += 1; // count = 1
 ```
 
