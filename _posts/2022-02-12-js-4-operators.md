@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JS #3] 논리 연산자 "
+title: "[JS #4] (논리,삼항)연산자 feat: if/else "
 author: "Nostrss"
 comments: true
 tags: javascript
