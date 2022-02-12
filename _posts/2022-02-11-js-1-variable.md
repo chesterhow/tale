@@ -9,9 +9,9 @@ sticky:
 hidden:
 ---
 
-얼마전 부터 제로베이스 사이트에서 동영상 강의를 보고 있다.
+얼마전 부터 `제로베이스` 사이트에서 동영상 강의를 보고 있다.
 
-[JavaScript 완전 정복](https://zero-base.co.kr/category_dev_camp/JS_challenge)
+[제로베이스 JavaScript 완전 정복](https://zero-base.co.kr/category_dev_camp/JS_challenge)
 
 나는 동영상 강의로 공부를 하는 것에 익숙하지 않은 세대(?)이다. 그러다 보니 학습이 되고 있는 건지 스스로에게 의구심이 들었다. 그리고 강사님이 은연중에 자신의 경험에서 비롯한 애기를 하는 경우가 있다. 노하우 라고 생각을 하는데 영상만 보고 잊어 버릴것 같았다.
 
