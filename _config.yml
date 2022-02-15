@@ -1,26 +1,26 @@
 # Site settings
-title:          Nostrss
-description:    "Nostrss coding note"
-url:            "https://nostrss.github.io"
+title: Nostrss
+description: "Nostrss coding note"
+url: "https://nostrss.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Nostrss
-  url:          
-  email:        jintagi@gmail.com
+  name: Nostrss
+  url:
+  email: jintagi@gmail.com
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 include:
   - _pages
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
 # Gems
 plugins:
@@ -30,11 +30,11 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+permalink: /:year-:month-:day/:title
+paginate:
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+exclude: [Gemfile, Gemfile.lock, tale.gemspec]
 
 # Disqus (Set to your disqus id)
-disqus:         nostrss
+disqus: nostrss
