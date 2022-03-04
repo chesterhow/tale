@@ -1,7 +1,7 @@
 # Site settings
 title: Nostrss
-description: "Nostrss coding note"
-url: "https://nostrss.github.io"
+description: 'Nostrss coding note'
+url: 'https://nostrss.github.io'
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
@@ -38,3 +38,13 @@ exclude: [Gemfile, Gemfile.lock, tale.gemspec]
 
 # Disqus (Set to your disqus id)
 disqus: nostrss
+
+#검색기능 추가
+tipue_search:
+  include:
+    pages: false
+    collections: []
+  exclude:
+    files: [search.html, index.html, tags.html]
+    categories: []
+    tags: []

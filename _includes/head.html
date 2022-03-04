@@ -1,41 +1,60 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {% seo %}
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700"
+  />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{
+  "/assets/favicon-32x32.png" | relative_url }}"> <link rel="icon"
+  type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" |
+  relative_url }}"> <link rel="apple-touch-icon" sizes="180x180" href="{{
+  "/assets/apple-touch-icon.png" | relative_url }}">
 
   <!-- RSS -->
   {% feed_meta %}
 
   <!-- Google Analytics-->
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDJDYHNGHV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-EDJDYHNGHV"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-EDJDYHNGHV');
-
-</script>
-  {% if site.google_analytics and jekyll.environment == 'production' %}
-  {% include analytics.html %}
-  {% endif %}
+    gtag('config', 'G-EDJDYHNGHV');
+  </script>
+  {% if site.google_analytics and jekyll.environment == 'production' %} {%
+  include analytics.html %} {% endif %}
 
   <!-- naver -->
-  <meta name="naver-site-verification" content="4d7aaf86da6996168e105b2e4d8f978b7bbfdb83" />
+  <meta
+    name="naver-site-verification"
+    content="4d7aaf86da6996168e105b2e4d8f978b7bbfdb83"
+  />
 
   <!-- 구글애드센스 -->
-  <script data-ad-client="ca-pub-4551649509417014" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script
+    data-ad-client="ca-pub-4551649509417014"
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ></script>
 
-
+  <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
 </head>
