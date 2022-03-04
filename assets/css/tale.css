@@ -147,7 +147,10 @@ pre code {
   width: 4rem;
 }
 
-.post p {
+.post p,
+.post ul,
+.post li,
+.post ol {
   margin: 0 0 1rem;
   text-align: justify;
   font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -676,6 +679,10 @@ footer span {
   width: 2rem;
 }
 
+.catalogue p {
+  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
 .notfound {
   position: relative;
   text-align: center;
@@ -755,6 +762,7 @@ footer span {
 }
 
 .tags-post-title {
+  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
   color: #555;
   text-decoration: none;
   white-space: nowrap;
