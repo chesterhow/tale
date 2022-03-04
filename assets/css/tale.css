@@ -12,7 +12,7 @@ body {
 }
 
 html {
-  font-family: "Libre Baskerville", "Times New Roman", Times, serif;
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   font-size: 14px;
   overflow-y: scroll;
 }
@@ -34,7 +34,8 @@ h4,
 h5,
 h6 {
   color: #353535;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   line-height: normal;
 }
 
@@ -46,8 +47,8 @@ a {
 blockquote {
   border-left: 0.25rem solid #e5e5e5;
   color: #979797;
-  margin: .8rem 0;
-  padding: .5rem 1rem;
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
 }
 
 blockquote p:last-child {
@@ -80,7 +81,7 @@ code {
   border-radius: 3px;
   color: #bf616a;
   font-size: 85%;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
 }
 
 pre {
@@ -110,11 +111,11 @@ pre code {
 .highlight .lineno {
   color: #aaa;
   display: inline-block;
-  padding: 0 .75rem 0 .25rem;
+  padding: 0 0.75rem 0 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
 
 .post {
@@ -123,7 +124,8 @@ pre code {
 
 .post-info {
   color: #aaa;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+  font-family: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua',
+    'Georgia', serif;
   letter-spacing: 0.5px;
   text-align: center;
 }
@@ -134,7 +136,8 @@ pre code {
 
 .post-title {
   color: #353535;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   font-size: 4rem;
   margin: 1rem 0;
   text-align: center;
@@ -153,7 +156,8 @@ pre code {
 .post ol {
   margin: 0 0 1rem;
   text-align: justify;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
 }
 
 .post a:hover {
@@ -167,7 +171,8 @@ pre code {
 .post img + em {
   color: #aaa;
   display: block;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   font-size: 0.9rem;
   font-style: normal;
   text-align: center;
@@ -177,7 +182,7 @@ pre code {
   display: inline-block;
   left: 0;
   -webkit-transform: none;
-          transform: none;
+  transform: none;
   width: 1rem;
   height: 1rem;
   vertical-align: text-top;
@@ -513,7 +518,7 @@ footer,
 
 .nav {
   -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
   overflow: auto;
 }
 
@@ -529,14 +534,18 @@ footer,
   color: #555;
   display: inline-block;
   margin: 0;
-  padding-right: .2rem;
+  padding-right: 0.2rem;
 }
 
-.nav-title:hover, .nav-title:focus {
-  opacity: .6;
+.nav-title:hover,
+.nav-title:focus {
+  opacity: 0.6;
 }
 
 .nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   list-style-type: none;
   margin: 1rem 0 0;
   padding: 0;
@@ -548,7 +557,7 @@ footer,
   transition: all 0.2s ease-out;
   color: #555;
   display: inline-block;
-  opacity: .6;
+  opacity: 0.6;
   padding: 0 2rem 0 0;
 }
 
@@ -556,13 +565,15 @@ footer,
   padding-right: 0;
 }
 
-.nav li:hover, .nav li:focus {
+.nav li:hover,
+.nav li:focus {
   opacity: 1;
 }
 
 .nav a {
   color: #555;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
 }
 
 @media (min-width: 600px) {
@@ -577,19 +588,21 @@ footer,
 }
 
 footer {
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+  font-family: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua',
+    'Georgia', serif;
   padding: 2rem 0;
   text-align: center;
 }
 
 footer span {
   color: #555;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .pagination {
   border-top: 0.5px solid #e5e5e5;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+  font-family: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua',
+    'Georgia', serif;
   padding-top: 2rem;
   position: relative;
   text-align: center;
@@ -604,9 +617,10 @@ footer span {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   color: #555;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   font-size: 1.1rem;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .pagination .top:hover {
@@ -620,8 +634,9 @@ footer span {
   position: absolute;
 }
 
-.pagination .arrow:hover, .pagination .arrow:focus {
-  opacity: .6;
+.pagination .arrow:hover,
+.pagination .arrow:focus {
+  opacity: 0.6;
   text-decoration: none;
 }
 
@@ -651,36 +666,41 @@ footer span {
 
 .catalogue-pinned {
   color: #aaa;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
-  letter-spacing: .5px;
+  font-family: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua',
+    'Georgia', serif;
+  letter-spacing: 0.5px;
 }
 
 .catalogue-time {
   color: #aaa;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
-  letter-spacing: .5px;
+  font-family: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua',
+    'Georgia', serif;
+  letter-spacing: 0.5px;
 }
 
 .catalogue-title {
   color: #353535;
   display: block;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .catalogue-line {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   border-top: 0.2rem solid #353535;
   display: block;
   width: 2rem;
 }
 
 .catalogue p {
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
 }
 
 .notfound {
@@ -708,7 +728,8 @@ footer span {
 
 .tags-header-title {
   color: #353535;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   font-size: 4rem;
   margin: 1rem 0;
   text-align: center;
@@ -723,7 +744,8 @@ footer span {
 
 .tags-clouds {
   text-align: center;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
 }
 
 .tags-clouds a {
@@ -736,7 +758,8 @@ footer span {
   text-decoration: none;
 }
 
-.tags-clouds a:hover, .tags-clouds a:active {
+.tags-clouds a:hover,
+.tags-clouds a:active {
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -747,7 +770,8 @@ footer span {
 .tags-item-label {
   display: inline-block;
   margin: 2rem 0 0.5rem;
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   color: #555;
 }
 
@@ -756,13 +780,14 @@ footer span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 5px 0;
 }
 
 .tags-post-title {
-  font-family: Noto Sans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Noto Sans, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial,
+    sans-serif;
   color: #555;
   text-decoration: none;
   white-space: nowrap;
@@ -784,11 +809,13 @@ footer span {
   white-space: nowrap;
 }
 
-.tags-post:hover .tags-post-line, .tags-post:active .tags-post-line {
+.tags-post:hover .tags-post-line,
+.tags-post:active .tags-post-line {
   width: 3rem;
 }
 
-.tags-post:hover .tags-post-meta, .tags-post:active .tags-post-meta {
+.tags-post:hover .tags-post-meta,
+.tags-post:active .tags-post-meta {
   color: #353535;
 }
 /*# sourceMappingURL=tale.css.map */
