@@ -9,6 +9,30 @@ sticky:
 hidden: 
 ---
 
+> 22/03/15 업데이트
+
+### 모질라 파이어폭스 CSS 선언 순서
+
+1. display
+2. list-style
+3. position
+4. float
+5. clear
+6. width/height
+7. padding/margin
+8. border/background
+9. color/font
+10. text-decoration
+11. taxt-align/vertical-align
+12. white-space
+13. other text
+14. content
+
+
+출처: https://jsunnylab.tistory.com/32 [Jsunny Lab]
+
+<hr>
+
 동영상 강의를 보다 보니 강의자가 아래와 같은 멘트를 한적이 있었다.
 
 >CSS의 여러가지 속성을 순서 없이 작성하게 될 경우, 추후 유지보수 시 알아보는데 어려움이 있을 수 있습니다.
@@ -50,3 +74,5 @@ overflow: auto | scroll | hidden
 z-index: 1 
 ```
 위의 순서는 예시이고 정답은 없다. 일관성 있게만 작성하면 될 듯하다. 아니면 같이 일하는 사람들과 맞추어서 결정하면 되지 않을까 생각한다.
+
+
