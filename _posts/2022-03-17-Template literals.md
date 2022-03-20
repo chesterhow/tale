@@ -19,10 +19,10 @@ hidden:
 우리말로 풀어 쓰기가 조금 어려운데 예를 들어서 정리를 해봤다.
 
 ```javascript
-const firstWord = '템플릿';
-const secondWord = '리터럴';
+const firstWord = '템플릿'
+const secondWord = '리터럴'
 
-console.log('이것은' + ' ' + firstWord + ' ' + secondWord + ' 입니다');
+console.log('이것은' + ' ' + firstWord + ' ' + secondWord + ' 입니다')
 
 //결과 이것은 템플릿 리터럴 입니다
 ```
@@ -32,10 +32,10 @@ console.log('이것은' + ' ' + firstWord + ' ' + secondWord + ' 입니다');
 > 템플릿 리터럴 사용시
 
 ```javascript
-const firstWord = '템플릿';
-const secondWord = '리터럴';
+const firstWord = '템플릿'
+const secondWord = '리터럴'
 
-console.log(`이것은 ${firstWord} ${secondWord} 입니다`);
+console.log(`이것은 ${firstWord} ${secondWord} 입니다`)
 
 //결과 이것은 템플릿 리터럴 입니다
 ```
@@ -75,7 +75,7 @@ string text line 2
 
 ```javascript
 console.log(`string text line 1
-string text line 2`);
+string text line 2`)
 ```
 
 차이를 눈치 챘는가? 템플릿 리터럴에서는 `\n` 대신에 `엔터`로 코드에서 개행처리를 하면 바로 줄바꿈이 된다.
