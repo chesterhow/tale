@@ -22,7 +22,8 @@ data ?? data.fetchProfile // data가 null undefined 일때 뒤에가 실행된�
 [거짓같은 값 Mdn문서](https://developer.mozilla.org/ko/docs/Glossary/Falsy)
 
 널 병합 연산자 (??) 는 왼쪽 피연산자가 `null` 또는 `undefined`일 때 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽 피연산자를 반환하는 논리 연산자이다.
-[Nullish coalescing operator MDN anstjqhrl](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+
+[Nullish coalescing operator MDN 문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 
 
 ## 삼항연산자
