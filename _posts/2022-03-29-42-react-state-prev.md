@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '[코드캠프#9] 메모'
+title: 'state와 prev 느낌잡기'
 author: 'Nostrss'
 comments: true
-tags: memo codecamp
+tags: react 
 excerpt_separator:
 sticky:
 hidden:
